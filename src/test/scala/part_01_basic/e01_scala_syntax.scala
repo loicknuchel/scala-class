@@ -1,6 +1,7 @@
 package part_01_basic
 
-import org.scalatest.{Matchers, FunSuite}
+import org.scalatest.{FunSuite, Matchers}
+import support.StopAfterFailure
 
 /**
   * Prerequisites: please read the README.md file to install all necessary tools
@@ -21,7 +22,7 @@ import org.scalatest.{Matchers, FunSuite}
   * In this class we will use them a lot and you have to replace them to progress
   */
 
-class e01_scala_syntax extends FunSuite with Matchers {
+class e01_scala_syntax extends FunSuite with Matchers with StopAfterFailure {
   lazy val __ : Any = ???
   /**
     * var, val & def are Scala keywords to respectively declare variables, constants and functions
@@ -40,6 +41,10 @@ class e01_scala_syntax extends FunSuite with Matchers {
     variable shouldBe 42 // TODO __
     constant shouldBe "abc" // TODO __
     result shouldBe "43" // TODO __
+  }
+
+  test("aaa") {
+    assert("toto" == "aaa")
   }
 
   /**
