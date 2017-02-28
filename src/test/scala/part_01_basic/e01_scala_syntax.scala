@@ -35,6 +35,7 @@ class e01_scala_syntax extends HandsOnSuite {
     constant shouldBe __
   }
 
+
   test("Déclarer une fonction") {
     def add(a: Int, b: Int): Int = {
       return a + b
@@ -42,6 +43,7 @@ class e01_scala_syntax extends HandsOnSuite {
 
     add(2, 3) shouldBe __
   }
+
 
   /**
     * Scala est un langage qui se veut concis. Il propose donc :
@@ -62,12 +64,13 @@ class e01_scala_syntax extends HandsOnSuite {
     def mult(a: Int, b: Int): Int = a * b
 
     // enfin, l'inférence de type fonctionne aussi pour les fonctions
-    // (mais il est préférable de fixer "manuellement" le type de retour pour ne pas avoir de mauvaises surprises
+    // mais il est préférable de fixer "manuellement" le type de retour pour ne pas avoir de mauvaises surprises
     def div(a: Int, b: Int) = a / b
     // name = div(4, 2) // ne compile pas => type mismatch !
 
     sub(5, 3) shouldBe __
   }
+
 
   test("Structures de code") {
     val num = 4
@@ -94,20 +97,51 @@ class e01_scala_syntax extends HandsOnSuite {
     }
     res shouldBe __
 
-    // contrairement aux apparences, à Java et beaucoup d'autres langages, le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
-    // mais plutôt quelque chose de plus généraliste qui s'approche de `for(list of iterator like statements){}` qui retourne lui aussi une valeur...
+    // de la même manière avec une liste
+    res = 0
+    for(word <- List("table", "chaise")) {
+      res += word.length
+    }
+    res shouldBe __
+
+    // contrairement aux apparences, à Java et à beaucoup d'autres langages, le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
+    // mais en fait une structure plus généraliste qui s'approche de `for(list of iterator-like statements){}` qui retourne lui aussi une valeur...
     // Mais nous verrons ça plus tard ;)
   }
 
-  /**
-    * Optional & named parameters
-    */
 
-  /**
-    * Class / trait
-    */
+  test("Astuces pratiques") {
+    // parfois on crée des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
+    // Il est alors facile de se tromper dans l'ordre et assez difficile ensuite trouver le bug
+    // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
 
-  /**
-    * _ shorthand
-    */
+    def buildReference(project: String, branch: String, commit: String, shortForm: Boolean): String =
+      if(shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"
+
+    val ref1 = buildReference("scala-class", "solutions", "cd959defd71f36f822dbd741085696b508549763", true)
+    val ref2 = buildReference(
+      shortForm = true,
+      project = "scala-class",
+      branch = "solutions",
+      commit = "cd959defd71f36f822dbd741085696b508549763"
+    )
+    ref1 shouldBe ref2
+    ref1 shouldBe __
+
+
+    // Il est aussi possible de définir des paramètres par défaut lorsqu'il y a une valeur "évidente"
+    // mais attention à ne pas en abuser ;)
+
+    def push(commit: String, remote: String = "origin", branch: String = "master"): String =
+      s"push $commit $remote $branch"
+
+    push("123") shouldBe __
+    push("123", "gh") shouldBe __
+    push("123", "gh", "dev") shouldBe __
+    push("123", branch = "dev") shouldBe __
+  }
+
+  test("Mise en pratique") {
+    // TODO
+  }
 }
