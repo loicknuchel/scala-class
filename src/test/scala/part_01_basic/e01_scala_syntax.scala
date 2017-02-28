@@ -1,68 +1,102 @@
 package part_01_basic
 
-import org.scalatest.{FunSuite, Matchers}
-import support.StopAfterFailure
+import support.HandsOnSuite
 
-/**
-  * Prerequisites: please read the README.md file to install all necessary tools
-  */
-
-/**
-  * Introduction
-  *
-  * Scala is a JVM based language which promote functional programming style as well as object oriented programming style; and they play well together !
-  * You can write Scala code very similar to Java one but it’s not a really the best idea. We will see how to write good Scala code leveraging best parts of FP and OOP.
-  * As a guide, if the code is immutable, there are chances it is not so bad ;)
-  */
-
-/**
-  * Side-note:
-  * In Scala you can use `???` to express a missing piece of code.
-  * It's just a shorthand for `throw new NotImplementedError("an implementation is missing")` which can replace any code and satisfy the compiler.
-  * In this class we will use them a lot and you have to replace them to progress
-  */
-
-class e01_scala_syntax extends FunSuite with Matchers with StopAfterFailure {
-  lazy val __ : Any = ???
+class e01_scala_syntax extends HandsOnSuite {
   /**
-    * var, val & def are Scala keywords to respectively declare variables, constants and functions
+    * Prérequis: merci de lire le README.md pour installer l'environnement nécessaire
     */
-  test("Declare some basic Scala objects") {
-    var variable: Int = 5
-    val constant: String = "abc"
-    def function(x: Int, y: Int): String = {
-      return (x + y).toString()
+
+  /**
+    * Introduction
+    *
+    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet; et les deux paradigmes fonctionne bien ensembles !
+    * Il est possible d'écrire du code Scala très similaire au code Java mais ce n'est pas forcément un bon plan.
+    * Dans ce cours on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et de l'orienté objet.
+    * Concrêtement, si le code est immutable, il y a de bonnes chances pour qu'il ne soit pas si mauvais ;)
+    */
+
+  /**
+    * PS:
+    * Scala offre le raccourci `???` qui permet de remplacer n'importe quel bout de code.
+    * C'est tout simplement un raccourci pour `throw new NotImplementedError("an implementation is missing")` qui permet de faire compiler du code non terminé
+    * Dans ce cours on utilisera un raccourci un peu différent, `__`, qu'il faudra remplacer petit à petit
+    */
+
+  test("Déclarer une variable") {
+    var variable: Int = 5 // permet de déclarer une variable
+    val constant: String = "abc" // permet de déclarer une valeur (= constante)
+
+    variable = 42 // on peut réassigner une valeur
+    //constant = "def" // mais pas une valeur (immutable FTW !)
+    //variable = true // et le type ne doit pas changer
+
+    variable shouldBe __
+    constant shouldBe __
+  }
+
+  test("Déclarer une fonction") {
+    def add(a: Int, b: Int): Int = {
+      return a + b
     }
 
-    variable = 42 // variables can be reassigned with same type
-    //constant = "def" // constants can't be reassigned (immutable FTW !)
-    val result = function(variable, 1)
-
-    variable shouldBe 42 // TODO __
-    constant shouldBe "abc" // TODO __
-    result shouldBe "43" // TODO __
-  }
-
-  test("aaa") {
-    assert("toto" == "aaa")
+    add(2, 3) shouldBe __
   }
 
   /**
-    * Scala language try to be as concise as possible, so it has some feature for that :
-    *   - type inference: you don't need to specify types everywhere, the compiler can guess them
-    *   - everything is an expression: so you don't need return keyword in function on even {}
-    *   - () and . are optionals
+    * Scala est un langage qui se veut concis. Il propose donc :
+    *   - de l'inférence de type: le compilateur est capable de déterminer un type sans qu'on ait à le préciser
+    *   - return implicit: tout est une expression qui retourne une valeur, le mot clé `return` est donc souvent omis
     */
-  test("Let's minimize boilerplate") {
-    var i = 4 // inferred as Int
-    // i = "abc" // so this doesn't compile
+  test("Minimiser le boilerplate") {
+    var name = "Jean" // est inféré en tant que String
+    // name = 12 // ne compile pas => type mismatch !
 
-    def add(a: Int, b: Int) = a + b // return type inferred as Int, {} are not required if there is just one expression and neither the `return` keyword
-    // var a: String = add(1, 2) // so this doesn't compile
+    // comme tout est expression et retourne une valeur, le mot clé `return` est facultatif
+    def sub(a: Int, b: Int): Int = {
+      a - b
+    }
 
-    var j = if(i == 4) "abc" else "def" // as everything is an expression, you can affect the return type of a `if` statement to a variable
+    // de même, les `{}` servent uniquement à définir un bloc d'exécution
+    // lorsqu'on a une seule instruction, elles peuvent être omises aussi
+    def mult(a: Int, b: Int): Int = a * b
 
-    var k = 12 toString // methods taking no parameters don't need () and you can ommit the `.` (which is helpful for DSL but you should not abuse of it)
+    // enfin, l'inférence de type fonctionne aussi pour les fonctions
+    // (mais il est préférable de fixer "manuellement" le type de retour pour ne pas avoir de mauvaises surprises
+    def div(a: Int, b: Int) = a / b
+    // name = div(4, 2) // ne compile pas => type mismatch !
+
+    sub(5, 3) shouldBe __
+  }
+
+  test("Structures de code") {
+    val num = 4
+    var name = "Pierre"
+
+    if(num > 6) {
+      name = "Jacques"
+    } else if(num == 6) {
+      name = "Claude"
+    } else {
+      name = "Alex"
+    }
+    name shouldBe __
+
+    // comme *tout* est expression et retourne une valeur, c'est aussi le cas des if
+    // et comme pour les fonctions, les `{}` sont optionnelles dans le cas d'une expression unique
+    name = if(num < 4) "Luc" else if(num == 4) "Jean" else "Jules"
+    name shouldBe __
+
+    // passons maintenant à la bonne vieille boucle for...
+    var res = 0
+    for(i <- 1 to 5) {
+      res += i
+    }
+    res shouldBe __
+
+    // contrairement aux apparences, à Java et beaucoup d'autres langages, le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
+    // mais plutôt quelque chose de plus généraliste qui s'approche de `for(list of iterator like statements){}` qui retourne lui aussi une valeur...
+    // Mais nous verrons ça plus tard ;)
   }
 
   /**
