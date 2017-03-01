@@ -20,7 +20,7 @@ class e01_scala_syntax extends HandsOnSuite {
     * PS:
     * Scala offre le raccourci `???` qui permet de remplacer n'importe quel bout de code.
     * C'est tout simplement un raccourci pour `throw new NotImplementedError("an implementation is missing")` qui permet de faire compiler du code non terminé
-    * Dans ce cours on utilisera un raccourci un peu différent, `__`, qu'il faudra remplacer petit à petit
+    * Dans ce cours on utilisera un raccourci différent, `__`, qu'il faudra remplacer petit à petit
     */
 
   test("Déclarer une variable") {
