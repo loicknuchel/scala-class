@@ -2,15 +2,13 @@ package part_01_basic
 
 import support.HandsOnSuite
 
-import scala.util.Random
-
 class e02_objects extends HandsOnSuite {
   /**
     * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus tard) mais il est tout aussi capable pour l'objet
     * C'est ce que nous allons voir dans cette partie
     */
 
-  test("Les classes en Scala") {
+  exercice("Les classes en Scala") {
     // Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe
     // s'il n'y a pas de modifieur, l'attribut sera un `private val`
     // si le modifieur est val ou var il sera alors public
@@ -36,7 +34,7 @@ class e02_objects extends HandsOnSuite {
     p2.toString shouldBe "Point(1,2)"
   }
 
-  test("Ajouter de l'immutabilité") {
+  exercice("Ajouter de l'immutabilité") {
     // Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
 
     // - crée une class Point immutable (qu'on ne peut pas modifier)
@@ -62,7 +60,7 @@ class e02_objects extends HandsOnSuite {
     // TIP3: les paramètres nommés et valeurs par défaut seront très utiles ici
   }
 
-  test("Les case class sont des super classes") {
+  exercice("Les case class sont des super classes") {
     // Le constructuer d'une case class est très similaire à celui d'une classe
     // sauf qui si les modifieurs ne sont pas précisé, l'attribut sera en `public val`
     case class Point(x: Int, y: Int)

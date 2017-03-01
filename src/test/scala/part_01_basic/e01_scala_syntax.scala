@@ -23,7 +23,7 @@ class e01_scala_syntax extends HandsOnSuite {
     * Dans ce cours on utilisera un raccourci différent, `__`, qu'il faudra remplacer petit à petit
     */
 
-  test("Déclarer une variable") {
+  exercice("Déclarer une variable") {
     var variable: Int = 5 // permet de déclarer une variable
     val constant: String = "abc" // permet de déclarer une valeur (= constante)
 
@@ -36,7 +36,7 @@ class e01_scala_syntax extends HandsOnSuite {
   }
 
 
-  test("Déclarer une fonction") {
+  exercice("Déclarer une fonction") {
     def add(a: Int, b: Int): Int = {
       return a + b
     }
@@ -50,7 +50,7 @@ class e01_scala_syntax extends HandsOnSuite {
     *   - de l'inférence de type: le compilateur est capable de déterminer un type sans qu'on ait à le préciser
     *   - return implicit: tout est une expression qui retourne une valeur, le mot clé `return` est donc souvent omis
     */
-  test("Minimiser le boilerplate") {
+  exercice("Minimiser le boilerplate") {
     var name = "Jean" // est inféré en tant que String
     // name = 12 // ne compile pas => type mismatch !
 
@@ -72,7 +72,7 @@ class e01_scala_syntax extends HandsOnSuite {
   }
 
 
-  test("Structures de code") {
+  exercice("Structures de code") {
     val num = 4
     var name = "Pierre"
 
@@ -110,7 +110,7 @@ class e01_scala_syntax extends HandsOnSuite {
   }
 
 
-  test("Astuces pratiques") {
+  exercice("Astuces pratiques") {
     // parfois on crée des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
     // Il est alors facile de se tromper dans l'ordre et assez difficile ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
@@ -141,7 +141,7 @@ class e01_scala_syntax extends HandsOnSuite {
     push("123", branch = "dev") shouldBe __
   }
 
-  test("Mise en pratique") {
+  exercice("Mise en pratique") {
     // TODO
   }
 }

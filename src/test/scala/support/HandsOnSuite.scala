@@ -1,7 +1,8 @@
 package support
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.{FunSpec, Matchers}
 
-trait HandsOnSuite extends FunSuite with Matchers with StopAfterFailure {
+trait HandsOnSuite extends FunSpec with Matchers {
   lazy val __ : Any = null
+  val exercice = it
 }
