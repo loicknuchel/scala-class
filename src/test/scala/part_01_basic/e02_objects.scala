@@ -112,12 +112,57 @@ class e02_objects extends HandsOnSuite {
   }
 
 
-  exercice("Des object pour remplacer static") {
-    // TODO
+  /**
+    * Le langage Scala n'a pas de concept de `static`. A la place il propose de `object` aussi nommés objet companions.
+    * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel code.
+    */
+  exercice("Des 'object' pour remplacer static") {
+    object Utils {
+      def toUpper(str: String): String = str.toUpperCase
+    }
+
+    Utils.toUpper("test") shouldBe __
+
+    // on les trouve souvent associés à des case class pour contenir les fonctions utilitaires non liées à l'instance de la classe
+    object User {
+      def fromFullName(fullName: String): User = {
+        val parts = fullName.split(" ")
+        User(parts.head, parts.tail.mkString(" "))
+      }
+    }
+    case class User(firstName: String, lastName: String)
+
+    val user = User.fromFullName("Jean Dupont")
+    user shouldBe __
+
+    // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme des fonctions d'un objet companion
+    // ça permet de réutiliser plus simplement le code et d'avoir une fonction pure facilement testable
+    // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
+    object Person {
+      def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
+      def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
+    }
+    case class Person(firstName: String, lastName: String) {
+      def initials(): String = Person.initials(this)
+      def trigramme(): String = Person.trigramme(firstName, lastName)
+    }
+
+    val person = Person("Jeanne", "Michu")
+    person.initials shouldBe __
+    person.trigramme shouldBe __
+    Person.trigramme("Jean-Claude", "Convenant") shouldBe __
+    Person.trigramme(user.firstName, user.lastName) shouldBe __
   }
 
 
+  /**
+    * Les traits Scala sont très similaires aux interfaces Java 8
+    */
   exercice("Les traits") {
+    // abstract val & def, concrete methods (like Java 8 interfaces)
+    // can hold state (not Java 8 interfaces)
+    // can be used for multiple inheritance
+    
     // TODO
   }
 
