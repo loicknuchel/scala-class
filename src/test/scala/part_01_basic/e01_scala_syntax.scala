@@ -49,6 +49,7 @@ class e01_scala_syntax extends HandsOnSuite {
     * Scala est un langage qui se veut concis. Il propose donc :
     *   - de l'inférence de type: le compilateur est capable de déterminer un type sans qu'on ait à le préciser
     *   - return implicit: tout est une expression qui retourne une valeur, le mot clé `return` est donc souvent omis
+    *   - les () et le . sont facultatifs
     */
   exercice("Minimiser le boilerplate") {
     var name = "Jean" // est inféré en tant que String
@@ -69,6 +70,17 @@ class e01_scala_syntax extends HandsOnSuite {
     // name = div(4, 2) // ne compile pas => type mismatch !
 
     sub(5, 3) shouldBe __
+
+    // les () et le . étant facultatifs, les syntaxes suivantes sont équivalentes :
+    val n = 3
+    val s1 = n.toString()
+    val s2 = n.toString
+    val s3 = (n toString)
+    s1 shouldBe s2
+    s2 shouldBe s3
+    s3 shouldBe __
+    // PS: les parenthèses sont souvent omises lorsque la fonction ne prends pas de paramètres (ex: toString)
+    // le reste du temps, mieux vaut conserver les . et () pour plus de clarté
   }
 
 
@@ -140,6 +152,7 @@ class e01_scala_syntax extends HandsOnSuite {
     push("123", "gh", "dev") shouldBe __
     push("123", branch = "dev") shouldBe __
   }
+
 
   exercice("Mise en pratique") {
     // TODO
