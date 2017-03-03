@@ -48,4 +48,12 @@ class e01_Option extends HandsOnSuite {
 
     ageAbsentIncremente shouldBe None
   }
+
+  exercice("flatMap sur une Option") {
+
+  }
+
+  exercice("Pattern matching sur une Option") {
+
+  }
 }
