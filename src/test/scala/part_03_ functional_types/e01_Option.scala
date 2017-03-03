@@ -9,9 +9,9 @@ class e01_Option extends HandsOnSuite {
   /**
     * Option
     *
-    *  Option[T] en scala est un conteneur d'une valeur optionelle de type T
+    *  Option[A] en scala est un conteneur de valeur optionelle de type T
     *  Option a valeur
-    *     * Some[T] => presente le cas ou la valeur est presente
+    *     * Some[A] => presente le cas ou la valeur est presente
     *     * None    => presente l'absence de la valeur
     *
     */
@@ -25,13 +25,26 @@ class e01_Option extends HandsOnSuite {
     val valeurNull : String = null
     val valeurAbsente : Option[String] = Option(valeurNull)
 
-    valeurAbsente  shouldBe None
+    valeurAbsente shouldBe None
 
+  }
+  /**
+    * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner un valeur dpar defaut
+    */
+
+  exercice("Valeur par défaut") {
+
+    val age : Option[Int] = None
+
+    age shouldBe None
+    age.getOrElse(42) shouldBe 42
   }
 
   /**
-    * Comme dans les collections, Option a une fontion Map qui permet d'appliquer une fontion sur la valeur de option
-    * ainsi l'application de la fonction de type A => B sur une Option[A] retournera une Option[B]
+    * Comme pour les collections, Option a une fontion Map qui permet d'appliquer une fontion sur la valeur de option
+    * ainsi l'application de la fonction de type A => B il existe deux  cas :
+    *          * si Some[A], le resultat sera une Some[B]
+    *          * si None le resultat sera un None
     * */
 
   exercice("Appliquer une fonction sur une Option") {
@@ -49,11 +62,34 @@ class e01_Option extends HandsOnSuite {
     ageAbsentIncremente shouldBe None
   }
 
+  /**
+    * Option possède aussi une fonction flatMap, qui prend une fonction de type A => Option[B]
+    * et comme dans le resultat de retour est:
+    *          * si Some[A], le resultat sera une Some[B]
+    *          * si None le resultat sera un None
+    */
+
   exercice("flatMap sur une Option") {
+    // En utilisant la fontion map incrementez l'age
+    val age : Option[Int] = Some(42)
+    val ageIncremente = age.flatMap(x => Option(x+1))
 
+    ageIncremente.get shouldBe 43
+
+    // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
+
+    val ageAbsent : Option[Int] = None
+    val ageAbsentIncremente = ageAbsent.flatMap(x => Option(x+1))
+
+    ageAbsentIncremente shouldBe None
   }
-
+  /**
+    * Some est une case class, alors il est possible d'appliquer du pattern matching
+    */
   exercice("Pattern matching sur une Option") {
-
+    Some("toto") match {
+      case Some(valeur) => print()
+      case None => print()
+    }
   }
 }
