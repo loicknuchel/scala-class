@@ -23,6 +23,10 @@ class e01_scala_syntax extends HandsOnSuite {
     * Dans ce cours on utilisera un raccourci différent, `__`, qu'il faudra remplacer petit à petit
     */
 
+  /**
+    * explication: HandsOnSuite, exercice, shouldBe, __ ...
+    */
+
   exercice("Déclarer une variable") {
     var variable: Int = 5 // permet de déclarer une variable
     val constant: String = "abc" // permet de déclarer une valeur (= constante)
@@ -52,7 +56,7 @@ class e01_scala_syntax extends HandsOnSuite {
     *   - les () et le . sont facultatifs
     */
   exercice("Minimiser le boilerplate") {
-    var name = "Jean" // est inféré en tant que String
+    var name = "Jean" // le type de la variable est inféré en tant que String
     // name = 12 // ne compile pas => type mismatch !
 
     // comme tout est expression et retourne une valeur, le mot clé `return` est facultatif
@@ -76,8 +80,8 @@ class e01_scala_syntax extends HandsOnSuite {
     val s1 = n.toString()
     val s2 = n.toString
     val s3 = (n toString)
-    s1 shouldBe s2
-    s2 shouldBe s3
+    s1 shouldBe __
+    s2 shouldBe __
     s3 shouldBe __
     // PS: les parenthèses sont souvent omises lorsque la fonction ne prends pas de paramètres (ex: toString)
     // le reste du temps, mieux vaut conserver les . et () pour plus de clarté
@@ -97,14 +101,14 @@ class e01_scala_syntax extends HandsOnSuite {
     }
     name shouldBe __
 
-    // comme *tout* est expression et retourne une valeur, c'est aussi le cas des if
+    // comme tout est expression et retourne une valeur, c'est aussi le cas des if
     // et comme pour les fonctions, les `{}` sont optionnelles dans le cas d'une expression unique
     name = if(num < 4) "Luc" else if(num == 4) "Jean" else "Jules"
     name shouldBe __
 
     // passons maintenant à la bonne vieille boucle for...
     var res = 0
-    for(i <- 1 to 5) {
+    for(i <- 3 to 5) {
       res += i
     }
     res shouldBe __
@@ -130,15 +134,15 @@ class e01_scala_syntax extends HandsOnSuite {
     def buildReference(project: String, branch: String, commit: String, shortForm: Boolean): String =
       if(shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"
 
-    val ref1 = buildReference("scala-class", "solutions", "cd959defd71f36f822dbd741085696b508549763", true)
+    val ref1 = buildReference("scala-class", "problems", "cd959defd71f36f822dbd741085696b508549763", true)
     val ref2 = buildReference(
-      shortForm = true,
+      shortForm = false,
       project = "scala-class",
       branch = "solutions",
       commit = "cd959defd71f36f822dbd741085696b508549763"
     )
-    ref1 shouldBe ref2
     ref1 shouldBe __
+    ref2 shouldBe __
 
 
     // Il est aussi possible de définir des paramètres par défaut lorsqu'il y a une valeur "évidente"

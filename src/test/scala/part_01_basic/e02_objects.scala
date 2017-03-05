@@ -29,9 +29,11 @@ class e02_objects extends HandsOnSuite {
 
     val p1 = new Point(1, 2)
     val p2 = new Point(1, 2)
-    // corrige la classe pour que ces assertions soient correctes
-    p1 shouldBe p2
+    // corrige la classe Point pour que ces assertions soient correctes
+    p1 == p2 shouldBe true
     p2.toString shouldBe "Point(1,2)"
+
+    // TIP1: look at hashCode/equals, intellij can generate them...
   }
 
 
@@ -46,25 +48,27 @@ class e02_objects extends HandsOnSuite {
 
     // - implémente la méthode `move()`
 
-    // val p1 = new Point(1, 2)
-    // p1.move(2, 2)
-    // p1.x shouldBe 1 // la classe étant immutable elle ne doit pas pouvoir être modifiée
+    // p.move(2, 2)
+    // p.x shouldBe 1 // la classe étant immutable elle ne doit pas pouvoir être modifiée
+
+    // val p1 = p.move(2, 1)
+    // p1.x shouldBe 3
 
 
     // - implémente la méthode `copy()` qui permettra de créer une nouvelle classe en modifiant un ou plusieurs paramètres
 
-    // val p2 = p1.copy(3, 4)
+    // val p2 = p.copy(3, 4)
     // p2.x shouldBe 3
     // p2.y shouldBe 4
-    // val p3 = p1.copy(x = 5)
+    // val p3 = p.copy(x = 5)
     // p3.x shouldBe 5
     // p3.y shouldBe 2
-    // val p4 = p1.copy(y = 6)
+    // val p4 = p.copy(y = 6)
     // p4.x shouldBe 1
     // p4.y shouldBe 6
 
 
-    // TIP1: une constante ne peut être modifiée
+    // TIP1: une valeur ne peut être modifiée
     // TIP2: si on ne peut modifier l'objet, alors il faut en créer un nouveau
     // TIP3: les paramètres nommés et valeurs par défaut seront très utiles ici
   }
@@ -89,8 +93,8 @@ class e02_objects extends HandsOnSuite {
 
     val p = Point(1, 2)
     // p.x = 3 // ne compile pas
-    p.x shouldBe __
-    val p1 = p.move(2, 2)
+
+    val p1 = p.move(2, 1)
     p.x shouldBe __
     p1.x shouldBe __
 
@@ -105,7 +109,7 @@ class e02_objects extends HandsOnSuite {
     p4.y shouldBe __
     p4.toString shouldBe __
 
-    // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une API fluent naturellement
+    // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
     // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
 
     // PS: pour aller plus loin avec les case class et comprendre pourquoi on ne met pas de `new` devant, rendez-vous ???
@@ -113,7 +117,7 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Le langage Scala n'a pas de concept de `static`. A la place il propose de `object` aussi nommés objet companions.
+    * Le langage Scala n'a pas de concept de `static`. A la place il propose des `object` aussi nommés objet companions lorsqu'ils accompagnent une case class
     * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel code.
     */
   exercice("Des 'object' pour remplacer static") {
