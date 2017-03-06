@@ -1,4 +1,4 @@
-package part_01_basic
+package exercices
 
 import support.HandsOnSuite
 

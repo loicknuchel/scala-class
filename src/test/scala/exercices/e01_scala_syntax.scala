@@ -1,4 +1,4 @@
-package part_01_basic
+package exercices
 
 import support.HandsOnSuite
 
@@ -24,7 +24,7 @@ class e01_scala_syntax extends HandsOnSuite {
     */
 
   /**
-    * explication: HandsOnSuite, exercice, shouldBe, __ ...
+    * explication: HandsOnSuite, exercice, shouldBe, __, ??? ...
     */
 
   exercice("Déclarer une variable") {

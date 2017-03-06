@@ -1,4 +1,4 @@
-package part_01_basic
+package exercices
 
 import support.HandsOnSuite
 
@@ -69,19 +69,48 @@ class e03_collections extends HandsOnSuite {
     // Nil
     // append elt
     // headOption
-    // map
-    // _ shorthand
-    // filter
+
+    // La fonction `.map(f: A => B): List[B]` sert à transformer les éléments d'une liste
+    // c'est une fonction d'ordre suppérieur car elle prend une autre fonction en paramètre
+    // cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#map[B](f:A=>B):List[B]
+    numbers.map(n => n.toString) shouldBe __
+    numbers.map(???) shouldBe List(4, 8, 12)
+
+    // La fonction `.filter(p: A => Boolean): List[A]` sert à sélectionner certains éléments d'une liste
+    // le résultat sera une liste avec uniquement les éléments qui auront renvoyé `true`
+    numbers.filter(n => n > 3) shouldBe __
+    numbers.filter(_ > 3) shouldBe __
+    // le `_` dans une lambda représente le paramètre de la fonction
+    // c'est très pratique lorsque les expressions sont simple cependant il n'est pas toujours possible de l'utiliser, par exemple lors d'une double condition
+
+    // La fonction `.find(p: A => Boolean): Option[A]` sert trouver un élément dans une liste
+    // elle renvoit le premier élément qui renvoit `true` pour la condition
+    // on note qu'elle ne renvoit pas l'élément mais une Option[A] car l'élément peut être présent ou pas (cf l'exercice suivant)
+    numbers.find(_ == 2).get shouldBe __
+    numbers.find(_ > 3).get shouldBe __
   }
 
   /**
-    * Hiérarchie pour Option :
+    * Une Option[A] est un type qui représente la présence ou l'absence d'un élément (de type A)
+    * C'est ce qui est utilisé en Scala pour éviter les `null` et les exceptions
     *
-    *    Option
-    *      |
-    *   +--+--+
-    *   |     |
-    * Some   None
+    * Le type Option[A] est une classe abstraite qui comporte deux sous-types : Some[A] (si l'élément est présent) et None (sinon)
+    *
+    *      Option
+    *        |
+    *    +---+---+
+    *    |       |
+    * Some[A]   None
+    *
+    * Ses principales fonctions sont :
+    *   - .isEmpty / .nonEmpty      : pour tester si l'élément est présent ou non
+    *   - .get                      : pour accéder à l'élément de manière risquée (lance une exception dans le cas de None)
+    *   - .getOrElse(default: A)    : pour accéder à l'élément ou à une valeur par défaut en cas de None
+    *   - .orElse(other: Option[A]) : permet de "concaténer" une autre option (le premier élément sinon le deuxième sinon None)
+    *   - .map(f: A => B)           : pour transformer le contenu sans l'extraire (sans effet dans le cas de None)
+    *   - toutes les fonctions des collections (similaire à une liste d'un seul élément)
+    *
+    * cf: https://www.scala-lang.org/api/current/scala/Option.html
     */
   exercice("Option") {
     // Option
