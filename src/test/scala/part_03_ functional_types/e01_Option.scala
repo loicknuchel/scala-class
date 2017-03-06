@@ -29,7 +29,7 @@ class e01_Option extends HandsOnSuite {
 
   }
   /**
-    * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner un valeur dpar defaut
+    * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur dpar defaut
     */
 
   exercice("Valeur par défaut") {
