@@ -173,6 +173,7 @@ class e02_objects extends HandsOnSuite {
 
   exercice("Les tuples") {
     // TODO
+    // pair._1
   }
 
 

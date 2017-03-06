@@ -25,6 +25,9 @@ class e01_scala_syntax extends HandsOnSuite {
 
   /**
     * explication: HandsOnSuite, exercice, shouldBe, __, ??? ...
+    * TIP: useful intellij shortcuts :
+    *   - alt =        : get expression type
+    *   - ctrl maj F10 : run test
     */
 
   exercice("Déclarer une variable") {

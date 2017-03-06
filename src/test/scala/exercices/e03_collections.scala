@@ -1,23 +1,9 @@
 package exercices
 
+import org.joda.time.DateTime
 import support.HandsOnSuite
 
 class e03_collections extends HandsOnSuite {
-  /**
-    * List
-    * map
-    *   _
-    * filter
-    * find
-    *   Option
-    * groupBy
-    *   Map
-    * flatMap
-    * reduce
-    *
-    * bonus: covariance
-    */
-
   /**
     * Passons maintenant aux collections qui sont souvent au coeur de notre code
     *
@@ -27,21 +13,21 @@ class e03_collections extends HandsOnSuite {
     *
     * Voici la hierarchie (non-exhaustive) des collections Scala :
     *
-    *                                               Traversable
-    *                                                   |
-    *                                                Iterable
-    *                                                   |
-    *                  +--------------------------------+--------------------------+
-    *                  |                                |                          |
-    *                 Seq                              Map                        Set
-    *                  |                                |                          |
-    *         +--------+----------+             +-------+--------+         +-------+--------+
-    *         |                   |             |       |        |         |       |        |
-    *     LinearSeq           IndexedSeq     HashMap ListMap SortedMap  HashSet ListSet SortedSet
-    *         |                   |                              |                          |
-    *   +-----+-----+      +------+-----+                        |                          |
-    *   |     |     |      |      |     |                        |                          |
-    * List Stream Queue Vector String Range                   TreeMap                    TreeSet
+    *                                            Traversable
+    *                                                |
+    *                                             Iterable
+    *                                                |
+    *                  +-----------------------------+--------------------------+
+    *                  |                             |                          |
+    *                 Seq                           Map                        Set
+    *                  |                             |                          |
+    *         +--------+----------+          +-------+--------+         +-------+--------+
+    *         |                   |          |       |        |         |       |        |
+    *     LinearSeq           IndexedSeq  HashMap ListMap SortedMap  HashSet ListSet SortedSet
+    *         |                   |                           |                          |
+    *   +-----+-----+      +------+-----+                     |                          |
+    *   |     |     |      |      |     |                     |                          |
+    * List Stream Queue Vector String Range                TreeMap                    TreeSet
     *
     * Plus d'infos : http://docs.scala-lang.org/overviews/collections/overview.html
     */
@@ -51,7 +37,7 @@ class e03_collections extends HandsOnSuite {
     * Le premier étant la liste vide et le second un élément contenant une valeur (head) et une liste (tail).
     * Mais le plus souvent nous n'interragissons pas directement avec cette implémentation...
     *
-    * L'API List : http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
+    * cf http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
     */
   exercice("Manipuler une liste immutable") {
     val numbers: List[Int] = List(2, 4, 6)
@@ -90,17 +76,20 @@ class e03_collections extends HandsOnSuite {
     numbers.find(_ > 3).get shouldBe __
   }
 
+
   /**
-    * Une Option[A] est un type qui représente la présence ou l'absence d'un élément (de type A)
-    * C'est ce qui est utilisé en Scala pour éviter les `null` et les exceptions
+    * L'une des erreurs les plus difficiles à éviter est le bien connu NullPointerException
+    * Une solution très simple à ce problème est de simplement interdire les `null`...
+    * C'est ce que fait Scala en proposant le type Option[A] pour représenter l'absence de valeur
+    * (null existe toujours pour la compatibilité JVM mais il ne doit JAMAIS être utilisé !)
     *
     * Le type Option[A] est une classe abstraite qui comporte deux sous-types : Some[A] (si l'élément est présent) et None (sinon)
     *
-    *      Option
-    *        |
-    *    +---+---+
-    *    |       |
-    * Some[A]   None
+    *    Option[A]
+    *       |
+    *   +---+---+
+    *   |       |
+    * Some[A]  None
     *
     * Ses principales fonctions sont :
     *   - .isEmpty / .nonEmpty      : pour tester si l'élément est présent ou non
@@ -113,14 +102,103 @@ class e03_collections extends HandsOnSuite {
     * cf: https://www.scala-lang.org/api/current/scala/Option.html
     */
   exercice("Option") {
-    // Option
-    // no null
+    val firstName = Some("Jean")
+
+    firstName.isEmpty shouldBe __
+    firstName.nonEmpty shouldBe __
+    firstName.getOrElse("empty") shouldBe __
+    firstName.orElse(Some("other")) shouldBe __
+    firstName.map(_.length) shouldBe __
+    firstName.get shouldBe __
+
+    val lastName: Option[String] = None
+
+    lastName.isEmpty shouldBe __
+    lastName.nonEmpty shouldBe __
+    lastName.getOrElse("empty") shouldBe __
+    lastName.orElse(Some("other")) shouldBe __
+    lastName.map(_.length) shouldBe __
+    assertThrows[NoSuchElementException] {
+      lastName.get
+    }
   }
 
-  exercice("Toujours plus de manipulation de List") {
-    // group by
-    // Map
-    // Map.map : ._1, case
-    // flatMap
+
+  /**
+    * Comme dans beaucoup de langages Scala a une collection Map[A, B] qui associe une clé A à une valeur B
+    * Map étant une collection, les méthodes qu'on a vu s'appliques comme pour les listes
+    */
+  exercice("Map") {
+    val states = Map("fr" -> "France", "be" -> "Belgique", "en" -> "Angleterre")
+    states.get("fr") shouldBe __
+    // l'élément du .map() est un tuple avec la clé et la valeur
+    states.map(state => (state._1, state._2.length)) shouldBe __
+    // on le verra plus tard mais il est possible d'extraire directement les éléments du tuple grâce au pattern matching :)
+    states.map { case (code, name) => (code, name.length) } shouldBe __
+
+    // .toList & .toMap
   }
+
+
+  /**
+    * L'API des collections en Scala est très riche et permet de manipuler facilement les données
+    * Voici quelques fonctions très utiles mais n'hésitez pas à consulter l'API complète : http://www.scala-lang.org/api/current/scala/collection/Traversable.html
+    */
+  exercice("Toujours plus de manipulation de List") {
+    val words = List("table", "chaise", "bureau", "écran", "ordinateur")
+
+    val wordsByLength: Map[Int, List[String]] = words.groupBy(_.length)
+    wordsByLength.get(5) shouldBe Some(List("table", "écran"))
+
+    // group by
+    // flatMap
+    // reduce
+  }
+
+
+  /**
+    * Voyons comment mettre en pratique ces manipulations de données
+    */
+  exercice("Mise en application") {
+    import models.devoxx.basic._
+    val talks = List(
+      Talk("BBV-277", Conference, "Le bon testeur il teste...", "Pourquoi proposer une nouvelle conférence sur les tests ?", List("6cbb41adbc049f923c4327ed3642f208faf4e03f", "5926b150dbddc5ae5214ad045de64d806306ed67"))
+    )
+    val speakers = List(
+      Speaker("6cbb41adbc049f923c4327ed3642f208faf4e03f", "Agnès", "Crepet", "fr"),
+      Speaker("5926b150dbddc5ae5214ad045de64d806306ed67", "Guillaume", "Ehret", "fr")
+    )
+
+    // récupérer la liste des speakers pour un talk
+    def getTalkSpeakers(talk: Talk, speakers: List[Speaker]): List[Speaker] = {
+      speakers.filter(s => talk.speakers.contains(s.uuid))
+    }
+    getTalkSpeakers(talks.head, speakers).map(_.uuid) shouldBe talks.head.speakers
+
+    // associer les talks à leur salle
+    def getRoomTalks(slots: List[Slot], talks: List[Talk]): Map[RoomId, List[Talk]] = {
+      slots.groupBy(_.room).map { case (id, roomSlots) =>
+        (id, roomSlots.flatMap(s => talks.find(_.id == s.talk)))
+      }
+    }
+
+    // extraire la liste des salles et horaires pour un speaker
+    def speakerSchedule(slots: List[Slot], talks: List[Talk], speaker: SpeakerId): List[(DateTime, DateTime, RoomId)] = {
+      slots.filter { s =>
+        talks
+          .find(_.id == s.talk)
+          .exists(t => t.speakers.contains(speaker))
+      }.map(s => (s.from, s.to, s.room))
+    }
+
+    // déterminer où se trouve un speaker à une heure précise
+    def whereIsCharlie(slots: List[Slot], talks: List[Talk], speaker: SpeakerId, time: DateTime): Option[RoomId] = {
+      speakerSchedule(slots, talks, speaker)
+        .find { case (from, to, room) => from.isBefore(time) && to.isAfter(time) }
+        .map(_._3)
+    }
+
+  }
+
+  // Bonus: covariance
 }
