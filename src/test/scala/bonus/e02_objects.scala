@@ -41,6 +41,7 @@ class e02_objects extends HandsOnSuite{
     // C'est ce mécanisme qui est utilisé pour les case class afin de pouvoir les créer sans ajouter le mot clé new, apply() jouant le rôle de constructeur
     class NormalClass(val key: String, val value: Int)
     new NormalClass("key", 5).key shouldBe __
+    // NormalClass.apply("key", 5).key shouldBe __ // ne compile pas
     // NormalClass("key", 5).key shouldBe __ // ne compile pas
 
     class ApplyClass(val key: String, val value: Int)
@@ -48,13 +49,16 @@ class e02_objects extends HandsOnSuite{
       def apply(key: String, value: Int): ApplyClass = new ApplyClass(key, value)
     }
     new ApplyClass("key", 5).key shouldBe __
+    ApplyClass.apply("key", 5).key shouldBe __
     ApplyClass("key", 5).key shouldBe __
 
     case class CaseClass(key: String, value: Int)
-    CaseClass("key", 5) == CaseClass.apply("key", 5) shouldBe __
-    CaseClass("key", 5) == new CaseClass("key", 5) shouldBe __
+    new CaseClass("key", 5).key shouldBe __
+    CaseClass.apply("key", 5).key shouldBe __
+    CaseClass("key", 5).key shouldBe __
 
-    // Pour unapply() c'est assez similaire, elle est sert d'extracteur (c'est l'inverse d'un constructeur, il permet d'extraire les valeurs d'une classe)
+    // Pour unapply() c'est assez similaire, elle est sert d'extracteur
+    // c'est l'inverse d'un constructeur, il permet d'extraire les valeurs d'une classe
     val normalClass = new NormalClass("key", 5)
     // val NormalClass(uKey, uValue) = normalClass // ne compile pas
 
@@ -68,9 +72,9 @@ class e02_objects extends HandsOnSuite{
     uValue shouldBe __
 
     val caseClass = CaseClass("key", 5)
-    val CaseClass(key, value) = caseClass
-    key shouldBe __
-    value shouldBe __
+    val CaseClass(cKey, cValue) = caseClass
+    cKey shouldBe __
+    cValue shouldBe __
 
     // en conclusion, une case class est une classe tout à faire "normale" qui possède certaines méthodes implémentées par défaut (equals, toString, copy...)
     // ainsi qu'un object companion qui lui sert de constructeur / extracteur
