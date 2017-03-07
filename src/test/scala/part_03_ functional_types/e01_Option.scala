@@ -48,9 +48,11 @@ class e01_Option extends HandsOnSuite {
     * */
 
   exercice("Appliquer une fonction sur une Option") {
+    val room2 = RoomRepository.getRoomById(2)
+    val room1 = RoomRepository.getRoomById(15)
+
     // En utilisant la fontion map incrementer l'age
-    val age : Option[Int] = Some(42)
-    val ageIncremente = age.map(x => x+1)
+    val ageIncremente = room2.map(room => room)
 
     ageIncremente.get shouldBe 43
 
@@ -90,6 +92,16 @@ class e01_Option extends HandsOnSuite {
     Some("toto") match {
       case Some(valeur) => print()
       case None => print()
+    }
+  }
+
+  object RoomRepository{
+
+    def getRoomById(id: RoomId): Option[Room] {
+      if(id < 8 )
+        new Some(Room(id,s"salle$id"))
+      else
+        None
     }
   }
 }
