@@ -71,8 +71,8 @@ class e01_scala_syntax extends HandsOnSuite {
     // lorsqu'on a une seule instruction, elles peuvent être omises aussi
     def mult(a: Int, b: Int): Int = a * b
 
-    // enfin, l'inférence de type fonctionne aussi pour les fonctions
-    // mais il est préférable de fixer "manuellement" le type de retour pour ne pas avoir de mauvaises surprises
+    // enfin, l'inférence de type fonctionne aussi pour le type de retour des fonctions
+    // mais il est préférable de le fixer "manuellement" pour ne pas avoir de mauvaises surprises
     def div(a: Int, b: Int) = a / b
     // name = div(4, 2) // ne compile pas => type mismatch !
 
@@ -130,7 +130,7 @@ class e01_scala_syntax extends HandsOnSuite {
 
 
   exercice("Astuces pratiques") {
-    // parfois on crée des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
+    // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
     // Il est alors facile de se tromper dans l'ordre et assez difficile ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
 

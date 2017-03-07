@@ -48,7 +48,7 @@ class e02_objects extends HandsOnSuite {
 
     // - implémente la méthode `move()`
 
-    // p.move(2, 2)
+    // p.move(2, 1)
     // p.x shouldBe 1 // la classe étant immutable elle ne doit pas pouvoir être modifiée
 
     // val p1 = p.move(2, 1)
@@ -76,12 +76,12 @@ class e02_objects extends HandsOnSuite {
 
   /**
     * Scala propose des `case class` qui sont des classes ordinaires mais avec quelques différences :
-    *   - un certain nombre de méthodes directement implémentées :
+    *   - un certain nombre de méthodes sont directement implémentées :
     *     * equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
-    *     * toString : réimplémenté pour afficher la classe et son contenu plutôt que son adresse
-    *     * copy : qui permet de créer une nouvelle classe en modifiant quelques attributs
-    *     * eq : permet de tester une égalité de référence
-    *   - se construit un peu différemment (cf doc/e02_objects.md) et ne nécessite pas de mot clé `new` à l'instantiation
+    *     * toString          : affiche la classe et son contenu plutôt que son adresse
+    *     * copy              : permet de créer une nouvelle classe en modifiant quelques attributs
+    *     * eq                : permet de tester une égalité de référence
+    *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
     * Toutes ces particularités rendent les case class très pratiques pour modéliser les données
@@ -121,9 +121,13 @@ class e02_objects extends HandsOnSuite {
     * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel code.
     */
   exercice("Des 'object' pour remplacer static") {
+
     object Utils {
+      def apply(x: Int): Int = x
       def toUpper(str: String): String = str.toUpperCase
     }
+
+    val res = Utils(2)
 
     Utils.toUpper("test") shouldBe __
 
