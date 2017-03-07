@@ -33,7 +33,7 @@ class e03_collections extends HandsOnSuite {
     */
 
   /**
-    * Les listes Scala sont composés de deux classes : `Nil` et `::`.
+    * Les listes Scala sont composés de deux classes : `Nil` et `::` (appelé Cons).
     * Le premier étant la liste vide et le second un élément contenant une valeur (head) et une liste (tail).
     * Mais le plus souvent nous n'interragissons pas directement avec cette implémentation...
     *
@@ -197,8 +197,5 @@ class e03_collections extends HandsOnSuite {
         .find { case (from, to, room) => from.isBefore(time) && to.isAfter(time) }
         .map(_._3)
     }
-
   }
-
-  // Bonus: covariance
 }
