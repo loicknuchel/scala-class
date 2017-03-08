@@ -127,11 +127,9 @@ class e02_objects extends HandsOnSuite {
       def toUpper(str: String): String = str.toUpperCase
     }
 
-    val res = Utils(2)
-
     Utils.toUpper("test") shouldBe __
 
-    // on les trouve souvent associés à des case class pour contenir les fonctions utilitaires non liées à l'instance de la classe
+    // on trouve souvent les object associés à des case class pour contenir les fonctions utilitaires non liées à l'instance de la classe
     object User {
       def fromFullName(fullName: String): User = {
         val parts = fullName.split(" ")
