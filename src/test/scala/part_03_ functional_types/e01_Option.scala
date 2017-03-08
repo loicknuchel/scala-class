@@ -1,7 +1,8 @@
+package exercices
 
 import support.HandsOnSuite
 import org.scalatest.Matchers._
-
+import models.devoxx.basic.Room
 import scala.None
 
 class e01_Option extends HandsOnSuite {
@@ -48,20 +49,24 @@ class e01_Option extends HandsOnSuite {
     * */
 
   exercice("Appliquer une fonction sur une Option") {
-    val room2 = RoomRepository.getRoomById(2)
-    val room1 = RoomRepository.getRoomById(15)
 
-    // En utilisant la fontion map incrementer l'age
-    val ageIncremente = room2.map(room => room)
+    // chercher dans la base de donnée la salle avec un id = 2
+    val room2 : Option[Room] = RoomRepository.getRoomById("2")
 
-    ageIncremente.get shouldBe 43
+    // En utilisant la fontion map recuperer le nom de la salle
+    val room2Name = room2.map(room => room.name)
+
+    room2Name.get shouldBe "salle2"
+
+    // recuperer la salle 15, sachant que la salle 15  n'existe pas
+    val room15 = RoomRepository.getRoomById("15")
+
+    room15 shouldBe None
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
+    val room15Name = room15.map(room => room.name)
 
-    val ageAbsent : Option[Int] = None
-    val ageAbsentIncremente = ageAbsent.map(x => x + 1)
-
-    ageAbsentIncremente shouldBe None
+    room15Name shouldBe None
   }
 
   /**
@@ -73,33 +78,47 @@ class e01_Option extends HandsOnSuite {
 
   exercice("flatMap sur une Option") {
     // En utilisant la fontion map incrementez l'age
-    val age : Option[Int] = Some(42)
-    val ageIncremente = age.flatMap(x => Option(x+1))
+    val room3 : Option[Room] = RoomRepository.getRoomById("3")
 
-    ageIncremente.get shouldBe 43
+    // recuperer la capacité de la room 3 en utilsiant la fonction RoomRepository.getCapacite(room :Room)
+    // la fonction def getCapacite(room) return une  Option[Int]
+    val capaciteRoom3 = room3.flatMap( room => RoomRepository.getCapacite(room) )
+
+    capaciteRoom3.get shouldBe 30
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
+    val room5 : Option[Room] = RoomRepository.getRoomById("5")
+    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room) )
 
-    val ageAbsent : Option[Int] = None
-    val ageAbsentIncremente = ageAbsent.flatMap(x => Option(x+1))
-
-    ageAbsentIncremente shouldBe None
+    capaciteRoom5 shouldBe None
   }
+
   /**
     * Some est une case class, alors il est possible d'appliquer du pattern matching
     */
   exercice("Pattern matching sur une Option") {
-    Some("toto") match {
-      case Some(valeur) => print()
-      case None => print()
+    //en appliquant le pattern matching afficher dans le consolle le nom de la salle
+    val room3 : Option[Room] = RoomRepository.getRoomById("3")
+
+    room3 match {
+      case Some(room) => println(room.name)
+      case None => println("la salle n'exciste pas")
     }
+
   }
 
   object RoomRepository{
 
-    def getRoomById(id: RoomId): Option[Room] {
-      if(id < 8 )
-        new Some(Room(id,s"salle$id"))
+    def getRoomById(id: String): Option[Room] = {
+      if(id.toInt < 8 )
+        Some(Room(id,s"salle$id", Some(id.toInt * 10)))
+      else
+        None
+    }
+
+    def getCapacite(room :Room) : Option[Int] = {
+      if(room.id.toInt < 4)
+        room.capacite
       else
         None
     }

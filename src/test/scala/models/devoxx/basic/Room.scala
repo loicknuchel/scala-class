@@ -2,5 +2,6 @@ package models.devoxx.basic
 
 case class Room(
                  id: RoomId,
-                 name: String
+                 name: String,
+                 capacite : Option[Int]
                )
