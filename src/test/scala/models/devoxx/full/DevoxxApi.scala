@@ -8,43 +8,61 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 object DevoxxApi {
+  val useCache = true
   val baseUrl = "http://cfp.devoxx.fr/api"
   val conference = "DevoxxFR2017"
   val conferenceUrl = s"$baseUrl/conferences/$conference"
+  val roomsUrl = s"$conferenceUrl/rooms/"
+  val schedulesUrl = s"$conferenceUrl/schedules/"
+  def scheduleUrl(day: String) = s"$conferenceUrl/schedules/$day"
+  val speakersUrl = s"$conferenceUrl/speakers"
+  def speakerUrl(id: SpeakerId) = s"$conferenceUrl/speakers/$id"
+  def talkUrl(id: TalkId) = s"$conferenceUrl/talks/$id"
+
+  def getRooms(): Future[List[Room]] =
+    HttpClient.get(roomsUrl, useCache).flatMap(res => parseJson[RoomList](res).toFuture).map(_.rooms)
 
   def getSpeakers(): Future[List[Speaker]] =
-    HttpClient.get(s"$conferenceUrl/speakers").flatMap(res => parseJson[List[Speaker]](res).toFuture)
+    HttpClient.get(speakersUrl, useCache).flatMap(res => parseJson[List[Speaker]](res).toFuture)
 
   def getSpeaker(id: SpeakerId): Future[Speaker] =
-    getSpeakerByUrl(s"$conferenceUrl/speakers/$id")
+    getSpeakerByUrl(speakerUrl(id))
 
   def getSpeaker(link: LinkWithName): Future[Speaker] =
     getSpeakerByUrl(link.link.href)
 
   private def getSpeakerByUrl(url: String): Future[Speaker] =
-    HttpClient.get(url).flatMap(res => parseJson[Speaker](res).toFuture)
+    HttpClient.get(url, useCache).flatMap(res => parseJson[Speaker](res).toFuture)
 
   def getTalk(id: TalkId): Future[Talk] =
-    getTalkByUrl(s"$conferenceUrl/talks/$id")
+    getTalkByUrl(talkUrl(id))
 
   def getTalk(link: LinkWithName): Future[Talk] =
     getTalkByUrl(link.link.href)
 
   private def getTalkByUrl(url: String): Future[Talk] =
-    HttpClient.get(url).flatMap(res => parseJson[Talk](res).toFuture)
+    HttpClient.get(url, useCache).flatMap(res => parseJson[Talk](res).toFuture)
 
   def getSchedules(): Future[List[Link]] =
-    HttpClient.get(s"$conferenceUrl/schedules/").flatMap(res => parseJson[ScheduleList](res).toFuture).map(_.links)
+    HttpClient.get(schedulesUrl, useCache).flatMap(res => parseJson[ScheduleList](res).toFuture).map(_.links)
 
   def getSchedule(day: String): Future[List[Slot]] =
-    getScheduleByUrl(s"$conferenceUrl/schedules/$day")
+    getScheduleByUrl(scheduleUrl(day))
 
   def getSchedule(link: LinkWithName): Future[List[Slot]] =
     getScheduleByUrl(link.link.href)
 
   private def getScheduleByUrl(url: String): Future[List[Slot]] =
-    HttpClient.get(url).flatMap(res => parseJson[Schedule](res).toFuture).map(_.slots)
+    HttpClient.get(url, useCache).flatMap(res => parseJson[Schedule](res).toFuture).map(_.slots)
 
-  def getRooms(): Future[List[Room]] =
-    HttpClient.get(s"$conferenceUrl/rooms/").flatMap(res => parseJson[RoomList](res).toFuture).map(_.rooms)
+  def fillCache(): Future[Unit] = {
+    for {
+      rooms <- HttpClient.getAndSave(roomsUrl).flatMap(res => parseJson[RoomList](res).toFuture).map(_.rooms)
+      schedules <- HttpClient.getAndSave(schedulesUrl).flatMap(res => parseJson[ScheduleList](res).toFuture).map(_.links)
+      slots <- Future.sequence(schedules.map(link => HttpClient.getAndSave(link.href).flatMap(res => parseJson[Schedule](res).toFuture).map(_.slots))).map(_.flatten)
+      speakers <- HttpClient.getAndSave(speakersUrl).flatMap(res => parseJson[List[Speaker]](res).toFuture)
+      _ <- Future.sequence(speakers.map(s => HttpClient.getAndSave(speakerUrl(s.uuid)).flatMap(res => parseJson[Speaker](res).toFuture)))
+      talks <- Future.sequence(slots.flatMap(_.talk).map(t => HttpClient.getAndSave(talkUrl(t.id)).flatMap(res => parseJson[Talk](res).toFuture)))
+    } yield ()
+  }
 }
