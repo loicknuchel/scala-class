@@ -77,10 +77,10 @@ class e02_objects extends HandsOnSuite {
   /**
     * Scala propose des `case class` qui sont des classes ordinaires mais avec quelques différences :
     *   - un certain nombre de méthodes sont directement implémentées :
-    *     * equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
-    *     * toString          : affiche la classe et son contenu plutôt que son adresse
-    *     * copy              : permet de créer une nouvelle classe en modifiant quelques attributs
-    *     * eq                : permet de tester une égalité de référence
+    * * equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
+    * * toString          : affiche la classe et son contenu plutôt que son adresse
+    * * copy              : permet de créer une nouvelle classe en modifiant quelques attributs
+    * * eq                : permet de tester une égalité de référence
     *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
@@ -124,6 +124,7 @@ class e02_objects extends HandsOnSuite {
 
     object Utils {
       def apply(x: Int): Int = x
+
       def toUpper(str: String): String = str.toUpperCase
     }
 
@@ -146,10 +147,12 @@ class e02_objects extends HandsOnSuite {
     // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
     object Person {
       def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
+
       def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
     }
     case class Person(firstName: String, lastName: String) {
       def initials(): String = Person.initials(this)
+
       def trigramme(): String = Person.trigramme(firstName, lastName)
     }
 
@@ -168,7 +171,7 @@ class e02_objects extends HandsOnSuite {
     // abstract val & def, concrete methods (like Java 8 interfaces)
     // can hold state (not Java 8 interfaces)
     // can be used for multiple inheritance
-    
+
     // TODO
   }
 

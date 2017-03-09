@@ -1,5 +1,7 @@
-.idea/
-.DS_Store
+/sbt/repository
+/sbt/sbt
 /project/project/
 /project/target/
 /target/
+.idea/
+.DS_Store

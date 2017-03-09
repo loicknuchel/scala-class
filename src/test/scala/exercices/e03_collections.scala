@@ -173,6 +173,7 @@ class e03_collections extends HandsOnSuite {
     def getTalkSpeakers(talk: Talk, speakers: List[Speaker]): List[Speaker] = {
       speakers.filter(s => talk.speakers.contains(s.uuid))
     }
+
     getTalkSpeakers(talks.head, speakers).map(_.uuid) shouldBe talks.head.speakers
 
     // associer les talks à leur salle

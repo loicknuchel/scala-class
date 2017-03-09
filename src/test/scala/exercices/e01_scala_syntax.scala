@@ -28,10 +28,11 @@ class e01_scala_syntax extends HandsOnSuite {
     * TIP: useful intellij shortcuts :
     *   - alt =        : get expression type
     *   - ctrl maj F10 : run test
-    */
+    **/
 
   exercice("Déclarer une variable") {
-    var variable: Int = 5 // permet de déclarer une variable
+    var variable: Int = 5
+    // permet de déclarer une variable
     val constant: String = "abc" // permet de déclarer une valeur (= constante)
 
     variable = 42 // on peut réassigner une valeur
@@ -74,6 +75,7 @@ class e01_scala_syntax extends HandsOnSuite {
     // enfin, l'inférence de type fonctionne aussi pour le type de retour des fonctions
     // mais il est préférable de le fixer "manuellement" pour ne pas avoir de mauvaises surprises
     def div(a: Int, b: Int) = a / b
+
     // name = div(4, 2) // ne compile pas => type mismatch !
 
     sub(5, 3) shouldBe __
@@ -95,9 +97,9 @@ class e01_scala_syntax extends HandsOnSuite {
     val num = 4
     var name = "Pierre"
 
-    if(num > 6) {
+    if (num > 6) {
       name = "Jacques"
-    } else if(num == 6) {
+    } else if (num == 6) {
       name = "Claude"
     } else {
       name = "Alex"
@@ -106,19 +108,19 @@ class e01_scala_syntax extends HandsOnSuite {
 
     // comme tout est expression et retourne une valeur, c'est aussi le cas des if
     // et comme pour les fonctions, les `{}` sont optionnelles dans le cas d'une expression unique
-    name = if(num < 4) "Luc" else if(num == 4) "Jean" else "Jules"
+    name = if (num < 4) "Luc" else if (num == 4) "Jean" else "Jules"
     name shouldBe __
 
     // passons maintenant à la bonne vieille boucle for...
     var res = 0
-    for(i <- 3 to 5) {
+    for (i <- 3 to 5) {
       res += i
     }
     res shouldBe __
 
     // de la même manière avec une liste
     res = 0
-    for(word <- List("table", "chaise")) {
+    for (word <- List("table", "chaise")) {
       res += word.length
     }
     res shouldBe __
@@ -135,7 +137,7 @@ class e01_scala_syntax extends HandsOnSuite {
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
 
     def buildReference(project: String, branch: String, commit: String, shortForm: Boolean): String =
-      if(shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"
+      if (shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"
 
     val ref1 = buildReference("scala-class", "problems", "cd959defd71f36f822dbd741085696b508549763", true)
     val ref2 = buildReference(
