@@ -6,7 +6,6 @@ import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
 object Helpers {
-  def httpGet(url: String): Future[String] = ??? // TODO
 
   def parseJson[T](json: String)(implicit decoder: Decoder[T]): Try[T] =
     parser.decode[T](json).toTry
