@@ -1,6 +1,8 @@
 package bonus
 
-class e03_collections {
+import support.HandsOnSuite
+
+class e03_collections extends HandsOnSuite {
   /**
     * Covariance
     */

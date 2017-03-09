@@ -8,7 +8,7 @@ import support.HandsOnSuite
   * Les bonus sont des explications facultatives qui permettent d'aller plus loin dans les explications,
   * soit pour montrer des cas plus avancés soit pour expliquer des fonctionnement internes de Scala
   */
-class e02_objects extends HandsOnSuite{
+class e02_objects extends HandsOnSuite {
 
   /**
     * Class
@@ -33,7 +33,7 @@ class e02_objects extends HandsOnSuite{
     // Un `object` possède deux méthodes spéciales qui peuvent être définies : apply() et unapply()
     // Leur particularité est qu'elle peuvent être appelées sans les nommer directement...
     object Add {
-      def apply(a: Int, b: Int): Int = a  + b
+      def apply(a: Int, b: Int): Int = a + b
     }
     Add.apply(5, 6) shouldBe __
     Add(7, 1) shouldBe __

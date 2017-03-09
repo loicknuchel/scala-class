@@ -2,13 +2,18 @@ name := "scala-class"
 
 version := "1.0"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= List(
+  "org.scala-lang" % "scala-reflect" % scalaVersion.value,
+  "org.scala-lang" % "scala-compiler" % scalaVersion.value,
   "joda-time" % "joda-time" % "2.9.7",
   "io.circe" %% "circe-core" % "0.7.0",
   "io.circe" %% "circe-generic" % "0.7.0",
   "io.circe" %% "circe-parser" % "0.7.0",
   "com.typesafe.akka" %% "akka-http" % "10.0.4",
-  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 )
+
+addCommandAlias("go", "~ test-only HandsOnScala")
+addCommandAlias("bonus", "~ test-only HandsOnBonus")
