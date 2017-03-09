@@ -63,6 +63,7 @@ object DevoxxApi {
       speakers <- HttpClient.getAndSave(speakersUrl).flatMap(res => parseJson[List[Speaker]](res).toFuture)
       _ <- Future.sequence(speakers.map(s => HttpClient.getAndSave(speakerUrl(s.uuid)).flatMap(res => parseJson[Speaker](res).toFuture)))
       talks <- Future.sequence(slots.flatMap(_.talk).map(t => HttpClient.getAndSave(talkUrl(t.id)).flatMap(res => parseJson[Talk](res).toFuture)))
-    } yield ()
+    } yield
+      println("cache filled with "+rooms.length+" rooms, "+slots.length+" slots, "+speakers.length+" speakers, "+talks.length+" talks")
   }
 }
