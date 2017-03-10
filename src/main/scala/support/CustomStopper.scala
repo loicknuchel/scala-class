@@ -1,4 +1,4 @@
-package support.scalatest
+package support
 
 import org.scalatest.Stopper
 

@@ -1,4 +1,4 @@
-package support.scalatest
+package recorder
 
 class CustomTestPendingException extends Exception(new NotImplementedError)
 

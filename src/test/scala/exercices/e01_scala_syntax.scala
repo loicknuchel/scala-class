@@ -39,8 +39,8 @@ class e01_scala_syntax extends HandsOnSuite {
     //constant = "def" // mais pas une valeur (immutable FTW !)
     //variable = true // et le type ne doit pas changer
 
-    variable shouldBe __
-    constant shouldBe __
+    variable shouldBe 42
+    constant shouldBe "abc"
   }
 
 

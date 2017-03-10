@@ -1,4 +1,4 @@
-package support.scalatest
+package recorder
 
 import scala.reflect.macros.blackbox.Context
 

@@ -1,10 +1,10 @@
 package support
 
+import org.scalatest._
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.matchers.Matcher
 import org.scalatest.time.{Millis, Seconds, Span}
-import org.scalatest.{Args, Matchers, SucceededStatus}
-import support.scalatest._
+import recorder._
 
 import scala.language.experimental.macros
 

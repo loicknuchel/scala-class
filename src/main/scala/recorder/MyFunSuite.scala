@@ -1,4 +1,4 @@
-package support.scalatest
+package recorder
 
 import org.scalatest.FunSpec
 import org.scalatest.exceptions.TestFailedException

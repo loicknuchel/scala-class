@@ -1,5 +1,6 @@
 import org.scalatest.{Args, Spec, SucceededStatus}
-import support.scalatest.{CustomStopper, ReportToTheStopper}
+import recorder.ReportToTheStopper
+import support.CustomStopper
 
 class HandsOn extends Spec {
   override def run(testName: Option[String], args: Args) = {

@@ -1,4 +1,4 @@
-package support.scalatest
+package recorder
 
 class AnchorRecorder {
   var records: List[AnchorValue] = Nil
