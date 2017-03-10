@@ -2,6 +2,8 @@ package exercices
 
 import support.HandsOnSuite
 
+import scala.language.postfixOps
+
 class e01_scala_syntax extends HandsOnSuite {
   /**
     * Prérequis: merci de lire le README.md pour installer l'environnement nécessaire

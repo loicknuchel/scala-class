@@ -1,10 +1,9 @@
-package recorder
+package support
 
 import org.scalatest.Reporter
 import org.scalatest.events._
-import support.CustomStopper
 
-class ReportToTheStopper(other: Reporter) extends Reporter {
+class CustomReporter(other: Reporter) extends Reporter {
   var failed = false
 
   def headerFail = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"

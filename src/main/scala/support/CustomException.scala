@@ -1,4 +1,4 @@
-package recorder
+package support
 
 class CustomTestPendingException extends Exception(new NotImplementedError)
 

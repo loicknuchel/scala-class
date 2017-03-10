@@ -1,11 +1,10 @@
 import org.scalatest.{Args, Spec, SucceededStatus}
-import recorder.ReportToTheStopper
-import support.CustomStopper
+import support.{CustomStopper, CustomReporter}
 
 class HandsOn extends Spec {
   override def run(testName: Option[String], args: Args) = {
     if(!CustomStopper.oneTestFailed)
-      super.run(testName, args.copy(reporter = new ReportToTheStopper(args.reporter), stopper = CustomStopper))
+      super.run(testName, args.copy(reporter = new CustomReporter(args.reporter), stopper = CustomStopper))
     else
       SucceededStatus
   }

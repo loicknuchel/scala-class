@@ -5,7 +5,6 @@ import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.exceptions.TestFailedException
 import org.scalatest.matchers.Matcher
 import org.scalatest.time.{Millis, Seconds, Span}
-import recorder._
 
 import scala.language.experimental.macros
 
@@ -17,15 +16,11 @@ trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
   implicit val suite: HandsOnSuite = this
   implicit val defaultPatience = PatienceConfig(timeout = Span(5, Seconds), interval = Span(500, Millis))
 
-  def exercice(testName: String)(testFun: Unit)(implicit suite: HandsOnSuite): Unit = macro RecorderMacro.apply
-
-  def testPublic(testName: String)(testFun: => Unit) {
-    it(testName)(testFun)
-  }
+  def exercice(testName: String)(testFun: Unit)(implicit suite: HandsOnSuite): Unit = macro HandsOnMacro.apply
 
   protected override def runTest(testName: String, args: Args) = {
     if (!CustomStopper.oneTestFailed) {
-      super.runTest(testName, args.copy(reporter = new ReportToTheStopper(args.reporter), stopper = CustomStopper))
+      super.runTest(testName, args.copy(reporter = new CustomReporter(args.reporter), stopper = CustomStopper))
     } else {
       SucceededStatus
     }
@@ -34,7 +29,7 @@ trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
 
 object HandsOnSuite {
   def testBody(testName: String, suite: HandsOnSuite)(testFun: => Unit)(context: TestContext) {
-    suite.testPublic(testName)({
+    suite.it(testName) {
       val testExpressionLineStart = context.testStartLine
       val testExpressionLineEnd = context.testEndLine
       lazy val testSourceFile: Array[(String, Int)] = sourceProcessor(context.source)
@@ -99,7 +94,7 @@ object HandsOnSuite {
           throw new MyException(mes, Some(myctx), e, location)
         }
       }
-    })
+    }
   }
 
   private def prettyShow(source: Array[(String, Int)], errorLine: Int): List[String] = {

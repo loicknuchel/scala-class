@@ -16,5 +16,7 @@ libraryDependencies ++= List(
   "org.scalatest" %% "scalatest" % "2.2.6"
 )
 
+scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-Xlog-free-types", "-Xlog-free-terms")
+
 addCommandAlias("go", "~ test-only HandsOnScala")
 addCommandAlias("bonus", "~ test-only HandsOnBonus")
