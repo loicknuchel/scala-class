@@ -16,9 +16,7 @@ trait HandsOnSuite extends MyFunSuite with Matchers with ScalaFutures {
   implicit val suite: MyFunSuite = this
   implicit val defaultPatience = PatienceConfig(timeout = Span(5, Seconds), interval = Span(500, Millis))
 
-  def anchor[A](a: A): Unit = macro RecorderMacro.anchor[A]
-
-  def exercice(testName: String)(testFun: Unit)(implicit suite: MyFunSuite, anchorRecorder: AnchorRecorder): Unit = macro RecorderMacro.apply
+  def exercice(testName: String)(testFun: Unit)(implicit suite: MyFunSuite): Unit = macro RecorderMacro.apply
 
   protected override def runTest(testName: String, args: Args) = {
     // reporter: Reporter, stopper: Stopper, configMap: Map[String, Any], tracker: Tracker) {

@@ -4,30 +4,25 @@ import org.scalatest.FunSpec
 import org.scalatest.exceptions.TestFailedException
 
 trait MyFunSuite extends FunSpec {
-  implicit val anchorRecorder = new AnchorRecorder()
-
   def testPublic(testName: String)(testFun: => Unit) {
     it(testName)(testFun)
   }
 }
 
 object MyFunSuite {
-  def testBody(testName: String, suite: MyFunSuite, anchorRecorder: AnchorRecorder)(testFun: => Unit)(context: TestContext) {
+  def testBody(testName: String, suite: MyFunSuite)(testFun: => Unit)(context: TestContext) {
 
     suite.testPublic(testName)({
       val testExpressionLineStart = context.testStartLine
       val testExpressionLineEnd = context.testEndLine
       lazy val testSourceFile: Array[(String, Int)] = sourceProcessor(context.source)
 
-      anchorRecorder.reset()
-
       def testCtx(errorLine: Int): String = {
-        MyFunSuite.prettyShow(testSourceFile.drop(testExpressionLineStart - 1).take(testExpressionLineEnd - testExpressionLineStart + 2),
-          errorLine, anchorRecorder.records).mkString("\n")
+        MyFunSuite.prettyShow(testSourceFile.drop(testExpressionLineStart - 1).take(testExpressionLineEnd - testExpressionLineStart + 2), errorLine).mkString("\n")
       }
 
       def errorCtx(errorLine: Int): String = {
-        MyFunSuite.prettyShow(testSourceFile.drop(errorLine - 2).take(3), errorLine, anchorRecorder.records).mkString("\n")
+        MyFunSuite.prettyShow(testSourceFile.drop(errorLine - 2).take(3), errorLine).mkString("\n")
       }
 
       def ctx(errorLines: List[Int]): Option[String] = {
@@ -85,21 +80,7 @@ object MyFunSuite {
     })
   }
 
-  def mergeSourceAndAnchor(source: List[(String, Int)], anchorsMessages: List[AnchorValue]): List[(String, Int, Option[String])] = {
-    def anchor(line: Int, anchorsMessages: List[AnchorValue]): Option[String] = {
-      val mess = anchorsMessages.filter(_.line == line)
-        .map(a => a.name + " => " + a.value).mkString("\n")
-      if (mess.trim == "") None else Some(mess)
-    }
-
-    source match {
-      case shead :: stail =>
-        (shead._1, shead._2, anchor(shead._2, anchorsMessages)) :: mergeSourceAndAnchor(stail, anchorsMessages)
-      case _ => Nil
-    }
-  }
-
-  def prettyShow(source: Array[(String, Int)], errorLine: Int, anchorsMessages: List[AnchorValue]): List[String] = {
+  def prettyShow(source: Array[(String, Int)], errorLine: Int): List[String] = {
     def intLen(i: Int) = i.toString.length
 
     val len: Int = 4
@@ -116,9 +97,9 @@ object MyFunSuite {
       }
     }
 
-    mergeSourceAndAnchor(source.toList, anchorsMessages.reverse).map { case (line, number, oanchor) =>
+    source.toList.map { case (line, number) =>
       val prefix: String = if (number == errorLine) " ->" else "   "
-      prefix + completewithspace(number) + " |" + line + oanchor.map(_.split("\n").map(i => "\n         " + spacehead(line) + i).mkString).getOrElse("")
+      prefix + completewithspace(number) + " |" + line
     }
   }
 
