@@ -1,12 +1,24 @@
 # Scala class, the easy way into scala
 
-Plan: https://docs.google.com/document/d/1SuS7f7DldCwCoXO6mcxlwP91x3io6WaBHsYx2KDBsW0/edit?usp=sharing / https://docs.google.com/document/d/14_xrvAbsrQIJSHBSm8HQ6nDl5F-xckQpt_55CrZscLg/edit?usp=sharing
+## Auteurs
 
-## Prerequisites
+- Fabrice
+- Loïc
+- Walid
 
-To do this class you will need to install :
+## Prérequis
 
 - Java 8
 - Scala 2.11
 - Sbt 0.13
 - Intellij (with scala plugins)
+
+## Lancer le handson
+
+- Linux/Max : `./handson`
+- Windows : `handson.bat`
+
+La commande lancera sbt, vous aurez alors deux commandes disponibles :
+
+- `go` pour lancer le handson normal
+- `bonus` pour lancer le handson avec les exercices bonus
