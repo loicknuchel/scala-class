@@ -6,13 +6,12 @@ import org.scalatest.events._
 class CustomReporter(other: Reporter) extends Reporter {
   var failed = false
 
-  def headerFail = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  def footerFail = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  def headerPending = "\n*******************************************\n               TEST PENDING                \n*******************************************"
-  def footerPending = "*******************************************"
+  private val pendingHeader = "\n*******************************************\n               TEST PENDING                \n*******************************************"
+  private val pendingFooter = "*******************************************"
+  private val failureHeader = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  private val failureFooter = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 
   def sendInfo(evt: Event, header: String, suite: String, test: String, location: Option[String], message: Option[String], context: Option[String], footer: String) {
-    var i = 0
     var toto = evt.ordinal.nextNewOldPair._2
 
     def mess(s: String) = {
@@ -40,37 +39,20 @@ class CustomReporter(other: Reporter) extends Reporter {
     sb.append("").append("\n")
     footer.split("\n").foreach(sb.append(_).append("\n"))
 
-
     mess(sb.toString)
 
     CustomStopper.testFailed
   }
 
-  def sendFail(evt: Event, e: MyException, suite: String, test: String) = {
-    sendInfo(evt, headerFail
-      , suite
-      , test
-      , e.fileNameAndLineNumber
-      , Option(e.getMessage)
-      , e.context
-      , footerFail
-    )
-  }
+  def sendFail(evt: Event, e: MyException, suite: String, test: String) =
+    sendInfo(evt, failureHeader, suite, test, e.fileNameAndLineNumber, Option(e.getMessage), e.context, failureFooter)
 
-  def sendPending(evt: Event, e: MyException, suite: String, test: String, mess: Option[String]) = {
-    sendInfo(evt, headerPending
-      , suite
-      , test
-      , e.fileNameAndLineNumber
-      , mess
-      , e.context
-      , footerPending
-    )
-  }
+  def sendPending(evt: Event, e: MyException, suite: String, test: String, mess: Option[String]) =
+    sendInfo(evt, pendingHeader, suite, test, e.fileNameAndLineNumber, mess, e.context, pendingFooter)
 
   def apply(event: Event) {
     event match {
-      case e: TestFailed => {
+      case e: TestFailed =>
         e.throwable match {
           //pour les erreurs d'assertions => sans stacktrace
           case Some(failure: MyTestFailedException) =>
@@ -89,25 +71,10 @@ class CustomReporter(other: Reporter) extends Reporter {
             println("something went wrong ("+e.getClass.getCanonicalName+")")
           //ça non plus, un TestFailed a normalement une excepetion attachée
           case None =>
-            sendInfo(event, headerFail
-              , e.suiteName
-              , e.testName
-              , None
-              , None
-              , None
-              ,
-              footerFail
-            )
+            sendInfo(event, failureHeader, e.suiteName, e.testName, None, None, None, failureFooter)
         }
-      }
       case e: TestPending =>
-        sendInfo(event, headerPending
-          , e.suiteName
-          , e.testName
-          , None
-          , Some("pending")
-          , None
-          , footerPending)
+        sendInfo(event, pendingHeader, e.suiteName, e.testName, None, Some("pending"), None, pendingFooter)
       case e: InfoProvided =>
         if (e.formatter.isDefined) other(event)
       case _: SuiteCompleted | _: SuiteStarting | _: RunCompleted | _: RunStopped | _: TestStarting | _: TestSucceeded =>
