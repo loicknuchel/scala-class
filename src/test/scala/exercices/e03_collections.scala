@@ -118,7 +118,7 @@ class e03_collections extends HandsOnSuite {
     lastName.getOrElse("empty") shouldBe __
     lastName.orElse(Some("other")) shouldBe __
     lastName.map(_.length) shouldBe __
-    assertThrows[NoSuchElementException] {
+    intercept[NoSuchElementException] {
       lastName.get
     }
   }

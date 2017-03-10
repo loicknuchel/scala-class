@@ -12,7 +12,7 @@ libraryDependencies ++= List(
   "io.circe" %% "circe-generic" % "0.7.0",
   "io.circe" %% "circe-parser" % "0.7.0",
   "com.typesafe.akka" %% "akka-http" % "10.0.4",
-  "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+  "org.scalatest" %% "scalatest" % "2.2.6"
 )
 
 addCommandAlias("go", "~ test-only HandsOnScala")

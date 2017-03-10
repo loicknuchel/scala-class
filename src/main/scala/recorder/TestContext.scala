@@ -1,4 +1,4 @@
-package support.scalatest
+package recorder
 
 import scala.annotation.switch
 import scala.collection.mutable.ArrayBuffer

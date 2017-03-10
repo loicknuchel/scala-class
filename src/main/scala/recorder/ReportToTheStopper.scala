@@ -1,14 +1,15 @@
-package support.scalatest
+package recorder
 
 import org.scalatest.Reporter
 import org.scalatest.events._
+import support.CustomStopper
 
 class ReportToTheStopper(other: Reporter) extends Reporter {
   var failed = false
 
-  def headerFail = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  def headerFail = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   def footerFail = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  def headerPending = "*******************************************\n               TEST PENDING                \n*******************************************"
+  def headerPending = "\n*******************************************\n               TEST PENDING                \n*******************************************"
   def footerPending = "*******************************************"
 
   def sendInfo(evt: Event, header: String, suite: String, test: String, location: Option[String], message: Option[String], context: Option[String], footer: String) {
@@ -86,7 +87,7 @@ class ReportToTheStopper(other: Reporter) extends Reporter {
             sendFail(event, failure, e.suiteName, e.testName)
           //ça ne devrait pas arriver
           case Some(e) =>
-            println("something went wrong")
+            println("something went wrong ("+e.getClass.getCanonicalName+")")
           //ça non plus, un TestFailed a normalement une excepetion attachée
           case None =>
             sendInfo(event, headerFail
@@ -111,6 +112,7 @@ class ReportToTheStopper(other: Reporter) extends Reporter {
       case e: InfoProvided =>
         if (e.formatter.isDefined) other(event)
       case _: SuiteCompleted | _: SuiteStarting | _: RunCompleted | _: RunStopped | _: TestStarting | _: TestSucceeded =>
+        other(event)
       case _ =>
         println(event)
         other(event)

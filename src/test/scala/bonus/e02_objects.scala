@@ -9,6 +9,7 @@ import support.HandsOnSuite
   * soit pour montrer des cas plus avancés soit pour expliquer des fonctionnement internes de Scala
   */
 class e02_objects extends HandsOnSuite {
+  implicit val r = anchorRecorder
 
   /**
     * Class
