@@ -1,24 +1,19 @@
 package recorder
 
+import support.HandsOnSuite
+
 import scala.reflect.macros.blackbox.Context
 
 class RecorderMacro[C <: Context](val c: C) {
-
   import c.universe._
 
-  def apply(testName: c.Expr[String])
-           (testFun: c.Expr[Unit])
-           (suite: c.Expr[MyFunSuite]): c.Expr[Unit] = {
-
+  def apply(testName: c.Expr[String])(testFun: c.Expr[Unit])(suite: c.Expr[HandsOnSuite]): c.Expr[Unit] = {
     val texts = getTexts(testFun.tree)
     val content = texts._1
     val start = texts._2
     val end = texts._3
 
-    c.Expr(
-      q"""recorder.MyFunSuite.testBody($testName, $suite)($testFun)(new recorder.TestContext(
-      $content, $start, $end))
-     """)
+    c.Expr(q"""support.HandsOnSuite.testBody($testName, $suite)($testFun)(new recorder.TestContext($content, $start, $end))""")
   }
 
   def getTexts(recording: Tree): (String, Int, Int) = {
@@ -38,9 +33,7 @@ class RecorderMacro[C <: Context](val c: C) {
 
 
 object RecorderMacro {
-  def apply(c: Context)(testName: c.Expr[String])
-           (testFun: c.Expr[Unit])
-           (suite: c.Expr[MyFunSuite]): c.Expr[Unit] = {
+  def apply(c: Context)(testName: c.Expr[String])(testFun: c.Expr[Unit])(suite: c.Expr[HandsOnSuite]): c.Expr[Unit] = {
     new RecorderMacro[c.type](c).apply(testName)(testFun)(suite)
   }
 }
