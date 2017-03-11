@@ -2,14 +2,13 @@ package support
 
 import scala.reflect.macros.blackbox.Context
 
-class HandsOnMacro[C <: Context](val c: C) {
+class ExerciceMacro[C <: Context](val c: C) {
   import c.universe._
 
   def apply(testName: c.Expr[String])(testFun: c.Expr[Unit])(suite: c.Expr[HandsOnSuite]): c.Expr[Unit] = {
+    val code = testFun.tree.pos.source.content.mkString
     val (start, end) = getLines(testFun.tree)
-    val content = testFun.tree.pos.source.content.mkString
-
-    c.Expr(q"""support.HandsOnSuite.runTest($testName, $suite)($testFun)(new support.TestContext($content, $start, $end))""")
+    c.Expr(q"""support.HandsOnSuite.runTest($testName, $suite)($testFun)(new support.TestContext($code, $start, $end))""")
   }
 
   private def getLines(tree: Tree): (Int, Int) =
@@ -19,8 +18,8 @@ class HandsOnMacro[C <: Context](val c: C) {
     }
 }
 
-object HandsOnMacro {
+object ExerciceMacro {
   def apply(c: Context)(testName: c.Expr[String])(testFun: c.Expr[Unit])(suite: c.Expr[HandsOnSuite]): c.Expr[Unit] = {
-    new HandsOnMacro[c.type](c).apply(testName)(testFun)(suite)
+    new ExerciceMacro[c.type](c).apply(testName)(testFun)(suite)
   }
 }

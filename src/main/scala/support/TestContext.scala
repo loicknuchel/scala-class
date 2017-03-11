@@ -3,8 +3,8 @@ package support
 import scala.annotation.switch
 import scala.collection.mutable.ArrayBuffer
 
-class TestContext(laZysource: => String, val testStartLine: Int, val testEndLine: Int) {
-  lazy val source: Array[String] = TestContext.sourceToArray(laZysource)
+class TestContext(code: => String, val startLine: Int, val endLine: Int) {
+  lazy val lines: List[(Int, String)] = TestContext.getLines(code)
 }
 
 object TestContext {
@@ -13,8 +13,8 @@ object TestContext {
   final val CR = '\u000D'
   final val SU = '\u001A'
 
-  def sourceToArray(source: String): Array[String] = {
-    val text = source
+  def getLines(code: String): List[(Int, String)] = {
+    val text = code
     val lineBuf = new ArrayBuffer[String]()
     var charBuf = new ArrayBuffer[Char]()
     var previousChar: Char = 'a'
@@ -36,6 +36,6 @@ object TestContext {
       previousChar = c
     }
 
-    lineBuf.toArray
+    lineBuf.toList.zipWithIndex.map(t => (t._2 + 1, t._1))
   }
 }
