@@ -4,12 +4,12 @@ case class Speaker(
                     uuid: SpeakerId,
                     firstName: String,
                     lastName: String,
-                    bio: String,
-                    bioAsHtml: String,
+                    bio: Option[String],
+                    bioAsHtml: Option[String],
                     avatarURL: Option[String],
                     company: Option[String],
                     blog: Option[String],
                     twitter: Option[String],
                     lang: Option[String],
-                    acceptedTalks: List[AcceptedTalk]
+                    acceptedTalks: Option[List[AcceptedTalk]]
                   )

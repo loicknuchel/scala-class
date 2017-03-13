@@ -1,0 +1,20 @@
+{
+  "trackId" : "wm",
+  "talkType" : "Hands-on Labs",
+  "track" : "Web, JS, HTML5 et UX",
+  "summaryAsHtml" : "<p>Learn how to set your environment up from scratch, develop a simple app, test it, integrating CSS frameworks (Angular Material or Bootstrap), secure it with Stormpath, and deploy it to the cloud. Could even turn it into a PWA if there's time.</p>\n",
+  "id" : "MFG-0249",
+  "speakers" : [
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f387c127f51cd63fec084d5c55d5e111fa4ece93",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Matt Raible"
+      },
+      "name" : "Matt Raible"
+    }
+  ],
+  "title" : "The Ultimate Getting Started with Angular Workshop",
+  "lang" : "en",
+  "summary" : "Learn how to set your environment up from scratch, develop a simple app, test it, integrating CSS frameworks (Angular Material or Bootstrap), secure it with Stormpath, and deploy it to the cloud. Could even turn it into a PWA if there's time."
+}

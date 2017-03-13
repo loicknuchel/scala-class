@@ -10,6 +10,11 @@ object Helpers {
   def parseJson[T](json: String)(implicit decoder: Decoder[T]): Try[T] =
     parser.decode[T](json).toTry
 
+  def formatJson(json: String): String = parser.parse(json) match {
+    case Left(_) => json
+    case Right(parsed) => parsed.toString()
+  }
+
   implicit class TryConverter[T](t: Try[T]) {
     def toFuture: Future[T] = t match {
       case Success(value) => Future.successful(value)
@@ -28,5 +33,4 @@ object Helpers {
       case Left(err) => Future.failed(err)
     }
   }
-
 }

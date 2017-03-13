@@ -2,9 +2,9 @@ package models.devoxx.full
 
 case class Talk(
                  id: TalkId,
+                 talkType: String,
                  trackId: String,
                  track: String,
-                 talkType: String,
                  lang: String,
                  title: String,
                  summary: String,

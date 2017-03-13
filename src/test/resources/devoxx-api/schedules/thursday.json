@@ -1,1 +1,2766 @@
-{"slots":[{"roomId":"a_hall","notAllocated":false,"fromTimeMillis":1491456600000,"break":{"id":"reg","nameEN":"Registration","nameFR":"Accueil","room":{"id":"a_hall","name":"Exhibition floor","capacity":2300,"setup":"special","recorded":""}},"roomSetup":"special","talk":null,"fromTime":"07:30","toTimeMillis":1491462000000,"toTime":"09:00","roomCapacity":2300,"roomName":"Exhibition floor","slotId":"reg_thursday_6_7h30_9h0","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491462000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"09:00","toTimeMillis":1491462900000,"toTime":"09:15","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"key_b_amphi_thursday_6_9h0_9h15","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491463200000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"09:20","toTimeMillis":1491464400000,"toTime":"09:40","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"key_b_amphi_thursday_6_9h20_9h40","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491464700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"09:45","toTimeMillis":1491465900000,"toTime":"10:05","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"key_b_amphi_thursday_6_9h45_10h5","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491466200000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"10:10","toTimeMillis":1491467400000,"toTime":"10:30","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"key_b_amphi_thursday_6_10h10_10h30","day":"thursday"},{"roomId":"a_hall","notAllocated":false,"fromTimeMillis":1491468300000,"break":{"id":"chgt","nameEN":"Break","nameFR":"Pause courte","room":{"id":"a_hall","name":"Exhibition floor","capacity":2300,"setup":"special","recorded":""}},"roomSetup":"special","talk":null,"fromTime":"10:45","toTimeMillis":1491470100000,"toTime":"11:15","roomCapacity":2300,"roomName":"Exhibition floor","slotId":"chgt_thursday_6_10h45_11h15","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491470100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"11:15","toTimeMillis":1491472800000,"toTime":"12:00","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_11h15_12h0","day":"thursday"},{"roomId":"a_hall","notAllocated":false,"fromTimeMillis":1491472800000,"break":{"id":"lunch","nameEN":"Lunch","nameFR":"Pause déjeuner","room":{"id":"a_hall","name":"Exhibition floor","capacity":2300,"setup":"special","recorded":""}},"roomSetup":"special","talk":null,"fromTime":"12:00","toTimeMillis":1491476100000,"toTime":"12:55","roomCapacity":2300,"roomName":"Exhibition floor","slotId":"lunch_thursday_6_12h0_12h55","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":380,"roomName":"Maillot","slotId":"quick_c_maillot_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"quick_par242AB_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"quick_e_neu252_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":220,"roomName":"Paris 241","slotId":"quick_d_par241_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":220,"roomName":"Neuilly 251","slotId":"quick_f_neu251_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":120,"roomName":"Paris 243","slotId":"quick_par243_t_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491473100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:05","toTimeMillis":1491474000000,"toTime":"12:20","roomCapacity":120,"roomName":"Neuilly 253","slotId":"quick_neu253_t_thursday_6_12h5_12h20","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":380,"roomName":"Maillot","slotId":"quick_c_maillot_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"quick_par242AB_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"quick_e_neu252_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":220,"roomName":"Paris 241","slotId":"quick_d_par241_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":220,"roomName":"Neuilly 251","slotId":"quick_f_neu251_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":120,"roomName":"Paris 243","slotId":"quick_par243_t_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491474300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:25","toTimeMillis":1491475200000,"toTime":"12:40","roomCapacity":120,"roomName":"Neuilly 253","slotId":"quick_neu253_t_thursday_6_12h25_12h40","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"12:55","toTimeMillis":1491478800000,"toTime":"13:40","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_12h55_13h40","day":"thursday"},{"roomId":"par202_203","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":32,"roomName":"Paris 202-203 Lab","slotId":"lab_par202_203_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"par221M-222M","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":32,"roomName":"Paris 221M-222M Lab","slotId":"lab_par221M-222M_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"par224M-225M","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":26,"roomName":"Paris 224M-225M Lab","slotId":"lab_par224M-225M_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"neu_212_213","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":32,"roomName":"Neuilly 212-213M Lab","slotId":"lab_neu_212_213_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"neu_232_232","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":32,"roomName":"Neuilly 231-232M Lab","slotId":"lab_neu_232_232_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"neu_234_235","notAllocated":true,"fromTimeMillis":1491476100000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"12:55","toTimeMillis":1491486900000,"toTime":"15:55","roomCapacity":32,"roomName":"Neuilly 234_234M Lab","slotId":"lab_neu_234_235_thursday_6_12h55_15h55","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491479700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"13:55","toTimeMillis":1491482400000,"toTime":"14:40","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_13h55_14h40","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491483300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"14:55","toTimeMillis":1491486000000,"toTime":"15:40","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_14h55_15h40","day":"thursday"},{"roomId":"a_hall","notAllocated":false,"fromTimeMillis":1491486000000,"break":{"id":"coffee","nameEN":"Coffee Break","nameFR":"Pause café","room":{"id":"a_hall","name":"Exhibition floor","capacity":2300,"setup":"special","recorded":""}},"roomSetup":"special","talk":null,"fromTime":"15:40","toTimeMillis":1491487200000,"toTime":"16:00","roomCapacity":2300,"roomName":"Exhibition floor","slotId":"coffee_thursday_6_15h40_16h0","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"16:10","toTimeMillis":1491490500000,"toTime":"16:55","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_16h10_16h55","day":"thursday"},{"roomId":"par202_203","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":32,"roomName":"Paris 202-203 Lab","slotId":"lab_par202_203_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"par221M-222M","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":32,"roomName":"Paris 221M-222M Lab","slotId":"lab_par221M-222M_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"par224M-225M","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":26,"roomName":"Paris 224M-225M Lab","slotId":"lab_par224M-225M_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"neu_212_213","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":32,"roomName":"Neuilly 212-213M Lab","slotId":"lab_neu_212_213_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"neu_232_232","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":32,"roomName":"Neuilly 231-232M Lab","slotId":"lab_neu_232_232_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"neu_234_235","notAllocated":true,"fromTimeMillis":1491487800000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"16:10","toTimeMillis":1491498600000,"toTime":"19:10","roomCapacity":32,"roomName":"Neuilly 234_234M Lab","slotId":"lab_neu_234_235_thursday_6_16h10_19h10","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"conf_b_amphi_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"c_maillot","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":380,"roomName":"Maillot","slotId":"conf_c_maillot_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"conf_par242AB_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"conf_e_neu252_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":220,"roomName":"Paris 241","slotId":"conf_d_par241_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":220,"roomName":"Neuilly 251","slotId":"conf_f_neu251_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":120,"roomName":"Paris 243","slotId":"conf_par243_t_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491491400000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"17:10","toTimeMillis":1491494100000,"toTime":"17:55","roomCapacity":120,"roomName":"Neuilly 253","slotId":"conf_neu253_t_thursday_6_17h10_17h55","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"tia_b_amphi_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"tia_par242AB_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"tia_e_neu252_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":220,"roomName":"Paris 241","slotId":"tia_d_par241_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":220,"roomName":"Neuilly 251","slotId":"tia_f_neu251_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":120,"roomName":"Paris 243","slotId":"tia_par243_t_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491495000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:10","toTimeMillis":1491496800000,"toTime":"18:40","roomCapacity":120,"roomName":"Neuilly 253","slotId":"tia_neu253_t_thursday_6_18h10_18h40","day":"thursday"},{"roomId":"b_amphi","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":826,"roomName":"Amphi Bleu","slotId":"tia_b_amphi_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"tia_par242AB_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"tia_e_neu252_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":220,"roomName":"Paris 241","slotId":"tia_d_par241_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":220,"roomName":"Neuilly 251","slotId":"tia_f_neu251_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":120,"roomName":"Paris 243","slotId":"tia_par243_t_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491497700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"18:55","toTimeMillis":1491499500000,"toTime":"19:25","roomCapacity":120,"roomName":"Neuilly 253","slotId":"tia_neu253_t_thursday_6_18h55_19h25","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"bof_par242AB_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"bof_e_neu252_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":220,"roomName":"Paris 241","slotId":"bof_d_par241_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":220,"roomName":"Neuilly 251","slotId":"bof_f_neu251_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":120,"roomName":"Paris 243","slotId":"bof_par243_t_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":120,"roomName":"Neuilly 253","slotId":"bof_neu253_t_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"par202_203","notAllocated":true,"fromTimeMillis":1491500700000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"19:45","toTimeMillis":1491503700000,"toTime":"20:35","roomCapacity":32,"roomName":"Paris 202-203 Lab","slotId":"bof_par202_203_thursday_6_19h45_20h35","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"bof_par242AB_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"bof_e_neu252_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":220,"roomName":"Paris 241","slotId":"bof_d_par241_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":220,"roomName":"Neuilly 251","slotId":"bof_f_neu251_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":120,"roomName":"Paris 243","slotId":"bof_par243_t_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":120,"roomName":"Neuilly 253","slotId":"bof_neu253_t_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"par202_203","notAllocated":true,"fromTimeMillis":1491504000000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"20:40","toTimeMillis":1491507000000,"toTime":"21:30","roomCapacity":32,"roomName":"Paris 202-203 Lab","slotId":"bof_par202_203_thursday_6_20h40_21h30","day":"thursday"},{"roomId":"par242AB","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":280,"roomName":"Paris 242-AB","slotId":"bof_par242AB_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"e_neu252","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":380,"roomName":"Neuilly 252 AB","slotId":"bof_e_neu252_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"d_par241","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":220,"roomName":"Paris 241","slotId":"bof_d_par241_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"f_neu251","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":220,"roomName":"Neuilly 251","slotId":"bof_f_neu251_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"par243_t","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":120,"roomName":"Paris 243","slotId":"bof_par243_t_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"neu253_t","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"theatre","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":120,"roomName":"Neuilly 253","slotId":"bof_neu253_t_thursday_6_21h35_22h25","day":"thursday"},{"roomId":"par202_203","notAllocated":true,"fromTimeMillis":1491507300000,"break":null,"roomSetup":"classroom","talk":null,"fromTime":"21:35","toTimeMillis":1491510300000,"toTime":"22:25","roomCapacity":32,"roomName":"Paris 202-203 Lab","slotId":"bof_par202_203_thursday_6_21h35_22h25","day":"thursday"}]}
+{
+  "slots" : [
+    {
+      "roomId" : "a_hall",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491456600000,
+      "break" : {
+        "id" : "reg",
+        "nameEN" : "Registration",
+        "nameFR" : "Accueil",
+        "room" : {
+          "id" : "a_hall",
+          "name" : "Exhibition floor",
+          "capacity" : 2300,
+          "setup" : "special",
+          "recorded" : ""
+        }
+      },
+      "roomSetup" : "special",
+      "talk" : null,
+      "fromTime" : "07:30",
+      "toTimeMillis" : 1491462000000,
+      "toTime" : "09:00",
+      "roomCapacity" : 2300,
+      "roomName" : "Exhibition floor",
+      "slotId" : "reg_thursday_6_7h30_9h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491462000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "Keynote",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Tout bon Devoxx commence toujours par une keynote d'ouverture, par les trois organisateurs. Après l'arrivée en rappel en 2015, après l'arrivée en mono-wheel en 2016... que va-t-il se passer en 2017 ?</p>\n<p>Bref si vous voulez démarrer Devoxx France sur les chapeaux de roues, rendez-vous avant 9h devant l'Amphi Bleu. La keynote est aussi retransmise dans 3 salles.</p>\n",
+        "id" : "HVC-6887",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b14651a3cd78ab4fd03d522ebef81cdac1d5755c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Nicolas Martignole"
+            },
+            "name" : "Nicolas Martignole"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/2b935a5bfa04635d2e4c196afa7385ee2d254dde",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Antonio Goncalves"
+            },
+            "name" : "Antonio Goncalves"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/0031996932b23d92d1e67d556946c0e14cfdf4c9",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Zouheir Cadi"
+            },
+            "name" : "Zouheir Cadi"
+          }
+        ],
+        "title" : "La Keynote d'ouverture de Devoxx France",
+        "lang" : "fr",
+        "summary" : "Tout bon Devoxx commence toujours par une keynote d'ouverture, par les trois organisateurs. Après l'arrivée en rappel en 2015, après l'arrivée en mono-wheel en 2016... que va-t-il se passer en 2017 ? \r\n\r\nBref si vous voulez démarrer Devoxx France sur les chapeaux de roues, rendez-vous avant 9h devant l'Amphi Bleu. La keynote est aussi retransmise dans 3 salles. "
+      },
+      "fromTime" : "09:00",
+      "toTimeMillis" : 1491462900000,
+      "toTime" : "09:15",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "key_b_amphi_thursday_6_9h0_9h15",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491463200000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "09:20",
+      "toTimeMillis" : 1491464400000,
+      "toTime" : "09:40",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "key_b_amphi_thursday_6_9h20_9h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491464700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Keynote",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>A l’heure où tout le monde s’inquiète de la singularité technologique, de l’avènement des machines, et de la prise de contrôle du monde par les micro-ondes connectés, un domaine entier de l’informatique lutte et résiste de toute ses forces pour que le pire soit évité. Ce domaine, qui cherche à tout prix à éviter l’IA parfaite, c’est le jeu vidéo.</p>\n<p>Petite rétrospective sur l’état de l’Intelligence Artificielle au sein des jeux vidéo. Ou, comment, chez nous, le fun ne peut venir que grâce à des IA bancales.</p>\n",
+        "id" : "KUB-0999",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1456a29fcbede6cede049d7ccca763919ec424bb",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Laurent Victorino"
+            },
+            "name" : "Laurent Victorino"
+          }
+        ],
+        "title" : "Video games: The quest for smart dumbness.",
+        "lang" : "fr",
+        "summary" : "A l’heure où tout le monde s’inquiète de la singularité technologique, de l’avènement des machines, et de la prise de contrôle du monde par les micro-ondes connectés, un domaine entier de l’informatique lutte et résiste de toute ses forces pour que le pire soit évité. Ce domaine, qui cherche à tout prix à éviter l’IA parfaite, c’est le jeu vidéo.\r\n\r\nPetite rétrospective sur l’état de l’Intelligence Artificielle au sein des jeux vidéo. Ou, comment, chez nous, le fun ne peut venir que grâce à des IA bancales. "
+      },
+      "fromTime" : "09:45",
+      "toTimeMillis" : 1491465900000,
+      "toTime" : "10:05",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "key_b_amphi_thursday_6_9h45_10h5",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491466200000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "10:10",
+      "toTimeMillis" : 1491467400000,
+      "toTime" : "10:30",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "key_b_amphi_thursday_6_10h10_10h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "a_hall",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491468300000,
+      "break" : {
+        "id" : "chgt",
+        "nameEN" : "Break",
+        "nameFR" : "Pause courte",
+        "room" : {
+          "id" : "a_hall",
+          "name" : "Exhibition floor",
+          "capacity" : 2300,
+          "setup" : "special",
+          "recorded" : ""
+        }
+      },
+      "roomSetup" : "special",
+      "talk" : null,
+      "fromTime" : "10:45",
+      "toTimeMillis" : 1491470100000,
+      "toTime" : "11:15",
+      "roomCapacity" : 2300,
+      "roomName" : "Exhibition floor",
+      "slotId" : "chgt_thursday_6_10h45_11h15",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491470100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "11:15",
+      "toTimeMillis" : 1491472800000,
+      "toTime" : "12:00",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_11h15_12h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "a_hall",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491472800000,
+      "break" : {
+        "id" : "lunch",
+        "nameEN" : "Lunch",
+        "nameFR" : "Pause déjeuner",
+        "room" : {
+          "id" : "a_hall",
+          "name" : "Exhibition floor",
+          "capacity" : 2300,
+          "setup" : "special",
+          "recorded" : ""
+        }
+      },
+      "roomSetup" : "special",
+      "talk" : null,
+      "fromTime" : "12:00",
+      "toTimeMillis" : 1491476100000,
+      "toTime" : "12:55",
+      "roomCapacity" : 2300,
+      "roomName" : "Exhibition floor",
+      "slotId" : "lunch_thursday_6_12h0_12h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "quick_c_maillot_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "quick_par242AB_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "quick_e_neu252_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "quick_d_par241_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "quick_f_neu251_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "quick_par243_t_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491473100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:05",
+      "toTimeMillis" : 1491474000000,
+      "toTime" : "12:20",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "quick_neu253_t_thursday_6_12h5_12h20",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "quick_c_maillot_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "quick_par242AB_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "quick_e_neu252_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "quick_d_par241_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "quick_f_neu251_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "quick_par243_t_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491474300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:25",
+      "toTimeMillis" : 1491475200000,
+      "toTime" : "12:40",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "quick_neu253_t_thursday_6_12h25_12h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par202_203",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Hands-on Labs",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Comment gérer les données en provenance d'une flotte de taxis New-Yorkais vous informant de leur position en temps réel ? Comment se concentrer efficacement sur le traitement des données, plutôt que de passer du temps à déployer et gérer des serveurs ? Comment fournir des rapports financiers exacts au centime près pour la comptabilité et aussi des données temps réels pour le marketing, avec le même code ?</p>\n<p>Les technologies de traitement de données ont fait des progrès notables ces dix dernières années, depuis MapReduce, qui fonctionnait en batch, jusqu'aux technologies modernes capables de gérer des flux de données en temps réel.</p>\n<p>Dans ce lab, vous écrirez un pipeline de traitement en utilisant le modèle de programmation \"Dataflow\" sur lequel s'appuient à la fois Google Cloud Dataflow, un service de traitement \"serverless\" dans le cloud, et Apache Beam, sa contrepartie open source pour les déploiements internes. Vous travaillerez sur un flux de données temps réel conséquent et devrez mobiliser un cluster Dataflow pour tenir la charge.</p>\n<p><strong>IMPORTANT</strong>\nInstallation à effectuer AVANT le jour du lab:\nhttps://codelabs.developers.google.com/codelabs/cloud-dataflow-nyc-taxi-tycoon/#1</p>\n",
+        "id" : "BTF-1420",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/61dfd901ae785202fd5a87ed358657cf02b568ed",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Martin Görner"
+            },
+            "name" : "Martin Görner"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/5d6685dc68a9b43d75febcbecadd0dccb4fd27a2",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Robert Kubis"
+            },
+            "name" : "Robert Kubis"
+          }
+        ],
+        "title" : "Le monde après MapReduce, ou le traitement de données distribué en temps réel avec Google Cloud Dataflow / Apache Beam",
+        "lang" : "en",
+        "summary" : "Comment gérer les données en provenance d'une flotte de taxis New-Yorkais vous informant de leur position en temps réel ? Comment se concentrer efficacement sur le traitement des données, plutôt que de passer du temps à déployer et gérer des serveurs ? Comment fournir des rapports financiers exacts au centime près pour la comptabilité et aussi des données temps réels pour le marketing, avec le même code ?\r\n\r\nLes technologies de traitement de données ont fait des progrès notables ces dix dernières années, depuis MapReduce, qui fonctionnait en batch, jusqu'aux technologies modernes capables de gérer des flux de données en temps réel.\r\n\r\nDans ce lab, vous écrirez un pipeline de traitement en utilisant le modèle de programmation \"Dataflow\" sur lequel s'appuient à la fois Google Cloud Dataflow, un service de traitement \"serverless\" dans le cloud, et Apache Beam, sa contrepartie open source pour les déploiements internes. Vous travaillerez sur un flux de données temps réel conséquent et devrez mobiliser un cluster Dataflow pour tenir la charge.\r\n\r\n**IMPORTANT**\r\nInstallation à effectuer AVANT le jour du lab:\r\nhttps://codelabs.developers.google.com/codelabs/cloud-dataflow-nyc-taxi-tycoon/#1"
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 202-203 Lab",
+      "slotId" : "lab_par202_203_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par221M-222M",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Hands-on Labs",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Découvrez les <strong>API Watson</strong> à travers l'outil open source <strong>Node-RED</strong>, le tout depuis la plateforme Cloud Bluemix.</p>\n<p>Je vous proposerai les activités suivantes :</p>\n<ul>\n<li>découverte de <a href=\"http://nodered.org/\">Node-RED</a> : outil de développement visuel d'applications, basé sur le runtime Node JS et open source,  qui permet de relier facilement objets connectés (IoT), API et services. Léger, il fonctionne sur un Raspberry Pi et sur toutes les plateformes Cloud !</li>\n<li>création de plusieurs applications \"cognitives\" avec Node-RED mettant en oeuvre les <a href=\"https://www.ibm.com/watson/developercloud/\">API Cognitives de Watson</a> (en particulier Conversation, Tone Analyser, Image Recognition, Translator, Speech to Text et Text to Speech )</li>\n<li>développement d'un noeud Node-RED (Lab avancé): pour les développeurs avertis (Javascript et Node.js + HTML/CSS). Développez votre premier noeud, et étudiez différentes implémentations de noeuds que j'ai développé (Business Rules et  Visual Recognition) ! L'objectif est de vous donner envi de vous aussi devenir un contributeur Node-RED.</li>\n</ul>\n<p>NB: découvrez aussi le noeud <a href=\"https://github.com/ylecleach/labs/tree/master/node-red/basic-labs/business-rules\">Business Rules</a></p>\n",
+        "id" : "YWB-9589",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7da184f5d275532ef0c27f545c0e1cfff1ccaee8",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yves LE CLEACH"
+            },
+            "name" : "Yves LE CLEACH"
+          }
+        ],
+        "title" : "Labs sur API Watson avec Node-RED sur Bluemix",
+        "lang" : "fr",
+        "summary" : "Découvrez les **API Watson** à travers l'outil open source **Node-RED**, le tout depuis la plateforme Cloud Bluemix.\r\n\r\nJe vous proposerai les activités suivantes :\r\n\r\n* découverte de [Node-RED](http://nodered.org/) : outil de développement visuel d'applications, basé sur le runtime Node JS et open source,  qui permet de relier facilement objets connectés (IoT), API et services. Léger, il fonctionne sur un Raspberry Pi et sur toutes les plateformes Cloud !\r\n* création de plusieurs applications \"cognitives\" avec Node-RED mettant en oeuvre les [API Cognitives de Watson](https://www.ibm.com/watson/developercloud/) (en particulier Conversation, Tone Analyser, Image Recognition, Translator, Speech to Text et Text to Speech )\r\n* développement d'un noeud Node-RED (Lab avancé): pour les développeurs avertis (Javascript et Node.js + HTML/CSS). Développez votre premier noeud, et étudiez différentes implémentations de noeuds que j'ai développé (Business Rules et  Visual Recognition) ! L'objectif est de vous donner envi de vous aussi devenir un contributeur Node-RED. \r\n\r\nNB: découvrez aussi le noeud [Business Rules](https://github.com/ylecleach/labs/tree/master/node-red/basic-labs/business-rules)"
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 221M-222M Lab",
+      "slotId" : "lab_par221M-222M_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par224M-225M",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "mobile",
+        "talkType" : "Hands-on Labs",
+        "track" : "Mobile, IoT",
+        "summaryAsHtml" : "<p>Vous êtes développeur ? Vous avez toujours rêvé de fabriquer vos propres objects connectés ? Android Things est fait pour vous !</p>\n<p>Ce nouvel OS de chez Google fait le pari fou de rendre accessible aux développeurs Java la conception d'objets, dans le monde réel. Et nous allons vous en donner un aperçu durant ce workshop.</p>\n<p>Cette session a pour objectif de faire construire à chacun des participants une magnifique catapulte connectée basée sur un Raspberry Pi.</p>\n<p>Pour ce workshop vous aurez besoin de ramener :</p>\n<ul>\n<li>Votre ordinateur avec <a href=\"https://developer.android.com/studio/index.html\">Android Studio (dernière version stable)</a></li>\n<li>Votre créativité et votre bonne humeur</li>\n</ul>\n<p>Vous n'avez pas besoin de ramener le reste du matériel, nous nous en occupons pour vous.</p>\n",
+        "id" : "FQV-7792",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f769aff54557881f250a78f11a827c9211504510",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Eyal LEZMY"
+            },
+            "name" : "Eyal LEZMY"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/18ccfd6d55edb5f0f88d865b0f42c957e0b6727c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Romain Menetrier"
+            },
+            "name" : "Romain Menetrier"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9cc5353ec72a6d4614a652eae245ff5bdd260b58",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Gautier MECHLING"
+            },
+            "name" : "Gautier MECHLING"
+          }
+        ],
+        "title" : "Android Things, de Développeur à Maker",
+        "lang" : "fr",
+        "summary" : "Vous êtes développeur ? Vous avez toujours rêvé de fabriquer vos propres objects connectés ? Android Things est fait pour vous ! \r\n\r\nCe nouvel OS de chez Google fait le pari fou de rendre accessible aux développeurs Java la conception d'objets, dans le monde réel. Et nous allons vous en donner un aperçu durant ce workshop. \r\n\r\nCette session a pour objectif de faire construire à chacun des participants une magnifique catapulte connectée basée sur un Raspberry Pi. \r\n\r\nPour ce workshop vous aurez besoin de ramener : \r\n\r\n- Votre ordinateur avec [Android Studio (dernière version stable)](https://developer.android.com/studio/index.html)\r\n- Votre créativité et votre bonne humeur \r\n\r\nVous n'avez pas besoin de ramener le reste du matériel, nous nous en occupons pour vous."
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 26,
+      "roomName" : "Paris 224M-225M Lab",
+      "slotId" : "lab_par224M-225M_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_212_213",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "Hands-on Labs",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>modèle distribué à base d'acteurs, fault-tolerence, supervision, hot-swap, 99,99% de disponibilité, base de données distribuée : telles sont les fonctionnalités intrinsèques à la plateforme du langage Erlang.\n<strong>Le Reactive Manifesto ? La programmation fonctionnelle ?</strong> Erlang le fait déjà depuis sa création dans les locaux d'Ericsson et vous l'offre depuis 1998, lorsqu'il est devenu open-source.\nPour ce qui est des références sur le marché, ce langage multi-paradigmes est utilisé par des applications comme Chef, Riak, RabbitMQ ou encore le très populaire WhatsApp.</p>\n<p>\"Comment ai-je pu passer à côté de ça ?\" : <strong>On a pensé à vous !</strong>\nA travers ce Hands-On, vous découvrirez comment programmer et designer une application en Erlang, utiliser OTP et comment sont implémentés les mécanismes qui font la force de ce langage.</p>\n<p>Durant ces 3h, nous allons apprendre Erlang en <strong>programmant un jeu distribué en se basant sur le jeu de société Pandémie</strong> : chaque ville du jeu sera un process Erlang qui tournera sur vos machines !</p>\n<p><em>Matériel nécessaire</em> : un ordinateur avec les droits nécessaires pour installer un langage, l'envie de programmer et découvrir de nouvelles choses dans la bonne humeur.</p>\n",
+        "id" : "GXS-1080",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b4f2685d545ff927785480eceb1005e93d136a28",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yvan VU"
+            },
+            "name" : "Yvan VU"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/96861b9f4bd67f986e22eb98c5e9b0d1fdf3f689",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Arnauld Loyer"
+            },
+            "name" : "Arnauld Loyer"
+          }
+        ],
+        "title" : "Erlang : Reactive Microservices since 1987",
+        "lang" : "fr",
+        "summary" : "\r\nmodèle distribué à base d'acteurs, fault-tolerence, supervision, hot-swap, 99,99% de disponibilité, base de données distribuée : telles sont les fonctionnalités intrinsèques à la plateforme du langage Erlang.\r\n**Le Reactive Manifesto ? La programmation fonctionnelle ?** Erlang le fait déjà depuis sa création dans les locaux d'Ericsson et vous l'offre depuis 1998, lorsqu'il est devenu open-source.\r\nPour ce qui est des références sur le marché, ce langage multi-paradigmes est utilisé par des applications comme Chef, Riak, RabbitMQ ou encore le très populaire WhatsApp.\r\n\r\n\"Comment ai-je pu passer à côté de ça ?\" : **On a pensé à vous !**\r\nA travers ce Hands-On, vous découvrirez comment programmer et designer une application en Erlang, utiliser OTP et comment sont implémentés les mécanismes qui font la force de ce langage.\r\n\r\nDurant ces 3h, nous allons apprendre Erlang en **programmant un jeu distribué en se basant sur le jeu de société Pandémie** : chaque ville du jeu sera un process Erlang qui tournera sur vos machines !\r\n\r\n_Matériel nécessaire_ : un ordinateur avec les droits nécessaires pour installer un langage, l'envie de programmer et découvrir de nouvelles choses dans la bonne humeur."
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 212-213M Lab",
+      "slotId" : "lab_neu_212_213_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_232_232",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "Hands-on Labs",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>De plus en plus de développeurs Java se tournent vers le Go, le langage backend qui monte, qui monte.</p>\n<p>Lors de cet atelier, nous vous proposons de développer du sol au plafond un petit service web REST qui expose des data JSON récupérées en base de données.</p>\n<p>Nous commencerons par le parsing d'arguments de la ligne de commande et le logging. Nous verrons ensuite comment modéliser et manipuler la data avec MongoDB. Pour finir nous attaquerons la partie web avec les middleware, le routage et les handler.</p>\n<p>L'objectif de cet atelier est mettre les mains dans le code et vous familiariser avec le langage et son écosystème (make, test, vendors, libs, etc). Il est recommandé d'avoir fait le <a href=\"https://tour.golang.org/welcome/1\">tour of Go</a> et d'être déjà à l'aise avec le langage pour rentrer plus facilement dans le sujet. Un workspace de développement est fourni pour les OS Unix friendly (linux, mac) et des VM sont à disposition des utilisateurs Windows ou de ceux qui le souhaitent.</p>\n<p>En bonus, nous pourrons déployer le tout dans un docker-compose prévoir donc un docker et docker-compose sur sa machine pour aller au bout de l'atelier.</p>\n",
+        "id" : "WXR-3840",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/bdcd981e013426ad1fa33b18d7cbe1df92d9874c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Sébastien FRIESS"
+            },
+            "name" : "Sébastien FRIESS"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/da90527e0f6fbe2960f3594b274551f753e28859",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Romain lespinasse"
+            },
+            "name" : "Romain lespinasse"
+          }
+        ],
+        "title" : "Votre premier microservice en Go",
+        "lang" : "fr",
+        "summary" : "De plus en plus de développeurs Java se tournent vers le Go, le langage backend qui monte, qui monte.\r\n\r\nLors de cet atelier, nous vous proposons de développer du sol au plafond un petit service web REST qui expose des data JSON récupérées en base de données.\r\n\r\nNous commencerons par le parsing d'arguments de la ligne de commande et le logging. Nous verrons ensuite comment modéliser et manipuler la data avec MongoDB. Pour finir nous attaquerons la partie web avec les middleware, le routage et les handler.\r\n\r\nL'objectif de cet atelier est mettre les mains dans le code et vous familiariser avec le langage et son écosystème (make, test, vendors, libs, etc). Il est recommandé d'avoir fait le [tour of Go](https://tour.golang.org/welcome/1) et d'être déjà à l'aise avec le langage pour rentrer plus facilement dans le sujet. Un workspace de développement est fourni pour les OS Unix friendly (linux, mac) et des VM sont à disposition des utilisateurs Windows ou de ceux qui le souhaitent.\r\n\r\nEn bonus, nous pourrons déployer le tout dans un docker-compose prévoir donc un docker et docker-compose sur sa machine pour aller au bout de l'atelier."
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 231-232M Lab",
+      "slotId" : "lab_neu_232_232_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_234_235",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "cldops",
+        "talkType" : "Hands-on Labs",
+        "track" : "Cloud, Container et Scalabilité",
+        "summaryAsHtml" : "<p>Vous ne pouvez pas être passés à côté de la tendance des <strong>microservices</strong>. Sur le papier, rien à dire, mais concrètement, beaucoup de mystères planent encore au dessus de ce concept.\nComment les services communiquent-ils ? Le <strong>discovery</strong>, kézako ? Et si on <strong>scale</strong>, ça casse tout ? J'ai entendu parler de <strong>Docker</strong>, ça me sert à quoi dans mon architecture ?</p>\n<p>Si, vous aussi, vous avez déjà eu besoin de mettre en place des mécanismes \"custom\" et \"statiques\" d'enregistrement et de découverte de services, ou que vous souhaitez commencer, ce talk est fait pour vous !\nNous vous proposerons, au travers d'exemples concrets, de comprendre comment fonctionnent les mécanismes d'enregistrement et de découverte de microservices sur une plateforme de plus en plus dynamique avec les outils <strong>Docker</strong></p>\n<p>Au programme :</p>\n<ul>\n<li>Microservices</li>\n<li>Bref rappel des bases de Docker</li>\n<li>Manipulation du network Docker</li>\n<li>Docker Compose</li>\n<li>Docker Swarm</li>\n</ul>\n",
+        "id" : "MDG-6935",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/587c46e7b957f7e92a63246bdcc683e5d5e612a8",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jérémie MONSINJON"
+            },
+            "name" : "Jérémie MONSINJON"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/eec27b231d20ebc4d7e2e2899fb37ffa7e0bbbac",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Garcia Florian"
+            },
+            "name" : "Garcia Florian"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3c458756e883af773c547d9dba7cc5c2be2e3cee",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Christophe Labouisse"
+            },
+            "name" : "Christophe Labouisse"
+          }
+        ],
+        "title" : "Plateforme dynamique, #docker #dns #scalabilité... Où sont mes microservices ?",
+        "lang" : "fr",
+        "summary" : "Vous ne pouvez pas être passés à côté de la tendance des **microservices**. Sur le papier, rien à dire, mais concrètement, beaucoup de mystères planent encore au dessus de ce concept.\r\nComment les services communiquent-ils ? Le **discovery**, kézako ? Et si on **scale**, ça casse tout ? J'ai entendu parler de **Docker**, ça me sert à quoi dans mon architecture ?\r\n\r\nSi, vous aussi, vous avez déjà eu besoin de mettre en place des mécanismes \"custom\" et \"statiques\" d'enregistrement et de découverte de services, ou que vous souhaitez commencer, ce talk est fait pour vous !\r\nNous vous proposerons, au travers d'exemples concrets, de comprendre comment fonctionnent les mécanismes d'enregistrement et de découverte de microservices sur une plateforme de plus en plus dynamique avec les outils **Docker**\r\n\r\nAu programme :\r\n\r\n- Microservices\r\n- Bref rappel des bases de Docker\r\n- Manipulation du network Docker\r\n- Docker Compose\r\n- Docker Swarm"
+      },
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491486900000,
+      "toTime" : "15:55",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 234_234M Lab",
+      "slotId" : "lab_neu_234_235_thursday_6_12h55_15h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491476100000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "12:55",
+      "toTimeMillis" : 1491478800000,
+      "toTime" : "13:40",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_12h55_13h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491479700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "13:55",
+      "toTimeMillis" : 1491482400000,
+      "toTime" : "14:40",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_13h55_14h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491483300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "14:55",
+      "toTimeMillis" : 1491486000000,
+      "toTime" : "15:40",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_14h55_15h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "a_hall",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491486000000,
+      "break" : {
+        "id" : "coffee",
+        "nameEN" : "Coffee Break",
+        "nameFR" : "Pause café",
+        "room" : {
+          "id" : "a_hall",
+          "name" : "Exhibition floor",
+          "capacity" : 2300,
+          "setup" : "special",
+          "recorded" : ""
+        }
+      },
+      "roomSetup" : "special",
+      "talk" : null,
+      "fromTime" : "15:40",
+      "toTimeMillis" : 1491487200000,
+      "toTime" : "16:00",
+      "roomCapacity" : 2300,
+      "roomName" : "Exhibition floor",
+      "slotId" : "coffee_thursday_6_15h40_16h0",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par202_203",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Hands-on Labs",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Cet atelier vous permettra, quel que soit votre niveau de connaissance, de vous familiariser avec la modélisation et le requêtage de données dans une base de données graphe comme Neo4j sur un dataset fun et représentatif.</p>\n<p>Outre les rudiments du langage Cypher (du MATCH simple aux agrégations en passant par le profilage), seront abordées également les dernières nouveautés de Neo4j 3.1 sorti mi-Décembre (causal clustering, stored procedure and user-defined functions).</p>\n<p>À l’issue de cet atelier, Neo4j n’aura plus de secrets pour vous !</p>\n<p>Pensez à consulter les pré-requis : https://fbiville.github.io/neo4j-training/setup/.</p>\n",
+        "id" : "HUA-2052",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9d77f0e35092ee25dacf9f9b6f9cc0fc695be416",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florent Biville"
+            },
+            "name" : "Florent Biville"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6edfe70ee7621dc90e256afe05ee9bd1bdb9cf73",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Marouane Gazanayi"
+            },
+            "name" : "Marouane Gazanayi"
+          }
+        ],
+        "title" : "Hands on Neo4j : la base de données graphe pour tous !",
+        "lang" : "fr",
+        "summary" : "Cet atelier vous permettra, quel que soit votre niveau de connaissance, de vous familiariser avec la modélisation et le requêtage de données dans une base de données graphe comme Neo4j sur un dataset fun et représentatif.\r\n\r\nOutre les rudiments du langage Cypher (du MATCH simple aux agrégations en passant par le profilage), seront abordées également les dernières nouveautés de Neo4j 3.1 sorti mi-Décembre (causal clustering, stored procedure and user-defined functions).\r\n\r\nÀ l’issue de cet atelier, Neo4j n’aura plus de secrets pour vous !\r\n\r\nPensez à consulter les pré-requis : https://fbiville.github.io/neo4j-training/setup/.\r\n"
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 202-203 Lab",
+      "slotId" : "lab_par202_203_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par221M-222M",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Hands-on Labs",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Learn how to set your environment up from scratch, develop a simple app, test it, integrating CSS frameworks (Angular Material or Bootstrap), secure it with Stormpath, and deploy it to the cloud. Could even turn it into a PWA if there's time.</p>\n",
+        "id" : "MFG-0249",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f387c127f51cd63fec084d5c55d5e111fa4ece93",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Matt Raible"
+            },
+            "name" : "Matt Raible"
+          }
+        ],
+        "title" : "The Ultimate Getting Started with Angular Workshop",
+        "lang" : "en",
+        "summary" : "Learn how to set your environment up from scratch, develop a simple app, test it, integrating CSS frameworks (Angular Material or Bootstrap), secure it with Stormpath, and deploy it to the cloud. Could even turn it into a PWA if there's time."
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 221M-222M Lab",
+      "slotId" : "lab_par221M-222M_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par224M-225M",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "Hands-on Labs",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>Tu entends de plus en plus parler de Scala, mais le temps te manque pour démarrer ?<br  />\nTu as peur de te lancer car le langage semble compliqué ?<br  />\nOu tu souhaites tout simplement revoir les bases ?<br  />\nDans ce cas, viens à ce hands-on !</p>\n<p>L'objectif est de partir de 0, progresser pas à pas et poser plein de questions dans la bonne humeur !<br  />\nCe hands-on devrait te permettre d'avoir les connaissances nécessaires pour comprendre et écrire du Scala au quotidien :)</p>\n<p>Pour ceux qui se poseraient la question, Scala est un langage sur la JVM qui permet de la programmation fonctionnelle et objet et reste entièrement interopérable avec Java. Il est notamment très utilisé dans le monde Big Data (via Spark et Scalding entre autres).</p>\n",
+        "id" : "XPI-0919",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/09a79f4e4592cf77e5ebf0965489e6c7ec0438cd",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Loïc Knuchel"
+            },
+            "name" : "Loïc Knuchel"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1693d28c079e6c28269b9aa86ae04a4549ad3074",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Fabrice Sznajderman"
+            },
+            "name" : "Fabrice Sznajderman"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d167a51898267ed3b5913c1789f1ae6110a6ecf5",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Walid chergui"
+            },
+            "name" : "Walid chergui"
+          }
+        ],
+        "title" : "Scala class, bien démarrer avec Scala",
+        "lang" : "fr",
+        "summary" : "Tu entends de plus en plus parler de Scala, mais le temps te manque pour démarrer ?  \r\nTu as peur de te lancer car le langage semble compliqué ?  \r\nOu tu souhaites tout simplement revoir les bases ?  \r\nDans ce cas, viens à ce hands-on !\r\n\r\nL'objectif est de partir de 0, progresser pas à pas et poser plein de questions dans la bonne humeur !  \r\nCe hands-on devrait te permettre d'avoir les connaissances nécessaires pour comprendre et écrire du Scala au quotidien :)\r\n\r\nPour ceux qui se poseraient la question, Scala est un langage sur la JVM qui permet de la programmation fonctionnelle et objet et reste entièrement interopérable avec Java. Il est notamment très utilisé dans le monde Big Data (via Spark et Scalding entre autres)."
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 26,
+      "roomName" : "Paris 224M-225M Lab",
+      "slotId" : "lab_par224M-225M_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_212_213",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "Hands-on Labs",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Le caching est une des solutions qui s'offrent aux développeurs qui ont besoin d'améliorer les performances de leur application. Grâce à l'API JCache (JSR-107), Java possède son standard de Caching. Ce Hands on Lab vous montrera les différentes patterns de caching (Cache Aside, Cache Through, Write-Behind) et vous permettra de les implémenter avec JCache. Les différents exercices pratiques couvriront les concepts définis par JSR-107 : Les bases de l'API, les annotations, les règles d'expiration, et la vérification de l'utilisation de vos cas via les statistiques. Nous couvrirons égalements plusieurs sujets qui étendent JSR-107 et qui sont disponibles parmi plusieurs librairies de caching : Topologies de caches, contrôle de capacité, caches distribués.</p>\n",
+        "id" : "IYM-8175",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1c8c78210dc424eb8ee603ecb95626b44122eec5",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Aurelien Broszniowski"
+            },
+            "name" : "Aurelien Broszniowski"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/407f394c16a1dc8684bda06a68d9be07e88f8d14",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Ludovic Orban"
+            },
+            "name" : "Ludovic Orban"
+          }
+        ],
+        "title" : "Caching et Performance",
+        "lang" : "fr",
+        "summary" : "Le caching est une des solutions qui s'offrent aux développeurs qui ont besoin d'améliorer les performances de leur application. Grâce à l'API JCache (JSR-107), Java possède son standard de Caching. Ce Hands on Lab vous montrera les différentes patterns de caching (Cache Aside, Cache Through, Write-Behind) et vous permettra de les implémenter avec JCache. Les différents exercices pratiques couvriront les concepts définis par JSR-107 : Les bases de l'API, les annotations, les règles d'expiration, et la vérification de l'utilisation de vos cas via les statistiques. Nous couvrirons égalements plusieurs sujets qui étendent JSR-107 et qui sont disponibles parmi plusieurs librairies de caching : Topologies de caches, contrôle de capacité, caches distribués."
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 212-213M Lab",
+      "slotId" : "lab_neu_212_213_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_232_232",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Hands-on Labs",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Pour créer demain un code de qualité, venez (re)découvrir les bases des pratiques techniques du Software Craftsmanship de manière ludique !\nChers gens du métier, venez découvrir la vie d'un développeur agile.\nChers développeurs, venez pratiquer l'eXtreme LegoBuilding avec le framework LegoUnit !</p>\n",
+        "id" : "FAC-5030",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/528ed667b374bf3f3d741ffd178bdf66a6e71ba0",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Isabelle BLASQUEZ"
+            },
+            "name" : "Isabelle BLASQUEZ"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/83e120dc8a0287621a510e0ed93952de16ae2421",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Alice Barralon"
+            },
+            "name" : "Alice Barralon"
+          }
+        ],
+        "title" : "Sensibilisation aux bonnes pratiques techniques du Software Craftsmanship : Lego® à la rescousse !",
+        "lang" : "fr",
+        "summary" : "Pour créer demain un code de qualité, venez (re)découvrir les bases des pratiques techniques du Software Craftsmanship de manière ludique !\r\nChers gens du métier, venez découvrir la vie d'un développeur agile.\r\nChers développeurs, venez pratiquer l'eXtreme LegoBuilding avec le framework LegoUnit !"
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 231-232M Lab",
+      "slotId" : "lab_neu_232_232_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu_234_235",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "future",
+        "talkType" : "Hands-on Labs",
+        "track" : "Future, Robotique",
+        "summaryAsHtml" : "<p>Ce workshop se compose en 3 parties :</p>\n<ol>\n<li><p>Une présentation générale sur la technologie Blockchain et du projet Hyperledger.</p>\n</li>\n<li><p>Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée</p>\n</li>\n<li><p>Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live.</p>\n</li>\n</ol>\n<p>Pré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire.</p>\n",
+        "id" : "KWC-5405",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/311166c8587718e43872b2263abd01a5f630b06f",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Benjamin Fuentes"
+            },
+            "name" : "Benjamin Fuentes"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b32733e7a415d36b7711196aef7dfed8e33bba1d",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Nitesh  Thakrar"
+            },
+            "name" : "Nitesh  Thakrar"
+          }
+        ],
+        "title" : "Coder un SmartContract sur Hyperledger (Blockchain) ",
+        "lang" : "fr",
+        "summary" : "Ce workshop se compose en 3 parties :\r\n\r\n1.  Une présentation générale sur la technologie Blockchain et du projet Hyperledger. \r\n\r\n2.  Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée\r\n\r\n3. Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live. \r\n\r\nPré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire."
+      },
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491498600000,
+      "toTime" : "19:10",
+      "roomCapacity" : 32,
+      "roomName" : "Neuilly 234_234M Lab",
+      "slotId" : "lab_neu_234_235_thursday_6_16h10_19h10",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491487800000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "16:10",
+      "toTimeMillis" : 1491490500000,
+      "toTime" : "16:55",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_16h10_16h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "conf_b_amphi_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "c_maillot",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 380,
+      "roomName" : "Maillot",
+      "slotId" : "conf_c_maillot_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "conf_par242AB_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "conf_e_neu252_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "conf_d_par241_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "conf_f_neu251_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "conf_par243_t_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491491400000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "17:10",
+      "toTimeMillis" : 1491494100000,
+      "toTime" : "17:55",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "conf_neu253_t_thursday_6_17h10_17h55",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "tia_b_amphi_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "tia_par242AB_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "tia_e_neu252_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "tia_d_par241_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "tia_f_neu251_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "tia_par243_t_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491495000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:10",
+      "toTimeMillis" : 1491496800000,
+      "toTime" : "18:40",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "tia_neu253_t_thursday_6_18h10_18h40",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "b_amphi",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 826,
+      "roomName" : "Amphi Bleu",
+      "slotId" : "tia_b_amphi_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "tia_par242AB_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "tia_e_neu252_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "tia_d_par241_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "tia_f_neu251_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "tia_par243_t_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491497700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "18:55",
+      "toTimeMillis" : 1491499500000,
+      "toTime" : "19:25",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "tia_neu253_t_thursday_6_18h55_19h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>En 11 ans Jenkins est devenu la référence des serveurs d'intégration continue.</p>\n<p>Après une version 2.0 et l'arrivée du Pipeline en 2016, fort de ses 1400 plugins permettant une intégration aisée, il adresse des besoins de plus en plus variés pour la livraison, le déploiement continue et tellement d'autres usages.</p>\n<p>2017 réserve encore de grandes choses pour Jenkins: la nouvelle interface graphique BlueOcean, les pipelines \"descriptifs\", un nouveau plugin center, et bien d'autre encore.</p>\n<p>Utilisateur, contributeur ou simplement intéressé par Jenkins rejoignez-nous!</p>\n",
+        "id" : "ULX-3789",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6e4596fa4b3666882910e1b75546254b17d5f89d",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Damien DUPORTAL"
+            },
+            "name" : "Damien DUPORTAL"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a73cc5bfb4ce4d8f07f209039ada742ee750a332",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jean-Philippe Briend"
+            },
+            "name" : "Jean-Philippe Briend"
+          }
+        ],
+        "title" : "BoF Jenkins",
+        "lang" : "fr",
+        "summary" : "En 11 ans Jenkins est devenu la référence des serveurs d'intégration continue. \r\n\r\nAprès une version 2.0 et l'arrivée du Pipeline en 2016, fort de ses 1400 plugins permettant une intégration aisée, il adresse des besoins de plus en plus variés pour la livraison, le déploiement continue et tellement d'autres usages.\r\n\r\n2017 réserve encore de grandes choses pour Jenkins: la nouvelle interface graphique BlueOcean, les pipelines \"descriptifs\", un nouveau plugin center, et bien d'autre encore.\r\n\r\nUtilisateur, contributeur ou simplement intéressé par Jenkins rejoignez-nous!\r\n\r\n"
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "bof_par242AB_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "future",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Future, Robotique",
+        "summaryAsHtml" : "<p>Le BOF Duchess France est de retour ! et il s'adresse à tout le monde, hommes/femmes, développeurs(euses), personnes non technique, etc.</p>\n<p>Duchess France est avant tout une communauté de développeuses passionnées qui organisent des événements techniques destinés à tous et à toutes sur diverses technologies pour apprendre et partager des connaissances.</p>\n<p>Cette année, après vous avoir présenté un bilan des actions que nous avons réalisées (événements, marrainage, partenariats tels que la Webcademy ou Erasmus+), nous ferons une table ronde pour discuter du sujet des carrières techniques. Quelles sont les perspectives d’évolutions (Dev, Architecte, Tech Lead, CTO) ? Dans quels domaines (éditeurs ? SSII ? Startup ?)  ? Et beaucoup d’autres ;)</p>\n",
+        "id" : "YZL-8520",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/cb5891baa07247eb11df130701f0f3902a6fcd41",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Duchess France"
+            },
+            "name" : "Duchess France"
+          }
+        ],
+        "title" : "BOF Duchess France",
+        "lang" : "fr",
+        "summary" : "Le BOF Duchess France est de retour ! et il s'adresse à tout le monde, hommes/femmes, développeurs(euses), personnes non technique, etc.\r\n\r\nDuchess France est avant tout une communauté de développeuses passionnées qui organisent des événements techniques destinés à tous et à toutes sur diverses technologies pour apprendre et partager des connaissances.\r\n\r\nCette année, après vous avoir présenté un bilan des actions que nous avons réalisées (événements, marrainage, partenariats tels que la Webcademy ou Erasmus+), nous ferons une table ronde pour discuter du sujet des carrières techniques. Quelles sont les perspectives d’évolutions (Dev, Architecte, Tech Lead, CTO) ? Dans quels domaines (éditeurs ? SSII ? Startup ?)  ? Et beaucoup d’autres ;)"
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "bof_e_neu252_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Retrouvez les trois organisateurs de Devoxx France pour échanger, discuter et partager votre expérience sur la conférence.</p>\n",
+        "id" : "KIM-5827",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b14651a3cd78ab4fd03d522ebef81cdac1d5755c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Nicolas Martignole"
+            },
+            "name" : "Nicolas Martignole"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/2b935a5bfa04635d2e4c196afa7385ee2d254dde",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Antonio Goncalves"
+            },
+            "name" : "Antonio Goncalves"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/0031996932b23d92d1e67d556946c0e14cfdf4c9",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Zouheir Cadi"
+            },
+            "name" : "Zouheir Cadi"
+          }
+        ],
+        "title" : "Dans les coulisses de l'organisation de Devoxx France",
+        "lang" : "fr",
+        "summary" : "Retrouvez les trois organisateurs de Devoxx France pour échanger, discuter et partager votre expérience sur la conférence."
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "bof_d_par241_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Une BOF pour tous les développeurs qui s’intéressent à Spring. Au programme: discussion libre avec l’équipe Spring sur tous les projets du portfolio, et bien plus encore!</p>\n",
+        "id" : "HBJ-3604",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7ee8911b3983bb10774f99ed3b3da60b1854c839",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Stéphane Nicoll"
+            },
+            "name" : "Stéphane Nicoll"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e8c67e2df13f82a0e69b26b1274d11fec44b0122",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Brian Clozel"
+            },
+            "name" : "Brian Clozel"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9d77f0e35092ee25dacf9f9b6f9cc0fc695be416",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florent Biville"
+            },
+            "name" : "Florent Biville"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6edfe70ee7621dc90e256afe05ee9bd1bdb9cf73",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Marouane Gazanayi"
+            },
+            "name" : "Marouane Gazanayi"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d84b817a907825ede4a9d5a74665bc23be072608",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Sebastien Deleuze"
+            },
+            "name" : "Sebastien Deleuze"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/89a849add91029107d06f2981979f4c8d857ece3",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Simon Baslé"
+            },
+            "name" : "Simon Baslé"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7e7ce8659844ad917a72243cf0d07465aa9ed3e7",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yoann HENRY"
+            },
+            "name" : "Yoann HENRY"
+          }
+        ],
+        "title" : "The Spring BOF",
+        "lang" : "fr",
+        "summary" : "Une BOF pour tous les développeurs qui s’intéressent à Spring. Au programme: discussion libre avec l’équipe Spring sur tous les projets du portfolio, et bien plus encore!"
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "bof_f_neu251_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "future",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Future, Robotique",
+        "summaryAsHtml" : "<p>BOF des GDG Francais. Les Google Developer Groups (GDGs) sont des groupes de dévelopeurs intéressés par les technologies Google: Android, Chrome, Cloud, Go, Dart, Kubernetes, AngularJS, Firebase... ainsi que les API telles que Maps API, Cast API, YouTube API...</p>\n<p>Ce BOF présentera les GDGs ainsi que plusieurs technologies nouvelles du monde Google et sera co-organisé par plusieurs GDGs.</p>\n",
+        "id" : "VAQ-8019",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/bf8a71eed7ae0339dd4f1aca4899939fad7ad87b",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Alain Regnier"
+            },
+            "name" : "Alain Regnier"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4537de89f56b7966e34644ca43bb04407d264be9",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Thibault Pouget"
+            },
+            "name" : "Thibault Pouget"
+          }
+        ],
+        "title" : "BOF des Google Developer Group francais",
+        "lang" : "fr",
+        "summary" : "BOF des GDG Francais. Les Google Developer Groups (GDGs) sont des groupes de dévelopeurs intéressés par les technologies Google: Android, Chrome, Cloud, Go, Dart, Kubernetes, AngularJS, Firebase... ainsi que les API telles que Maps API, Cast API, YouTube API...\r\n\r\nCe BOF présentera les GDGs ainsi que plusieurs technologies nouvelles du monde Google et sera co-organisé par plusieurs GDGs.\r\n"
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "bof_par243_t_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>Le Performance User Group (Perfug)[http://perfug.github.io/] offre depuis bientôt 4 ans un lieu d'échanges pour toutes les personnes intéressées par l'optimisation et la performance, quel que soit leur niveau.\nNous vous offrons ce soir une rétrospective de 35 sessions en 35 minutes.</p>\n",
+        "id" : "GBG-3006",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/c0de4311c70c85f320209e2612aa274aa47a9984",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Marc Bojoly"
+            },
+            "name" : "Marc Bojoly"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/db02ea2e74f6c7618b9e887b0d721d5439fbeb42",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Borémi Toch"
+            },
+            "name" : "Borémi Toch"
+          }
+        ],
+        "title" : "35 sessions de Perfug en 35 minutes",
+        "lang" : "fr",
+        "summary" : "Le Performance User Group (Perfug)[http://perfug.github.io/] offre depuis bientôt 4 ans un lieu d'échanges pour toutes les personnes intéressées par l'optimisation et la performance, quel que soit leur niveau.\r\nNous vous offrons ce soir une rétrospective de 35 sessions en 35 minutes."
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "bof_neu253_t_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par202_203",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491500700000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>BOF Docker.</p>\n",
+        "id" : "VKE-6295",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4339329660c101f8f1a3755e856a1984c2dc54bf",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Adrien Blind"
+            },
+            "name" : "Adrien Blind"
+          }
+        ],
+        "title" : "BOF Docker",
+        "lang" : "fr",
+        "summary" : "BOF Docker.\r\n\r\n"
+      },
+      "fromTime" : "19:45",
+      "toTimeMillis" : 1491503700000,
+      "toTime" : "20:35",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 202-203 Lab",
+      "slotId" : "bof_par202_203_thursday_6_19h45_20h35",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Session de discussions et talks dédiée à la data sous toute ses formes. Du data engineer au data scientist, venez discuter des joies et frustrations de la data, mais aussi des dernières tendances liées à ce joyeux écosystème.</p>\n",
+        "id" : "IRK-8786",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/0cf90fdb17187ce10305b7d4f2e11832d3bc22e5",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Sam Bessalah"
+            },
+            "name" : "Sam Bessalah"
+          }
+        ],
+        "title" : "BOF Data Geeks and Friends",
+        "lang" : "fr",
+        "summary" : "Session de discussions et talks dédiée à la data sous toute ses formes. Du data engineer au data scientist, venez discuter des joies et frustrations de la data, mais aussi des dernières tendances liées à ce joyeux écosystème."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "bof_par242AB_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "future",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Future, Robotique",
+        "summaryAsHtml" : "<p>Tout ce que vous avez toujours voulu savoir sur l'initiative Devoxx4Kids sans jamais oser le demander.\nVenez rencontrer l'équipe Devoxx4Kids et poser vos questions.</p>\n",
+        "id" : "ARN-4486",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d79ace1e6a6d7c5ceee2bfb8725542d79ecf870b",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Daniel De Luca"
+            },
+            "name" : "Daniel De Luca"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/27a795af0940905c721d6a9c179e89c600aeb159",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Emmanuel Feller"
+            },
+            "name" : "Emmanuel Feller"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f4aea1c9996bf4e307a68c3080915b7a14cd1579",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Audrey NEVEU"
+            },
+            "name" : "Audrey NEVEU"
+          }
+        ],
+        "title" : "Devoxx4Kids BOF",
+        "lang" : "fr",
+        "summary" : "Tout ce que vous avez toujours voulu savoir sur l'initiative Devoxx4Kids sans jamais oser le demander.\r\nVenez rencontrer l'équipe Devoxx4Kids et poser vos questions."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "bof_e_neu252_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Apache Maven 3.5.0, Jigsaw, POM model v5, ... Apache Maven ne se repose pas sur ses lauriers. Il continue d'évoluer tout en restant complètement indépendant de toute entreprise et des enjeux commerciaux.</p>\n<p>Venez discuter avec différents membres de l’équipe mais aussi les contributeurs et acteurs du projet pour partager votre point de vue, vos douleurs, vos envies d’évolutions, pour qu’Apache Maven continue au quotidien à vous rendre service, à vous rendre plus productif.</p>\n",
+        "id" : "OKR-3855",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3a75b07635a12f01aea785cf606c395d03d2f1c2",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Hervé Boutemy"
+            },
+            "name" : "Hervé Boutemy"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a4aa19fa64372b927a62ff039428f4b4aafc687d",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Arnaud Héritier"
+            },
+            "name" : "Arnaud Héritier"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9851a429a45bee3543469ba6385e1d552790420f",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Brian Fox"
+            },
+            "name" : "Brian Fox"
+          }
+        ],
+        "title" : "BOF Apache Maven",
+        "lang" : "fr",
+        "summary" : "Apache Maven 3.5.0, Jigsaw, POM model v5, ... Apache Maven ne se repose pas sur ses lauriers. Il continue d'évoluer tout en restant complètement indépendant de toute entreprise et des enjeux commerciaux.\r\n\r\nVenez discuter avec différents membres de l’équipe mais aussi les contributeurs et acteurs du projet pour partager votre point de vue, vos douleurs, vos envies d’évolutions, pour qu’Apache Maven continue au quotidien à vous rendre service, à vous rendre plus productif."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "bof_d_par241_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Venez découvrir de multiples activités d'initiation aux concepts de l'univers Lean (petits jeux, ice breakers, formations à base de jeux de plateau, ...).\nNotre objectif : bousculer des certitudes et vous faire découvrir de nouvelles façons de faire et vous amener à vous demander “ Mais pourquoi est-ce que cela marche ?”\nCe sera aussi l’occasion de vous apprendre à refaire ces activités dans vos équipes.</p>\n<p>L’association Lean Kanban France a pour mission de faire découvrir l'immense terrain de jeu qu'est le Lean. Ce soir nous allons privilégier l'aspect ludique car nous ne souhaitons pas vous “infliger” des slides théoriques à la fin d’une journée bien remplie par les différentes sessions techniques qui sont au coeur de la conférence. Alors nous organisons une grande diversion : un espace de jeux où vous pourrez découvrir l'état d'esprit Lean &amp; Agile.</p>\n<p>Nous vous ferons gagner à cette occasion de nombreux cadeaux, dont 2 entrées pour la conférence LKFR du 29&amp;30/11/2017 à Paris.</p>\n",
+        "id" : "TJI-4584",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ca4adb955901a692a096161b51997d346d007bf",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Anne Gabrillagues"
+            },
+            "name" : "Anne Gabrillagues"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/341ff3dc19b831ea24193dc1218debd921e6c528",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Dimitri BAELI"
+            },
+            "name" : "Dimitri BAELI"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/815c0c15a6796e465b21163604d6254d88871af0",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Nils Lesieur"
+            },
+            "name" : "Nils Lesieur"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f3217b928f67c17d94c5da8fd7c9fb14f0009ed5",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yannick grenzinger"
+            },
+            "name" : "Yannick grenzinger"
+          }
+        ],
+        "title" : "BoF Lean Kanban France : laissez vous surprendre.",
+        "lang" : "fr",
+        "summary" : "Venez découvrir de multiples activités d'initiation aux concepts de l'univers Lean (petits jeux, ice breakers, formations à base de jeux de plateau, ...).\r\nNotre objectif : bousculer des certitudes et vous faire découvrir de nouvelles façons de faire et vous amener à vous demander “ Mais pourquoi est-ce que cela marche ?”\r\nCe sera aussi l’occasion de vous apprendre à refaire ces activités dans vos équipes.\r\n\r\nL’association Lean Kanban France a pour mission de faire découvrir l'immense terrain de jeu qu'est le Lean. Ce soir nous allons privilégier l'aspect ludique car nous ne souhaitons pas vous “infliger” des slides théoriques à la fin d’une journée bien remplie par les différentes sessions techniques qui sont au coeur de la conférence. Alors nous organisons une grande diversion : un espace de jeux où vous pourrez découvrir l'état d'esprit Lean & Agile.\r\n\r\nNous vous ferons gagner à cette occasion de nombreux cadeaux, dont 2 entrées pour la conférence LKFR du 29&30/11/2017 à Paris."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "bof_f_neu251_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>meetup Paris Machine Learning</p>\n",
+        "id" : "FFO-6370",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4d86ede09d575e52be7a9acabff56d7229c28505",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Bardol franck"
+            },
+            "name" : "Bardol franck"
+          }
+        ],
+        "title" : "BOF : Paris Machine Learning",
+        "lang" : "fr",
+        "summary" : "meetup Paris Machine Learning"
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "bof_par243_t_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Organisation d'un open-space sur le thème du DevOps.</p>\n<p>L’Open-space est une méthodologie qui vise a structurer et encourager la communication entre les différents participants de la soirée. Dans un premier temps, toute personne le souhaitant est invitée à proposer un ou plusieurs sujets (question technique, retour d'expérience, sujet méta ...), l’inscrire sur un ou des post-it et venir le ou les présenter en quelques mots. Une fois que nous avons fait le tour des propositions, chaque personne vient voter pour les sujets auxquels il désire participer (un point par post-it désiré). En fonction du nombre de voix récoltées par les différents sujets, nous organisons des séances de conversation, reparties dans différents espaces/créneaux horaires. Ainsi, au court de la soirée, à tout moment on sait quel sujet est abordé, et dans quel lieu.</p>\n<p>Que vous souhaitiez échanger sur le thème du DevOps ou que vous voulliez voir comment s'organsie un open-space, vous êtes les bienvenu dans cette espace.</p>\n",
+        "id" : "UWP-8703",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/5cebcb429230861cb0b2c4c6218383adedd1273d",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Clément Cunin"
+            },
+            "name" : "Clément Cunin"
+          }
+        ],
+        "title" : "Devops Paris Meetup",
+        "lang" : "fr",
+        "summary" : "Organisation d'un open-space sur le thème du DevOps.\r\n\r\nL’Open-space est une méthodologie qui vise a structurer et encourager la communication entre les différents participants de la soirée. Dans un premier temps, toute personne le souhaitant est invitée à proposer un ou plusieurs sujets (question technique, retour d'expérience, sujet méta ...), l’inscrire sur un ou des post-it et venir le ou les présenter en quelques mots. Une fois que nous avons fait le tour des propositions, chaque personne vient voter pour les sujets auxquels il désire participer (un point par post-it désiré). En fonction du nombre de voix récoltées par les différents sujets, nous organisons des séances de conversation, reparties dans différents espaces/créneaux horaires. Ainsi, au court de la soirée, à tout moment on sait quel sujet est abordé, et dans quel lieu.\r\n\r\nQue vous souhaitiez échanger sur le thème du DevOps ou que vous voulliez voir comment s'organsie un open-space, vous êtes les bienvenu dans cette espace."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "bof_neu253_t_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par202_203",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491504000000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : {
+        "trackId" : "cldops",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Cloud, Container et Scalabilité",
+        "summaryAsHtml" : "<p><em>Cloud Native Computing</em> vous connaissez ? Peut-être pas mais sans doute avez vous déjà entendu parlé de Docker, de Kubernetes, de Mesos, de CoreOS... Intéressés par ces sujets, venez en discuter.\nEn 2016 nous avons créé le meetup <em>Cloud Native Computing Paris</em> et nous profiterons de cette BOF pour faire un bilan \"un an de Cloud Native\". Mais nous désirons également que cette BOF soit une discussion ouverte, tout le monde est invité à participer, que vous vouliez faire un retour d'expérience ou alors poser une question.</p>\n",
+        "id" : "SGX-3211",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/69b4032195e405af7ad127ec72cc0b0c3243a6bb",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jean-Christophe Sirot"
+            },
+            "name" : "Jean-Christophe Sirot"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b90f822bbd8bd88166e0b87dbe316d019304fcb0",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Smaine Kahlouch"
+            },
+            "name" : "Smaine Kahlouch"
+          }
+        ],
+        "title" : "BOF Cloud Native Computing",
+        "lang" : "fr",
+        "summary" : "_Cloud Native Computing_ vous connaissez ? Peut-être pas mais sans doute avez vous déjà entendu parlé de Docker, de Kubernetes, de Mesos, de CoreOS... Intéressés par ces sujets, venez en discuter.\r\nEn 2016 nous avons créé le meetup _Cloud Native Computing Paris_ et nous profiterons de cette BOF pour faire un bilan \"un an de Cloud Native\". Mais nous désirons également que cette BOF soit une discussion ouverte, tout le monde est invité à participer, que vous vouliez faire un retour d'expérience ou alors poser une question."
+      },
+      "fromTime" : "20:40",
+      "toTimeMillis" : 1491507000000,
+      "toTime" : "21:30",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 202-203 Lab",
+      "slotId" : "bof_par202_203_thursday_6_20h40_21h30",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par242AB",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Venez discuter et poser vos questions à propos des outils elastic (elasticsearch, kibana, logstash, beats et X-Pack)</p>\n",
+        "id" : "VRT-8136",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4a822ea73a5cb708b3eb656ce77b48748c5cc7c7",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "David Pilato"
+            },
+            "name" : "David Pilato"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4914e3c813740c8a00dd48ccc9edfa42c7c0d945",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Baha Azarmi"
+            },
+            "name" : "Baha Azarmi"
+          }
+        ],
+        "title" : "BOF elastic and tools",
+        "lang" : "fr",
+        "summary" : "Venez discuter et poser vos questions à propos des outils elastic (elasticsearch, kibana, logstash, beats et X-Pack)"
+      },
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 280,
+      "roomName" : "Paris 242-AB",
+      "slotId" : "bof_par242AB_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "e_neu252",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>En mode \"thérapie de groupe\" nous vous proposons un BOF pour tous les speakers, débutants et \"confirmés\". L'idée est que chacun puisse partager ses expériences, bonnes pratiques, checklists et idées qui n'ont pas bien marché sur les différentes étapes d'un talk :</p>\n<ul>\n<li>Soumission du CFP</li>\n<li>Préparation du discours et des supports</li>\n<li>Répétitions</li>\n<li>Le jour de la conf</li>\n<li>L'après...</li>\n</ul>\n<p>Cette thérapie de groupe est aussi l'occasion d'échanger sur ce que ça veut dire d'être speaker. Pourquoi nous faisons ça ? Pourquoi nous passons autant de temps sur nos présentations etc...</p>\n",
+        "id" : "ZNQ-7776",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ef9ee08cfb1a46a285430223a056d889f99044c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Hubert 😎 SABLONNIÈRE"
+            },
+            "name" : "Hubert 😎 SABLONNIÈRE"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Sebastien Blanc"
+            },
+            "name" : "Sebastien Blanc"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f4aea1c9996bf4e307a68c3080915b7a14cd1579",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Audrey NEVEU"
+            },
+            "name" : "Audrey NEVEU"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/996b582386dd98b7ea73098dbcc6f0bd037ba037",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jean-Francois Garreau"
+            },
+            "name" : "Jean-Francois Garreau"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6dd4408eea453917089be404a1233df22818424b",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Philippe Antoine"
+            },
+            "name" : "Philippe Antoine"
+          }
+        ],
+        "title" : "Les speakers anonymes : thérapie de groupe",
+        "lang" : "fr",
+        "summary" : "En mode \"thérapie de groupe\" nous vous proposons un BOF pour tous les speakers, débutants et \"confirmés\". L'idée est que chacun puisse partager ses expériences, bonnes pratiques, checklists et idées qui n'ont pas bien marché sur les différentes étapes d'un talk :\r\n\r\n* Soumission du CFP\r\n* Préparation du discours et des supports\r\n* Répétitions\r\n* Le jour de la conf\r\n* L'après...\r\n\r\nCette thérapie de groupe est aussi l'occasion d'échanger sur ce que ça veut dire d'être speaker. Pourquoi nous faisons ça ? Pourquoi nous passons autant de temps sur nos présentations etc..."
+      },
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 380,
+      "roomName" : "Neuilly 252 AB",
+      "slotId" : "bof_e_neu252_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "d_par241",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Indépendant... Ce statut peut à la fois faire rêver et faire peur.\nQuid de l'aspect administratif ? Est-il facile de trouver des missions ? Comment se maintenir \"bankable\" sur le marché ? Et surtout, champagne ou caviar ?</p>\n<p>Ce BOF est l'occasion de rencontrer un panel d'indépendants qui pourront répondre à toutes vos questions, partager leur expérience concrète et fournir des conseils pour se lancer sans stresser !</p>\n",
+        "id" : "XGR-9005",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/06398fa2407ffee2f710f0173b45a0b480647d56",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Olivier Croisier"
+            },
+            "name" : "Olivier Croisier"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/560138938aaa2b17bdb586fc90a34b268437c05f",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Katia Aresti"
+            },
+            "name" : "Katia Aresti"
+          }
+        ],
+        "title" : "Les indépendants, une espèce en voie de... développement ?",
+        "lang" : "fr",
+        "summary" : "Indépendant... Ce statut peut à la fois faire rêver et faire peur.\r\nQuid de l'aspect administratif ? Est-il facile de trouver des missions ? Comment se maintenir \"bankable\" sur le marché ? Et surtout, champagne ou caviar ?\r\n\r\nCe BOF est l'occasion de rencontrer un panel d'indépendants qui pourront répondre à toutes vos questions, partager leur expérience concrète et fournir des conseils pour se lancer sans stresser !\r\n"
+      },
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 220,
+      "roomName" : "Paris 241",
+      "slotId" : "bof_d_par241_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "f_neu251",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>Bof des amateurs de GO, des passionnés des channels et de toutes les personnes intéressés par le merveilleux pays de Goland</p>\n",
+        "id" : "DDW-1785",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/043a31210de876082b469d82155bb25f5b2a83f5",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Gabriel Kastenbaum"
+            },
+            "name" : "Gabriel Kastenbaum"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f5526d5115b7aa4734dee1f48c060055e3e93193",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Fred Ménez"
+            },
+            "name" : "Fred Ménez"
+          }
+        ],
+        "title" : "BOF Goland Paris",
+        "lang" : "fr",
+        "summary" : "Bof des amateurs de GO, des passionnés des channels et de toutes les personnes intéressés par le merveilleux pays de Goland"
+      },
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 220,
+      "roomName" : "Neuilly 251",
+      "slotId" : "bof_f_neu251_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par243_t",
+      "notAllocated" : false,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "BOF (Bird of a Feather)",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>We live in a time of changes. Functional programming (FP) is not widely known and has an image of being too be academic or being ill-suited for real-world systems. Myths have a thin bit of truth. Somehow, a number of ecosystem changes are now shaking things up.</p>\n<p>On the one hand, technology improves, multi-core machines and multi-machines systems are common with the cloud. Algorithms and data-structures developped for FP are useful in these distributed environments.\nOn the other hand, FP languages gain maturity and reach new platforms such as the JVM, .Net and the web, which means that more real-world problems are within the range of functional programmers.</p>\n<p>Java, C++ both got anonymous lambdas and optional types in the recent years. Meanwhile, Swift started with these features. Also, immutable infrastructure is taking up. These illustrative facts are not a coincidence, they tell that FP is a direction, and functional programmers are pulling the whole industry in their direction.</p>\n<p>The Functional Programmers Paris Meetup gathers FP users and implementers and stresses the importance of cross-pollinisation between language-specific FP communities.</p>\n",
+        "id" : "EBX-7555",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a443b4669779a955877e2c0415406761195dc2c8",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Lucas DiCioccio"
+            },
+            "name" : "Lucas DiCioccio"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/68e3eb4644fd25d25ece568b8ad434fe8cab5e29",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Fred CECILIA"
+            },
+            "name" : "Fred CECILIA"
+          }
+        ],
+        "title" : "BOF - Meetup Functional Programmers",
+        "lang" : "en",
+        "summary" : "We live in a time of changes. Functional programming (FP) is not widely known and has an image of being too be academic or being ill-suited for real-world systems. Myths have a thin bit of truth. Somehow, a number of ecosystem changes are now shaking things up.\r\n\r\nOn the one hand, technology improves, multi-core machines and multi-machines systems are common with the cloud. Algorithms and data-structures developped for FP are useful in these distributed environments.\r\nOn the other hand, FP languages gain maturity and reach new platforms such as the JVM, .Net and the web, which means that more real-world problems are within the range of functional programmers.\r\n\r\nJava, C++ both got anonymous lambdas and optional types in the recent years. Meanwhile, Swift started with these features. Also, immutable infrastructure is taking up. These illustrative facts are not a coincidence, they tell that FP is a direction, and functional programmers are pulling the whole industry in their direction.\r\n\r\nThe Functional Programmers Paris Meetup gathers FP users and implementers and stresses the importance of cross-pollinisation between language-specific FP communities."
+      },
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 120,
+      "roomName" : "Paris 243",
+      "slotId" : "bof_par243_t_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "neu253_t",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "theatre",
+      "talk" : null,
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 120,
+      "roomName" : "Neuilly 253",
+      "slotId" : "bof_neu253_t_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    },
+    {
+      "roomId" : "par202_203",
+      "notAllocated" : true,
+      "fromTimeMillis" : 1491507300000,
+      "break" : null,
+      "roomSetup" : "classroom",
+      "talk" : null,
+      "fromTime" : "21:35",
+      "toTimeMillis" : 1491510300000,
+      "toTime" : "22:25",
+      "roomCapacity" : 32,
+      "roomName" : "Paris 202-203 Lab",
+      "slotId" : "bof_par202_203_thursday_6_21h35_22h25",
+      "day" : "thursday"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "uuid" : "1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
+  "bioAsHtml" : "<p>Sébastien Blanc a 12 d’expérience. Il a passé prés de 7 ans au pays des Bataves à  écumer les compagnie d&#x27;assurances et les banques à base de Struts et de Websphere.  Revenu depuis sur la cote d&#x27;azur se faire dorer, Sébastien travaille actuellement pour Red Hat, il fait partie de l’équipe KeyCloak qui délivre un serveur Open Source d&#x27;authentification et de gestion d&#x27;identité.\nDans son temps libre, il s’intéresse également au langage Groovy, au framework Web Grails et plus particulièrement à l&#x27;aspect Mobile et les outils RAD. Il aime également évangéliser les nerds en donnant régulièrement des conférences (Devoxx, SpringOne, GR8Conf). Vous pouvez réagir a ses trolls sur @sebi2706.</p>\n",
+  "acceptedTalks" : [
+    {
+      "talkType" : "Conference",
+      "track" : "Architecture, Performance et Securité",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/MXF-3544",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Sebastien Blanc"
+        }
+      ],
+      "id" : "MXF-3544",
+      "title" : "Mettre en place sa sécurité et sa gestion d'identité en 2017"
+    },
+    {
+      "talkType" : "BOF (Bird of a Feather)",
+      "track" : "DevOps, Agilité, Méthodologie & Tests",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/ZNQ-7776",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ef9ee08cfb1a46a285430223a056d889f99044c",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Hubert 😎 SABLONNIÈRE"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Sebastien Blanc"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f4aea1c9996bf4e307a68c3080915b7a14cd1579",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Audrey NEVEU"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/996b582386dd98b7ea73098dbcc6f0bd037ba037",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Jean-Francois Garreau"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6dd4408eea453917089be404a1233df22818424b",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Philippe Antoine"
+        }
+      ],
+      "id" : "ZNQ-7776",
+      "title" : "Les speakers anonymes : thérapie de groupe"
+    },
+    {
+      "talkType" : "Hands-on Labs",
+      "track" : "Java, JVM, Javas SE/EE",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/LPW-4412",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Sebastien Blanc"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4f411ec38191b55d2ca0558eb1cb8642d48eeb14",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Antoine Sabot-Durand"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4c653281ee1b4ac170732db9768b7ddf9bdbd33f",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Antonin Stefanutti"
+        }
+      ],
+      "id" : "LPW-4412",
+      "title" : "Créer une application Java EE 7 compatible MicroProfile et sécurisée avec WildFly Swarm,  Forge et KeyCloak"
+    }
+  ],
+  "company" : "Red Hat",
+  "bio" : "Sébastien Blanc a 12 d’expérience. Il a passé prés de 7 ans au pays des Bataves à  écumer les compagnie d'assurances et les banques à base de Struts et de Websphere.  Revenu depuis sur la cote d'azur se faire dorer, Sébastien travaille actuellement pour Red Hat, il fait partie de l’équipe KeyCloak qui délivre un serveur Open Source d'authentification et de gestion d'identité.\r\nDans son temps libre, il s’intéresse également au langage Groovy, au framework Web Grails et plus particulièrement à l'aspect Mobile et les outils RAD. Il aime également évangéliser les nerds en donnant régulièrement des conférences (Devoxx, SpringOne, GR8Conf). Vous pouvez réagir a ses trolls sur @sebi2706.",
+  "lastName" : "Blanc",
+  "firstName" : "Sebastien",
+  "blog" : "aerogear.org",
+  "avatarURL" : "https://lh4.googleusercontent.com/-U-laaS5DB64/AAAAAAAAAAI/AAAAAAAAAAA/f9MVKxhXGjk/photo.jpg",
+  "twitter" : "@sebi2706",
+  "lang" : "fr"
+}

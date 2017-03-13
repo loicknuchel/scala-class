@@ -1,0 +1,28 @@
+{
+  "trackId" : "lang",
+  "talkType" : "Hands-on Labs",
+  "track" : "Langages alternatifs",
+  "summaryAsHtml" : "<p>La Nintendo NES Classic Mini a suscité un engouement chez les amateurs de rétrogaming, mais aussi une déception pour les bidouilleurs acharnés: en effet on a affaire à de l'émulation classique sur un chipset ARM, qu'on peut obtenir avec un Raspberry Pi pour bien moins cher.\nL'objectif de cet atelier est d'étudier rapidement la NES originale, écrire un émulateur software minimaliste en C++, puis progressivement de remplacer les composants émulés par des implémentations hardware de ceux-ci en Verilog.\nOn utilisera à cet effet Verilator, un outil de génération de code C++ à partir de Verilog, qui permet de mélanger joyeusement le tout.</p>\n",
+  "id" : "QXY-1919",
+  "speakers" : [
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e630d2d08c4fc0610b87ef0b4d9c14bdafe9491c",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Gregory Estrade"
+      },
+      "name" : "Gregory Estrade"
+    },
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6a5beaea101fbcbbd1283512b0d0c5497a6ddfed",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Louise Ngo Mback"
+      },
+      "name" : "Louise Ngo Mback"
+    }
+  ],
+  "title" : "La Nintendo NES Classic Mini - Ce qu'elle aurait pu (dû ?) être. De l'émulation software à l'émulation hardware avec un FPGA.",
+  "lang" : "fr",
+  "summary" : "La Nintendo NES Classic Mini a suscité un engouement chez les amateurs de rétrogaming, mais aussi une déception pour les bidouilleurs acharnés: en effet on a affaire à de l'émulation classique sur un chipset ARM, qu'on peut obtenir avec un Raspberry Pi pour bien moins cher.\r\nL'objectif de cet atelier est d'étudier rapidement la NES originale, écrire un émulateur software minimaliste en C++, puis progressivement de remplacer les composants émulés par des implémentations hardware de ceux-ci en Verilog.\r\nOn utilisera à cet effet Verilator, un outil de génération de code C++ à partir de Verilog, qui permet de mélanger joyeusement le tout.  "
+}

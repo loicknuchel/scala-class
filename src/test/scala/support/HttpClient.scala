@@ -19,11 +19,11 @@ object HttpClient {
   private implicit val system = ActorSystem()
   private implicit val materializer = ActorMaterializer()
 
-  def get(url: String, useCache: Boolean = true): Future[String] =
-    if (useCache) localGet(url) else httpGet(url)
+  def get(url: String)(implicit useCache: Boolean = true): Future[String] =
+    if (useCache) localGet(url).recoverWith { case _ => getAndSave(url) } else httpGet(url)
 
   def getAndSave(url: String): Future[String] =
-    httpGet(url).flatMap(res => localSave(url, res))
+    httpGet(url).flatMap(res => localSave(url, formatJson(res)))
 
   private def urlToPath(url: String): String = (url.replace(DevoxxApi.conferenceUrl, "src/test/resources/devoxx-api") + ".json").replace("/.json", ".json")
 
@@ -37,6 +37,9 @@ object HttpClient {
     content
   }.toFuture
 
-  private def httpGet(url: String): Future[String] = Http().singleRequest(HttpRequest(uri = url)).flatMap(_.entity.toStrict(300.millis).map(_.data.utf8String))
+  private def httpGet(url: String): Future[String] = {
+    println("GET "+url)
+    Http().singleRequest(HttpRequest(uri = url)).flatMap(_.entity.toStrict(300.millis).map(_.data.utf8String))
+  }
 }
 

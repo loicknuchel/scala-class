@@ -1,0 +1,28 @@
+{
+  "trackId" : "lang",
+  "talkType" : "BOF (Bird of a Feather)",
+  "track" : "Langages alternatifs",
+  "summaryAsHtml" : "<p>Bof des amateurs de GO, des passionnés des channels et de toutes les personnes intéressés par le merveilleux pays de Goland</p>\n",
+  "id" : "DDW-1785",
+  "speakers" : [
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/043a31210de876082b469d82155bb25f5b2a83f5",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Gabriel Kastenbaum"
+      },
+      "name" : "Gabriel Kastenbaum"
+    },
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f5526d5115b7aa4734dee1f48c060055e3e93193",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Fred Ménez"
+      },
+      "name" : "Fred Ménez"
+    }
+  ],
+  "title" : "BOF Goland Paris",
+  "lang" : "fr",
+  "summary" : "Bof des amateurs de GO, des passionnés des channels et de toutes les personnes intéressés par le merveilleux pays de Goland"
+}

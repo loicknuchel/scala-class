@@ -1,0 +1,28 @@
+{
+  "trackId" : "future",
+  "talkType" : "Hands-on Labs",
+  "track" : "Future, Robotique",
+  "summaryAsHtml" : "<p>Ce workshop se compose en 3 parties :</p>\n<ol>\n<li><p>Une présentation générale sur la technologie Blockchain et du projet Hyperledger.</p>\n</li>\n<li><p>Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée</p>\n</li>\n<li><p>Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live.</p>\n</li>\n</ol>\n<p>Pré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire.</p>\n",
+  "id" : "KWC-5405",
+  "speakers" : [
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/311166c8587718e43872b2263abd01a5f630b06f",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Benjamin Fuentes"
+      },
+      "name" : "Benjamin Fuentes"
+    },
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b32733e7a415d36b7711196aef7dfed8e33bba1d",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Nitesh  Thakrar"
+      },
+      "name" : "Nitesh  Thakrar"
+    }
+  ],
+  "title" : "Coder un SmartContract sur Hyperledger (Blockchain) ",
+  "lang" : "fr",
+  "summary" : "Ce workshop se compose en 3 parties :\r\n\r\n1.  Une présentation générale sur la technologie Blockchain et du projet Hyperledger. \r\n\r\n2.  Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée\r\n\r\n3. Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live. \r\n\r\nPré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire."
+}

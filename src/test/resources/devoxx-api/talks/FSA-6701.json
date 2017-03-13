@@ -1,0 +1,28 @@
+{
+  "trackId" : "java",
+  "talkType" : "Conference",
+  "track" : "Java, JVM, Javas SE/EE",
+  "summaryAsHtml" : "<p>Spring 5.0 arrive dans le monde Reactive avec un nouveau framework web qui adhère à 100% à Reactive Streams et s'adapte aux Reactive APIs comme Reactor 3 ou RxJava 2.</p>\n<p>Cette session de live coding va vous montrer comment créer une application réactive avec Spring 5.0 et Spring Boot 2.0. Entre autres, nous coderons ensemble <strong>une API JSON</strong> et des <strong>vues HTML avec Thymeleaf 3.0</strong>, avec <strong>Spring Data Reactive</strong> et le nouveau <code>WebClient</code> pour composer des données de services distants. L'application utilisera <strong>Netty</strong> comme client et serveur.</p>\n",
+  "id" : "FSA-6701",
+  "speakers" : [
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e8c67e2df13f82a0e69b26b1274d11fec44b0122",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Brian Clozel"
+      },
+      "name" : "Brian Clozel"
+    },
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d84b817a907825ede4a9d5a74665bc23be072608",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Sebastien Deleuze"
+      },
+      "name" : "Sebastien Deleuze"
+    }
+  ],
+  "title" : "Reactive Spring",
+  "lang" : "fr",
+  "summary" : "Spring 5.0 arrive dans le monde Reactive avec un nouveau framework web qui adhère à 100% à Reactive Streams et s'adapte aux Reactive APIs comme Reactor 3 ou RxJava 2.\r\n\r\nCette session de live coding va vous montrer comment créer une application réactive avec Spring 5.0 et Spring Boot 2.0. Entre autres, nous coderons ensemble **une API JSON** et des **vues HTML avec Thymeleaf 3.0**, avec **Spring Data Reactive** et le nouveau `WebClient` pour composer des données de services distants. L'application utilisera **Netty** comme client et serveur."
+}
