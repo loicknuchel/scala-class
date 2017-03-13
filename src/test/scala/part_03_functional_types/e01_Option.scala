@@ -1,17 +1,15 @@
 package exercices
 
-import support.HandsOnSuite
-import org.scalatest.Matchers._
 import models.devoxx.basic.Room
-import scala.None
+import support.HandsOnSuite
 
 class e01_Option extends HandsOnSuite {
 
   /**
     * Option
     *
-    *  Option[A] en scala est un conteneur de valeur optionelle de type T
-    *  Option a valeur
+    *  Option[A] en scala est un conteneur de valeur optionelle de type A
+    *  Option a deux classes
     *     * Some[A] => presente le cas ou la valeur est presente
     *     * None    => presente l'absence de la valeur
     *
@@ -102,7 +100,7 @@ class e01_Option extends HandsOnSuite {
 
     room3 match {
       case Some(room) => println(room.name)
-      case None => println("la salle n'exciste pas")
+      case None => println("la salle n'existe pas")
     }
 
   }

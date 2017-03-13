@@ -1,22 +1,9 @@
-
-import java.io.{File, PrintWriter}
+package exercices
 
 import support.HandsOnSuite
-import org.scalatest.Matchers._
-
-import scala.None
-import scala.concurrent.Future
-import scala.concurrent._
-import ExecutionContext.Implicits.global
-import scala.concurrent.duration._
-import scala.util.{Failure, Success, Try}
-import models.devoxx.basic.Talk
-import models.devoxx.basic.Slot
-import models.devoxx.basic.Room
-import models.devoxx.basic.Conference
-import org.joda.time.DateTime
 
 import scala.io.Source
+import scala.util.{Failure, Success, Try}
 
 class e03_Try extends HandsOnSuite {
 
@@ -25,13 +12,36 @@ class e03_Try extends HandsOnSuite {
     */
 
 
-  exercice("Déclarer une Future") {
+  exercice("Déclarer un Try") {
 
-    Try {
-      Source.fromFile("Speaker.txt").getLines.toList
-    }.map(iter => iter.filter())
-    new File("Write.txt").getAbsolutePath shouldBe "titi"
-    .foreach { x => print(x) }
+    val nombreSpeaker = Try {
+      Source.fromFile("Speakers.txt").getLines
+    }.map(lines => lines.size)
+
+    nombreSpeaker match {
+      case Success(count) => print(s"Le fichier Speacker.txt contient : $count speakers")
+      case Failure(ex) => println(s"Erreur : ${ex.getMessage}")
+    }
+
+    nombreSpeaker.isSuccess shouldBe true
+    nombreSpeaker.get shouldBe 2
+
+  }
+
+  exercice("Déclarer un") {
+
+    val nombreTalks = Try {
+      Source.fromFile("Talks.txt").getLines
+    }.map(lines => lines.size)
+
+    nombreTalks match {
+      case Success(count) => print(s"Le fichier Speacker.txt contient : $count speakers")
+      case Failure(ex) => println(s"Erreur : ${ex.getMessage}")
+    }
+
+    nombreTalks.failed shouldBe true
+    nombreTalks.recover{ case _ => 0} shouldBe 0
+
   }
 
 
