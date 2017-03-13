@@ -2,13 +2,13 @@ package support
 
 import org.scalatest.exceptions.{TestFailedException, TestPendingException}
 
-class MyException(val fileNameAndLineNumber: Option[String], val context: Option[String], val message: String, val cause: Throwable) extends Exception(message, cause) {}
+class MyException(val fileName: Option[String], val ctx: TestContext, val errors: Option[List[Int]], val message: String, val cause: Throwable) extends Exception(message, cause) {}
 
-class MyTestPendingException(fileNameAndLineNumber: Option[String], context: Option[String], message: String, cause: Throwable) extends MyException(fileNameAndLineNumber, context, message, cause) {}
+class MyTestPendingException(fileName: Option[String], ctx: TestContext, errors: Option[List[Int]], message: String, cause: Throwable) extends MyException(fileName, ctx, errors, message, cause) {}
 
-class MyNotImplException(fileNameAndLineNumber: Option[String], context: Option[String], message: String, cause: Throwable) extends MyException(fileNameAndLineNumber, context, message, cause) {}
+class MyNotImplementedException(fileName: Option[String], ctx: TestContext, errors: Option[List[Int]], message: String, cause: Throwable) extends MyException(fileName, ctx, errors, message, cause) {}
 
-class MyTestFailedException(fileNameAndLineNumber: Option[String], context: Option[String], message: String, cause: Throwable) extends MyException(fileNameAndLineNumber, context, message, cause) {}
+class MyTestFailedException(fileName: Option[String], ctx: TestContext, errors: Option[List[Int]], message: String, cause: Throwable) extends MyException(fileName, ctx, errors, message, cause) {}
 
 object MyException {
   private def getPackage(suite: HandsOnSuite, name: String): String =
@@ -20,28 +20,28 @@ object MyException {
   def pending(suite: HandsOnSuite, ctx: TestContext, e: TestPendingException): MyTestPendingException = {
     val stack = e.getStackTrace()(2)
     val location = getLocation(suite, stack)
-    val formattedCode = Formatter.formatCode(ctx, List(stack.getLineNumber))
-    new MyTestPendingException(Some(location), Some(formattedCode), Formatter.missingValue, e)
+    val errors = List(stack.getLineNumber)
+    new MyTestPendingException(Some(location), ctx, Some(errors), Formatter.missingValue, e)
   }
 
-  def notImpl(suite: HandsOnSuite, ctx: TestContext, e: NotImplementedError): MyNotImplException = {
+  def notImplemented(suite: HandsOnSuite, ctx: TestContext, e: NotImplementedError): MyNotImplementedException = {
     val stack = e.getStackTrace()(1)
     val nextStack = e.getStackTrace()(2)
     val location = getLocation(suite, stack)
-    val formattedCode = Formatter.formatCode(ctx, List(stack.getLineNumber, nextStack.getLineNumber))
-    new MyNotImplException(Some(location), Some(formattedCode), Formatter.missingImplementation, e)
+    val errors = List(stack.getLineNumber, nextStack.getLineNumber)
+    new MyNotImplementedException(Some(location), ctx, Some(errors), Formatter.missingImplementation, e)
   }
 
   def failed(suite: HandsOnSuite, ctx: TestContext, e: TestFailedException): MyTestFailedException = {
     val locationOpt = e.failedCodeFileNameAndLineNumberString.map(getPackage(suite, _))
-    val formattedCode = Formatter.formatCode(ctx, e.failedCodeLineNumber.toList)
-    new MyTestFailedException(locationOpt, Some(formattedCode), Option(e.getMessage).getOrElse(""), e)
+    val errors = e.failedCodeLineNumber.toList
+    new MyTestFailedException(locationOpt, ctx, Some(errors), Option(e.getMessage).getOrElse(""), e)
   }
 
   def unknown(suite: HandsOnSuite, ctx: TestContext, e: Throwable): MyException = {
     val firstGoodStack: Option[StackTraceElement] = e.getStackTrace.find(_.getClassName.contains(suite.getClass.getName))
     val locationOpt = firstGoodStack.map(st => getLocation(suite, st))
-    val formattedCodeOpt = firstGoodStack.map(st => Formatter.formatCode(ctx, List(st.getLineNumber)))
-    new MyException(locationOpt, formattedCodeOpt, e.toString, e)
+    val errorsOpt = firstGoodStack.map(st => List(st.getLineNumber))
+    new MyException(locationOpt, ctx, errorsOpt, e.toString, e)
   }
 }

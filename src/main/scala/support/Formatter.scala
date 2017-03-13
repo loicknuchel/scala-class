@@ -12,63 +12,67 @@ object Formatter {
   private val failureHeader = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
   private val failureFooter = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
 
-  def formatMessage(suiteName: String, testName: String, err: Option[MyException], pending: Boolean): String = {
-    def formatHeader(pending: Boolean): String = if (pending) pendingHeader else failureHeader
+  def formatInfo(suiteName: String, testName: String, errOpt: Option[MyException], pending: Boolean): String = {
+    def formatHeader(pending: Boolean): String =
+      if (pending) pendingHeader else failureHeader
 
-    def locationLine(name: String, content: String): String = padRight(name, 9) + ": " + content.replace("\n", "") + "\n"
+    def locationLine(name: String, content: String): String =
+      padRight(name, 9) + ": " + content.replace("\n", "") + "\n"
 
     def formatLocation(suiteName: String, testName: String, fileName: Option[String]): String =
       locationLine("Suite", suiteName) +
         locationLine("Test", testName) +
         fileName.map(f => locationLine("File", f)).getOrElse("")
 
-    def formatMessage(message: Option[String]): String = message.map(m => "\n" + m).getOrElse("")
+    def formatMessage(message: Option[String]): String =
+      message.map(m => "\n" + m).getOrElse("")
 
-    def formatContext(context: Option[String]): String = context.map(c => "\n" + c + "\n").getOrElse("")
+    def formatCode(ctx: TestContext, errors: Option[List[Int]]): String =
+      errors.map("\n" + codeSection(ctx, _) + "\n").getOrElse("")
 
-    def formatStackTrace(err: Option[MyException]): String = err.map {
+    def formatStackTrace(err: MyException): String = err match {
       case _: MyTestPendingException => ""
-      case _: MyNotImplException => ""
+      case _: MyNotImplementedException => ""
       case _: MyTestFailedException => ""
       case e => "\n" + e.getCause.getStackTrace.take(7).mkString("\n") + "\n"
-    }.getOrElse("")
+    }
 
-    def formatFooter(pending: Boolean): String = if (pending) pendingFooter else failureFooter
+    def formatFooter(pending: Boolean): String =
+      if (pending) pendingFooter else failureFooter
 
     val sb = new StringBuilder()
     sb.append(formatHeader(pending))
-    sb.append(formatLocation(suiteName, testName, err.flatMap(_.fileNameAndLineNumber)))
-    sb.append(formatMessage(err.map(_.getMessage)))
-    sb.append(formatContext(err.flatMap(_.context)))
-    sb.append(formatStackTrace(err))
+    sb.append(formatLocation(suiteName, testName, errOpt.flatMap(_.fileName)))
+    errOpt.foreach(err => {
+      sb.append(formatMessage(Option(err.getMessage)))
+      sb.append(formatCode(err.ctx, err.errors))
+      sb.append(formatStackTrace(err))
+    })
     sb.append(formatFooter(pending))
     sb.toString
   }
 
-  def formatCode(ctx: TestContext, errorLines: List[Int]): String = {
-    def testCtx(context: TestContext, errorLine: Int): String =
-      prettyShow(context.lines.slice(context.startLine - 1, context.endLine + 1), errorLine).mkString("\n")
+  private def codeSection(ctx: TestContext, errors: List[Int]): String = {
+    def formatLine(lineNumber: Int, line: String, hasError: Boolean): String =
+      (if (hasError) " ->" else "   ") + padLeft(lineNumber.toString, 4) + " |" + line
 
-    def errorCtx(context: TestContext, errorLine: Int): String =
-      prettyShow(context.lines.slice(errorLine - 2, errorLine + 1), errorLine).mkString("\n")
+    def formatBlock(lines: List[(Int, String)], error: Int): List[String] =
+      lines.map { case (lineNumber, codeLine) => formatLine(lineNumber, codeLine, lineNumber == error) }
 
-    def prettyShow(source: List[(Int, String)], errorLine: Int): List[String] =
-      source.map { case (lineNumber, codeLine) =>
-        formatCodeLine(lineNumber == errorLine, lineNumber, codeLine)
-      }
+    def formatTest(context: TestContext, error: Int): String =
+      formatBlock(context.lines.slice(context.startLine - 1, context.endLine + 1), error).mkString("\n")
 
-    def formatCodeLine(isError: Boolean, lineNumber: Int, codeLine: String): String =
-      (if (isError) " ->" else "   ") + padLeft(lineNumber.toString, 4) + " |" + codeLine
+    def formatError(context: TestContext, error: Int): String =
+      formatBlock(context.lines.slice(error - 2, error + 1), error).mkString("\n")
 
-    val (inTest, outTest) = errorLines.partition(line => ctx.startLine <= line && line <= ctx.endLine)
-    val errorCtxs = outTest.sorted.map(i => errorCtx(ctx, i))
-    val split = if (errorCtxs.isEmpty) "" else "\n...\n"
+    val (inTest, outTest) = errors.partition(line => ctx.startLine <= line && line <= ctx.endLine)
+    val formattedErrors = outTest.sorted.map(i => formatError(ctx, i))
+    val split = if (formattedErrors.isEmpty) "" else "\n...\n"
     if (inTest.nonEmpty)
-      (errorCtxs ::: (split :: testCtx(ctx, inTest.min) :: Nil)).mkString("\n")
+      (formattedErrors ::: (split :: formatTest(ctx, inTest.min) :: Nil)).mkString("\n")
     else
-      (errorCtxs ::: (split :: Nil)).mkString("\n")
+      (formattedErrors ::: (split :: Nil)).mkString("\n")
   }
-
 
   private object Utils {
     def padLeft(text: String, size: Int, char: String = " "): String =

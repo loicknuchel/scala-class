@@ -8,31 +8,27 @@ class TestContext(code: => String, val startLine: Int, val endLine: Int) {
 }
 
 object TestContext {
+  final val CR = '\u000D'
   final val LF = '\u000A'
   final val FF = '\u000C'
-  final val CR = '\u000D'
   final val SU = '\u001A'
 
   def getLines(code: String): List[(Int, String)] = {
-    val text = code
     val lineBuf = new ArrayBuffer[String]()
     var charBuf = new ArrayBuffer[Char]()
     var previousChar: Char = 'a'
-    for (c <- text.toCharArray) {
-      def closeLine() {
-        lineBuf.append(charBuf.mkString)
-        charBuf = new ArrayBuffer[Char]()
-      }
+    def closeLine() {
+      lineBuf.append(charBuf.mkString)
+      charBuf = new ArrayBuffer[Char]()
+    }
 
+    for (c <- code.toCharArray) {
       (c: @switch) match {
         case CR => closeLine()
-        case LF => if (previousChar != CR) {
-          closeLine()
-        }
+        case LF => if (previousChar != CR) closeLine()
         case FF | SU => closeLine()
         case _ => charBuf.append(c)
       }
-
       previousChar = c
     }
 

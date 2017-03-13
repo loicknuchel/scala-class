@@ -7,15 +7,12 @@ class ExerciceMacro[C <: Context](val c: C) {
 
   def apply(testName: c.Expr[String])(testFun: c.Expr[Unit])(suite: c.Expr[HandsOnSuite]): c.Expr[Unit] = {
     val code = testFun.tree.pos.source.content.mkString
-    val (start, end) = getLines(testFun.tree)
-    c.Expr(q"""support.HandsOnSuite.runTest($testName, $suite)($testFun)(new support.TestContext($code, $start, $end))""")
-  }
-
-  private def getLines(tree: Tree): (Int, Int) =
-    tree match {
-      case Block(xs, y) => (tree.pos.line, y.pos.line)
-      case _ => (tree.pos.line, tree.pos.line)
+    val (start, end) = testFun.tree match {
+      case Block(xs, y) => (testFun.tree.pos.line, y.pos.line)
+      case _ => (testFun.tree.pos.line, testFun.tree.pos.line)
     }
+    c.Expr(q"""$suite.test($testName)($testFun)(new support.TestContext($code, $start, $end))""")
+  }
 }
 
 object ExerciceMacro {
