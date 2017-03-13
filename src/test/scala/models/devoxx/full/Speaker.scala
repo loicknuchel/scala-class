@@ -11,5 +11,5 @@ case class Speaker(
                     blog: Option[String],
                     twitter: Option[String],
                     lang: Option[String],
-                    acceptedTalks: List[Link]
+                    acceptedTalks: List[AcceptedTalk]
                   )
