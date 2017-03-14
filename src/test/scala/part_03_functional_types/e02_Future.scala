@@ -61,7 +61,7 @@ class e02_Future extends HandsOnSuite {
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd") // DevoxxService.getSlotByTalkId("DNY-501")
 
     // récupèrer les dètails du talk DNY-501
-    val talk :Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(speaker.acceptedTalks(0).id))
+    val talk :Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(" DNY-501"))
                                       .map(talk => talk.speakers.size)
 
     val talkValue = Await.result(talk , 1 second)
