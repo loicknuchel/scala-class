@@ -13,9 +13,9 @@ case class Talk(
                )
 
 case class AcceptedTalk(
-                          id: TalkId,
-                          talkType: String,
-                          track: String,
-                          title: String,
-                          links: List[Link]
-)
+                         id: TalkId,
+                         talkType: String,
+                         track: String,
+                         title: String,
+                         links: List[Link]
+                       )

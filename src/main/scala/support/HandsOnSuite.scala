@@ -8,7 +8,7 @@ import org.scalatest.time.{Millis, Seconds, Span}
 
 import scala.language.experimental.macros
 
-trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
+trait HandsOnSuite extends FunSuite with Matchers with ScalaFutures {
   implicit val suite: HandsOnSuite = this
   implicit val defaultPatience = PatienceConfig(timeout = Span(5, Seconds), interval = Span(500, Millis))
 
@@ -16,8 +16,8 @@ trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
 
   def exercice(testName: String)(testFun: Unit)(implicit suite: HandsOnSuite): Unit = macro ExerciceMacro.apply
 
-  def test(testName: String)(testFun: => Unit)(ctx: TestContext): Unit = {
-    it(testName) {
+  def testExercice(testName: String)(testFun: => Unit)(ctx: TestContext): Unit = {
+    test(testName) {
       try {
         testFun
       } catch {

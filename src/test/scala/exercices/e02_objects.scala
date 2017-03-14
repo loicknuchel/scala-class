@@ -3,10 +3,12 @@ package exercices
 import support.HandsOnSuite
 
 class e02_objects extends HandsOnSuite {
+
   /**
     * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus tard) mais il est tout aussi capable pour l'objet
     * C'est ce que nous allons voir dans cette partie
     */
+
 
   exercice("Les classes en Scala") {
     // Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe
@@ -77,10 +79,10 @@ class e02_objects extends HandsOnSuite {
   /**
     * Scala propose des `case class` qui sont des classes ordinaires mais avec quelques différences :
     *   - un certain nombre de méthodes sont directement implémentées :
-    * * equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
-    * * toString          : affiche la classe et son contenu plutôt que son adresse
-    * * copy              : permet de créer une nouvelle classe en modifiant quelques attributs
-    * * eq                : permet de tester une égalité de référence
+    *     - equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
+    *     - toString          : affiche la classe et son contenu plutôt que son adresse
+    *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
+    *     - eq                : permet de tester une égalité de référence
     *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
@@ -165,24 +167,169 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Les traits Scala sont très similaires aux interfaces Java 8
+    * Les traits Scala sont très similaires aux interfaces de Java 8.
+    * Ils peuvent contenir des variables, valeurs et méthodes abstraites mais aussi concrètes.
+    * Il est aussi possible d'hériter de plusieurs traits contrairement aux classes
     */
   exercice("Les traits") {
-    // abstract val & def, concrete methods (like Java 8 interfaces)
-    // can hold state (not Java 8 interfaces)
-    // can be used for multiple inheritance
+    trait Geo {
+      // valeur abstraite, doit être définie dans la classe qui implémente ce trait
+      val name: String
 
-    // TODO
+      // méthode abstraite, doit être définie par la classe qui implémente ce trait
+      def perimeter(): Double
+
+      // variable concrète, accessible dans la classe qui implémente ce trait
+      var color = "red"
+
+      // méthode concrète, accessible dans la classe qui implémente ce trait
+      def setColor(c: String): Unit = this.color = c
+    }
+    case class Square(width: Double) extends Geo {
+      val name = "Square"
+
+      def perimeter(): Double = width * 4
+    }
+
+    val square = Square(5)
+    square.name shouldBe __
+    square.perimeter() shouldBe __
+    square.color shouldBe __
+    square.setColor("blue")
+    square.color shouldBe __
+
+    val other = Square(4)
+    other.color shouldBe __
   }
 
 
+  /**
+    * Parfois, on a besoin d'une fonction renvoit plusieurs résultats.
+    * Dans ce cas, on peut créer objet spécifique avec ces différents résultats ou utiliser un objet générique qui peut contenur plusieurs valeurs.
+    * Par exemple en Java, on peut créer un objet Pair<A, B> (https://github.com/search?q=filename%3APair.java)
+    *
+    * Côté Scala, on a les tuples qui sont des case class qui peuvent contenir un nombre fixe de valeurs de type hétérogène.
+    * Il y a de Tuple1 à Tuple22
+    */
   exercice("Les tuples") {
-    // TODO
-    // pair._1
+    val pair: Tuple2[Int, String] = (1, "test")
+    pair._1 shouldBe __
+    pair._2 shouldBe __
+
+    // any value can be in a tuple
+    val multi = (3, 2.0, "1", (n: Int) => n + 1)
+    multi._3 shouldBe __
+    multi._4(multi._1) shouldBe __
   }
 
 
+  /**
+    * Un extracteur est l'inverse d'un constructeur.
+    * Il permet d'extraire les valeurs d'un objet, ce qui peut s'avérer très pratique...
+    */
+  exercice("Extractors") {
+    // On extrait les valeurs du tuple dans deux variables indépendantes
+    val pair = (2, "name")
+    val (value, name) = pair
+    value shouldBe __
+    name shouldBe __
+
+    // Et bien sûr il est possible de généraliser ça au delà des tupes grâce à la méthode `unapply()`
+    class User(val name: String, val score: Int)
+    class Point(val x: Int, val y: Int)
+    object MyExtractor {
+      def unapply(arg: User): Option[(String, Int)] = Some((arg.name, arg.score))
+
+      def unapply(arg: Point): Option[(Int, Int)] = Some((arg.x, arg.y))
+    }
+
+    // On appelle la méthode unapply de l'extracteur identifié
+    // Si une valeur ne nous intéresse pas, on peut utiliser `_` pour ne pas l'affecter
+    val MyExtractor(username, _) = new User("Jean", 10)
+    username shouldBe __
+    val MyExtractor(x, y) = new Point(1, 2)
+    x shouldBe __
+
+    // Bien souvent on va créer l'extracteur dans l'objet companion de la classe
+    class Square(val width: Int)
+    object Square {
+      def unapply(arg: Square): Option[Int] = Some(arg.width)
+    }
+    val Square(width) = new Square(3)
+    width shouldBe __
+
+    // Pour le cas des `case class` la méthode `unapply()` des automatiquement générée
+    case class Circle(x: Int, y: Int, r: Int)
+    val Circle(_, _, r) = Circle(3, 3, 5)
+    r shouldBe __
+
+    // A noter quand même, la méthode unapply renvoyant une option de tuple, on est limité à 22 paramètres par les tuples :(
+  }
+
+
+  /**
+    * Le pattern matching est un mécanisme similaire aux `switch` d'autres langages mais en étant bien plus souple.
+    * Par ailleurs, comme en Scala toute expression retroue une valeur, c'est aussi le cas du pattern matching
+    */
   exercice("Le pattern matching") {
-    // TODO
+    // Commençons par du classique...
+    val r1 = "B" match {
+      case "A" => "it's A"
+      case "B" => "B wins"
+      case "C" => "C is best"
+    }
+    r1 shouldBe __
+
+    // On peut ajouter un catch-all avec un case "sans condition"
+    // c'est le cas des deux derniers, le premier capturant la valeur (in) et l'autre non
+    // on voit ici que l'ordre compte, le premier qui correspond est sélectionné
+    val r2 = "Z" match {
+      case "D" => "Hello D"
+      case in: String => "Catched " + in
+      case _ => "Fallback"
+    }
+    r2 shouldBe __
+
+    // Il est possible de mettre plusieurs conditions dans un même case
+    val r3 = "C" match {
+      case "A" | "B" | "C" => "first"
+      case "D" | "F" => "second"
+      case _ => "third"
+    }
+    r3 shouldBe __
+
+    // Maintenant commençons avec les fonctionnalités plus sympa ;)
+    // On peut ajouter une condition
+    val r4 = "salut" match {
+      case s: String if s.length < 3 => "short text"
+      case s: String if s.length >= 3 => "long text"
+    }
+    r4 shouldBe __
+
+    // Le pattern matching supporte les extrateurs, y compris les extracteurs imbriqués
+    case class User(name: String, score: Int)
+    val r5 = User("toto", 10) match {
+      case User(_, score) if score > 10 => "high score"
+      case User("toto", score) => s"toto has $score in score"
+      case _ => "no match"
+    }
+    r5 shouldBe __
+    case class Talk(title: String, speaker: User, opts: (Boolean, Boolean))
+    val r6 = Talk("Scala", User("Luc", 9), (true, false)) match {
+      case Talk(title, User(_, score), (true, _)) if score < 10 => s"MATCH for $title"
+      case _ => "no match..."
+    }
+    r6 shouldBe __
+
+    // Enfin, il est possible d'utiliser le pattern matching sur des types
+    trait Person
+    case class Attendee(name: String) extends Person
+    case class Speaker(name: String) extends Person
+    val p: Person = Speaker("Marc")
+    val r7 = p match {
+      case Attendee(name) => s"$name is attendee"
+      case Speaker(name) => s"$name is speaker"
+    }
+    r7 shouldBe __
   }
 }

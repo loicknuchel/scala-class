@@ -11,7 +11,7 @@ class ExerciceMacro[C <: Context](val c: C) {
       case Block(xs, y) => (testFun.tree.pos.line, y.pos.line)
       case _ => (testFun.tree.pos.line, testFun.tree.pos.line)
     }
-    c.Expr(q"""$suite.test($testName)($testFun)(new support.TestContext($code, $start, $end))""")
+    c.Expr(q"""$suite.testExercice($testName)($testFun)(new support.TestContext($code, $start, $end))""")
   }
 }
 
