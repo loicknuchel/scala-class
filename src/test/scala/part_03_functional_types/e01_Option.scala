@@ -9,15 +9,25 @@ class e01_Option extends HandsOnSuite {
     * Option
     *
     *  Option[A] en scala est un conteneur de valeur optionelle de type A
-    *  Option a deux classes
+    *  Le type Option est une solution élégante pour resoudre le problème qu'un fontion ne retour pas de valauer,
+    *  ansi ca permet d'eviter les NullPointerExceptions
+    *  Option a deux sous-types
     *     * Some[A] => presente le cas ou la valeur est presente
     *     * None    => presente l'absence de la valeur
+    *
+    *  les fonctions de Option resemble beaucoup a celle des collections, ainsi un peut trouver :
+    *
+    *     map : permet d'appliquer une fonction sur la valeur de l'Option, et elle retour une Option
+    *     flatMap : appliquer une fonction qui retourn une Option
+    *     get : retourne la valeur de l'Option
+    *     getOrElse : permet de retourner une valeur si l'Option egale None
     *
     */
   exercice("Déclarer une Option") {
     // pour declarer une Option on peut utiliser le constructeur de la classe Some
     val age : Option[Int] = Some(42)
 
+    //Utilisez get pour retourner la valeur de l'Option
     age.get shouldBe 42
 
     //S'il ya un doute sur la nulleté de la valeur on peut utiliser le constructeur de Option
@@ -25,9 +35,9 @@ class e01_Option extends HandsOnSuite {
     val valeurAbsente : Option[String] = Option(valeurNull)
 
     valeurAbsente shouldBe None
-
   }
   /**
+    *
     * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur dpar defaut
     */
 
@@ -37,6 +47,7 @@ class e01_Option extends HandsOnSuite {
 
     age shouldBe None
     age.getOrElse(42) shouldBe 42
+    age.orElse(Option(42)) shouldBe Option(42)
   }
 
   /**
@@ -48,16 +59,16 @@ class e01_Option extends HandsOnSuite {
 
   exercice("Appliquer une fonction sur une Option") {
 
-    // chercher dans la base de donnée la salle avec un id = 2
-    val room2 : Option[Room] = RoomRepository.getRoomById("2")
+    // cherchez dans la base de donnée la salle avec un id = 2, en utilisant  RoomRepository.getRoomById
+    val room2 : Option[Room] = RoomRepository.getRoom("2")
 
-    // En utilisant la fontion map recuperer le nom de la salle
+    // En utilisant la fontion map retournez le nom de la salle
     val room2Name = room2.map(room => room.name)
 
     room2Name.get shouldBe "salle2"
 
-    // recuperer la salle 15, sachant que la salle 15  n'existe pas
-    val room15 = RoomRepository.getRoomById("15")
+    // récupérez la salle 15, sachant que la salle 15  n'existe pas
+    val room15 = RoomRepository.getRoom("15")
 
     room15 shouldBe None
 
@@ -76,7 +87,7 @@ class e01_Option extends HandsOnSuite {
 
   exercice("flatMap sur une Option") {
     // En utilisant la fontion map incrementez l'age
-    val room3 : Option[Room] = RoomRepository.getRoomById("3")
+    val room3 : Option[Room] = RoomRepository.getRoom("3")
 
     // recuperer la capacité de la room 3 en utilsiant la fonction RoomRepository.getCapacite(room :Room)
     // la fonction def getCapacite(room) return une  Option[Int]
@@ -85,7 +96,7 @@ class e01_Option extends HandsOnSuite {
     capaciteRoom3.get shouldBe 30
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
-    val room5 : Option[Room] = RoomRepository.getRoomById("5")
+    val room5 : Option[Room] = RoomRepository.getRoom("5")
     val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room) )
 
     capaciteRoom5 shouldBe None
@@ -95,19 +106,21 @@ class e01_Option extends HandsOnSuite {
     * Some est une case class, alors il est possible d'appliquer du pattern matching
     */
   exercice("Pattern matching sur une Option") {
-    //en appliquant le pattern matching afficher dans le consolle le nom de la salle
-    val room3 : Option[Room] = RoomRepository.getRoomById("3")
+    val room10 : Option[Room] = RoomRepository.getRoom("10")
 
-    room3 match {
-      case Some(room) => println(room.name)
-      case None => println("la salle n'existe pas")
+    //en appliquant le pattern matching retourner le nom de la salle, sinon "unknown"
+    val roomName = room10 match {
+      case Some(room) => room.name
+      case None => "unknown"
     }
+
+    roomName shouldBe "unknown"
 
   }
 
   object RoomRepository{
 
-    def getRoomById(id: String): Option[Room] = {
+    def getRoom(id: String): Option[Room] = {
       if(id.toInt < 8 )
         Some(Room(id,s"salle$id", Some(id.toInt * 10)))
       else
