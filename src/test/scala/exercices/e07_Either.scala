@@ -2,13 +2,13 @@ package exercices
 
 import java.net.MalformedURLException
 
-import models.devoxx.full.{DevoxxApi, Speaker, SpeakerId, Talk}
+import models.devoxx.full.DevoxxApi
 import support.HandsOnSuite
 
-import scala.concurrent.duration._
 import scala.concurrent.Await
+import scala.concurrent.duration._
 
-class e04_Either extends HandsOnSuite {
+class e07_Either extends HandsOnSuite {
 
   exercice("Either : Right") {
 

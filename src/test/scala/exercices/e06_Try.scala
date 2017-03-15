@@ -5,7 +5,7 @@ import support.HandsOnSuite
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
-class e03_Try extends HandsOnSuite {
+class e06_Try extends HandsOnSuite {
 
   /**
     * TODO

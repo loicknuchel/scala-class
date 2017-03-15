@@ -3,7 +3,7 @@ package exercices
 import models.devoxx.basic.Room
 import support.HandsOnSuite
 
-class e01_Option extends HandsOnSuite {
+class e04_Option extends HandsOnSuite {
 
   /**
     * Option
@@ -91,7 +91,7 @@ class e01_Option extends HandsOnSuite {
 
     // recuperer la capacité de la room 3 en utilsiant la fonction RoomRepository.getCapacite(room :Room)
     // la fonction def getCapacite(room) return une  Option[Int]
-    val capaciteRoom3 = room3.flatMap( room => RoomRepository.getCapacite(room) )
+    val capaciteRoom3: Option[Int] = ??? //room3.flatMap( room => RoomRepository.getCapacite(room) )
 
     capaciteRoom3.get shouldBe 30
 

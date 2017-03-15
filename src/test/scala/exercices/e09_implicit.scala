@@ -2,11 +2,12 @@ package exercices
 
 import models.devoxx.basic.{Conference, Room, Speaker, Talk}
 import support.HandsOnSuite
+import scala.language.implicitConversions
 
 /**
   * Created by fsznajderman on 12/03/2017.
   */
-class e04_implicit extends HandsOnSuite {
+class e09_implicit extends HandsOnSuite {
 
 
   /**
@@ -79,9 +80,11 @@ class e04_implicit extends HandsOnSuite {
       * La méthode initiale ne fait pas partie du type Speaker, néanmoins à l'aide du mécanisme d'implicit appliqué sur une classe
       * cette méthode est maintenant disponible.
       */
-    import Helpers._
-
     val speaker = Speaker("Azef234", "Martin", "Lapin", "Fr")
+
+    // val initiales = speaker.initiales // does not compile
+
+    import Helpers._
 
     speaker.initiales shouldEqual __
 

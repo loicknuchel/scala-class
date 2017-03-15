@@ -1,13 +1,15 @@
+package exercices
+
 
 import models.devoxx.full.{DevoxxApi, Speaker}
 import support.HandsOnSuite
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.{Future, _}
 import scala.concurrent.duration._
+import scala.concurrent.{Future, _}
 import scala.util.{Failure, Success}
 
-class e02_Future extends HandsOnSuite {
+class e05_Future extends HandsOnSuite {
 
   /**
     * TODO
