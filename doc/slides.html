@@ -3,48 +3,78 @@
 <head>
     <title>Title</title>
     <meta charset="utf-8">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-        body { font-family: 'Droid Serif'; }
-        h1, h2, h3 {
-            font-family: 'Yanone Kaffeesatz';
-            font-weight: normal;
-        }
-        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    </style>
+    <link rel="stylesheet" href="assets/devoxx-2017.css">
 </head>
 <body>
+    <!--
+        remark documentation: https://github.com/gnab/remark/wiki
+    -->
     <textarea id="source">
-        class: center, middle
+        class: intro
         # Scala class
 
-        ---
-
-        # Agenda
-
-        1. Introduction
-        2. Deep-dive
-        3. ...
+        - Fabrice Sznajderman [@fsznajderman](https://twitter.com/fsznajderman)
+        - Loïc Knuchel [@loicknuchel](https://twitter.com/loicknuchel)
+        - Walid Chergui [@walidchergui](https://twitter.com/walidchergui)
 
         ---
 
-        # Introduction
+        # Big title
+
+        Simple text
 
         ---
 
-        # Syntaxe
+        ## Syntax highlighting
+
+        1. Androidstudio
+        2. Atelier Estuary Dark
+        3. Dracula
+        4. Hybrid
+
+        ---
+
+        ### Code
+
+        ```scala
+        def add(a: Int, b: Int): Int = {
+          return a + b
+        }
+        *def add(a: Int, b: Int): Int = {
+        * a + b
+        *}
+
+        // Notice how there is no return statement.
+        ```
+
+        ---
+
+        #### Syntaxe
 
         - les `;` en fin de ligne sont facultatifs
         - `.` et `()` sont optionnels (mais mieux vaut les mettre)
         - on peut déclarer plusieurs classes dans un même fichier
         - Unit
+
+        ---
+        class: title
+        # Démo
     </textarea>
+    <div class="footer">
+        <p>#DevoxxFR</p>
+        <img src="./assets/devoxx-2017/logo-texte-devoxx-france-400.png" />
+    </div>
     <script src="./assets/remark-latest.min.js"></script>
     <script>
-        var slideshow = remark.create();
+        var slideshow = remark.create({
+            ratio: '16:9',
+            navigation: {
+                scroll: false
+            },
+            highlightStyle: 'androidstudio',
+            highlightLines: true,
+            highlightSpans: true
+        });
     </script>
 </body>
 </html>

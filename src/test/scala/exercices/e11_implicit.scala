@@ -6,8 +6,6 @@ import support.HandsOnSuite
 import scala.language.implicitConversions
 
 class e11_implicit extends HandsOnSuite {
-
-
   /**
     * Une des fonctionnalité intéressante du langage Scala est l'utilisation d'implicit.
     *
@@ -47,6 +45,7 @@ class e11_implicit extends HandsOnSuite {
 
   exercice("Implicit : Enrichissment de type") {
     object Helpers {
+
       /**
         * Ici nous allons enrichir un type existant avec de nouvelles fonctionnalités. Ceci sans mécanisme d'héritage ni modification du type original.
         * L'objectif est de rajouter au type Speaker un fonction permettant d'extraire ses initiales
@@ -54,6 +53,7 @@ class e11_implicit extends HandsOnSuite {
       implicit class SpeakerTools(speaker: Speaker) {
         def initiales: String = s"${speaker.firstName.toUpperCase.head}. ${speaker.lastName.toUpperCase.head}."
       }
+
     }
 
     /**
@@ -73,6 +73,7 @@ class e11_implicit extends HandsOnSuite {
     implicit def addition(a: Int, b: Int): Int = {
       a + b
     }
+
     implicit def multiplication(a: Int, b: Int): Int = {
       a * b
     }
@@ -119,6 +120,7 @@ class e11_implicit extends HandsOnSuite {
   exercice("Implicit pattern") {
     //todo à revoir
     object DisplayHelpers {
+
       /**
         * Ici nous définissons un trait representant la methode permettant d'obtenir une représentation du paramètre sous forme d'une chaîne
         */
@@ -140,6 +142,7 @@ class e11_implicit extends HandsOnSuite {
       implicit object TalkDisplay extends Display[Talk] {
         override def show(item: Talk): String = s"${item.title} - ${item.speakers.mkString(",")} ${item.talkType}"
       }
+
     }
 
     /**

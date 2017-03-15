@@ -4,7 +4,6 @@ import models.devoxx.basic.Room
 import support.HandsOnSuite
 
 class e04_Option extends HandsOnSuite {
-
   /**
     * Option
     *
@@ -24,14 +23,14 @@ class e04_Option extends HandsOnSuite {
     */
   exercice("Déclarer une Option") {
     // pour declarer une Option on peut utiliser le constructeur de la classe Some
-    val age : Option[Int] = Some(42)
+    val age: Option[Int] = Some(42)
 
     //Utilisez get pour retourner la valeur de l'Option
     age.get shouldBe 42
 
     //S'il ya un doute sur la nulleté de la valeur on peut utiliser le constructeur de Option
-    val valeurNull : String = null
-    val valeurAbsente : Option[String] = Option(valeurNull)
+    val valeurNull: String = null
+    val valeurAbsente: Option[String] = Option(valeurNull)
 
     valeurAbsente shouldBe None
   }
@@ -41,7 +40,7 @@ class e04_Option extends HandsOnSuite {
     * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur dpar defaut
     */
   exercice("Valeur par défaut") {
-    val age : Option[Int] = None
+    val age: Option[Int] = None
 
     age shouldBe None
     age.getOrElse(42) shouldBe 42
@@ -57,7 +56,7 @@ class e04_Option extends HandsOnSuite {
     */
   exercice("Appliquer une fonction sur une Option") {
     // cherchez dans la base de donnée la salle avec un id = 2, en utilisant  RoomRepository.getRoomById
-    val room2 : Option[Room] = RoomRepository.getRoom("2")
+    val room2: Option[Room] = RoomRepository.getRoom("2")
 
     // En utilisant la fontion map retournez le nom de la salle
     val room2Name = room2.map(room => room.name)
@@ -84,7 +83,7 @@ class e04_Option extends HandsOnSuite {
     */
   exercice("flatMap sur une Option") {
     // En utilisant la fontion map incrementez l'age
-    val room3 : Option[Room] = RoomRepository.getRoom("3")
+    val room3: Option[Room] = RoomRepository.getRoom("3")
 
     // recuperer la capacité de la room 3 en utilsiant la fonction RoomRepository.getCapacite(room :Room)
     // la fonction def getCapacite(room) return une  Option[Int]
@@ -93,8 +92,8 @@ class e04_Option extends HandsOnSuite {
     capaciteRoom3.get shouldBe 30
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
-    val room5 : Option[Room] = RoomRepository.getRoom("5")
-    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room) )
+    val room5: Option[Room] = RoomRepository.getRoom("5")
+    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room))
 
     capaciteRoom5 shouldBe None
   }
@@ -104,7 +103,7 @@ class e04_Option extends HandsOnSuite {
     * Some est une case class, alors il est possible d'appliquer du pattern matching
     */
   exercice("Pattern matching sur une Option") {
-    val room10 : Option[Room] = RoomRepository.getRoom("10")
+    val room10: Option[Room] = RoomRepository.getRoom("10")
 
     //en appliquant le pattern matching retourner le nom de la salle, sinon "unknown"
     val roomName = room10 match {
@@ -115,18 +114,17 @@ class e04_Option extends HandsOnSuite {
     roomName shouldBe "unknown"
   }
 
-  
-  object RoomRepository{
 
+  object RoomRepository {
     def getRoom(id: String): Option[Room] = {
-      if(id.toInt < 8 )
-        Some(Room(id,s"salle$id", Some(id.toInt * 10)))
+      if (id.toInt < 8)
+        Some(Room(id, s"salle$id", Some(id.toInt * 10)))
       else
         None
     }
 
-    def getCapacite(room :Room) : Option[Int] = {
-      if(room.id.toInt < 4)
+    def getCapacite(room: Room): Option[Int] = {
+      if (room.id.toInt < 4)
         room.capacite
       else
         None

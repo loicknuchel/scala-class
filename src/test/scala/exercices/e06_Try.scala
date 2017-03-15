@@ -6,7 +6,6 @@ import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
 class e06_Try extends HandsOnSuite {
-
   /**
     * TODO
     */

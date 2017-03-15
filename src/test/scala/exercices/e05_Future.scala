@@ -1,17 +1,15 @@
 package exercices
 
-
 import models.devoxx.full.{DevoxxApi, Speaker}
 import support.HandsOnSuite
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration._
 import scala.concurrent._
+import scala.concurrent.duration._
 import scala.language.postfixOps
 import scala.util.{Failure, Success}
 
 class e05_Future extends HandsOnSuite {
-
   /**
     * TODO
     */
@@ -21,8 +19,8 @@ class e05_Future extends HandsOnSuite {
       42
     }
 
-    val numberValue = Await.result(number , 1 second)
-    numberValue shouldBe  42
+    val numberValue = Await.result(number, 1 second)
+    numberValue shouldBe 42
 
     number.onComplete {
       case Success(number) => println(number)
@@ -38,8 +36,8 @@ class e05_Future extends HandsOnSuite {
     // récupèrer le prénom du speaker
     val firstName: Future[String] = speaker.map(speaker => speaker.firstName)
 
-    val roomName = Await.result(firstName , 1 second)
-    roomName shouldBe  "Loïc"
+    val roomName = Await.result(firstName, 1 second)
+    roomName shouldBe "Loïc"
   }
 
 
@@ -49,10 +47,10 @@ class e05_Future extends HandsOnSuite {
 
     //combiner les deux futures pour en avoir une seul
     val description = speaker1.zip(speaker2)
-            .map{case (speaker1 : Speaker , speaker2 : Speaker) => speaker1.lang == speaker2.lang}
+      .map { case (speaker1: Speaker, speaker2: Speaker) => speaker1.lang == speaker2.lang }
 
     val descriptionValue = Await.result(description, 2 second)
-    descriptionValue shouldBe  true
+    descriptionValue shouldBe true
   }
 
 
@@ -61,10 +59,10 @@ class e05_Future extends HandsOnSuite {
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd") // DevoxxService.getSlotByTalkId("DNY-501")
 
     // récupèrer les dètails du talk DNY-501
-    val talk :Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(" DNY-501"))
-                                      .map(talk => talk.speakers.size)
+    val talk: Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(" DNY-501"))
+      .map(talk => talk.speakers.size)
 
-    val talkValue = Await.result(talk , 1 second)
+    val talkValue = Await.result(talk, 1 second)
 
     talkValue shouldBe 3
   }

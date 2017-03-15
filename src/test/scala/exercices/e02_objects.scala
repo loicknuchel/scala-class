@@ -149,10 +149,12 @@ class e02_objects extends HandsOnSuite {
     // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
     object Person {
       def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
+
       def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
     }
     case class Person(firstName: String, lastName: String) {
       def initials(): String = Person.initials(this)
+
       def trigramme(): String = Person.trigramme(firstName, lastName)
     }
 
@@ -185,6 +187,7 @@ class e02_objects extends HandsOnSuite {
     }
     case class Square(width: Double) extends Geo {
       val name = "Square"
+
       def perimeter(): Double = width * 4
     }
 

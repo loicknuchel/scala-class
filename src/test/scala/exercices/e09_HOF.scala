@@ -3,7 +3,6 @@ package exercices
 import support.HandsOnSuite
 
 class e09_HOF extends HandsOnSuite {
-
   /**
     * Dans le chapitre collection nous avons eu l'occasion de voir ce qu'était une fonction d'Ordre Supérieur.
     * Nous allons maintenons mettre en oeuvre pour no propre besoin les proporiétés du tel fonction.
@@ -19,5 +18,4 @@ class e09_HOF extends HandsOnSuite {
       * Soit les fonctions suivantes :
       */
   }
-
 }
