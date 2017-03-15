@@ -1,6 +1,6 @@
 package exercices
 
-import models.devoxx.basic.Speaker
+import models.devoxx.basic.{Conference, Room, Speaker, Talk}
 import support.HandsOnSuite
 
 /**
@@ -18,7 +18,8 @@ class e04_implicit extends HandsOnSuite {
     *   - D'enrichir un type avec de nouvelles fonctions
     *   - Faire une conversion d'un type A vers un type B implicitement
     *
-    * La résolution des imlpicites se base sur le système de type. 
+    * La résolution des imlpicites se base sur le système de type. Lorsque le compilateur se trouve face à un implicit, il va chercher dans les différents
+    * scopes un type (class, fonction) qui match celui de l'implicit
     *
     * Une mauvaise compréhension de ce méchanisme ou une mauvaise utilisation peuvent avoir des conséquences importantes
     * sur les temps de compilation de notre programmme.
@@ -86,44 +87,51 @@ class e04_implicit extends HandsOnSuite {
 
   }
 
-  exercice("Implicit : paramètre") {
+  object operation {
 
-    /**
-      * Ici nous déclarons deux fonctions implicit
-      */
-    object operation {
-
-      implicit def addition(a: Int, b: Int): Int = {
-        a + b
-      }
-
-      implicit def multiplication(a: Int, b: Int): Int = {
-        a * b
-      }
-
+    implicit def addition(a: Int, b: Int): Int = {
+      a + b
     }
 
-    def compute(a: Int, b: Int)(implicit operation: (Int, Int) => Int) = {
-      operation(a, b)
+    implicit def multiplication(a: Int, b: Int): Int = {
+      a * b
     }
 
-    object main1 {
+  }
 
-      import operation.addition
+  def compute(a: Int, b: Int)(implicit operation: (Int, Int) => Int) = {
+    operation(a, b)
+  }
 
-      compute(3, 4) shouldEqual __
+  /**
+    * La fonction compute(Int,Int):Int attend en paramètre deux entiers et un implicit sous la forme d'une fonction fonction
+    * de type (Int, Int) => Int)
+    *
+    * Pour répondre à la résolution de cet implicit nous déclarons deux fonctions implicites (addition, multiplication) qui match ce type.
+    *
+    * Pour comprendre le mécanisme de résolution, nous avons deux objects main1 et main2 qui permettent de délimiter un scope de résolution.
+    * Si deux types implicites se trouvent dans le même scope de résolution, un confllit sera remonté par le compilateur.
+    *
+    */
+  exercice("Implicit : paramètre 1 (simple)") {
 
 
-    }
+    import operation.addition
 
-    object main2 {
+    compute(3, 4) shouldEqual __
 
-      import operation.multiplication
 
-      compute(3, 4) shouldEqual __
+  }
+  exercice("Implicit : paramètre 2 (simple)") {
 
-    }
 
+    import operation.multiplication
+
+    compute(3, 4) shouldEqual __
+
+
+  }
+  exercice("Implicit pattern") {
     //todo à revoir
     /**
       * Dans cet exercice nous allons voir le mécanisme des implicits appliqué au paramètres d'une fonction.
@@ -139,9 +147,59 @@ class e04_implicit extends HandsOnSuite {
       */
 
 
-    trait Display[A] {
-      def show
+    object DisplayHelpers {
+
+      /**
+        * Ici nous définissons un trait representant la methode permettant d'obtenir une représentation du paramètre sous forme d'une chaîne
+        */
+
+      trait Display[A] {
+        def show(item: A): String
+      }
+
+      /**
+        * Ici nous définissons 3 implicits (1 par type) permettant d'opérer la transformation
+        */
+
+      implicit object SpeakerDisplay extends Display[Speaker] {
+        override def show(item: Speaker): String = s"${item.firstName} ${item.lastName} [${item.lang}]"
+      }
+
+
+      implicit object RoomDisplay extends Display[Room] {
+        override def show(item: Room): String = s"${item.name}[${item.capacite}]"
+      }
+
+      implicit object TalkDisplay extends Display[Talk] {
+        override def show(item: Talk): String = s"${item.title} - ${item.speakers.mkString(",")} ${item.talkType}"
+      }
+
     }
+
+
+    /**
+      * Maintenant nous allons voir comment mettre tout ça en oeuvre
+      */
+
+    import DisplayHelpers._
+
+
+    def display[A](item: A)(implicit display: Display[A]): String = {
+      display.show(item)
+    }
+
+
+    val speaker = Speaker("SDfr3", "Harry", "Cover", "Fr")
+    val room = Room("AdFgh", "Grand Amphi", Some(200))
+    val talk = Talk("mLpo", Conference, "Handson Scala", "découvrir Scala en s'amusant", List("Loic, Walid, Fabrice"))
+
+    /**
+      * La résolution de l'implicit se faire sur le type du paramètre passé à la fonction. 
+      */
+
+    display(speaker) shouldEqual __
+    display(talk) shouldEqual __
+    display(room) shouldEqual __
 
 
   }
