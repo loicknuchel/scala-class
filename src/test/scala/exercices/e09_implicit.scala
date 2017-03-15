@@ -197,7 +197,7 @@ class e09_implicit extends HandsOnSuite {
     val talk = Talk("mLpo", Conference, "Handson Scala", "découvrir Scala en s'amusant", List("Loic, Walid, Fabrice"))
 
     /**
-      * La résolution de l'implicit se faire sur le type du paramètre passé à la fonction. 
+      * La résolution de l'implicit se faire sur le type du paramètre passé à la fonction.
       */
 
     display(speaker) shouldEqual __
