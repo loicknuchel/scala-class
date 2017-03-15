@@ -35,20 +35,20 @@ class e02_objects extends HandsOnSuite {
     p1 == p2 shouldBe true
     p2.toString shouldBe "Point(1,2)"
 
-    // TIP1: look at hashCode/equals, intellij can generate them...
+    // TIP1: penser à hashCode/equals, intellij peut les générer...
   }
 
 
   exercice("Ajouter de l'immutabilité") {
     // Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
 
-    // - crée une class Point immutable (qu'on ne peut pas modifier)
+    // - crée une class Point immutable qui réponde à ces assertions
 
     // val p = new Point(1, 2)
     // p.x = 3 // ne doit pas compiler
 
 
-    // - implémente la méthode `move()`
+    // - implémente la méthode `move()` de la classe Point
 
     // p.move(2, 1)
     // p.x shouldBe 1 // la classe étant immutable elle ne doit pas pouvoir être modifiée
@@ -70,15 +70,15 @@ class e02_objects extends HandsOnSuite {
     // p4.y shouldBe 6
 
 
-    // TIP1: une valeur ne peut être modifiée
-    // TIP2: si on ne peut modifier l'objet, alors il faut en créer un nouveau
+    // TIP1: une valeur (val) ne peut être modifiée
+    // TIP2: si on ne peut pas modifier un objet, alors il faut en créer un nouveau
     // TIP3: les paramètres nommés et valeurs par défaut seront très utiles ici
   }
 
 
   /**
-    * Scala propose des `case class` qui sont des classes ordinaires mais avec quelques différences :
-    *   - un certain nombre de méthodes sont directement implémentées :
+    * Scala propose des `case class` qui sont des classes ordinaires avec certaines méthodes implémentées par défaut :
+    *   - méthodes déjà implémentées :
     *     - equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
     *     - toString          : affiche la classe et son contenu plutôt que son adresse
     *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
@@ -86,7 +86,7 @@ class e02_objects extends HandsOnSuite {
     *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
-    * Toutes ces particularités rendent les case class très pratiques pour modéliser les données
+    * Toutes ces particularités rendent les case class très pratiques pour modéliser les données d'une application
     */
   exercice("Les case class sont des super classes") {
     case class Point(x: Int, y: Int) {
@@ -114,19 +114,17 @@ class e02_objects extends HandsOnSuite {
     // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
     // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
 
-    // PS: pour aller plus loin avec les case class et comprendre pourquoi on ne met pas de `new` devant, rendez-vous ???
+    // PS: pour aller plus loin avec les case class et comprendre pourquoi on ne met pas de `new` devant, rendez-vous dans les bonus
+    // Il est possible de lancer le handson avec les bonus avec la commande `./handons bonus`
   }
 
 
   /**
-    * Le langage Scala n'a pas de concept de `static`. A la place il propose des `object` aussi nommés objet companions lorsqu'ils accompagnent une case class
+    * Le langage Scala n'a pas de `static`. A la place il propose des `object` aussi nommés objet companions lorsqu'ils accompagnent une case class
     * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel code.
     */
   exercice("Des 'object' pour remplacer static") {
-
     object Utils {
-      def apply(x: Int): Int = x
-
       def toUpper(str: String): String = str.toUpperCase
     }
 
@@ -149,12 +147,10 @@ class e02_objects extends HandsOnSuite {
     // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
     object Person {
       def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
-
       def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
     }
     case class Person(firstName: String, lastName: String) {
       def initials(): String = Person.initials(this)
-
       def trigramme(): String = Person.trigramme(firstName, lastName)
     }
 
@@ -168,8 +164,8 @@ class e02_objects extends HandsOnSuite {
 
   /**
     * Les traits Scala sont très similaires aux interfaces de Java 8.
-    * Ils peuvent contenir des variables, valeurs et méthodes abstraites mais aussi concrètes.
-    * Il est aussi possible d'hériter de plusieurs traits contrairement aux classes
+    * Ils peuvent contenir des variables, des valeurs et/ou des méthodes. Celles-ci peuvent être abstraites ou concrètes.
+    * Il est aussi possible d'hériter de plusieurs traits (comme une interface) contrairement aux classes
     */
   exercice("Les traits") {
     trait Geo {
@@ -187,7 +183,6 @@ class e02_objects extends HandsOnSuite {
     }
     case class Square(width: Double) extends Geo {
       val name = "Square"
-
       def perimeter(): Double = width * 4
     }
 
@@ -204,19 +199,19 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Parfois, on a besoin d'une fonction renvoit plusieurs résultats.
-    * Dans ce cas, on peut créer objet spécifique avec ces différents résultats ou utiliser un objet générique qui peut contenur plusieurs valeurs.
-    * Par exemple en Java, on peut créer un objet Pair<A, B> (https://github.com/search?q=filename%3APair.java)
+    * Parfois, on a besoin d'une fonction qui renvoit plusieurs résultats.
+    * Dans ce cas, on peut créer un objet spécifique avec ces différents résultats ou utiliser un objet générique qui peut contenir plusieurs valeurs.
+    * Par exemple en Java, on créer souvent un objet Pair<A, B> (ex: https://github.com/search?q=filename%3APair.java)
     *
-    * Côté Scala, on a les tuples qui sont des case class qui peuvent contenir un nombre fixe de valeurs de type hétérogène.
-    * Il y a de Tuple1 à Tuple22
+    * En Scala, on a les tuples qui sont des case class qui peuvent contenir un nombre de valeurs hétérogènes fixe.
+    * Les tuples sont disponibles de 1 à 22 paramètres.
     */
   exercice("Les tuples") {
     val pair: Tuple2[Int, String] = (1, "test")
     pair._1 shouldBe __
     pair._2 shouldBe __
 
-    // any value can be in a tuple
+    // n'importe quelle valeur peut être dans un tuple
     val multi = (3, 2.0, "1", (n: Int) => n + 1)
     multi._3 shouldBe __
     multi._4(multi._1) shouldBe __
@@ -225,7 +220,7 @@ class e02_objects extends HandsOnSuite {
 
   /**
     * Un extracteur est l'inverse d'un constructeur.
-    * Il permet d'extraire les valeurs d'un objet, ce qui peut s'avérer très pratique...
+    * Il permet d'extraire les valeurs d'un objet.
     */
   exercice("Extractors") {
     // On extrait les valeurs du tuple dans deux variables indépendantes

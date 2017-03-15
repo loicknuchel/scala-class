@@ -164,8 +164,5 @@ class e01_scala_syntax extends HandsOnSuite {
     push("123", branch = "dev") shouldBe __
   }
 
-
-  exercice("Mise en pratique") {
-    // TODO
-  }
+  // TODO : scala : first class function
 }
