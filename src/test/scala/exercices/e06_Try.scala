@@ -10,10 +10,7 @@ class e06_Try extends HandsOnSuite {
   /**
     * TODO
     */
-
-
   exercice("Déclarer un Try") {
-
     val nombreSpeaker = Try {
       Source.fromFile("Speakers.txt").getLines
     }.map(lines => lines.size)
@@ -25,11 +22,10 @@ class e06_Try extends HandsOnSuite {
 
     nombreSpeaker.isSuccess shouldBe true
     nombreSpeaker.get shouldBe 2
-
   }
 
-  exercice("Déclarer un") {
 
+  exercice("Déclarer un") {
     val nombreTalks = Try {
       Source.fromFile("Talks.txt").getLines
     }.map(lines => lines.size)
@@ -40,9 +36,6 @@ class e06_Try extends HandsOnSuite {
     }
 
     nombreTalks.failed shouldBe true
-    nombreTalks.recover{ case _ => 0} shouldBe 0
-
+    nombreTalks.recover { case _ => 0 } shouldBe 0
   }
-
-
-  }
+}

@@ -6,7 +6,8 @@ import support.HandsOnSuite
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
-import scala.concurrent.{Future, _}
+import scala.concurrent._
+import scala.language.postfixOps
 import scala.util.{Failure, Success}
 
 class e05_Future extends HandsOnSuite {
@@ -14,9 +15,7 @@ class e05_Future extends HandsOnSuite {
   /**
     * TODO
     */
-
   exercice("Déclarer une Future") {
-
     val number = Future {
       Thread.sleep(500)
       42
@@ -31,8 +30,8 @@ class e05_Future extends HandsOnSuite {
     }
   }
 
-  exercice("Appliquer une fonction sur Future") {
 
+  exercice("Appliquer une fonction sur Future") {
     // récupèrer le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd") // DevoxxService.getSlotByTalkId("DNY-501")
 
@@ -43,8 +42,8 @@ class e05_Future extends HandsOnSuite {
     roomName shouldBe  "Loïc"
   }
 
-  exercice("Combiner les Futures") {
 
+  exercice("Combiner les Futures") {
     val speaker1 = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
     val speaker2 = DevoxxApi.getSpeaker("1693d28c079e6c28269b9aa86ae04a4549ad3074")
 
@@ -58,7 +57,6 @@ class e05_Future extends HandsOnSuite {
 
 
   exercice("Le future des Futures") {
-
     // récupèrer le slot du talk DNY-501
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd") // DevoxxService.getSlotByTalkId("DNY-501")
 
@@ -69,6 +67,5 @@ class e05_Future extends HandsOnSuite {
     val talkValue = Await.result(talk , 1 second)
 
     talkValue shouldBe 3
-
   }
 }

@@ -10,7 +10,7 @@ class e02_objects extends HandsOnSuite {
     */
 
 
-  exercice("Les classes en Scala") {
+  ignore("Les classes en Scala") {
     // Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe
     // s'il n'y a pas de modifieur, l'attribut sera un `private val`
     // si le modifieur est val ou var il sera alors public
@@ -43,6 +43,8 @@ class e02_objects extends HandsOnSuite {
     // Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
 
     // - crée une class Point immutable qui réponde à ces assertions
+
+    "Crée la classe Point et décommente les lignes ci-dessous" shouldBe __
 
     // val p = new Point(1, 2)
     // p.x = 3 // ne doit pas compiler

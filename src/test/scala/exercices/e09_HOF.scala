@@ -1,13 +1,8 @@
 package exercices
 
-import models.devoxx.basic.Speaker
 import support.HandsOnSuite
 
-/**
-  * Created by fsznajderman on 15/03/2017.
-  */
-class e05_HOF extends HandsOnSuite {
-
+class e09_HOF extends HandsOnSuite {
 
   /**
     * Dans le chapitre collection nous avons eu l'occasion de voir ce qu'était une fonction d'Ordre Supérieur.
@@ -19,18 +14,10 @@ class e05_HOF extends HandsOnSuite {
     *   - faire la composition de fonction
     *
     */
-
   exercice("") {
-
     /**
       * Soit les fonctions suivantes :
       */
-
-    val dayOne
-
-
-
-
   }
 
 }

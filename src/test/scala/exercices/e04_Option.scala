@@ -21,7 +21,6 @@ class e04_Option extends HandsOnSuite {
     *     flatMap : appliquer une fonction qui retourn une Option
     *     get : retourne la valeur de l'Option
     *     getOrElse : permet de retourner une valeur si l'Option egale None
-    *
     */
   exercice("Déclarer une Option") {
     // pour declarer une Option on peut utiliser le constructeur de la classe Some
@@ -36,13 +35,12 @@ class e04_Option extends HandsOnSuite {
 
     valeurAbsente shouldBe None
   }
+
+
   /**
-    *
     * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur dpar defaut
     */
-
   exercice("Valeur par défaut") {
-
     val age : Option[Int] = None
 
     age shouldBe None
@@ -50,15 +48,14 @@ class e04_Option extends HandsOnSuite {
     age.orElse(Option(42)) shouldBe Option(42)
   }
 
+
   /**
     * Comme pour les collections, Option a une fontion Map qui permet d'appliquer une fontion sur la valeur de option
     * ainsi l'application de la fonction de type A => B il existe deux  cas :
     *          * si Some[A], le resultat sera une Some[B]
     *          * si None le resultat sera un None
-    * */
-
+    */
   exercice("Appliquer une fonction sur une Option") {
-
     // cherchez dans la base de donnée la salle avec un id = 2, en utilisant  RoomRepository.getRoomById
     val room2 : Option[Room] = RoomRepository.getRoom("2")
 
@@ -78,13 +75,13 @@ class e04_Option extends HandsOnSuite {
     room15Name shouldBe None
   }
 
+
   /**
     * Option possède aussi une fonction flatMap, qui prend une fonction de type A => Option[B]
     * et comme dans le resultat de retour est:
     *          * si Some[A], le resultat sera une Some[B]
     *          * si None le resultat sera un None
     */
-
   exercice("flatMap sur une Option") {
     // En utilisant la fontion map incrementez l'age
     val room3 : Option[Room] = RoomRepository.getRoom("3")
@@ -102,6 +99,7 @@ class e04_Option extends HandsOnSuite {
     capaciteRoom5 shouldBe None
   }
 
+
   /**
     * Some est une case class, alors il est possible d'appliquer du pattern matching
     */
@@ -115,9 +113,9 @@ class e04_Option extends HandsOnSuite {
     }
 
     roomName shouldBe "unknown"
-
   }
 
+  
   object RoomRepository{
 
     def getRoom(id: String): Option[Room] = {
