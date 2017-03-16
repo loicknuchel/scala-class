@@ -48,6 +48,9 @@ a:hover {
 .remark-fading {
     display: none;
 }
+.remark-slide-number {
+    display: none;
+}
 .hljs-androidstudio .remark-code-line-highlighted {
     background-color: #3e4042;
 }
@@ -125,9 +128,6 @@ a:hover {
     margin: 0em 4em;
     padding-left: 5%;
     list-style-type: none;
-}
-.remark-slide-content.intro .remark-slide-number {
-    display: none;
 }
 .remark-slide-content.title h1 {
     font-size: 2em;

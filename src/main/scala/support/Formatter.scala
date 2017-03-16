@@ -4,25 +4,22 @@ object Formatter {
 
   import Utils._
 
-  val missingValue = "You have to replace __ by correct value"
-  val missingImplementation = "You have to replace ??? by correct implementation"
+  val missingValue = "Remplace __ par la valeur attendue"
+  val missingImplementation = "Remplace ??? par une implémentation correcte"
 
-  private val pendingHeader = "\n*******************************************\n               TEST PENDING                \n*******************************************\n"
-  private val pendingFooter = "\n*******************************************\n"
-  private val failureHeader = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n               TEST FAILED                 \n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-  private val failureFooter = "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+  private val width = 60
+  private def line(char: String): String = char * width
+  private val pendingLine = line("*")
+  private val failureLine = line("!")
 
   def formatInfo(suiteName: String, testName: String, errOpt: Option[MyException], pending: Boolean): String = {
-    def formatHeader(pending: Boolean): String =
-      if (pending) pendingHeader else failureHeader
-
-    def locationLine(name: String, content: String): String =
-      padRight(name, 9) + ": " + content.replace("\n", "") + "\n"
-
-    def formatLocation(suiteName: String, testName: String, fileName: Option[String]): String =
-      locationLine("Suite", suiteName) +
-        locationLine("Test", testName) +
-        fileName.map(f => locationLine("File", f)).getOrElse("")
+    def formatHeader(testName: String, pending: Boolean): String = {
+      val line = if (pending) pendingLine else failureLine
+      val text = if(pending) "EXERCICE" else "ERREUR"
+      s"\n$line\n" +
+        s"${padCenter(text+": "+testName, width)}\n" +
+        s"$line\n"
+    }
 
     def formatMessage(message: Option[String]): String =
       message.map(m => "\n" + m).getOrElse("")
@@ -37,18 +34,18 @@ object Formatter {
       case e => "\n" + e.getCause.getStackTrace.take(7).mkString("\n") + "\n"
     }
 
-    def formatFooter(pending: Boolean): String =
-      if (pending) pendingFooter else failureFooter
+    def formatFooter(fileName: Option[String], pending: Boolean): String =
+      "\n" + (if (pending) pendingLine else failureLine) + "\n" +
+        fileName.map("  "+_+"\n").getOrElse("")
 
     val sb = new StringBuilder()
-    sb.append(formatHeader(pending))
-    sb.append(formatLocation(suiteName, testName, errOpt.flatMap(_.fileName)))
+    sb.append(formatHeader(testName, pending))
     errOpt.foreach(err => {
       sb.append(formatMessage(Option(err.getMessage)))
       sb.append(formatCode(err.ctx, err.errors))
       sb.append(formatStackTrace(err))
     })
-    sb.append(formatFooter(pending))
+    sb.append(formatFooter(errOpt.flatMap(_.fileName), pending))
     sb.toString
   }
 
@@ -80,6 +77,9 @@ object Formatter {
 
     def padRight(text: String, size: Int, char: String = " "): String =
       text + (char * (size - text.length))
+
+    def padCenter(text: String, size: Int, char: String = " "): String =
+      (char * ((size - text.length) / 2)) + text
   }
 
 }

@@ -9,8 +9,7 @@ class e02_objects extends HandsOnSuite {
     * C'est ce que nous allons voir dans cette partie
     */
 
-
-  ignore("Les classes en Scala") {
+  exercice("Les classes en Scala") {
     // Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe
     // s'il n'y a pas de modifieur, l'attribut sera un `private val`
     // si le modifieur est val ou var il sera alors public
@@ -224,8 +223,8 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Un extracteur est l'inverse d'un constructeur.
-    * Il permet d'extraire les valeurs d'un objet.
+    * Un extracteur est l'inverse d'un constructeur, il permet d'extraire les valeurs d'un objet.
+    * Scala propose des extracteurs par défaut pour les `tuples` et les `case class`
     */
   exercice("Extractors") {
     // On extrait les valeurs du tuple dans deux variables indépendantes
@@ -234,36 +233,12 @@ class e02_objects extends HandsOnSuite {
     value shouldBe __
     name shouldBe __
 
-    // Et bien sûr il est possible de généraliser ça au delà des tupes grâce à la méthode `unapply()`
-    class User(val name: String, val score: Int)
-    class Point(val x: Int, val y: Int)
-    object MyExtractor {
-      def unapply(arg: User): Option[(String, Int)] = Some((arg.name, arg.score))
-
-      def unapply(arg: Point): Option[(Int, Int)] = Some((arg.x, arg.y))
-    }
-
-    // On appelle la méthode unapply de l'extracteur identifié
-    // Si une valeur ne nous intéresse pas, on peut utiliser `_` pour ne pas l'affecter
-    val MyExtractor(username, _) = new User("Jean", 10)
-    username shouldBe __
-    val MyExtractor(x, y) = new Point(1, 2)
-    x shouldBe __
-
-    // Bien souvent on va créer l'extracteur dans l'objet companion de la classe
-    class Square(val width: Int)
-    object Square {
-      def unapply(arg: Square): Option[Int] = Some(arg.width)
-    }
-    val Square(width) = new Square(3)
-    width shouldBe __
-
-    // Pour le cas des `case class` la méthode `unapply()` des automatiquement générée
+    // Et c'est très similaire pour une `case class`
     case class Circle(x: Int, y: Int, r: Int)
-    val Circle(_, _, r) = Circle(3, 3, 5)
+    val Circle(_, _, r) = Circle(3, 3, 5) // les _ sont utilisés pour les valeurs qu'on ne souhaite pas affecter
     r shouldBe __
 
-    // A noter quand même, la méthode unapply renvoyant une option de tuple, on est limité à 22 paramètres par les tuples :(
+    // PS: voir les bonus pour plus de détails...
   }
 
 
@@ -331,5 +306,9 @@ class e02_objects extends HandsOnSuite {
       case Speaker(name) => s"$name is speaker"
     }
     r7 shouldBe __
+
+    // TODO : regex
   }
+
+  // TODO : mise en application du pattern matching
 }

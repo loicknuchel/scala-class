@@ -6,19 +6,10 @@
 - Loïc
 - Walid
 
-## Prérequis
-
-- Java 8
-- Scala 2.11
-- Sbt 0.13
-- Intellij (with scala plugins)
-
 ## Lancer le handson
 
-- Linux/Max : `./handson`
-- Windows : `handson.bat`
+- Compléter les [étapes prérequises](prérequis.md)
+- Démarrer le hondson (Linux/Mac: `./handson go`, Windows: `handson.bat` puis `go`)
 
-La commande lancera sbt, vous aurez alors deux commandes disponibles :
-
-- `go` pour lancer le handson normal
-- `bonus` pour lancer le handson avec les exercices bonus
+Des exercices plus avancés sont disponible dans les bonus.
+Pour les lancer remplacer `go` par `bonus`

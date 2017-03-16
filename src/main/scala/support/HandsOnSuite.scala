@@ -8,16 +8,18 @@ import org.scalatest.time.{Millis, Seconds, Span}
 
 import scala.language.experimental.macros
 
-trait HandsOnSuite extends FunSuite with Matchers with ScalaFutures {
+trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
   implicit val suite: HandsOnSuite = this
   implicit val defaultPatience = PatienceConfig(timeout = Span(5, Seconds), interval = Span(500, Millis))
 
   def __ : Matcher[Any] = throw new TestPendingException
 
+  def section = describe _
+
   def exercice(testName: String)(testFun: Unit)(implicit suite: HandsOnSuite): Unit = macro ExerciceMacro.apply
 
   def testExercice(testName: String)(testFun: => Unit)(ctx: TestContext): Unit = {
-    test(testName) {
+    it(testName) {
       try {
         testFun
       } catch {

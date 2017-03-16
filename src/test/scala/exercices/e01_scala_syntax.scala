@@ -6,31 +6,29 @@ import scala.language.postfixOps
 
 class e01_scala_syntax extends HandsOnSuite {
   /**
-    * Prérequis: merci de lire le README.md pour installer l'environnement nécessaire
+    * Prérequis: merci de lire le prérequis.md pour installer l'environnement nécessaire
     */
 
   /**
     * Introduction
     *
-    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet; et les deux paradigmes fonctionne bien ensembles !
-    * Il est possible d'écrire du code Scala très similaire au code Java mais ce n'est pas forcément un bon plan.
-    * Dans ce cours on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et de l'orienté objet.
-    * Concrêtement, si le code est immutable, il y a de bonnes chances pour qu'il ne soit pas si mauvais ;)
+    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet; et ces deux paradigmes fonctionnent très bien ensembles !
+    * Il est possible d'écrire du code Scala très proche du code Java mais ce n'est pas vraiment l'idée du siècle...
+    * Dans ce handson on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et orientée objet.
+    *
+    * De manière simple, si le code est immutable, il y a de bonnes chances pour qu'il ne soit pas si mauvais ;)
     */
 
   /**
-    * PS:
-    * Scala offre le raccourci `???` qui permet de remplacer n'importe quel bout de code.
-    * C'est tout simplement un raccourci pour `throw new NotImplementedError("an implementation is missing")` qui permet de faire compiler du code non terminé
-    * Dans ce cours on utilisera un raccourci différent, `__`, qu'il faudra remplacer petit à petit
+    * Dans ce handson il faudra remplir les trous ;
+    *   - les `__` sont à remplacer par valeur manquante
+    *   - les `???` sont à remplacer par une implémentation de code
+    *
+    * Par ailleurs, pour laisser de côté un exercice, il suffit de remplacer `exercice("...")` par `ignore("...")`
+    *
+    * Quelques raccourcis utiles pour les utilisateurs d'intellij :
+    *   - Alt + Egal : accéder au type de l'expression sélectionnée
     */
-
-  /**
-    * explication: HandsOnSuite, exercice, ignore, shouldBe, __, ??? ...
-    * TIP: useful intellij shortcuts :
-    *   - alt =        : get expression type
-    *   - ctrl maj F10 : run test
-    **/
 
   exercice("Déclarer une variable") {
     var variable: Int = 5

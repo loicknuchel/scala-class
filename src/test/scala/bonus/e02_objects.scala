@@ -76,7 +76,43 @@ class e02_objects extends HandsOnSuite {
     cValue shouldBe __
 
     // en conclusion, une case class est une classe tout à faire "normale" qui possède certaines méthodes implémentées par défaut (equals, toString, copy...)
-    // ainsi qu'un object companion qui lui sert de constructeur / extracteur
+    // ainsi qu'un object companion avec les fonctions apply/unapply qui lui servent de constructeur / extracteur
     // pas si compliqué que ça ;)
+  }
+
+  /**
+    * Un extracteur est tout simplement un appel à la fonction `.unapply()` dans l'objet identifié.
+    * Cette méthode étant automatiquement générée pour les `case class`, on peut directement les utiliser
+    * Mais on peut en créer autant que nécessaire
+    */
+  section("Fonctionnement d'un extracteur") {
+    exercice("Cas général") {
+      // On peut créer un extracteur non lié à une classe
+      // Dans ce cas, on cherchera la méthode `unapply()` dans l'`object` spécifié
+      class User(val name: String, val score: Int)
+      class Point(val x: Int, val y: Int)
+      object MyExtractor {
+        def unapply(arg: User): Option[(String, Int)] = Some((arg.name, arg.score))
+
+        def unapply(arg: Point): Option[(Int, Int)] = Some((arg.x, arg.y))
+      }
+
+      val MyExtractor(username, _) = new User("Jean", 10)
+      username shouldBe __
+      val MyExtractor(x, y) = new Point(1, 2)
+      x shouldBe __
+    }
+
+    exercice("Cas habituel") {
+      // Mais généralement on préfère créer l'extracteur dans l'objet companion de la classe
+      class Square(val width: Int)
+      object Square {
+        def unapply(arg: Square): Option[Int] = Some(arg.width)
+      }
+      val Square(width) = new Square(3)
+      width shouldBe __
+    }
+
+    // A noter quand même, la méthode unapply renvoyant une option de tuple, on est limité à 22 paramètres par les tuples :(
   }
 }
