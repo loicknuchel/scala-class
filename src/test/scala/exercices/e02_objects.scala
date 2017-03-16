@@ -5,15 +5,18 @@ import support.HandsOnSuite
 class e02_objects extends HandsOnSuite {
 
   /**
-    * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus tard) mais il est tout aussi capable pour l'objet
+    * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus loin) mais il est tout aussi capable pour l'orienté objet
     * C'est ce que nous allons voir dans cette partie
     */
 
+
+  /**
+    * Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe :
+    *   - s'il n'y a pas de modifieur, l'attribut sera un `private val`
+    *   - si le modifieur est val ou var il sera alors public
+    *   - sinon on peut entièrement le préciser `public var`, `protected val`...
+    */
   exercice("Les classes en Scala") {
-    // Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe
-    // s'il n'y a pas de modifieur, l'attribut sera un `private val`
-    // si le modifieur est val ou var il sera alors public
-    // sinon on peut entièrement le préciser `public var`, `protected val`...
     class Point(var x: Int, var y: Int) {
       def move(dx: Int, dy: Int): Unit = {
         x += dx
@@ -33,32 +36,31 @@ class e02_objects extends HandsOnSuite {
     // corrige la classe Point pour que ces assertions soient correctes
     p1 == p2 shouldBe true
     p2.toString shouldBe "Point(1,2)"
-
-    // TIP1: penser à hashCode/equals, intellij peut les générer...
   }
+  // TIP1: penser à hashCode/equals, intellij peut les générer...
 
 
-  exercice("Ajouter de l'immutabilité") {
-    // Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
-
-    // - crée une class Point immutable qui réponde à ces assertions
-
-    "Crée la classe Point et décommente les lignes ci-dessous" shouldBe __
+  /**
+    * Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
+    * Nous allons donc voir comment nous en servir
+    */
+  exercice("Une classe immuable") {
+    "Crée la classe Point immuable qui réponde aux assertions suivantes" shouldBe __
 
     // val p = new Point(1, 2)
     // p.x = 3 // ne doit pas compiler
 
 
-    // - implémente la méthode `move()` de la classe Point
+    // Implémente la méthode `move` pour la classe Point
 
     // p.move(2, 1)
-    // p.x shouldBe 1 // la classe étant immutable elle ne doit pas pouvoir être modifiée
+    // p.x shouldBe 1 // la classe étant immuable elle ne doit pas pouvoir être modifiée
 
     // val p1 = p.move(2, 1)
     // p1.x shouldBe 3
 
 
-    // - implémente la méthode `copy()` qui permettra de créer une nouvelle classe en modifiant un ou plusieurs paramètres
+    // Implémente la méthode `copy` qui permettra de créer une nouvelle classe en modifiant un ou plusieurs paramètres
 
     // val p2 = p.copy(3, 4)
     // p2.x shouldBe 3
@@ -69,19 +71,17 @@ class e02_objects extends HandsOnSuite {
     // val p4 = p.copy(y = 6)
     // p4.x shouldBe 1
     // p4.y shouldBe 6
-
-
-    // TIP1: une valeur (val) ne peut être modifiée
-    // TIP2: si on ne peut pas modifier un objet, alors il faut en créer un nouveau
-    // TIP3: les paramètres nommés et valeurs par défaut seront très utiles ici
   }
+  // TIP1: une valeur (val) ne peut pas être modifiée
+  // TIP2: si on ne peut pas modifier un objet, alors il faut en créer un nouveau
+  // TIP3: pense les paramètres nommés et valeurs par défaut
 
 
   /**
-    * Scala propose des `case class` qui sont des classes ordinaires avec certaines méthodes implémentées par défaut :
+    * Scala propose des `case class` qui sont des classes ordinaires avec certains bonus :
     *   - méthodes déjà implémentées :
     *     - equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
-    *     - toString          : affiche la classe et son contenu plutôt que son adresse
+    *     - toString          : affiche le nom de la classe et son contenu plutôt que son adresse mémoire
     *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
     *     - eq                : permet de tester une égalité de référence
     *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
@@ -111,57 +111,63 @@ class e02_objects extends HandsOnSuite {
     p4.x shouldBe __
     p4.y shouldBe __
     p4.toString shouldBe __
-
-    // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
-    // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
-
-    // PS: pour aller plus loin avec les case class et comprendre pourquoi on ne met pas de `new` devant, rendez-vous dans les bonus
-    // Il est possible de lancer le handson avec les bonus avec la commande `./handons bonus`
   }
+  // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
+  // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
+  // PS: pour aller plus loin avec les case class et comprendre leur fonctionnement, rendez-vous dans les bonus ;)
+  // Il est possible de lancer ce handson avec les bonus avec la commande `./handson bonus`
 
 
   /**
-    * Le langage Scala n'a pas de `static`. A la place il propose des `object` aussi nommés objet companions lorsqu'ils accompagnent une case class
-    * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel code.
+    * Le langage Scala n'a pas de `static`. A la place il propose des `object`, aussi nommés objet companions lorsqu'ils accompagnent une case class
+    * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel endroit du code.
     */
-  exercice("Des 'object' pour remplacer static") {
-    object Utils {
-      def toUpper(str: String): String = str.toUpperCase
-    }
-
-    Utils.toUpper("test") shouldBe __
-
-    // on trouve souvent les object associés à des case class pour contenir les fonctions utilitaires non liées à l'instance de la classe
-    object User {
-      def fromFullName(fullName: String): User = {
-        val parts = fullName.split(" ")
-        User(parts.head, parts.tail.mkString(" "))
+  section("Des 'object' pour remplacer static") {
+    exercice("Définition") {
+      object Utils {
+        def toUpper(str: String): String = str.toUpperCase
       }
+
+      Utils.toUpper("test") shouldBe __
     }
-    case class User(firstName: String, lastName: String)
 
-    val user = User.fromFullName("Jean Dupont")
-    user shouldBe __
+    // on trouve souvent les object associés à des class / case class pour contenir les fonctions utilitaires non liées à l'instance
+    exercice("Object companion") {
+      object User {
+        def fromFullName(fullName: String): User = {
+          val parts = fullName.split(" ")
+          User(parts.head, parts.tail.mkString(" "))
+        }
+      }
+      case class User(firstName: String, lastName: String)
 
-    // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme des fonctions d'un objet companion
+      val user = User.fromFullName("Jean Dupont")
+      user shouldBe __
+    }
+
+    // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme des fonctions de son objet companion
     // ça permet de réutiliser plus simplement le code et d'avoir une fonction pure facilement testable
     // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
-    object Person {
-      def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
+    exercice("minimiser le code des méthodes") {
+      object Person {
+        def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
 
-      def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
+        def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
+      }
+      case class User(firstName: String, lastName: String)
+      case class Person(firstName: String, lastName: String) {
+        def initials(): String = Person.initials(this)
+
+        def trigramme(): String = Person.trigramme(firstName, lastName)
+      }
+
+      val user = User("Jean", "Dupont")
+      val person = Person("Jeanne", "Michu")
+      person.initials shouldBe __
+      person.trigramme shouldBe __
+      Person.trigramme("Jean-Claude", "Convenant") shouldBe __
+      Person.trigramme(user.firstName, user.lastName) shouldBe __
     }
-    case class Person(firstName: String, lastName: String) {
-      def initials(): String = Person.initials(this)
-
-      def trigramme(): String = Person.trigramme(firstName, lastName)
-    }
-
-    val person = Person("Jeanne", "Michu")
-    person.initials shouldBe __
-    person.trigramme shouldBe __
-    Person.trigramme("Jean-Claude", "Convenant") shouldBe __
-    Person.trigramme(user.firstName, user.lastName) shouldBe __
   }
 
 
@@ -212,7 +218,7 @@ class e02_objects extends HandsOnSuite {
     */
   exercice("Les tuples") {
     val pair: Tuple2[Int, String] = (1, "test")
-    pair._1 shouldBe __
+    pair._1 shouldBe __ // accéder à la première valeur du tuple
     pair._2 shouldBe __
 
     // n'importe quelle valeur peut être dans un tuple
@@ -226,88 +232,100 @@ class e02_objects extends HandsOnSuite {
     * Un extracteur est l'inverse d'un constructeur, il permet d'extraire les valeurs d'un objet.
     * Scala propose des extracteurs par défaut pour les `tuples` et les `case class`
     */
-  exercice("Extractors") {
-    // On extrait les valeurs du tuple dans deux variables indépendantes
+  exercice("Extracteurs") {
     val pair = (2, "name")
-    val (value, name) = pair
+    val (value, name) = pair // On extrait les valeurs du tuple dans deux variables indépendantes
     value shouldBe __
     name shouldBe __
 
-    // Et c'est très similaire pour une `case class`
+    // De même pour une `case class`
     case class Circle(x: Int, y: Int, r: Int)
-    val Circle(_, _, r) = Circle(3, 3, 5) // les _ sont utilisés pour les valeurs qu'on ne souhaite pas affecter
+    val Circle(_, _, r) = Circle(3, 3, 5) // les _ sont utilisés pour les valeurs que l'on ne souhaite pas affecter
     r shouldBe __
-
-    // PS: voir les bonus pour plus de détails...
   }
+  // PS: voir les bonus pour plus de détails...
 
 
   /**
-    * Le pattern matching est un mécanisme similaire aux `switch` d'autres langages mais en étant bien plus souple.
+    * Le pattern matching est un mécanisme similaire aux `switch` d'autres langages mais en étant bien plus puissant.
     * Par ailleurs, comme en Scala toute expression retroue une valeur, c'est aussi le cas du pattern matching
     */
-  exercice("Le pattern matching") {
+  section("Le pattern matching") {
     // Commençons par du classique...
-    val r1 = "B" match {
-      case "A" => "it's A"
-      case "B" => "B wins"
-      case "C" => "C is best"
+    exercice("cas basique") {
+      val result = "B" match {
+        case "A" => "it's A"
+        case "B" => "B wins"
+        case "C" => "C is best"
+      }
+      result shouldBe __
     }
-    r1 shouldBe __
 
     // On peut ajouter un catch-all avec un case "sans condition"
     // c'est le cas des deux derniers, le premier capturant la valeur (in) et l'autre non
-    // on voit ici que l'ordre compte, le premier qui correspond est sélectionné
-    val r2 = "Z" match {
-      case "D" => "Hello D"
-      case in: String => "Catched " + in
-      case _ => "Fallback"
+    // on voit ici que l'ordre compte, le premier qui est satisfait est sélectionné
+    exercice("cas général") {
+      val result = "Z" match {
+        case "D" => "Hello D"
+        case in: String => "Catched " + in
+        case _ => "Fallback"
+      }
+      result shouldBe __
     }
-    r2 shouldBe __
 
     // Il est possible de mettre plusieurs conditions dans un même case
-    val r3 = "C" match {
-      case "A" | "B" | "C" => "first"
-      case "D" | "F" => "second"
-      case _ => "third"
+    exercice("grouper les cas") {
+      val result = "C" match {
+        case "A" | "B" | "C" => "first"
+        case "D" | "F" => "second"
+        case _ => "third"
+      }
+      result shouldBe __
     }
-    r3 shouldBe __
 
     // Maintenant commençons avec les fonctionnalités plus sympa ;)
     // On peut ajouter une condition
-    val r4 = "salut" match {
-      case s: String if s.length < 3 => "short text"
-      case s: String if s.length >= 3 => "long text"
+    exercice("ajouter une condition") {
+      val result = "salut" match {
+        case s: String if s.length < 3 => "short text"
+        case s: String if s.length >= 3 => "long text"
+      }
+      result shouldBe __
     }
-    r4 shouldBe __
 
     // Le pattern matching supporte les extrateurs, y compris les extracteurs imbriqués
-    case class User(name: String, score: Int)
-    val r5 = User("toto", 10) match {
-      case User(_, score) if score > 10 => "high score"
-      case User("toto", score) => s"toto has $score in score"
-      case _ => "no match"
+    exercice("extraire des valeurs") {
+      case class User(name: String, score: Int)
+      val r1 = User("toto", 10) match {
+        case User(_, score) if score > 10 => "high score"
+        case User("toto", score) => s"toto has $score in score"
+        case _ => "no match"
+      }
+      r1 shouldBe __
+      case class Talk(title: String, speaker: User, opts: (Boolean, Boolean))
+      val r2 = Talk("Scala", User("Luc", 9), (true, false)) match {
+        case Talk(title, User(_, score), (true, _)) if score < 10 => s"MATCH for $title"
+        case _ => "no match..."
+      }
+      r2 shouldBe __
     }
-    r5 shouldBe __
-    case class Talk(title: String, speaker: User, opts: (Boolean, Boolean))
-    val r6 = Talk("Scala", User("Luc", 9), (true, false)) match {
-      case Talk(title, User(_, score), (true, _)) if score < 10 => s"MATCH for $title"
-      case _ => "no match..."
-    }
-    r6 shouldBe __
 
     // Enfin, il est possible d'utiliser le pattern matching sur des types
-    trait Person
-    case class Attendee(name: String) extends Person
-    case class Speaker(name: String) extends Person
-    val p: Person = Speaker("Marc")
-    val r7 = p match {
-      case Attendee(name) => s"$name is attendee"
-      case Speaker(name) => s"$name is speaker"
+    exercice("différentier des types") {
+      trait Person
+      case class Attendee(name: String) extends Person
+      case class Speaker(name: String) extends Person
+      val p: Person = Speaker("Marc")
+      val result = p match {
+        case Attendee(name) => s"$name is attendee"
+        case Speaker(name) => s"$name is speaker"
+      }
+      result shouldBe __
     }
-    r7 shouldBe __
 
-    // TODO : regex
+    exercice("extraire une expression régulière") {
+      // TODO
+    }
   }
 
   // TODO : mise en application du pattern matching

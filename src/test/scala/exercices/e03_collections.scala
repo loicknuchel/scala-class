@@ -5,11 +5,11 @@ import support.HandsOnSuite
 
 class e03_collections extends HandsOnSuite {
   /**
-    * Passons maintenant aux collections qui sont souvent au coeur de notre code
+    * Passons maintenant aux collections...
     *
     * En Scala, toutes les collections étendent le trait `Traversable`
     * Toutes les fonctions que nous allons voir sont définies dans Traversable et sont donc accessible pour n'importe quelle collection.
-    * Scala et la programmation fonctionnelle mettent en avant l'immutabilité mais il existe aussi l'équivalent avec des collections mutables.
+    * Scala et la programmation fonctionnelle mettent en avant l'immuabilité mais il existe aussi un équivalent avec des collections mutables.
     *
     * Voici la hierarchie (non-exhaustive) des collections Scala :
     *
@@ -32,14 +32,16 @@ class e03_collections extends HandsOnSuite {
     * Plus d'infos : http://docs.scala-lang.org/overviews/collections/overview.html
     */
 
+
   /**
     * Les listes Scala sont composés de deux classes : `Nil` et `::` (appelé Cons).
-    * Le premier étant la liste vide et le second un élément contenant une valeur (head) et une liste (tail).
-    * Mais le plus souvent nous n'interragissons pas directement avec cette implémentation...
+    * `Nil` étant la liste vide et `::` un élément contenant une valeur (head) et une liste (tail), éventuellement vide.
+    * Les listes Scala sont donc définies comme une structure réccursive.
+    * Mais le plus souvent nous n'interragissons pas directement avec cette spécificité d'implémentation...
     *
     * cf http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
     */
-  exercice("Manipuler une liste immutable") {
+  exercice("Manipuler une liste immuable") {
     val numbers: List[Int] = List(2, 4, 6)
     val other: List[Int] = List(2, 4, 6)
 
