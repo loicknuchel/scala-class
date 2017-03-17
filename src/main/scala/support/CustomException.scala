@@ -11,12 +11,6 @@ class MyNotImplementedException(fileName: Option[String], ctx: TestContext, erro
 class MyTestFailedException(fileName: Option[String], ctx: TestContext, errors: Option[List[Int]], message: String, cause: Throwable) extends MyException(fileName, ctx, errors, message, cause) {}
 
 object MyException {
-  private def getPackage(suite: HandsOnSuite, name: String): String =
-    List("src", "test", "scala", suite.getClass.getPackage.getName, name).mkString(java.io.File.separator)
-
-  private def getLocation(suite: HandsOnSuite, st: StackTraceElement): String =
-    getPackage(suite, st.getFileName + ":" + st.getLineNumber)
-
   def pending(suite: HandsOnSuite, ctx: TestContext, e: TestPendingException): MyTestPendingException = {
     val stack = e.getStackTrace()(2)
     val location = getLocation(suite, stack)
@@ -25,11 +19,10 @@ object MyException {
   }
 
   def notImplemented(suite: HandsOnSuite, ctx: TestContext, e: NotImplementedError): MyNotImplementedException = {
-    val stack = e.getStackTrace()(1)
-    val nextStack = e.getStackTrace()(2)
-    val location = getLocation(suite, stack)
-    val errors = List(stack.getLineNumber, nextStack.getLineNumber)
-    new MyNotImplementedException(Some(location), ctx, Some(errors), Formatter.missingImplementation, e)
+    val stacks = e.getStackTrace.take(7).filter(isSuiteClass(suite, _)).toList
+    val locationOpt = stacks.headOption.map(getLocation(suite, _))
+    val errors = stacks.map(_.getLineNumber).distinct
+    new MyNotImplementedException(locationOpt, ctx, nonEmpty(errors), Formatter.missingImplementation, e)
   }
 
   def failed(suite: HandsOnSuite, ctx: TestContext, e: TestFailedException): MyTestFailedException = {
@@ -39,9 +32,21 @@ object MyException {
   }
 
   def unknown(suite: HandsOnSuite, ctx: TestContext, e: Throwable): MyException = {
-    val firstGoodStack: Option[StackTraceElement] = e.getStackTrace.find(_.getClassName.contains(suite.getClass.getName))
-    val locationOpt = firstGoodStack.map(st => getLocation(suite, st))
-    val errorsOpt = firstGoodStack.map(st => List(st.getLineNumber))
-    new MyException(locationOpt, ctx, errorsOpt, e.toString, e)
+    val stacks = e.getStackTrace.filter(isSuiteClass(suite, _)).toList
+    val locationOpt = stacks.headOption.map(getLocation(suite, _))
+    val errors = stacks.map(_.getLineNumber).distinct
+    new MyException(locationOpt, ctx, nonEmpty(errors), e.toString, e)
   }
+
+  private def getPackage(suite: HandsOnSuite, name: String): String =
+    List("src", "test", "scala", suite.getClass.getPackage.getName, name).mkString(java.io.File.separator)
+
+  private def getLocation(suite: HandsOnSuite, st: StackTraceElement): String =
+    getPackage(suite, st.getFileName + ":" + st.getLineNumber)
+
+  private def isSuiteClass(suite: HandsOnSuite, e: StackTraceElement): Boolean =
+    e.getClassName.contains(suite.getClass.getName)
+
+  private def nonEmpty[T](l: List[T]): Option[List[T]] =
+    if (l.nonEmpty) Some(l) else None
 }

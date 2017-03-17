@@ -29,6 +29,7 @@ object Cache {
       if (urlsToProcess.isEmpty) Future.successful(results)
       else HttpClient.getAndSave(urlsToProcess.head).flatMap(res => internal(urlsToProcess.tail, res :: results))
     }
+
     internal(urls, List()).map(_.reverse)
   }
 

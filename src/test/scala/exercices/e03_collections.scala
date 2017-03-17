@@ -41,127 +41,182 @@ class e03_collections extends HandsOnSuite {
     *
     * cf http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List
     */
-  exercice("Manipuler une liste immuable") {
+  section("Liste immuable") {
+    val empty: List[Int] = Nil
     val numbers: List[Int] = List(2, 4, 6)
     val other: List[Int] = List(2, 4, 6)
 
-    // opérations basiques
-    numbers.head shouldBe __ // manière risquée d'accéder au premier élément
-    numbers.tail shouldBe __ // manière risquée d'accéder à la liste sans le premier élément
-    numbers(1) shouldBe __ // manière risquée d'accéder à un élément
+    /**
+      * comme pour les case class, les collections ont une égalité structurelle
+      */
+    exercice("comparaison") {
+      numbers == other shouldBe __
+      numbers eq other shouldBe __
+      empty == numbers shouldBe __
+      empty == numbers.tail.tail.tail shouldBe __
+    }
 
-    // comme les case class, les collections ont une égalité structurelle
-    numbers == other shouldBe __
-    numbers eq other shouldBe __
+    exercice("opérations basiques") {
+      numbers(1) shouldBe __ // manière risquée d'accéder à un élément
+      numbers.head shouldBe __ // manière risquée d'accéder au premier élément
+      numbers.tail shouldBe __ // manière risquée d'accéder à la liste sans le premier élément
+      intercept[NoSuchElementException] {
+        empty.head
+      }
+      intercept[UnsupportedOperationException] {
+        empty.tail
+      }
+      intercept[IndexOutOfBoundsException] {
+        empty(1)
+      }
+    }
 
-    // Nil
-    // append elt
-    // headOption
+    /**
+      * La fonction `map(f: A => B): List[B]` crée une nouvelle liste.
+      * Elle transforme chaque élément à l'aide de la fonction passée en paramètre.
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#map[B](f:A=>B):List[B]
+      */
+    exercice("transformer les éléments") {
+      numbers.map(n => n.toString) shouldBe __
+      numbers.map(???) shouldBe List(4, 8, 12)
+    }
 
-    // La fonction `.map(f: A => B): List[B]` sert à transformer les éléments d'une liste
-    // c'est une fonction d'ordre suppérieur car elle prend une autre fonction en paramètre
-    // cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#map[B](f:A=>B):List[B]
-    numbers.map(n => n.toString) shouldBe __
-    numbers.map(???) shouldBe List(4, 8, 12)
+    /**
+      * La fonction `filter(p: A => Boolean): List[A]` crée une nouvelle liste.
+      * Elle conserve que les éléments pour lesquels la fonction en paramètre a renvoyé `true`
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#filter(p:A=>Boolean):Repr
+      */
+    exercice("sélectionner des éléments") {
+      numbers.filter(n => n > 3) shouldBe __
+      numbers.filter(_ < 5) shouldBe __
+    }
+    // le `_` dans une lambda représente le paramètre unique de la fonction
+    // c'est très pratique lorsque les expressions sont simples cependant il n'est pas toujours possible de l'utiliser
 
-    // La fonction `.filter(p: A => Boolean): List[A]` sert à sélectionner certains éléments d'une liste
-    // le résultat sera une liste avec uniquement les éléments qui auront renvoyé `true`
-    numbers.filter(n => n > 3) shouldBe __
-    numbers.filter(_ > 3) shouldBe __
-    // le `_` dans une lambda représente le paramètre de la fonction
-    // c'est très pratique lorsque les expressions sont simple cependant il n'est pas toujours possible de l'utiliser, par exemple lors d'une double condition
-
-    // La fonction `.find(p: A => Boolean): Option[A]` sert trouver un élément dans une liste
-    // elle renvoit le premier élément qui renvoit `true` pour la condition
-    // on note qu'elle ne renvoit pas l'élément mais une Option[A] car l'élément peut être présent ou pas (cf l'exercice suivant)
-    numbers.find(_ == 2).get shouldBe __
-    numbers.find(_ > 3).get shouldBe __
+    /**
+      * La fonction `find(p: A => Boolean): Option[A]` renvoit le premier élément pour lequel la fonction en paramètre renvoit `true`
+      * Comme on ne peut pas être certain de trouver un élément qui correspond, le retour est une Option (cf exercice suivant)
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#find(p:A=>Boolean):Option[A]
+      */
+    exercice("chercher un élément") {
+      numbers.find(_ == 2).get shouldBe __
+      numbers.find(_ > 3).get shouldBe __
+    }
   }
 
 
   /**
-    * L'une des erreurs les plus difficiles à éviter est le bien connu NullPointerException
-    * Une solution très simple à ce problème est de simplement interdire les `null`...
-    * C'est ce que fait Scala en proposant le type Option[A] pour représenter l'absence de valeur
-    * (null existe toujours pour la compatibilité JVM mais il ne doit JAMAIS être utilisé !)
+    * Nous venons de l'évoquer, parfois on doit représenter la présence ou l'absence de valeur.
+    * Beaucoup de langages utilisent `null` ou `undefined` pour ça, voire les deux !!!
+    * Ce qui crée la célèbre NullPointerException en Java ou le "Cannot read property 'x' of undefined" en JavaScript :(
+    * (cf https://github.com/search?q=NullPointerException&type=Commits)
     *
-    * Le type Option[A] est une classe abstraite qui comporte deux sous-types : Some[A] (si l'élément est présent) et None (sinon)
+    * Scala a fait le choix de ne pas utiliser `null` (même s'il est présent pour la compatibilité Java).
+    * Il y a donc un type spécifique pour gérer cet usage.
+    * Je vous présente donc le type : Option !!!
     *
-    *    Option[A]
-    *       |
-    *   +---+---+
-    *   |       |
-    * Some[A]  None
+    * Il permet donc :
+    *   - d'éliminer complètement toute erreur du type NullPointerException à l'exécution !!!
+    *   - de rendre explicite ce qui peut être absent et ce qui ne peut pas l'être
+    *   - éviter les vérifications innutiles qui polluent le code
+    *
+    * Le type Option[A] est une classe abstraite qui comporte deux sous-types :
+    *   - Some[A] : si l'élément est présent
+    *   - None    : si l'élément est absent
     *
     * Ses principales fonctions sont :
-    *   - .isEmpty / .nonEmpty      : pour tester si l'élément est présent ou non
-    *   - .get                      : pour accéder à l'élément de manière risquée (lance une exception dans le cas de None)
-    *   - .getOrElse(default: A)    : pour accéder à l'élément ou à une valeur par défaut en cas de None
-    *   - .orElse(other: Option[A]) : permet de "concaténer" une autre option (le premier élément sinon le deuxième sinon None)
-    *   - .map(f: A => B)           : pour transformer le contenu sans l'extraire (sans effet dans le cas de None)
-    *   - toutes les fonctions des collections (similaire à une liste d'un seul élément)
+    *   - isEmpty / nonEmpty       : tester si l'élément est présent ou non
+    *   - get                      : accéder à l'élément de manière risquée (lance une exception dans le cas de None)
+    *   - getOrElse(default: A)    : accéder à l'élément ou à une valeur par défaut en cas de None
+    *   - orElse(other: Option[A]) : "concaténer" avec une autre option (le premier élément sinon le deuxième sinon None)
+    *   - map(f: A => B)           : transformer le contenu sans l'extraire (sans effet dans le cas de None)
+    *   - toutes les fonctions des collections (similaire à une liste à un seul élément)
     *
     * cf: https://www.scala-lang.org/api/current/scala/Option.html
     */
-  exercice("Option") {
-    val firstName = Some("Jean")
+  section("Option") {
+    exercice("manipuler") {
+      val firstName = Some("Jean")
 
-    firstName.isEmpty shouldBe __
-    firstName.nonEmpty shouldBe __
-    firstName.getOrElse("empty") shouldBe __
-    firstName.orElse(Some("other")) shouldBe __
-    firstName.map(_.length) shouldBe __
-    firstName.get shouldBe __
+      firstName.isEmpty shouldBe __
+      firstName.nonEmpty shouldBe __
+      firstName.getOrElse("empty") shouldBe __
+      firstName.orElse(Some("other")) shouldBe __
+      firstName.map(_.length) shouldBe __
+      firstName.get shouldBe __
 
-    val lastName: Option[String] = None
+      val lastName: Option[String] = None
 
-    lastName.isEmpty shouldBe __
-    lastName.nonEmpty shouldBe __
-    lastName.getOrElse("empty") shouldBe __
-    lastName.orElse(Some("other")) shouldBe __
-    lastName.map(_.length) shouldBe __
-    intercept[NoSuchElementException] {
-      lastName.get
+      lastName.isEmpty shouldBe __
+      lastName.nonEmpty shouldBe __
+      lastName.getOrElse("empty") shouldBe __
+      lastName.orElse(Some("other")) shouldBe __
+      lastName.map(_.length) shouldBe __
+      intercept[NoSuchElementException] {
+        lastName.get
+      }
     }
   }
 
 
   /**
     * Comme dans beaucoup de langages Scala a une collection Map[A, B] qui associe une clé A à une valeur B
-    * Map étant une collection, les méthodes qu'on a vu s'appliques comme pour les listes
+    * Map étant une collection, les méthodes qu'on a vu s'appliquent comme pour les listes
+    * L'élément est juste un tuple `(A, B)` au lieu de simplement `A` dans le cas d'une `List[A]`
+    * Il est d'ailleurs très facile de passer de `Map[A, B]` à `List[(A, B)]` et inversement grâce à `toList` et `toMap`
+    *
+    * cf https://www.scala-lang.org/api/current/scala/collection/Map.html
     */
-  exercice("Map") {
+  section("Map") {
     val states = Map("fr" -> "France", "be" -> "Belgique", "en" -> "Angleterre")
-    states.get("fr") shouldBe __
-    // l'élément du .map() est un tuple avec la clé et la valeur
-    states.map(state => (state._1, state._2.length)) shouldBe __
-    // on le verra plus tard mais il est possible d'extraire directement les éléments du tuple grâce au pattern matching :)
-    states.map { case (code, name) => (code, name.length) } shouldBe __
 
-    // .toList & .toMap
+    exercice("manipuler") {
+      states.get("fr") shouldBe __
+      states.map(state => (state._1, state._2.length)) shouldBe __
+      states.map { case (code, name) => (code, name.length) } shouldBe __ // en utilisant le pattern matching \o/
+      states.filter(_._2.contains("r")) shouldBe __
+      states.find(_._2.contains("e")) shouldBe __
+    }
   }
 
-
   /**
-    * L'API des collections en Scala est très riche et permet de manipuler facilement les données
-    * Voici quelques fonctions très utiles mais n'hésitez pas à consulter l'API complète : http://www.scala-lang.org/api/current/scala/collection/Traversable.html
+    * L'API collection Scala est très riche et permet de manipuler les données très simplement
+    * Nous allons voir quelques méthodes intéressantes mais jetez un oeil à l'API complète...
+    *
+    * cf http://www.scala-lang.org/api/current/scala/collection/Traversable.html
     */
-  exercice("Toujours plus de manipulation de List") {
+  section("API collection") {
     val words = List("table", "chaise", "bureau", "écran", "ordinateur")
 
-    val wordsByLength: Map[Int, List[String]] = words.groupBy(_.length)
-    wordsByLength.get(5) shouldBe Some(List("table", "écran"))
 
-    // group by
-    // flatMap
-    // reduce
+    /**
+      * La fonction `groupBy(f: A => K): Map[K, List[A]]` crée une Map.
+      * Le résultat de la fonction est utilisé comme clé, et la valeur est une liste des éléments correspondant à cette clé
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#groupBy[K](f:A=>K):scala.collection.immutable.Map[K,Repr]
+      */
+    exercice("groupBy") {
+      words.groupBy(???).get('c') shouldBe Some(List("chaise"))
+      words.groupBy(_.length).get(5) shouldBe __
+    }
+
+    exercice("flatMap") {
+      // TODO
+    }
+
+    exercice("reduce") {
+      // TODO
+    }
   }
 
 
   /**
     * Voyons comment mettre en pratique ces manipulations de données
     */
-  exercice("Mise en application") {
+  section("Mise en pratique") {
     import models.devoxx.basic._
     val talks = List(
       Talk("BBV-277", Conference, "Le bon testeur il teste...", "Pourquoi proposer une nouvelle conférence sur les tests ?", List("6cbb41adbc049f923c4327ed3642f208faf4e03f", "5926b150dbddc5ae5214ad045de64d806306ed67"))

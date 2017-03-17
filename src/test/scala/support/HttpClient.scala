@@ -19,15 +19,22 @@ object HttpClient {
   private implicit val system = ActorSystem()
   private implicit val materializer = ActorMaterializer()
 
-  def get(url: String)(implicit useCache: Boolean = true): Future[String] =
-    if (useCache) localGet(url).recoverWith { case _ => getAndSave(url) } else httpGet(url)
+  def get(url: String)(implicit useCache: Boolean): Future[String] =
+    if (useCache) localGet(url) else httpGet(url)
 
   def getAndSave(url: String): Future[String] =
     httpGet(url).flatMap(res => localSave(url, formatJson(res)))
 
-  private def urlToPath(url: String): String = (url.replace(DevoxxApi.conferenceUrl, "src/test/resources/devoxx-api") + ".json").replace("/.json", ".json")
+  private def httpGet(url: String): Future[String] = {
+    println("GET " + url)
+    Http().singleRequest(HttpRequest(uri = url)).flatMap(_.entity.toStrict(300.millis).map(_.data.utf8String))
+  }
 
-  private def localGet(url: String): Future[String] = Try(Source.fromFile(urlToPath(url)).getLines().mkString).toFuture
+  private def urlToPath(url: String): String =
+    (url.replace(DevoxxApi.conferenceUrl, "src/test/resources/devoxx-api") + ".json").replace("/.json", ".json")
+
+  private def localGet(url: String): Future[String] =
+    Try(Source.fromFile(urlToPath(url)).getLines().mkString).toFuture
 
   private def localSave(url: String, content: String): Future[String] = Try {
     val file = new File(urlToPath(url))
@@ -36,10 +43,5 @@ object HttpClient {
     bw.close()
     content
   }.toFuture
-
-  private def httpGet(url: String): Future[String] = {
-    println("GET "+url)
-    Http().singleRequest(HttpRequest(uri = url)).flatMap(_.entity.toStrict(300.millis).map(_.data.utf8String))
-  }
 }
 
