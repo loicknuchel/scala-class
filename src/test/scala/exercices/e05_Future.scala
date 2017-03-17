@@ -1,6 +1,6 @@
 package exercices
 
-import models.devoxx.full.{DevoxxApi, Speaker}
+import models.devoxx.{DevoxxApi, Speaker}
 import support.HandsOnSuite
 
 import scala.concurrent.ExecutionContext.Implicits.global

@@ -1,4 +1,4 @@
-package models.devoxx.full
+package models.devoxx
 
 import io.circe.generic.auto._
 import support.Helpers._

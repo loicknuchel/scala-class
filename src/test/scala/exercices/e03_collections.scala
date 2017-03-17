@@ -1,6 +1,6 @@
 package exercices
 
-import models.devoxx.full._
+import models.devoxx._
 import support.HandsOnSuite
 
 import scala.concurrent.Await

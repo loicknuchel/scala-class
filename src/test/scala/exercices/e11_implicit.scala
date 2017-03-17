@@ -1,6 +1,6 @@
 package exercices
 
-import models.devoxx.basic.{Conference, Room, Speaker, Talk}
+import models.devoxx._
 import support.HandsOnSuite
 
 import scala.language.implicitConversions
@@ -60,7 +60,7 @@ class e11_implicit extends HandsOnSuite {
       * La méthode initiale ne fait pas partie du type Speaker, néanmoins à l'aide du mécanisme d'implicit appliqué sur une classe
       * cette méthode est maintenant disponible.
       */
-    val speaker = Speaker("Azef234", "Martin", "Lapin", "Fr")
+    val speaker = Speaker("Azef234", "Martin", "Lapin")
 
     // val initiales = speaker.initiales // does not compile
 
@@ -136,7 +136,7 @@ class e11_implicit extends HandsOnSuite {
       }
 
       implicit object RoomDisplay extends Display[Room] {
-        override def show(item: Room): String = s"${item.name}[${item.capacite}]"
+        override def show(item: Room): String = s"${item.name}[${item.capacity}]"
       }
 
       implicit object TalkDisplay extends Display[Talk] {
@@ -154,9 +154,9 @@ class e11_implicit extends HandsOnSuite {
       display.show(item)
     }
 
-    val speaker = Speaker("SDfr3", "Harry", "Cover", "Fr")
-    val room = Room("AdFgh", "Grand Amphi", Some(200))
-    val talk = Talk("mLpo", Conference, "Handson Scala", "découvrir Scala en s'amusant", List("Loic, Walid, Fabrice"))
+    val speaker = Speaker("SDfr3", "Harry", "Cover")
+    val room = Room("AdFgh", "Grand Amphi", "theatre", 200, None)
+    val talk = Talk("mLpo", "Tools-in-Action", "java", "Handson", "fr", "découvrir Scala en s'amusant", "summary", "summaryAsHtml", List(LinkWithName("Loic", Link("Loic", "href", "rel")), LinkWithName("Walid", Link("Walid", "href", "rel")), LinkWithName("Fabrice", Link("Fabrice", "href", "rel"))))
 
     /**
       * La résolution de l'implicit se faire sur le type du paramètre passé à la fonction.

@@ -1,8 +1,8 @@
 package support
 
 import io.circe.generic.auto._
-import models.devoxx.full.DevoxxApi._
-import models.devoxx.full._
+import models.devoxx.DevoxxApi._
+import models.devoxx.{RoomList, Schedule, ScheduleList, Talk}
 import support.Helpers._
 
 import scala.concurrent.ExecutionContext.Implicits.global

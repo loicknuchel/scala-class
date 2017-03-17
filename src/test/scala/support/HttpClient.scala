@@ -6,7 +6,7 @@ import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
 import akka.stream.ActorMaterializer
-import models.devoxx.full.DevoxxApi
+import models.devoxx.DevoxxApi
 import support.Helpers._
 
 import scala.concurrent.ExecutionContext.Implicits.global

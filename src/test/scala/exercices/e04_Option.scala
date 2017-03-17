@@ -1,6 +1,6 @@
 package exercices
 
-import models.devoxx.basic.Room
+import models.devoxx.Room
 import support.HandsOnSuite
 
 class e04_Option extends HandsOnSuite {
@@ -93,7 +93,7 @@ class e04_Option extends HandsOnSuite {
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
     val room5: Option[Room] = RoomRepository.getRoom("5")
-    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room))
+    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getRecorded(room))
 
     capaciteRoom5 shouldBe None
   }
@@ -118,14 +118,14 @@ class e04_Option extends HandsOnSuite {
   object RoomRepository {
     def getRoom(id: String): Option[Room] = {
       if (id.toInt < 8)
-        Some(Room(id, s"salle$id", Some(id.toInt * 10)))
+        Some(Room(id, s"salle$id", "classroom", 50, Some(id)))
       else
         None
     }
 
-    def getCapacite(room: Room): Option[Int] = {
+    def getRecorded(room: Room): Option[String] = {
       if (room.id.toInt < 4)
-        room.capacite
+        room.recorded
       else
         None
     }

@@ -2,7 +2,7 @@ package exercices
 
 import java.net.MalformedURLException
 
-import models.devoxx.full.DevoxxApi
+import models.devoxx.DevoxxApi
 import support.HandsOnSuite
 
 import scala.concurrent.Await

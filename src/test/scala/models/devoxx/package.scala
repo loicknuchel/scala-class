@@ -1,6 +1,6 @@
-package models.devoxx
+package models
 
-package object full {
+package object devoxx {
   type SpeakerId = String
   type TalkId = String
   type SlotId = String

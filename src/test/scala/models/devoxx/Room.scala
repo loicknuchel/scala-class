@@ -1,4 +1,4 @@
-package models.devoxx.full
+package models.devoxx
 
 case class Room(
                  id: RoomId,
