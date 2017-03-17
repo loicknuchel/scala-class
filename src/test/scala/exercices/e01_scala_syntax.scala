@@ -6,7 +6,9 @@ import scala.language.postfixOps
 
 class e01_scala_syntax extends HandsOnSuite {
   /**
-    * Prérequis: merci de lire le prérequis.md pour installer l'environnement nécessaire
+    * Avant de commencer :
+    *   - installe l'environnement nécessaire, (cf `prérequis.md`)
+    *   - lis la présentation d'introduction (cf `doc/slides.html`)
     */
 
   /**

@@ -1,7 +1,6 @@
 package exercices
 
-import models.devoxx.full.DevoxxApi
-import org.joda.time.DateTime
+import models.devoxx.full._
 import support.HandsOnSuite
 
 import scala.concurrent.Await
@@ -251,6 +250,10 @@ class e03_collections extends HandsOnSuite {
       // si la lambda prends deux paramètres, alors on peut utiliser deux `_` comme raccourci...
       words.fold("")(_ + _.length.toString) shouldBe __
     }
+
+    exercice("autres") {
+      // TODO : exists pour les listes et options
+    }
   }
 
 
@@ -258,23 +261,26 @@ class e03_collections extends HandsOnSuite {
     * Voyons comment mettre en pratique ces manipulations de données
     */
   section("Mise en pratique") {
-    // TODO
-    /*val (speakers, talks, rooms, slots) = Await.result(DevoxxApi.getModel(), 5 second)
-    exercice("test") {
-      speakers.length shouldBe 20
-    }*/
+    val (speakers: List[Speaker], talks: List[Talk], rooms: List[Room], slots: List[Slot]) = Await.result(DevoxxApi.getModel(), 5 second)
+
+    val talkId = "XPI-0919"
+    val talkTitle = "Scala class, bien démarrer avec Scala"
+    val speakerId = "09a79f4e4592cf77e5ebf0965489e6c7ec0438cd"
+
+    def fetchTalk(id: TalkId): Option[Talk] = ???
+    def fetchSpeakerTalks(id: SpeakerId): List[Talk] = ???
+    def talkSpeakers(id: TalkId): List[Speaker] = ???
+    // pourcentage de talks en français
+    // l'emploi du temps d'une salle
+
+    exercice("fetch") {
+      fetchTalk(talkId).map(_.title) shouldBe Some(talkTitle)
+      fetchSpeakerTalks(speakerId).map(_.id) shouldBe List(talkId)
+      talkSpeakers(talkId).map(_.firstName).sorted shouldBe List("Fabrice", "Loïc", "walid")
+    }
   }
 
-  section("Mise en pratique") {
-    import models.devoxx.basic._
-    val talks = List(
-      Talk("BBV-277", Conference, "Le bon testeur il teste...", "Pourquoi proposer une nouvelle conférence sur les tests ?", List("6cbb41adbc049f923c4327ed3642f208faf4e03f", "5926b150dbddc5ae5214ad045de64d806306ed67"))
-    )
-    val speakers = List(
-      Speaker("6cbb41adbc049f923c4327ed3642f208faf4e03f", "Agnès", "Crepet", "fr"),
-      Speaker("5926b150dbddc5ae5214ad045de64d806306ed67", "Guillaume", "Ehret", "fr")
-    )
-
+  /*section("Mise en pratique") {
     // récupérer la liste des speakers pour un talk
     def getTalkSpeakers(talk: Talk, speakers: List[Speaker]): List[Speaker] = {
       speakers.filter(s => talk.speakers.contains(s.uuid))
@@ -304,5 +310,5 @@ class e03_collections extends HandsOnSuite {
         .find { case (from, to, room) => from.isBefore(time) && to.isAfter(time) }
         .map(_._3)
     }
-  }
+  }*/
 }

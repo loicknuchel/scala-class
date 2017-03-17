@@ -73,7 +73,7 @@ object Formatter {
       val (inTest, outTest) = errors.partition(line => ctx.startLine <= line && line <= ctx.endLine)
       val formattedTest = if(inTest.nonEmpty) formatTest(ctx, inTest.min) else ""
       val formattedErrors = outTest.sorted.map(i => formatError(ctx, i)).mkString("\n")
-      val split = if (formattedErrors.isEmpty) "" else "\n...\n"
+      val split = if (formattedErrors.isEmpty) "" else "\n          ..."
       formattedErrors + split + formattedTest
     }
   }
