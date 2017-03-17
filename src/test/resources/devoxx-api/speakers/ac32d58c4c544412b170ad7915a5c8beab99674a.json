@@ -1,0 +1,37 @@
+{
+  "uuid" : "ac32d58c4c544412b170ad7915a5c8beab99674a",
+  "bioAsHtml" : "<p>Developer of tooling at LeBonCoin, to make the devs&#x27; lives easier</p>\n",
+  "acceptedTalks" : [
+    {
+      "talkType" : "Conference",
+      "track" : "Future, Robotique",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/RSR-8246",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/43094674f4188c5e4a121d85ed52edc83ea9b97d",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Eric Lefevre-Ardant"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/ac32d58c4c544412b170ad7915a5c8beab99674a",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Sonia OUCHTAR"
+        }
+      ],
+      "id" : "RSR-8246",
+      "title" : "Introduction à la Philosophie de l'intelligence artificielle"
+    }
+  ],
+  "company" : "LeBonCoin",
+  "bio" : "Developer of tooling at LeBonCoin, to make the devs' lives easier",
+  "lastName" : "OUCHTAR",
+  "firstName" : "Sonia",
+  "blog" : "https://www.leboncoin.fr",
+  "avatarURL" : "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+  "twitter" : null,
+  "lang" : "fr"
+}

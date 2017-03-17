@@ -7,16 +7,17 @@ import support.Helpers._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.util.Try
+import scala.util.{Failure, Success, Try}
 
 object Cache {
   def fillCache(): Future[Unit] = {
+    // TODO delete files & create new directories
     for {
       rooms <- HttpClient.getAndSave(roomsUrl).flatMap(res => parseJson[RoomList](res).toFuture).map(_.rooms)
       schedules <- HttpClient.getAndSave(schedulesUrl).flatMap(res => parseJson[ScheduleList](res).toFuture).map(_.links)
-      slots <- getSequence(schedules.map(_.href)).flatMap(parseSequence(parseJson[Schedule])).map(_.flatMap(_.slots))
-      talks <- getSequence(slots.flatMap(_.talk).map(_.id).map(talkUrl)).flatMap(parseSequence(parseJson[Talk]))
-      talkSpeakers <- getSequence(talks.flatMap(_.speakers).map(_.link.href)).flatMap(parseSequence(parseJson[Talk]))
+      slots <- getAndParseSequence(schedules.map(_.href), parseJson[Schedule]).map(_.flatMap(_.slots))
+      talks <- getAndParseSequence(slots.flatMap(_.talk).map(_.id).map(talkUrl), parseJson[Talk])
+      talkSpeakers <- getAndParseSequence(talks.flatMap(_.speakers).map(_.link.href), parseJson[Talk])
     // TODO speakerList <- HttpClient.getAndSave(speakersUrl).flatMap(res => parseJson[List[Speaker]](res).toFuture)
     // TODO speakersNotInTalks <- ???
     // TODO talksNotInSlots <- (talkSpeakers ++ speakersNotInTalks).acceptedTalks.filter(not in talks)
@@ -28,20 +29,25 @@ object Cache {
         " - " + talks.length + " talks")
   }
 
-  def getSequence(urls: List[String]): Future[List[String]] = {
-    def internal(urlsToProcess: List[String], results: List[String]): Future[List[String]] = {
-      if (urlsToProcess.isEmpty) Future.successful(results)
-      else HttpClient.getAndSave(urlsToProcess.head).flatMap(res => internal(urlsToProcess.tail, res :: results))
-    }
-
-    internal(urls, List()).map(_.reverse)
-  }
-
-  def parseSequence[T](p: String => Try[T])(results: List[String]): Future[List[T]] = {
-    Future.sequence(results.map(result => p(result).toFuture))
+  def getAndParseSequence[T](urls: List[String], parse: String => Try[T], results: List[T] = List()): Future[List[T]] = {
+    if (urls.isEmpty) Future.successful(results)
+    else HttpClient.getAndSave(urls.head).flatMap(res => parse(res) match {
+      case Success(value) => getAndParseSequence(urls.tail, parse, value :: results)
+      case Failure(err) => {
+        println("ERROR: " + err.getMessage)
+        println("  url: " + urls.head)
+        println("  res: " + res)
+        getAndParseSequence(urls.tail, parse, results)
+      }
+    })
   }
 
   def main(args: Array[String]): Unit = {
+    /*
+    TODO :
+java.lang.NoClassDefFoundError: support/Cache$$anonfun$fillCache$3$$anonfun$apply$5$$anonfun$apply$19$$anonfun$apply$20
+	at support.Cache$$anonfun$fillCache$3$$anonfun$apply$5$$anonfun$apply$19.apply(Cache.scala:18)
+     */
     fillCache().map(_ => {
       println("Cache filled !")
     }).recover {

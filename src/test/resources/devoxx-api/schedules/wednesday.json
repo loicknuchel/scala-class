@@ -178,21 +178,29 @@
         "trackId" : "bigd",
         "talkType" : "University",
         "track" : "Big Data, Machine Learning, IA & Analytics",
-        "summaryAsHtml" : "<p>Google a récemment publié son framework d’intelligence artificielle appelé Tensorflow. Avec ce nouvel outil, l’apprentissage automatique franchit le pas entre la science de laboratoire et le métier d’ingénieur. Dans cette session, nos vous monterons comment choisir la bonne architecture de réseau de neurones pour votre problème et comment bien gérer son apprentissage. Savoir résoudre des équations différentielles n’est plus nécessaire. Des problèmes difficiles comme la reconnaissance de l’écriture manuscrite peuvent maintenant être résolus avec quelques lignes de Python/Tensorflow et une collection de trucs &amp; astuces d’ingénieur.\nCette Université s'adresse à tous les développeurs qui souhaitent entrer dans le monde des réseaux de neurones en 3 heures intenses mais accessibles. Elle couvre les réseaux denses, convolutionels et récurrents.</p>\n",
-        "id" : "RPG-3291",
+        "summaryAsHtml" : "<p>C’est la révolution dans la BI, les zones tampon FTP laissent la place aux systèmes de fichier distribués, le SQL s'exécute sur Hadoop, les dashboard en HTML5 remplacent les clients lourds, mais ne peut-on pas rationaliser un peu l’approche ?</p>\n<p><strong>Comment s’y prendre pour transformer une chaine BI en datalake ?</strong></p>\n<p>Cette université fera le tour de l’ingénierie des données en mode BigData. Au travers d’une présentation détaillée des concepts, de retour d’expériences et d’un cas pratique, nous allons découvrir  :</p>\n<ul>\n<li>les technologies et l’architecture, avec Spark, Kafka, Elasticsearch, Impala et Mesos,</li>\n<li>et les méthodes associées : cycle de développement avec Hadoop, tests unitaires, jointures, gestion de la qualité de donnée, recette en mode Big Data et gestion des métadonnées.</li>\n</ul>\n",
+        "id" : "PLK-3557",
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/61dfd901ae785202fd5a87ed358657cf02b568ed",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d78f17b882fb6ed14fc7d64a434ec08c7fc11e93",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Martin Görner"
+              "title" : "Jonathan Winandy"
             },
-            "name" : "Martin Görner"
+            "name" : "Jonathan Winandy"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/833f42657bbf7704ac83719535c2a71cebafc16e",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Bachir Aït M'Barek"
+            },
+            "name" : "Bachir Aït M'Barek"
           }
         ],
-        "title" : "University: Tensorflow et l'apprentissage profond, sans les équations différentielles",
+        "title" : "Spark-adabra : Comment construire un datalake !",
         "lang" : "fr",
-        "summary" : "Google a récemment publié son framework d’intelligence artificielle appelé Tensorflow. Avec ce nouvel outil, l’apprentissage automatique franchit le pas entre la science de laboratoire et le métier d’ingénieur. Dans cette session, nos vous monterons comment choisir la bonne architecture de réseau de neurones pour votre problème et comment bien gérer son apprentissage. Savoir résoudre des équations différentielles n’est plus nécessaire. Des problèmes difficiles comme la reconnaissance de l’écriture manuscrite peuvent maintenant être résolus avec quelques lignes de Python/Tensorflow et une collection de trucs & astuces d’ingénieur.\r\nCette Université s'adresse à tous les développeurs qui souhaitent entrer dans le monde des réseaux de neurones en 3 heures intenses mais accessibles. Elle couvre les réseaux denses, convolutionels et récurrents."
+        "summary" : "C’est la révolution dans la BI, les zones tampon FTP laissent la place aux systèmes de fichier distribués, le SQL s'exécute sur Hadoop, les dashboard en HTML5 remplacent les clients lourds, mais ne peut-on pas rationaliser un peu l’approche ? \r\n\r\n**Comment s’y prendre pour transformer une chaine BI en datalake ?**\r\n\r\nCette université fera le tour de l’ingénierie des données en mode BigData. Au travers d’une présentation détaillée des concepts, de retour d’expériences et d’un cas pratique, nous allons découvrir  : \r\n\r\n- les technologies et l’architecture, avec Spark, Kafka, Elasticsearch, Impala et Mesos,\r\n- et les méthodes associées : cycle de développement avec Hadoop, tests unitaires, jointures, gestion de la qualité de donnée, recette en mode Big Data et gestion des métadonnées.\r\n"
       },
       "fromTime" : "09:30",
       "toTimeMillis" : 1491388200000,
@@ -212,21 +220,29 @@
         "trackId" : "archisec",
         "talkType" : "University",
         "track" : "Architecture, Performance et Securité",
-        "summaryAsHtml" : "<p>Dans la machine virtuelle Java, les instructions (bytecode) sont chargées, interprétées pour un temps, puis profilées, optimisées, compilées, ... et encore optimisées et recompilées; le tout pour non seulement une performance optimale, mais également une exécution sécuritaire de notre code.\nMais que ce passe-t-il vraiment lorsque nos processeurs exécutent notre code? Lors de cette session nous regarderons sous le capot en regardant comment nos ordinateurs execute notre code: en regardant du code C, de l'assembleur, du C++ ... du code de la JVM et ainsi que d'autre environment d'éxecution. Afin de mieux comprendre ce qu'est de la mémoire, comment elle est utilisée, tout ce qui peut \"mal se passer\" et ce que les machines virtuelles adressent comme problème pour nous, afin de rendre notre vie plus simple, mais en tâchant de comprendre les compromis qui en découle.\nFinalement nous regarderont comment d'autre approches pourraient addresser ces problématiques de façon différente.</p>\n",
-        "id" : "KGN-4315",
+        "summaryAsHtml" : "<p>Et si la complexité d'un logiciel reflétait la complexité fonctionnelle et non technique ?</p>\n<p>Le but de ce livecode est de vous montrer une méthode de développement qui se focalise sur les problématiques métiers et non technique. Pas besoin d'un langage de programmation ou d'un Framework spécifique.\nNous ferons émerger une petite application « twitterlike » pendant la session. Et nous verrons comment l'Event Sourcing et CQRS se présentent d’eux même pour supprimer les problématiques techniques que nous rencontrons souvent dans une application en couche, même de petite taille.</p>\n",
+        "id" : "GNR-4303",
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1a2874344ca64ffa85a87ff980c80aa2cfcd3c58",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71088009efb094754d81152df165eba94cd3dac4",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Alex Snaps"
+              "title" : "Emilien Pecoul"
             },
-            "name" : "Alex Snaps"
+            "name" : "Emilien Pecoul"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7f72bec97e79afd0f742fc87c486bd2a30d29fea",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florent Pellet"
+            },
+            "name" : "Florent Pellet"
           }
         ],
-        "title" : "Execution de code — mais que ce passe-t-il vraiment?",
+        "title" : "CQRS/ES from scratch",
         "lang" : "fr",
-        "summary" : "Dans la machine virtuelle Java, les instructions (bytecode) sont chargées, interprétées pour un temps, puis profilées, optimisées, compilées, ... et encore optimisées et recompilées; le tout pour non seulement une performance optimale, mais également une exécution sécuritaire de notre code. \r\nMais que ce passe-t-il vraiment lorsque nos processeurs exécutent notre code? Lors de cette session nous regarderons sous le capot en regardant comment nos ordinateurs execute notre code: en regardant du code C, de l'assembleur, du C++ ... du code de la JVM et ainsi que d'autre environment d'éxecution. Afin de mieux comprendre ce qu'est de la mémoire, comment elle est utilisée, tout ce qui peut \"mal se passer\" et ce que les machines virtuelles adressent comme problème pour nous, afin de rendre notre vie plus simple, mais en tâchant de comprendre les compromis qui en découle.\r\nFinalement nous regarderont comment d'autre approches pourraient addresser ces problématiques de façon différente."
+        "summary" : "Et si la complexité d'un logiciel reflétait la complexité fonctionnelle et non technique ? \r\n\r\nLe but de ce livecode est de vous montrer une méthode de développement qui se focalise sur les problématiques métiers et non technique. Pas besoin d'un langage de programmation ou d'un Framework spécifique.\r\nNous ferons émerger une petite application « twitterlike » pendant la session. Et nous verrons comment l'Event Sourcing et CQRS se présentent d’eux même pour supprimer les problématiques techniques que nous rencontrons souvent dans une application en couche, même de petite taille.\r\n"
       },
       "fromTime" : "09:30",
       "toTimeMillis" : 1491388200000,
@@ -293,32 +309,32 @@
       "break" : null,
       "roomSetup" : "theatre",
       "talk" : {
-        "trackId" : "wm",
+        "trackId" : "java",
         "talkType" : "University",
-        "track" : "Web, JS, HTML5 et UX",
-        "summaryAsHtml" : "<p>Antonio est un développeur Java et ne connait rien aux interfaces utilisateurs. Il utilise son Mac pour développer des micro-services Java EE, les exécute avec WildFly Swarm, les package dans du Docker et expose de belles interfaces REST.</p>\n<p>Sébastien est un développeur TypeScript et ne connait rien à Java. Employé chez Microsoft, il utilise son PC pour développer de belles interfaces utilisateurs avec TypeScript et Angular2 pour invoquer les services REST exposés par Antonio.</p>\n<p>Cette université est destinée aux développeurs Java qui souhaitent découvrir comment utiliser un front-end Angular2/TypeScript avec un back-end Java/MicroProfile. Elle est composée de deux parties :</p>\n<p>1) Plus théorique : présentation du Micro Profile Java EE, WildFly Swarm, de la syntaxe TypeScript et d'Angular 2.\n2) Plus pratique : développement d'une application Angular 2 utilisant plusieurs back-ends REST (JAX-RS, JSon:API, Swagger, Cors, Hateoas, ETag, JWT, Traeffik).</p>\n",
-        "id" : "ULC-4036",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>La principale nouveauté de Java 9 viendra du coté de la modularité. Et qu'on le veuille ou non il faudra tenir compte de ce changement et s'y préparer.</p>\n<p>Dans la première partie de cette présentation, nous expliquerons ce qui a motivé cette évolution, puis nous verrons les principaux concepts sous-jacents.</p>\n<p>Dans la deuxième partie, nous verrons comment migrer une application vers java 9. Le premier objectif sera de faire fonctionner notre application avec un minimum d'effort, puis nous verrons y intégrer de la modularité.</p>\n<p>Dans la troisième partie, nous aborderons les aspects avancés de Jigsaw qui seront utiles pour le développement de nouvelles applications.</p>\n",
+        "id" : "KHV-4031",
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/2b935a5bfa04635d2e4c196afa7385ee2d254dde",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/98d890f4f5c499fdd36d1efbc8aa041e8c30d50e",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Antonio Goncalves"
+              "title" : "Alexis Hassler"
             },
-            "name" : "Antonio Goncalves"
+            "name" : "Alexis Hassler"
           },
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/0f290b7af448fc1401eee1921e06fc60e1ce3b77",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b967a0dc26fb6feaaa8795f375103b0d7aff319e",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Sébastien Pertus"
+              "title" : "Remi Forax"
             },
-            "name" : "Sébastien Pertus"
+            "name" : "Remi Forax"
           }
         ],
-        "title" : "Java EE, Micro Profile, TypeScript et Angular 2",
+        "title" : "Préparez-vous à la modularité selon Java 9",
         "lang" : "fr",
-        "summary" : "Antonio est un développeur Java et ne connait rien aux interfaces utilisateurs. Il utilise son Mac pour développer des micro-services Java EE, les exécute avec WildFly Swarm, les package dans du Docker et expose de belles interfaces REST.\r\n\r\nSébastien est un développeur TypeScript et ne connait rien à Java. Employé chez Microsoft, il utilise son PC pour développer de belles interfaces utilisateurs avec TypeScript et Angular2 pour invoquer les services REST exposés par Antonio.\r\n\r\nCette université est destinée aux développeurs Java qui souhaitent découvrir comment utiliser un front-end Angular2/TypeScript avec un back-end Java/MicroProfile. Elle est composée de deux parties :\r\n\r\n1) Plus théorique : présentation du Micro Profile Java EE, WildFly Swarm, de la syntaxe TypeScript et d'Angular 2.\r\n2) Plus pratique : développement d'une application Angular 2 utilisant plusieurs back-ends REST (JAX-RS, JSon:API, Swagger, Cors, Hateoas, ETag, JWT, Traeffik)."
+        "summary" : "La principale nouveauté de Java 9 viendra du coté de la modularité. Et qu'on le veuille ou non il faudra tenir compte de ce changement et s'y préparer.\r\n\r\nDans la première partie de cette présentation, nous expliquerons ce qui a motivé cette évolution, puis nous verrons les principaux concepts sous-jacents.\r\n\r\nDans la deuxième partie, nous verrons comment migrer une application vers java 9. Le premier objectif sera de faire fonctionner notre application avec un minimum d'effort, puis nous verrons y intégrer de la modularité.\r\n\r\nDans la troisième partie, nous aborderons les aspects avancés de Jigsaw qui seront utiles pour le développement de nouvelles applications."
       },
       "fromTime" : "09:30",
       "toTimeMillis" : 1491388200000,
@@ -792,29 +808,21 @@
         "trackId" : "bigd",
         "talkType" : "University",
         "track" : "Big Data, Machine Learning, IA & Analytics",
-        "summaryAsHtml" : "<p>C’est la révolution dans la BI, les zones tampon FTP laissent la place aux systèmes de fichier distribués, le SQL s'exécute sur Hadoop, les dashboard en HTML5 remplacent les clients lourds, mais ne peut-on pas rationaliser un peu l’approche ?</p>\n<p><strong>Comment s’y prendre pour transformer une chaine BI en datalake ?</strong></p>\n<p>Cette université fera le tour de l’ingénierie des données en mode BigData. Au travers d’une présentation détaillée des concepts, de retour d’expériences et d’un cas pratique, nous allons découvrir  :</p>\n<ul>\n<li>les technologies et l’architecture, avec Spark, Kafka, Elasticsearch, Impala et Mesos,</li>\n<li>et les méthodes associées : cycle de développement avec Hadoop, tests unitaires, jointures, gestion de la qualité de donnée, recette en mode Big Data et gestion des métadonnées.</li>\n</ul>\n",
-        "id" : "PLK-3557",
+        "summaryAsHtml" : "<p>Google a récemment publié son framework d’intelligence artificielle appelé Tensorflow. Avec ce nouvel outil, l’apprentissage automatique franchit le pas entre la science de laboratoire et le métier d’ingénieur. Dans cette session, nos vous monterons comment choisir la bonne architecture de réseau de neurones pour votre problème et comment bien gérer son apprentissage. Savoir résoudre des équations différentielles n’est plus nécessaire. Des problèmes difficiles comme la reconnaissance de l’écriture manuscrite peuvent maintenant être résolus avec quelques lignes de Python/Tensorflow et une collection de trucs &amp; astuces d’ingénieur.\nCette Université s'adresse à tous les développeurs qui souhaitent entrer dans le monde des réseaux de neurones en 3 heures intenses mais accessibles. Elle couvre les réseaux denses, convolutionels et récurrents.</p>\n",
+        "id" : "RPG-3291",
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d78f17b882fb6ed14fc7d64a434ec08c7fc11e93",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/61dfd901ae785202fd5a87ed358657cf02b568ed",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Jonathan Winandy"
+              "title" : "Martin Görner"
             },
-            "name" : "Jonathan Winandy"
-          },
-          {
-            "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/833f42657bbf7704ac83719535c2a71cebafc16e",
-              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Bachir Aït M'Barek"
-            },
-            "name" : "Bachir Aït M'Barek"
+            "name" : "Martin Görner"
           }
         ],
-        "title" : "Spark-adabra : Comment construire un datalake !",
+        "title" : "University: Tensorflow et l'apprentissage profond, sans les équations différentielles",
         "lang" : "fr",
-        "summary" : "C’est la révolution dans la BI, les zones tampon FTP laissent la place aux systèmes de fichier distribués, le SQL s'exécute sur Hadoop, les dashboard en HTML5 remplacent les clients lourds, mais ne peut-on pas rationaliser un peu l’approche ? \r\n\r\n**Comment s’y prendre pour transformer une chaine BI en datalake ?**\r\n\r\nCette université fera le tour de l’ingénierie des données en mode BigData. Au travers d’une présentation détaillée des concepts, de retour d’expériences et d’un cas pratique, nous allons découvrir  : \r\n\r\n- les technologies et l’architecture, avec Spark, Kafka, Elasticsearch, Impala et Mesos,\r\n- et les méthodes associées : cycle de développement avec Hadoop, tests unitaires, jointures, gestion de la qualité de donnée, recette en mode Big Data et gestion des métadonnées.\r\n"
+        "summary" : "Google a récemment publié son framework d’intelligence artificielle appelé Tensorflow. Avec ce nouvel outil, l’apprentissage automatique franchit le pas entre la science de laboratoire et le métier d’ingénieur. Dans cette session, nos vous monterons comment choisir la bonne architecture de réseau de neurones pour votre problème et comment bien gérer son apprentissage. Savoir résoudre des équations différentielles n’est plus nécessaire. Des problèmes difficiles comme la reconnaissance de l’écriture manuscrite peuvent maintenant être résolus avec quelques lignes de Python/Tensorflow et une collection de trucs & astuces d’ingénieur.\r\nCette Université s'adresse à tous les développeurs qui souhaitent entrer dans le monde des réseaux de neurones en 3 heures intenses mais accessibles. Elle couvre les réseaux denses, convolutionels et récurrents."
       },
       "fromTime" : "13:30",
       "toTimeMillis" : 1491402600000,
@@ -923,32 +931,32 @@
       "break" : null,
       "roomSetup" : "theatre",
       "talk" : {
-        "trackId" : "java",
+        "trackId" : "wm",
         "talkType" : "University",
-        "track" : "Java, JVM, Javas SE/EE",
-        "summaryAsHtml" : "<p>La principale nouveauté de Java 9 viendra du coté de la modularité. Et qu'on le veuille ou non il faudra tenir compte de ce changement et s'y préparer.</p>\n<p>Dans la première partie de cette présentation, nous expliquerons ce qui a motivé cette évolution, puis nous verrons les principaux concepts sous-jacents.</p>\n<p>Dans la deuxième partie, nous verrons comment migrer une application vers java 9. Le premier objectif sera de faire fonctionner notre application avec un minimum d'effort, puis nous verrons y intégrer de la modularité.</p>\n<p>Dans la troisième partie, nous aborderons les aspects avancés de Jigsaw qui seront utiles pour le développement de nouvelles applications.</p>\n",
-        "id" : "KHV-4031",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Antonio est un développeur Java et ne connait rien aux interfaces utilisateurs. Il utilise son Mac pour développer des micro-services Java EE, les exécute avec WildFly Swarm, les package dans du Docker et expose de belles interfaces REST.</p>\n<p>Sébastien est un développeur TypeScript et ne connait rien à Java. Employé chez Microsoft, il utilise son PC pour développer de belles interfaces utilisateurs avec TypeScript et Angular2 pour invoquer les services REST exposés par Antonio.</p>\n<p>Cette université est destinée aux développeurs Java qui souhaitent découvrir comment utiliser un front-end Angular2/TypeScript avec un back-end Java/MicroProfile. Elle est composée de deux parties :</p>\n<p>1) Plus théorique : présentation du Micro Profile Java EE, WildFly Swarm, de la syntaxe TypeScript et d'Angular 2.\n2) Plus pratique : développement d'une application Angular 2 utilisant plusieurs back-ends REST (JAX-RS, JSon:API, Swagger, Cors, Hateoas, ETag, JWT, Traeffik).</p>\n",
+        "id" : "ULC-4036",
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/98d890f4f5c499fdd36d1efbc8aa041e8c30d50e",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/2b935a5bfa04635d2e4c196afa7385ee2d254dde",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Alexis Hassler"
+              "title" : "Antonio Goncalves"
             },
-            "name" : "Alexis Hassler"
+            "name" : "Antonio Goncalves"
           },
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b967a0dc26fb6feaaa8795f375103b0d7aff319e",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/0f290b7af448fc1401eee1921e06fc60e1ce3b77",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Remi Forax"
+              "title" : "Sébastien Pertus"
             },
-            "name" : "Remi Forax"
+            "name" : "Sébastien Pertus"
           }
         ],
-        "title" : "Préparez-vous à la modularité selon Java 9",
+        "title" : "Java EE, Micro Profile, TypeScript et Angular 2",
         "lang" : "fr",
-        "summary" : "La principale nouveauté de Java 9 viendra du coté de la modularité. Et qu'on le veuille ou non il faudra tenir compte de ce changement et s'y préparer.\r\n\r\nDans la première partie de cette présentation, nous expliquerons ce qui a motivé cette évolution, puis nous verrons les principaux concepts sous-jacents.\r\n\r\nDans la deuxième partie, nous verrons comment migrer une application vers java 9. Le premier objectif sera de faire fonctionner notre application avec un minimum d'effort, puis nous verrons y intégrer de la modularité.\r\n\r\nDans la troisième partie, nous aborderons les aspects avancés de Jigsaw qui seront utiles pour le développement de nouvelles applications."
+        "summary" : "Antonio est un développeur Java et ne connait rien aux interfaces utilisateurs. Il utilise son Mac pour développer des micro-services Java EE, les exécute avec WildFly Swarm, les package dans du Docker et expose de belles interfaces REST.\r\n\r\nSébastien est un développeur TypeScript et ne connait rien à Java. Employé chez Microsoft, il utilise son PC pour développer de belles interfaces utilisateurs avec TypeScript et Angular2 pour invoquer les services REST exposés par Antonio.\r\n\r\nCette université est destinée aux développeurs Java qui souhaitent découvrir comment utiliser un front-end Angular2/TypeScript avec un back-end Java/MicroProfile. Elle est composée de deux parties :\r\n\r\n1) Plus théorique : présentation du Micro Profile Java EE, WildFly Swarm, de la syntaxe TypeScript et d'Angular 2.\r\n2) Plus pratique : développement d'une application Angular 2 utilisant plusieurs back-ends REST (JAX-RS, JSon:API, Swagger, Cors, Hateoas, ETag, JWT, Traeffik)."
       },
       "fromTime" : "13:30",
       "toTimeMillis" : 1491402600000,
@@ -960,11 +968,30 @@
     },
     {
       "roomId" : "neu253_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491391800000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "University",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>Dans la machine virtuelle Java, les instructions (bytecode) sont chargées, interprétées pour un temps, puis profilées, optimisées, compilées, ... et encore optimisées et recompilées; le tout pour non seulement une performance optimale, mais également une exécution sécuritaire de notre code.\nMais que ce passe-t-il vraiment lorsque nos processeurs exécutent notre code? Lors de cette session nous regarderons sous le capot en regardant comment nos ordinateurs execute notre code: en regardant du code C, de l'assembleur, du C++ ... du code de la JVM et ainsi que d'autre environment d'éxecution. Afin de mieux comprendre ce qu'est de la mémoire, comment elle est utilisée, tout ce qui peut \"mal se passer\" et ce que les machines virtuelles adressent comme problème pour nous, afin de rendre notre vie plus simple, mais en tâchant de comprendre les compromis qui en découle.\nFinalement nous regarderont comment d'autre approches pourraient addresser ces problématiques de façon différente.</p>\n",
+        "id" : "KGN-4315",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1a2874344ca64ffa85a87ff980c80aa2cfcd3c58",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Alex Snaps"
+            },
+            "name" : "Alex Snaps"
+          }
+        ],
+        "title" : "Execution de code — mais que ce passe-t-il vraiment?",
+        "lang" : "fr",
+        "summary" : "Dans la machine virtuelle Java, les instructions (bytecode) sont chargées, interprétées pour un temps, puis profilées, optimisées, compilées, ... et encore optimisées et recompilées; le tout pour non seulement une performance optimale, mais également une exécution sécuritaire de notre code. \r\nMais que ce passe-t-il vraiment lorsque nos processeurs exécutent notre code? Lors de cette session nous regarderons sous le capot en regardant comment nos ordinateurs execute notre code: en regardant du code C, de l'assembleur, du C++ ... du code de la JVM et ainsi que d'autre environment d'éxecution. Afin de mieux comprendre ce qu'est de la mémoire, comment elle est utilisée, tout ce qui peut \"mal se passer\" et ce que les machines virtuelles adressent comme problème pour nous, afin de rendre notre vie plus simple, mais en tâchant de comprendre les compromis qui en découle.\r\nFinalement nous regarderont comment d'autre approches pourraient addresser ces problématiques de façon différente."
+      },
       "fromTime" : "13:30",
       "toTimeMillis" : 1491402600000,
       "toTime" : "16:30",
@@ -1206,14 +1233,6 @@
         "speakers" : [
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71088009efb094754d81152df165eba94cd3dac4",
-              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Emilien Pecoul"
-            },
-            "name" : "Emilien Pecoul"
-          },
-          {
-            "link" : {
               "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7f72bec97e79afd0f742fc87c486bd2a30d29fea",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
               "title" : "Florent Pellet"
@@ -1230,11 +1249,11 @@
           },
           {
             "link" : {
-              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/62aced05d74e41c8f705d1675e55be24bad7d08a",
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71088009efb094754d81152df165eba94cd3dac4",
               "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-              "title" : "Jean Helou"
+              "title" : "Emilien Pecoul"
             },
-            "name" : "Jean Helou"
+            "name" : "Emilien Pecoul"
           }
         ],
         "title" : "Agilité par le code grâce à CQRS et EventSourcing",
@@ -1277,11 +1296,30 @@
     },
     {
       "roomId" : "b_amphi",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Tools-in-Action",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Kafka est devenu incontournable dans le milieu du Big Data.\nCependant son utilisation restait jusque-là assez complexe, particulièrement lorsqu’on l’utilisait dans un contexte micro-service à faible latence.\nLa bibliothèque \"Kafka Streams\" change complètement la donne.\nPas besoin d’infrastructure complexe, les mots d’ordre sont «Simplicité» et «Efficacité».\nÀ travers quelques exemples je vous présenterais les fonctionnalités phares ainsi que quelques cas d’usage où son utilisation est extrêmement pertinente.</p>\n",
+        "id" : "JZR-6594",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/68e3eb4644fd25d25ece568b8ad434fe8cab5e29",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Fred CECILIA"
+            },
+            "name" : "Fred CECILIA"
+          }
+        ],
+        "title" : "Pourquoi Kafka Streams change le Game ! ",
+        "lang" : "fr",
+        "summary" : "Kafka est devenu incontournable dans le milieu du Big Data. \r\nCependant son utilisation restait jusque-là assez complexe, particulièrement lorsqu’on l’utilisait dans un contexte micro-service à faible latence.\r\nLa bibliothèque \"Kafka Streams\" change complètement la donne. \r\nPas besoin d’infrastructure complexe, les mots d’ordre sont «Simplicité» et «Efficacité».\r\n À travers quelques exemples je vous présenterais les fonctionnalités phares ainsi que quelques cas d’usage où son utilisation est extrêmement pertinente.\r\n"
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1292,11 +1330,30 @@
     },
     {
       "roomId" : "c_maillot",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "Tools-in-Action",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>Comment sécuriser son application AngularJS basée sur des services REST en la protégeant du Top 10 OWASP (10 risques de sécurité les plus critiques) :\n- gérer les habilitations\n- contrôle des données côté serveur\n- éviter les fuites de données sensibles\n- protection CSRF\n...</p>\n<p>Où l'implémenter (frontend ou backend) ?</p>\n<p>Comment la tester ? BDD avec RestAssured et Cucumber</p>\n",
+        "id" : "PPS-6875",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a40cb55c9c31a3eb5c63cd6152e8606d12e010f1",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Pascal Abaziou"
+            },
+            "name" : "Pascal Abaziou"
+          }
+        ],
+        "title" : "Protéger son application web des risques de sécurité les plus critiques",
+        "lang" : "fr",
+        "summary" : "Comment sécuriser son application AngularJS basée sur des services REST en la protégeant du Top 10 OWASP (10 risques de sécurité les plus critiques) :\r\n- gérer les habilitations \r\n- contrôle des données côté serveur\r\n- éviter les fuites de données sensibles\r\n- protection CSRF\r\n...\r\n\r\nOù l'implémenter (frontend ou backend) ? \r\n\r\nComment la tester ? BDD avec RestAssured et Cucumber"
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1307,11 +1364,30 @@
     },
     {
       "roomId" : "f_neu251",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "Tools-in-Action",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>L'arrivée des <strong>lambda</strong>s et des <strong>streams</strong> dans <strong>Java 8</strong> à annoncé le passage de Java à l'ère de la <strong>programmation fonctionnelle</strong>. Cependant, le rêve est de courte de durée. On se retrouve rapidement avec des corner cases, des APIs bancales et verbeuses, bref ces nouveaux outils ne sont pas toujours aussi utilisable qu'on aimerait.</p>\n<p>Mais <strong>Javaslang</strong> est là pour vous sauver.<strong> Javaslang</strong> est une librairie qui emprunte énormément d'idée à <strong>Scala</strong> et les applique au monde Java. Tout y passe, des collections immutables, des structures de contrôles fonctionnelles puissantes et utilisables, du pattern matching bref de quoi écrire de belles applications qui fonctionnent, de manière efficace et sans la lourdeur des APIs standard.</p>\n",
+        "id" : "YNU-1334",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/928fb729aded7d9a2e1452ca269e0559e8cab7ff",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Mathieu ANCELIN"
+            },
+            "name" : "Mathieu ANCELIN"
+          }
+        ],
+        "title" : "Java 8 c'est bien, Javaslang c'est mieux ;-)",
+        "lang" : "fr",
+        "summary" : "L'arrivée des **lambda**s et des **streams** dans **Java 8** à annoncé le passage de Java à l'ère de la **programmation fonctionnelle**. Cependant, le rêve est de courte de durée. On se retrouve rapidement avec des corner cases, des APIs bancales et verbeuses, bref ces nouveaux outils ne sont pas toujours aussi utilisable qu'on aimerait.\r\n\r\nMais **Javaslang** est là pour vous sauver.** Javaslang** est une librairie qui emprunte énormément d'idée à **Scala** et les applique au monde Java. Tout y passe, des collections immutables, des structures de contrôles fonctionnelles puissantes et utilisables, du pattern matching bref de quoi écrire de belles applications qui fonctionnent, de manière efficace et sans la lourdeur des APIs standard."
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1322,11 +1398,30 @@
     },
     {
       "roomId" : "d_par241",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "Tools-in-Action",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>Vous avez certainement eu affaire à Apache Camel dans vos projects d'intégration et une grande partie se pose la question à savoir comment les styler en microservices &amp; les embarquer dans des conteneurs ?</p>\n<p>Dans cette session nous allons voir comment on peut developper rapidement des Microservices d'intégration et passer à DevOps avec Apache Camel &amp; Fabric8 en se basant sur docker, kubernetes &amp; jenkins.</p>\n",
+        "id" : "CUN-7261",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/486707fecdcb7c8cfbb10974e855389d5132a787",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Abdellatif BOUCHAMA"
+            },
+            "name" : "Abdellatif BOUCHAMA"
+          }
+        ],
+        "title" : "Integration in a #Microservices Style",
+        "lang" : "fr",
+        "summary" : "Vous avez certainement eu affaire à Apache Camel dans vos projects d'intégration et une grande partie se pose la question à savoir comment les styler en microservices & les embarquer dans des conteneurs ?\r\n\r\nDans cette session nous allons voir comment on peut developper rapidement des Microservices d'intégration et passer à DevOps avec Apache Camel & Fabric8 en se basant sur docker, kubernetes & jenkins."
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1337,11 +1432,38 @@
     },
     {
       "roomId" : "e_neu252",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "cldops",
+        "talkType" : "Tools-in-Action",
+        "track" : "Cloud, Container et Scalabilité",
+        "summaryAsHtml" : "<p><strong>Serverless</strong> <a href=\"https://serverless.com/\">https://serverless.com/</a> est un framework permettant de déployer facilement des architectures dites “serverless” sur AWS, qui nous a permis d’accélérer et de simplifier nos déploiements. Le modèle “serverless” permet de déployer des micro-services orientés événements, automatiquement dimensionnés et facturés à l’usage.</p>\n<p>Le déploiement d’une architecture “serverless” sur AWS met en oeuvre plusieurs composants (Lambda, API Gateway, S3, IAM, ...) dont la prise en main et l’articulation peuvent présenter un frein à leur adoption.</p>\n<p>Nous vous présenterons comment <strong>Serverless</strong> apporte un cadre efficace et extensible regroupant bonnes pratiques de développement et de déploiement qui vous permettra dès demain de vous lancer !</p>\n",
+        "id" : "NHQ-4531",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3f12729c30fd8a457c3c89fe430d7e83aa88cdd0",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Etienne Peiniau"
+            },
+            "name" : "Etienne Peiniau"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6a40c4bfc259d51ddf34fe093f7ca013785d969f",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Frédéric Boulet"
+            },
+            "name" : "Frédéric Boulet"
+          }
+        ],
+        "title" : "Serverless, le framework que votre lambda AWS attendait",
+        "lang" : "fr",
+        "summary" : "**Serverless** [https://serverless.com/](https://serverless.com/) est un framework permettant de déployer facilement des architectures dites “serverless” sur AWS, qui nous a permis d’accélérer et de simplifier nos déploiements. Le modèle “serverless” permet de déployer des micro-services orientés événements, automatiquement dimensionnés et facturés à l’usage.\r\n\r\nLe déploiement d’une architecture “serverless” sur AWS met en oeuvre plusieurs composants (Lambda, API Gateway, S3, IAM, ...) dont la prise en main et l’articulation peuvent présenter un frein à leur adoption. \r\n\r\nNous vous présenterons comment **Serverless** apporte un cadre efficace et extensible regroupant bonnes pratiques de développement et de déploiement qui vous permettra dès demain de vous lancer !"
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1352,11 +1474,30 @@
     },
     {
       "roomId" : "par242AB",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Tools-in-Action",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Pour ceux qui connaissent : Le \"Product Hunt\" du développeur, version Startup et développeur.</p>\n<p>Découvrez en moins de 30 minutes des outils, des APIS et des services pour votre projet, votre produit ou votre startup.</p>\n<p>L'envoi d'emails transactionnels, la gestion du support, le live-chat, le suivi de production, le déploiement continu, les tests avec un navigateur web que vous n'avez pas, l'intégration continue sur iOS, les tests de sécurité, la veille technique, le recrutement, les envois d'emails...</p>\n<p>Je vous propose de découvrir et de voir en situation tout un ensemble de services, à utiliser sur votre projet dès le lundi suivant. J'utiliserai des exemples tirés des différentes sociétés où j'ai travaillé, ainsi que de Devoxx France.</p>\n",
+        "id" : "CRU-5869",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b14651a3cd78ab4fd03d522ebef81cdac1d5755c",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Nicolas Martignole"
+            },
+            "name" : "Nicolas Martignole"
+          }
+        ],
+        "title" : "Recettes, outils, API et services pour construire et réussir sa startup",
+        "lang" : "fr",
+        "summary" : "Pour ceux qui connaissent : Le \"Product Hunt\" du développeur, version Startup et développeur.\r\n\r\nDécouvrez en moins de 30 minutes des outils, des APIS et des services pour votre projet, votre produit ou votre startup. \r\n\r\nL'envoi d'emails transactionnels, la gestion du support, le live-chat, le suivi de production, le déploiement continu, les tests avec un navigateur web que vous n'avez pas, l'intégration continue sur iOS, les tests de sécurité, la veille technique, le recrutement, les envois d'emails... \r\n\r\nJe vous propose de découvrir et de voir en situation tout un ensemble de services, à utiliser sur votre projet dès le lundi suivant. J'utiliserai des exemples tirés des différentes sociétés où j'ai travaillé, ainsi que de Devoxx France.\r\n\r\n\r\n\r\n\r\n\r\n"
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1367,11 +1508,30 @@
     },
     {
       "roomId" : "par243_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Tools-in-Action",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Non, le CSS c'est pas du coloriage !</p>\n<p>La puissance du CSS est souvent sous-estimée, cette session de Live-Coding sera l'occasion de montrer quantité de trucs et astuces utiles quotidiennement pour les développeurs web.</p>\n<p>Aujourd'hui on entre dans l'ère post-IE et on peut utiliser beaucoup plus sereinement la puissance que nous offre le CSS; pourquoi passer à coté !</p>\n<p>En mode 'no-javascript' venez découvrir des solutions pour faire des : collapsibles panels, accordions, compteurs, popovers, modals, tabs, ...</p>\n",
+        "id" : "SSZ-5251",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/dad5f5b3a325c966d47456d2efa91db1385d3382",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Igor Laborie"
+            },
+            "name" : "Igor Laborie"
+          }
+        ],
+        "title" : "CSS is Awesome!",
+        "lang" : "fr",
+        "summary" : "Non, le CSS c'est pas du coloriage !\r\n\r\nLa puissance du CSS est souvent sous-estimée, cette session de Live-Coding sera l'occasion de montrer quantité de trucs et astuces utiles quotidiennement pour les développeurs web.\r\n\r\nAujourd'hui on entre dans l'ère post-IE et on peut utiliser beaucoup plus sereinement la puissance que nous offre le CSS; pourquoi passer à coté !\r\n\r\nEn mode 'no-javascript' venez découvrir des solutions pour faire des : collapsibles panels, accordions, compteurs, popovers, modals, tabs, ... "
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1382,11 +1542,38 @@
     },
     {
       "roomId" : "neu253_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491405000000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "mobile",
+        "talkType" : "Tools-in-Action",
+        "track" : "Mobile, IoT",
+        "summaryAsHtml" : "<p>Développer sur mobile en 2017, c’est incontournable. Pour un développeur front-end ou full-stack le coût d’entrée est parfois élevé. Que ce soit sur iOS ou Android, avant d’être à l’aise, on peut passer pas mal de temps à apprendre les APIs natives, les outils et peut-être même le langage.</p>\n<p>Avec React Native, le jeu a changé, si vous connaissez React, vous avez tout ce qu’il faut pour développer une application native pour les deux plate-formes.</p>\n<p>Au cours de cette présentation, nous développerons en moins de vingt minutes une application pour choisir le prénom d’un nouveau-né pour iOS et Android en utilisant React Native, ES2017 et Flow.</p>\n",
+        "id" : "KXN-1864",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1a669acc8d193f14296af073cacf6e9446525c61",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florent Le Gall"
+            },
+            "name" : "Florent Le Gall"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/87e03893af48cf11409cc4f7375993399a8af521",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Thierry Abaléa"
+            },
+            "name" : "Thierry Abaléa"
+          }
+        ],
+        "title" : "React Native ou comment faire une application iOS & Android quand on est développeur web",
+        "lang" : "fr",
+        "summary" : "Développer sur mobile en 2017, c’est incontournable. Pour un développeur front-end ou full-stack le coût d’entrée est parfois élevé. Que ce soit sur iOS ou Android, avant d’être à l’aise, on peut passer pas mal de temps à apprendre les APIs natives, les outils et peut-être même le langage.\r\n\r\nAvec React Native, le jeu a changé, si vous connaissez React, vous avez tout ce qu’il faut pour développer une application native pour les deux plate-formes.\r\n\r\nAu cours de cette présentation, nous développerons en moins de vingt minutes une application pour choisir le prénom d’un nouveau-né pour iOS et Android en utilisant React Native, ES2017 et Flow."
+      },
       "fromTime" : "17:10",
       "toTimeMillis" : 1491406800000,
       "toTime" : "17:40",
@@ -1397,11 +1584,30 @@
     },
     {
       "roomId" : "b_amphi",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Tools-in-Action",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>In this live-coding session I'll use the open <a href=\"http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml\">NYC Taxi Trip Record Data</a> enriched with routing information and transformed into a realtime stream and walk you through some data discovery scenarios using <a href=\"https://beam.apache.org\">Apache Beam</a>. Let's see what we can find! You'll take away techniques, best practices and insights working with the new open data processing model and toolset.</p>\n",
+        "id" : "SCA-4407",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/5d6685dc68a9b43d75febcbecadd0dccb4fd27a2",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Robert Kubis"
+            },
+            "name" : "Robert Kubis"
+          }
+        ],
+        "title" : "Apache Beam, live data discovery from the open NYC Taxi Trip Records stream",
+        "lang" : "en",
+        "summary" : "In this live-coding session I'll use the open [NYC Taxi Trip Record Data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) enriched with routing information and transformed into a realtime stream and walk you through some data discovery scenarios using [Apache Beam](https://beam.apache.org). Let's see what we can find! You'll take away techniques, best practices and insights working with the new open data processing model and toolset."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1412,11 +1618,30 @@
     },
     {
       "roomId" : "c_maillot",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "Tools-in-Action",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Vous avez besoin d’intégrer une nouveau type de stockage ( Elasticsearch, Cassandra, Redis, Neo4j ) dans votre application mais l’apprentissage d’une nouvelle API vous fait hésiter ? Spring Data est fait pour vous ! Grâce à Spring Data, vous avez à disposition une interface unique pour communiquer avec tous vos backends. Venez découvrir comment faire un stream de données depuis Postgresql, faire des agrégations avec Elasticsearch, enregistrer des documents dans MongoDB, le tout en quelques lignes de code et sans efforts. Nous finirons cette session en détaillant les nouveautés apportées par la version 2.0 autour de la programmation réactive.</p>\n",
+        "id" : "DIW-3931",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/95184156420ea83a8b8b314747bbec50619b0d5a",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Julien Roy"
+            },
+            "name" : "Julien Roy"
+          }
+        ],
+        "title" : "Spring Data : Une API, quinze possibilités",
+        "lang" : "fr",
+        "summary" : "Vous avez besoin d’intégrer une nouveau type de stockage ( Elasticsearch, Cassandra, Redis, Neo4j ) dans votre application mais l’apprentissage d’une nouvelle API vous fait hésiter ? Spring Data est fait pour vous ! Grâce à Spring Data, vous avez à disposition une interface unique pour communiquer avec tous vos backends. Venez découvrir comment faire un stream de données depuis Postgresql, faire des agrégations avec Elasticsearch, enregistrer des documents dans MongoDB, le tout en quelques lignes de code et sans efforts. Nous finirons cette session en détaillant les nouveautés apportées par la version 2.0 autour de la programmation réactive."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1427,11 +1652,30 @@
     },
     {
       "roomId" : "f_neu251",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "Tools-in-Action",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>JOOQ et JOOλ sont des solutions open-source permettant d'intégrer proprement votre application Java avec votre base de données. Quoi de nouveau sous le soleil me diriez-vous ? Après tout la problématique de mapping objet-relationnel est au moins aussi vieille que la plateforme Java. Mais depuis Java 8, JOOQ permet d'utiliser l'API Stream du JDK avec le mapping objet-relationnel, ce qui, couplé avec JOOλ, a pour effet d'écrire des DAO plus simples et dans un paradigme fonctionnel. Au cours de ce tools in action nous allons vous présenter les avantages que nous pouvons tirer des frameworks JOOQ et JOOλ, par rapport à du JDBC pur sucre, JPA sans oublier Spring JDBC Template. Cerise sur le gâteau, nous vous indiquerons comment simplement introduire JOOQ et JOOλ dans votre code existant.</p>\n",
+        "id" : "GPW-2638",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e2a3223c846fc2073ec5be6e560ccff749f03161",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Mathieu Gandin"
+            },
+            "name" : "Mathieu Gandin"
+          }
+        ],
+        "title" : "JOOQ et JOOλ : Comment écrire du code propre dans vos DAO",
+        "lang" : "fr",
+        "summary" : "JOOQ et JOOλ sont des solutions open-source permettant d'intégrer proprement votre application Java avec votre base de données. Quoi de nouveau sous le soleil me diriez-vous ? Après tout la problématique de mapping objet-relationnel est au moins aussi vieille que la plateforme Java. Mais depuis Java 8, JOOQ permet d'utiliser l'API Stream du JDK avec le mapping objet-relationnel, ce qui, couplé avec JOOλ, a pour effet d'écrire des DAO plus simples et dans un paradigme fonctionnel. Au cours de ce tools in action nous allons vous présenter les avantages que nous pouvons tirer des frameworks JOOQ et JOOλ, par rapport à du JDBC pur sucre, JPA sans oublier Spring JDBC Template. Cerise sur le gâteau, nous vous indiquerons comment simplement introduire JOOQ et JOOλ dans votre code existant."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1442,11 +1686,30 @@
     },
     {
       "roomId" : "d_par241",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Tools-in-Action",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine de soucis mémoires causés par deux classes.</p>\n",
+        "id" : "YFR-9902",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/6b305f40e7eb9fe7737675112662208d97dc3914",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jean Bisutti"
+            },
+            "name" : "Jean Bisutti"
+          }
+        ],
+        "title" : "Boîte à outils d'investigation de soucis mémoire",
+        "lang" : "fr",
+        "summary" : "Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine de soucis mémoires causés par deux classes."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1457,11 +1720,38 @@
     },
     {
       "roomId" : "e_neu252",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Tools-in-Action",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Eclipse Che est à la fois un serveur de workspaces et un IDE cloud. Che peut être installé de la même façon qu’un IDE classique pour n’importe quel type de framework ou de langage. Chaque workspace est composé de projets et d'environnements qui fournissent les composants nécessaire à leur développement ainsi qu’à leur exécution. Un environnement est défini par un ensemble de machines Docker qui sont directement utilisées par Che.</p>\n<p>Durant cette session, nous expliquerons comment configurer un workspace cloud avec Eclipse Che. Nous montrerons comment configurer son environnement Docker avec ses outils et définir les commandes dont vous avez besoin. Enfin nous montrerons comment ces workspaces peuvent être facilement partagés avec d’autres développeurs.</p>\n<p>Nous montrerons également comment Eclipse Che supporte différents languages dans l’IDE, notamment au travers de l’implementation du Language Server Protocol - protocol de communication entre un outil de dev et un Language Server qui execute l’ensemble de l’analyse du code et les différentes opérations dont nous avons l’habitude (Intellisense, refactoring …). Ce protocol est actuellement utilisé par Eclipse Che et VSCode.</p>\n",
+        "id" : "RUO-3082",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3102bb500b44d7043b3f063ab6076716978f3746",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Stévan Le Meur"
+            },
+            "name" : "Stévan Le Meur"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/baede12fd06cf533e4a6510ae09d711f952f71c4",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florent Benoit"
+            },
+            "name" : "Florent Benoit"
+          }
+        ],
+        "title" : "Introduction à Eclipse Che",
+        "lang" : "fr",
+        "summary" : "Eclipse Che est à la fois un serveur de workspaces et un IDE cloud. Che peut être installé de la même façon qu’un IDE classique pour n’importe quel type de framework ou de langage. Chaque workspace est composé de projets et d'environnements qui fournissent les composants nécessaire à leur développement ainsi qu’à leur exécution. Un environnement est défini par un ensemble de machines Docker qui sont directement utilisées par Che.\r\n\r\nDurant cette session, nous expliquerons comment configurer un workspace cloud avec Eclipse Che. Nous montrerons comment configurer son environnement Docker avec ses outils et définir les commandes dont vous avez besoin. Enfin nous montrerons comment ces workspaces peuvent être facilement partagés avec d’autres développeurs. \r\n\r\nNous montrerons également comment Eclipse Che supporte différents languages dans l’IDE, notamment au travers de l’implementation du Language Server Protocol - protocol de communication entre un outil de dev et un Language Server qui execute l’ensemble de l’analyse du code et les différentes opérations dont nous avons l’habitude (Intellisense, refactoring …). Ce protocol est actuellement utilisé par Eclipse Che et VSCode."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1472,11 +1762,30 @@
     },
     {
       "roomId" : "par242AB",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Tools-in-Action",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Parfois, il faut savoir être <strong>pragmatique</strong> lorsque son temps est compté, par exemple lorsque, la nuit, on s'attèle à organiser une conférence qui réunit plus de 500 développeurs.</p>\n<p>C'est l'anecdote que je souhaite partager avec vous aujourd'hui : saviez-vous que le site de la conférence BDX I/O, ainsi qu'un bon nombre d'outils utilisés pour son organisation se reposaient uniquement sur des Spreadsheets Google ?</p>\n<p>Après tout :</p>\n<ul>\n<li><strong>pas besoin d'infra</strong> sur laquelle déployer une application : nos données sont dans une spreadsheet gérée par l'infra Google<br  /></li>\n<li>les données sont exportables/accessibles <strong>en JSON</strong> (sisi !)<br  /></li>\n<li>elles sont <strong>versionnées</strong>, et un rollback est possible à tout moment<br  /></li>\n<li>vous pouvez <strong>partager facilement l'accès en écriture</strong> à ces données, vous pouvez même l'alimenter avec des réponses à des gforms<br  /></li>\n<li>vous pouvez effectuer des traitements complexes avec <strong>l'éditeur de scripts</strong> qui parle JS (<em>parce que VB, c'est has been ! ;-)</em>) et dispose d'une API très fournie<br  /></li>\n</ul>\n<p>Pendant 30min, nous ne verrons peut-être pas les libs les plus hypes du moment, mais vous ressortirez sûrement avec un regard nouveau sur les Spreadsheets Google !</p>\n",
+        "id" : "UHJ-0617",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/ad8a2bc1ca2e061e9473a3595dc1c9276d4c7a84",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Frédéric Camblor"
+            },
+            "name" : "Frédéric Camblor"
+          }
+        ],
+        "title" : "Et si votre backend était une Google Spreadsheet ?",
+        "lang" : "fr",
+        "summary" : "Parfois, il faut savoir être **pragmatique** lorsque son temps est compté, par exemple lorsque, la nuit, on s'attèle à organiser une conférence qui réunit plus de 500 développeurs.\r\n\r\nC'est l'anecdote que je souhaite partager avec vous aujourd'hui : saviez-vous que le site de la conférence BDX I/O, ainsi qu'un bon nombre d'outils utilisés pour son organisation se reposaient uniquement sur des Spreadsheets Google ?\r\n\r\nAprès tout :\r\n\r\n* **pas besoin d'infra** sur laquelle déployer une application : nos données sont dans une spreadsheet gérée par l'infra Google  \r\n* les données sont exportables/accessibles **en JSON** (sisi !)  \r\n* elles sont **versionnées**, et un rollback est possible à tout moment  \r\n* vous pouvez **partager facilement l'accès en écriture** à ces données, vous pouvez même l'alimenter avec des réponses à des gforms  \r\n* vous pouvez effectuer des traitements complexes avec **l'éditeur de scripts** qui parle JS (_parce que VB, c'est has been ! ;-)_) et dispose d'une API très fournie  \r\n\r\nPendant 30min, nous ne verrons peut-être pas les libs les plus hypes du moment, mais vous ressortirez sûrement avec un regard nouveau sur les Spreadsheets Google !"
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1487,11 +1796,30 @@
     },
     {
       "roomId" : "par243_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Tools-in-Action",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<ul>\n<li>Utiliser le debugger : [✓]</li>\n<li>Utiliser le sourcemapping pour voir mon sass au lieu de mon css : [✓]</li>\n<li>Utiliser le nouveau color picker pour tester des couleurs : Quoi ? il y a un color picker dans les devtools.</li>\n<li>Analyser les screenshots de mon site pour comprendre comment mon site s'affiche : Quoi ? Je peux faire ça ?</li>\n</ul>\n<p>Bon nombre des nouveautés des devtools restent encore inconnues du grand public. Venez dans ce talk pour découvrir et redécouvrir comment les devtools peuvent vous aider voir vous sauvez la vie !</p>\n",
+        "id" : "VLA-9192",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/996b582386dd98b7ea73098dbcc6f0bd037ba037",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Jean-Francois Garreau"
+            },
+            "name" : "Jean-Francois Garreau"
+          }
+        ],
+        "title" : "Les Web DevTools en 2017",
+        "lang" : "fr",
+        "summary" : "* Utiliser le debugger : [✓]\r\n* Utiliser le sourcemapping pour voir mon sass au lieu de mon css : [✓]\r\n* Utiliser le nouveau color picker pour tester des couleurs : Quoi ? il y a un color picker dans les devtools.\r\n* Analyser les screenshots de mon site pour comprendre comment mon site s'affiche : Quoi ? Je peux faire ça ?\r\n\r\nBon nombre des nouveautés des devtools restent encore inconnues du grand public. Venez dans ce talk pour découvrir et redécouvrir comment les devtools peuvent vous aider voir vous sauvez la vie !"
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1502,11 +1830,30 @@
     },
     {
       "roomId" : "neu253_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491407700000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Tools-in-Action",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Ce talk est une présentation du projet Angular Universal. Universal est le module officiel d'Angular 2+ permettant d'ajouter entre autres le support du server-rendering ou facilité la gestion du SEO à nos Web apps. Mieux encore, avec Angular Universal il sera possible d'exécuter une même application Angular dans plusieurs environnement (navigateur, Web Worker, serveur, raspberry-pi...).\nAvant, nous avions l'isomorphisme, avec Angular 2+ nous avons l'universalisme.</p>\n",
+        "id" : "CXH-6084",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3c4cdf9d4d887ba8b7f97994a17ca2fbc64b432e",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Wassim Chegham"
+            },
+            "name" : "Wassim Chegham"
+          }
+        ],
+        "title" : "Exécutez vos applications Angular hors navigateur",
+        "lang" : "fr",
+        "summary" : "Ce talk est une présentation du projet Angular Universal. Universal est le module officiel d'Angular 2+ permettant d'ajouter entre autres le support du server-rendering ou facilité la gestion du SEO à nos Web apps. Mieux encore, avec Angular Universal il sera possible d'exécuter une même application Angular dans plusieurs environnement (navigateur, Web Worker, serveur, raspberry-pi...). \r\nAvant, nous avions l'isomorphisme, avec Angular 2+ nous avons l'universalisme."
+      },
       "fromTime" : "17:55",
       "toTimeMillis" : 1491409500000,
       "toTime" : "18:25",
@@ -1517,11 +1864,30 @@
     },
     {
       "roomId" : "b_amphi",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "bigd",
+        "talkType" : "Tools-in-Action",
+        "track" : "Big Data, Machine Learning, IA & Analytics",
+        "summaryAsHtml" : "<p>Les bases de données time series sont des bases de données optimisées pour gérer des données\ntemporelles. Si l'utilisation d'une base de données relationnelle pour gérer ce type de données est\ntout à fait possible, les base de données time series offrent des fonctionnalités spécifiques\npuissantes pour ces cas spécifiques. Elles sont typiquement utilisées dans le cadre de l'IoT ou du\nstockage de données de monitoring.</p>\n<p>Cette présentation est une introduction à l'utilisation de ces bases en s'appuyant sur un cas\nd'utilisation concret que nous avons mis en œuvre chez Scalingo. Nous avons utilisé InfluxDB afin de\nstocker les millions de données remontées chaque jour par nos capteurs pour suivre les métriques des\napplications de nos clients\n(https://blog.scalingo.com/2016/07/28/introducing-the-new-metrics-view-container.html).</p>\n",
+        "id" : "XYA-5266",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9a0c89b3b8f24e94216f6fe3ee13c08e3acb1cee",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Étienne Michon"
+            },
+            "name" : "Étienne Michon"
+          }
+        ],
+        "title" : "Prise en main d'InfluxDB : utilisation d'une base de données time series",
+        "lang" : "fr",
+        "summary" : "Les bases de données time series sont des bases de données optimisées pour gérer des données\r\ntemporelles. Si l'utilisation d'une base de données relationnelle pour gérer ce type de données est\r\ntout à fait possible, les base de données time series offrent des fonctionnalités spécifiques\r\npuissantes pour ces cas spécifiques. Elles sont typiquement utilisées dans le cadre de l'IoT ou du\r\nstockage de données de monitoring. \r\n\r\nCette présentation est une introduction à l'utilisation de ces bases en s'appuyant sur un cas\r\nd'utilisation concret que nous avons mis en œuvre chez Scalingo. Nous avons utilisé InfluxDB afin de\r\nstocker les millions de données remontées chaque jour par nos capteurs pour suivre les métriques des\r\napplications de nos clients\r\n(https://blog.scalingo.com/2016/07/28/introducing-the-new-metrics-view-container.html)."
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1532,11 +1898,30 @@
     },
     {
       "roomId" : "c_maillot",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "java",
+        "talkType" : "Tools-in-Action",
+        "track" : "Java, JVM, Javas SE/EE",
+        "summaryAsHtml" : "<p>Cette fois-ci, ça semble bien engagé. Java 9 va bientôt arriver, avec le nouveau système de modularité. Et comme la transition risque d'être douloureuse, commençons à nous préparer dès maintenant.</p>\n<p>Le projet Jigsaw implémente le système de modularité que nous utiliserons les prochaines années. Mais qu'est-ce qu'il propose pour la transition ? Faut-il restructurer nos applications, revoir notre code ?</p>\n<p>C'est là que ce situe cette session. Je reprendrai un projet qui utilise les API de Java 8, des classloaders maison, des librairies externes, des API non standards du JDK et je l'adapterai à Java 9. Pour ça j'utiliserai les outils du JDK comme jdeps, les nouvelles options du compilateur et du runtime.</p>\n",
+        "id" : "AHF-1145",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/98d890f4f5c499fdd36d1efbc8aa041e8c30d50e",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Alexis Hassler"
+            },
+            "name" : "Alexis Hassler"
+          }
+        ],
+        "title" : "Migrer à Jigsaw : en douleur ou en douceur ?",
+        "lang" : "fr",
+        "summary" : "Cette fois-ci, ça semble bien engagé. Java 9 va bientôt arriver, avec le nouveau système de modularité. Et comme la transition risque d'être douloureuse, commençons à nous préparer dès maintenant.\r\n\r\nLe projet Jigsaw implémente le système de modularité que nous utiliserons les prochaines années. Mais qu'est-ce qu'il propose pour la transition ? Faut-il restructurer nos applications, revoir notre code ?\r\n\r\nC'est là que ce situe cette session. Je reprendrai un projet qui utilise les API de Java 8, des classloaders maison, des librairies externes, des API non standards du JDK et je l'adapterai à Java 9. Pour ça j'utiliserai les outils du JDK comme jdeps, les nouvelles options du compilateur et du runtime.\r\n"
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1547,11 +1932,30 @@
     },
     {
       "roomId" : "f_neu251",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "archisec",
+        "talkType" : "Tools-in-Action",
+        "track" : "Architecture, Performance et Securité",
+        "summaryAsHtml" : "<p>Passer d'un monolithe à une architecture micro-services introduit de la complexité en terme de réseau, on ne peut donc plus logger de la même manière. En effet,  comment savoir quelles instances de service ont traité une requête ? Comment faire transiter des logs entre mes services ? Où se situent les goulots qui ralentisse mon architecture ?\nDécouvrons ensemble comment mettre en place une solution de tracing de requête dans un environnement distribué permettant de traiter toutes ces problématiques et ce avec une quantité de code minimal !\nAu programme Spring Cloud Sleuth, Zipkin, ElasticSearch ... Le tout en live coding !</p>\n",
+        "id" : "AXJ-0444",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/eec27b231d20ebc4d7e2e2899fb37ffa7e0bbbac",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Florian Garcia"
+            },
+            "name" : "Florian Garcia"
+          }
+        ],
+        "title" : "Spring cloud et Zipkin à la rescousse du tracing distribué",
+        "lang" : "fr",
+        "summary" : "Passer d'un monolithe à une architecture micro-services introduit de la complexité en terme de réseau, on ne peut donc plus logger de la même manière. En effet,  comment savoir quelles instances de service ont traité une requête ? Comment faire transiter des logs entre mes services ? Où se situent les goulots qui ralentisse mon architecture ?\r\nDécouvrons ensemble comment mettre en place une solution de tracing de requête dans un environnement distribué permettant de traiter toutes ces problématiques et ce avec une quantité de code minimal !\r\nAu programme Spring Cloud Sleuth, Zipkin, ElasticSearch ... Le tout en live coding !"
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1562,11 +1966,30 @@
     },
     {
       "roomId" : "d_par241",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "cldops",
+        "talkType" : "Tools-in-Action",
+        "track" : "Cloud, Container et Scalabilité",
+        "summaryAsHtml" : "<p>-Tu maîtrises parfaitement docker et tu aimerais en savoir plus sur rkt ?</p>\n<p>-Tu ne comprends rien aux conteneurs mais tu aimerais commencer ?</p>\n<p>-Tu as envie de passer un moment sympa avec un mec qui tape des lignes de commande sur son terminal ?</p>\n<p>Alors cette session est faite pour toi! Au menu, un peu de théorie sur les containers, l'Application Container Specification et rkt, puis de la pratique avec la mise en place d'un ensemble d'application en utilisant rkt.</p>\n",
+        "id" : "VPV-8691",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/5f59c22f0c9a158af63bdd4c6c24d58a6ac8aaf9",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yoan Rousseau"
+            },
+            "name" : "Yoan Rousseau"
+          }
+        ],
+        "title" : "A la découverte de rkt",
+        "lang" : "fr",
+        "summary" : "-Tu maîtrises parfaitement docker et tu aimerais en savoir plus sur rkt ?\r\n\r\n-Tu ne comprends rien aux conteneurs mais tu aimerais commencer ?\r\n\r\n-Tu as envie de passer un moment sympa avec un mec qui tape des lignes de commande sur son terminal ?\r\n\r\nAlors cette session est faite pour toi! Au menu, un peu de théorie sur les containers, l'Application Container Specification et rkt, puis de la pratique avec la mise en place d'un ensemble d'application en utilisant rkt."
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1577,11 +2000,38 @@
     },
     {
       "roomId" : "e_neu252",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Tools-in-Action",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Flow est un outil qui permet d’enregistrer puis d’explorer visuellement et interactivement ce qu’il s’est passé durant l'exécution d’une application Java. Il a pour objectif d’aider le développeur à comprendre un scénario particulier de son application.</p>\n<p>Nous verrons comment interpréter les visualisations générées par Flow pour répondre facilement à des questions récurrentes.  Quels sont les packages, classes et méthodes impliqués ? Quelles sont les threads et dans quel ordre appellent-elles les méthodes ? Etc.</p>\n<p>Ce sera également l’occasion de comparer Flow avec des techniques plus traditionnelles comme lire du code, ajouter des logs ou encore utiliser le debugger.</p>\n<p>Pour plus d’informations : <a href=\"http://findtheflow.io\">http://findtheflow.io</a></p>\n",
+        "id" : "PTA-8724",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/22b1b5a9757f0b71f53a53fa52d7454b74295d13",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yoann Buch"
+            },
+            "name" : "Yoann Buch"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/711109fd3ce1ae47e5ff29c5e3221ecdc669e0f1",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Yiquan Zhou"
+            },
+            "name" : "Yiquan Zhou"
+          }
+        ],
+        "title" : "Visualisez l'exécution de votre code avec Flow",
+        "lang" : "fr",
+        "summary" : "Flow est un outil qui permet d’enregistrer puis d’explorer visuellement et interactivement ce qu’il s’est passé durant l'exécution d’une application Java. Il a pour objectif d’aider le développeur à comprendre un scénario particulier de son application.\r\n\r\nNous verrons comment interpréter les visualisations générées par Flow pour répondre facilement à des questions récurrentes.  Quels sont les packages, classes et méthodes impliqués ? Quelles sont les threads et dans quel ordre appellent-elles les méthodes ? Etc.\r\n\r\nCe sera également l’occasion de comparer Flow avec des techniques plus traditionnelles comme lire du code, ajouter des logs ou encore utiliser le debugger.\r\n\r\nPour plus d’informations : <http://findtheflow.io>"
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1592,11 +2042,38 @@
     },
     {
       "roomId" : "par242AB",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "agTest",
+        "talkType" : "Tools-in-Action",
+        "track" : "DevOps, Agilité, Méthodologie & Tests",
+        "summaryAsHtml" : "<p>Si vous avez déjà écris des tests d'intégration, vous avez probablement rencontré des difficultés à faire tourner vos dépendances.\nEn effet, il faut :</p>\n<ul>\n<li>démarrer la dépendance</li>\n<li>s'assurer que la dépendance est dans un état correct avant de lancer le test</li>\n<li>arrêter la dépendance à la fin du test</li>\n</ul>\n<p>À tout ceci se rajoute le problème de reproductibilité du test (différents environments, système d'exploitation).\nCela peut s’avérer assez complexe. Heureusement, grâce à docker, le problème de reproductibilité est en grande partie résolue, mais encore faut-il pouvoir l'utiliser dans nos tests !\nNous avons écris une extension à JUnit 5 qui rends tout ceci beaucoup plus simple.\nDurant ce talk, nous vous présenterons notre solution après avoir fais une présentation de jUnit 5.</p>\n",
+        "id" : "YOJ-9199",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/b79d2812e5f3a077ae9678e34e513933915cf677",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Xavier Detant"
+            },
+            "name" : "Xavier Detant"
+          },
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f152133e6107190056f5706e22c92c95468dde9a",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Vincent Demeester"
+            },
+            "name" : "Vincent Demeester"
+          }
+        ],
+        "title" : "JUnit-docker",
+        "lang" : "fr",
+        "summary" : "Si vous avez déjà écris des tests d'intégration, vous avez probablement rencontré des difficultés à faire tourner vos dépendances.\r\nEn effet, il faut :\r\n\r\n* démarrer la dépendance\r\n* s'assurer que la dépendance est dans un état correct avant de lancer le test\r\n* arrêter la dépendance à la fin du test\r\n\r\nÀ tout ceci se rajoute le problème de reproductibilité du test (différents environments, système d'exploitation).\r\nCela peut s’avérer assez complexe. Heureusement, grâce à docker, le problème de reproductibilité est en grande partie résolue, mais encore faut-il pouvoir l'utiliser dans nos tests !\r\nNous avons écris une extension à JUnit 5 qui rends tout ceci beaucoup plus simple.\r\nDurant ce talk, nous vous présenterons notre solution après avoir fais une présentation de jUnit 5."
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1607,11 +2084,30 @@
     },
     {
       "roomId" : "par243_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "wm",
+        "talkType" : "Tools-in-Action",
+        "track" : "Web, JS, HTML5 et UX",
+        "summaryAsHtml" : "<p>Concevoir ses composants d'interface React n'est pas une tâche facile : ils ont souvent plusieurs états et il peut être difficile de les reproduire lorsqu'on développe en plein milieu du reste de son application. Pire, une fois qu'un composant a été réalisé, comment faire en sorte qu'il soit correctement documenté ? Comment les nouveaux développeurs sauront comment l'utiliser et quels comportements en attendre ?</p>\n<p>Avec React-Storybook vous allez pouvoir développer vos composants d'interface itérativement dans un environnement totalement isolé et bénéficiant du hot reload. Cerise sur le gâteau, créer vos composants de cette manière vous apportera une documentation vivante et vous fournira un premier point d'entrée lorsqu'il vous faudra expérimenter et debugger.</p>\n",
+        "id" : "JCO-6316",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4dc448fc42b05aa45e5857933771e3c203603793",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "Marie-Laure Thuret"
+            },
+            "name" : "Marie-Laure Thuret"
+          }
+        ],
+        "title" : "React Storybook: Concevoir, Developper, Documenter et Debugger ses composants d'interface React",
+        "lang" : "fr",
+        "summary" : "Concevoir ses composants d'interface React n'est pas une tâche facile : ils ont souvent plusieurs états et il peut être difficile de les reproduire lorsqu'on développe en plein milieu du reste de son application. Pire, une fois qu'un composant a été réalisé, comment faire en sorte qu'il soit correctement documenté ? Comment les nouveaux développeurs sauront comment l'utiliser et quels comportements en attendre ? \r\n\r\nAvec React-Storybook vous allez pouvoir développer vos composants d'interface itérativement dans un environnement totalement isolé et bénéficiant du hot reload. Cerise sur le gâteau, créer vos composants de cette manière vous apportera une documentation vivante et vous fournira un premier point d'entrée lorsqu'il vous faudra expérimenter et debugger. "
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",
@@ -1622,11 +2118,30 @@
     },
     {
       "roomId" : "neu253_t",
-      "notAllocated" : true,
+      "notAllocated" : false,
       "fromTimeMillis" : 1491410400000,
       "break" : null,
       "roomSetup" : "theatre",
-      "talk" : null,
+      "talk" : {
+        "trackId" : "lang",
+        "talkType" : "Tools-in-Action",
+        "track" : "Langages alternatifs",
+        "summaryAsHtml" : "<p>Dart, Coffeescript, Typescript, Purescript, Babel, et les autres, ont tous cherché à proposer une alternative plus moderne au Javascript.\nDécouvrez une solution robuste, multi-paradigme, fortement typée comme Java, dynamique comme javascript, et fonctionnelle comme Scala.\nHaxe est un langage de programmation orienté objet, open source, parfaitement adapté au développement d’applications web et isomophiques.</p>\n",
+        "id" : "EFI-6314",
+        "speakers" : [
+          {
+            "link" : {
+              "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3541b009169b15b44880a4f35fa1b0960836d6da",
+              "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+              "title" : "David Mouton"
+            },
+            "name" : "David Mouton"
+          }
+        ],
+        "title" : "Beyond Javascript",
+        "lang" : "fr",
+        "summary" : "Dart, Coffeescript, Typescript, Purescript, Babel, et les autres, ont tous cherché à proposer une alternative plus moderne au Javascript. \r\nDécouvrez une solution robuste, multi-paradigme, fortement typée comme Java, dynamique comme javascript, et fonctionnelle comme Scala. \r\nHaxe est un langage de programmation orienté objet, open source, parfaitement adapté au développement d’applications web et isomophiques."
+      },
       "fromTime" : "18:40",
       "toTimeMillis" : 1491412200000,
       "toTime" : "19:10",

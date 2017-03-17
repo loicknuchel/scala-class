@@ -60,8 +60,8 @@ object DevoxxApi {
       rooms <- getRooms()
       schedules <- getSchedules()
       slots <- Future.sequence(schedules.map(getSchedule)).map(_.flatten)
-      talks <- Future.sequence(slots.flatMap(_.talk).map(_.id).map(getTalk))
-      speakers <- Future.sequence(talks.flatMap(_.speakers).map(getSpeaker))
+      talks <- Future.sequence(slots.flatMap(_.talk).map(_.id).distinct.map(getTalk))
+      speakers <- Future.sequence(talks.flatMap(_.speakers).distinct.map(getSpeaker))
     } yield (speakers, talks, rooms, slots)
   }
 }

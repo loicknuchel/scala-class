@@ -1,6 +1,6 @@
 {
   "uuid" : "407f394c16a1dc8684bda06a68d9be07e88f8d14",
-  "bioAsHtml" : "<p>Ludovic est développeur chez Terracotta depuis plus de six ans, et a une expérience significative dans le développement d&#x27;applications web et de systèmes à très haute\nconcurrence.\nAvant de rejoindre Terracotta, il travaillait dans le domaine des systèmes transactionnels\nce qui l&#x27;a poussé à développer le Transaction Manager Bitronix.</p>\n",
+  "bioAsHtml" : "<p>Ludovic est développeur chez Terracotta depuis plus de sept ans, et a une expérience significative dans le développement d&#x27;applications web et de systèmes à très haute\nconcurrence.\nAvant de rejoindre Terracotta, il travaillait dans le domaine des systèmes transactionnels\nce qui l&#x27;a poussé à développer le Transaction Manager Bitronix.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Hands-on Labs",
@@ -27,7 +27,7 @@
     }
   ],
   "company" : "Terracotta",
-  "bio" : "Ludovic est développeur chez Terracotta depuis plus de six ans, et a une expérience significative dans le développement d'applications web et de systèmes à très haute\r\nconcurrence.\r\nAvant de rejoindre Terracotta, il travaillait dans le domaine des systèmes transactionnels\r\nce qui l'a poussé à développer le Transaction Manager Bitronix.",
+  "bio" : "Ludovic est développeur chez Terracotta depuis plus de sept ans, et a une expérience significative dans le développement d'applications web et de systèmes à très haute\r\nconcurrence.\r\nAvant de rejoindre Terracotta, il travaillait dans le domaine des systèmes transactionnels\r\nce qui l'a poussé à développer le Transaction Manager Bitronix.",
   "lastName" : "Orban",
   "firstName" : "Ludovic",
   "blog" : null,

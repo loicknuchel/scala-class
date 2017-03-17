@@ -17,14 +17,14 @@
           "title" : "Jérémie MONSINJON"
         },
         {
-          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/eec27b231d20ebc4d7e2e2899fb37ffa7e0bbbac",
-          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Garcia Florian"
-        },
-        {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3c458756e883af773c547d9dba7cc5c2be2e3cee",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
           "title" : "Christophe Labouisse"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/eec27b231d20ebc4d7e2e2899fb37ffa7e0bbbac",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Florian Garcia"
         }
       ],
       "id" : "MDG-6935",

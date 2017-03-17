@@ -1,0 +1,37 @@
+{
+  "uuid" : "a3b944e4c133a014fdea3d5bc7217572a34792ce",
+  "bioAsHtml" : "<p>COO</p>\n",
+  "acceptedTalks" : [
+    {
+      "talkType" : "Conference",
+      "track" : "Web, JS, HTML5 et UX",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/HQL-1106",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/de3da7575830a16e641d43204cab18b671809dec",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Julien Dubois"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a3b944e4c133a014fdea3d5bc7217572a34792ce",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Geoffray Gruel"
+        }
+      ],
+      "id" : "HQL-1106",
+      "title" : "Open Source depuis les tranchées : 4 ans de JHipster @Ippon"
+    }
+  ],
+  "company" : "Ippon",
+  "bio" : "COO ",
+  "lastName" : "Gruel",
+  "firstName" : "Geoffray",
+  "blog" : "http://www.ippon.fr/",
+  "avatarURL" : "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/005/05c/22a/2548baa.jpg",
+  "twitter" : "@geoffray_ippon",
+  "lang" : "fr"
+}

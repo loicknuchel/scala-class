@@ -31,12 +31,12 @@
       "title" : "BOF Apache Maven"
     }
   ],
-  "company" : null,
+  "company" : "Sonatype",
   "bio" : "Brian is Chief Technical Officer at Sonatype. He has extensive open source experience as a member of the Apache Software Foundation and former Chair of the Apache Maven project. Brian was a direct contributor to the Maven ecosystem, including the maven-dependency-plugin and maven-enforcer-plugin. He has over 15 years of experience driving the vision behind, as well as developing and leading the development of software for organizations ranging from startups to large enterprises. Brian is a frequent speaker at national and regional events including Java User Groups and other development related conferences.",
   "lastName" : "Fox",
   "firstName" : "Brian",
   "blog" : null,
-  "avatarURL" : null,
+  "avatarURL" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhLAAAAJDE0MWRiM2FjLTk4NWMtNGZkZS1hMGZjLTFkNWNmNmIzODU1ZQ.jpg",
   "twitter" : "@brian_fox",
   "lang" : "en"
 }

@@ -7,14 +7,6 @@
   "speakers" : [
     {
       "link" : {
-        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71088009efb094754d81152df165eba94cd3dac4",
-        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Emilien Pecoul"
-      },
-      "name" : "Emilien Pecoul"
-    },
-    {
-      "link" : {
         "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7f72bec97e79afd0f742fc87c486bd2a30d29fea",
         "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
         "title" : "Florent Pellet"
@@ -31,11 +23,11 @@
     },
     {
       "link" : {
-        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/62aced05d74e41c8f705d1675e55be24bad7d08a",
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71088009efb094754d81152df165eba94cd3dac4",
         "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Jean Helou"
+        "title" : "Emilien Pecoul"
       },
-      "name" : "Jean Helou"
+      "name" : "Emilien Pecoul"
     }
   ],
   "title" : "Agilité par le code grâce à CQRS et EventSourcing",

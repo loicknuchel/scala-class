@@ -1,0 +1,14 @@
+{
+  "uuid" : "18d6b5e1fa41d694f4f0b1edcdcf4ad881335538",
+  "bioAsHtml" : "<p>Je travaille chez EDF depuis 3 ans.\nJe suis entré comme expert technique sur certains produits de la gamme Oracle Middleware (WebLogic Server , OSB, SOA Suite) ainsi que sur JBoss EAP et Tomcat du catalogue EDF\nJ’interviens en tant que support Niveau 3 sur les incidents de Production et les problématiques d’APM avec Dynatrace.\nDepuis plusieurs mois, je suis en charge des problématique lié à l’intégration continue et du déploiement automatisé des produits du catalogue (projet DevOps)\nJe travaille aussi sur le développement d’architecture micro service avec Docker/OpenShift</p>\n",
+  "acceptedTalks" : [
+  ],
+  "company" : "EDF",
+  "bio" : "Je travaille chez EDF depuis 3 ans.\r\nJe suis entré comme expert technique sur certains produits de la gamme Oracle Middleware (WebLogic Server , OSB, SOA Suite) ainsi que sur JBoss EAP et Tomcat du catalogue EDF\r\nJ’interviens en tant que support Niveau 3 sur les incidents de Production et les problématiques d’APM avec Dynatrace.\r\nDepuis plusieurs mois, je suis en charge des problématique lié à l’intégration continue et du déploiement automatisé des produits du catalogue (projet DevOps)\r\nJe travaille aussi sur le développement d’architecture micro service avec Docker/OpenShift",
+  "lastName" : "Routier",
+  "firstName" : "Olivier",
+  "blog" : null,
+  "avatarURL" : null,
+  "twitter" : null,
+  "lang" : "fr"
+}

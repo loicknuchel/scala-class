@@ -1,6 +1,6 @@
 {
   "uuid" : "b90f822bbd8bd88166e0b87dbe316d019304fcb0",
-  "bioAsHtml" : "<p>Tech Lead &amp; Devops</p>\n",
+  "bioAsHtml" : "<p>System Engineer/Devops</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "BOF (Bird of a Feather)",
@@ -26,12 +26,12 @@
       "title" : "BOF Cloud Native Computing"
     }
   ],
-  "company" : "Arkena",
-  "bio" : "Tech Lead & Devops",
+  "company" : "Dailymotion",
+  "bio" : "System Engineer/Devops",
   "lastName" : "Kahlouch",
   "firstName" : "Smaine",
   "blog" : null,
   "avatarURL" : null,
   "twitter" : "@smana",
-  "lang" : "en"
+  "lang" : "fr"
 }
