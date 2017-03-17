@@ -1,7 +1,12 @@
 package exercices
 
+import models.devoxx.full.DevoxxApi
 import org.joda.time.DateTime
 import support.HandsOnSuite
+
+import scala.concurrent.Await
+import scala.concurrent.duration._
+import scala.language.postfixOps
 
 class e03_collections extends HandsOnSuite {
   /**
@@ -189,9 +194,6 @@ class e03_collections extends HandsOnSuite {
     * cf http://www.scala-lang.org/api/current/scala/collection/Traversable.html
     */
   section("API collection") {
-    val words = List("table", "chaise", "bureau", "écran", "ordinateur")
-
-
     /**
       * La fonction `groupBy(f: A => K): Map[K, List[A]]` crée une Map.
       * Le résultat de la fonction est utilisé comme clé, et la valeur est une liste des éléments correspondant à cette clé
@@ -199,16 +201,55 @@ class e03_collections extends HandsOnSuite {
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#groupBy[K](f:A=>K):scala.collection.immutable.Map[K,Repr]
       */
     exercice("groupBy") {
-      words.groupBy(???).get('c') shouldBe Some(List("chaise"))
+      val words = List("table", "chaise", "bureau", "écran", "ordinateur")
+      val nums = List(1, 5, 6, 7, 2)
       words.groupBy(_.length).get(5) shouldBe __
+      words.groupBy(???)('c') shouldBe List("chaise")
+      nums.groupBy(???)("even") shouldBe List(6, 2)
     }
 
+    /**
+      * La fonction `flatMap(f: A => List[B]): List[B]` est similaire à la fonction `map` mais fusionne ensemble les listes créées.
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#flatMap[B](f:A=>scala.collection.GenTraversableOnce[B]):List[B]
+      */
     exercice("flatMap") {
-      // TODO
+      val words = List("I", "love", "Scala")
+      words.map(_.toList) shouldBe __
+      words.flatMap(_.toList) shouldBe __
+
+      // Fonctionne aussi avec les Options et toutes les collections
+      val nums = List("1", "foo", "3")
+      nums.map(toInt) shouldBe __
+      nums.flatMap(toInt) shouldBe __
+
+      Some("2").map(toInt) shouldBe __
+      Some("2").flatMap(toInt) shouldBe __
+      Some("a").map(toInt) shouldBe __
+      Some("a").flatMap(toInt) shouldBe __
+      None.map(toInt) shouldBe __
+      None.flatMap(toInt) shouldBe __
     }
 
-    exercice("reduce") {
-      // TODO
+    def toInt(s: String): Option[Int] = {
+      try {
+        Some(Integer.parseInt(s.trim))
+      } catch {
+        case e: Exception => None
+      }
+    }
+
+    /**
+      * La fonction `fold(z: A)(op: (A, A) => A): A` permet d'aggréger les éléments d'une collection
+      * `z` est la valeur initiale et `op` l'opération d'agrégation avec en paramètre l'accumulateur et la valeur courante.
+      *
+      * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#fold[A1>:A](z:A1)(op:(A1,A1)=>A1):A1
+      */
+    exercice("fold") {
+      val words = List("I", "love", "Scala")
+      words.fold("") { case (acc, word) => acc + " " + word } shouldBe __
+      // si la lambda prends deux paramètres, alors on peut utiliser deux `_` comme raccourci...
+      words.fold("")(_ + _.length.toString) shouldBe __
     }
   }
 
@@ -216,6 +257,14 @@ class e03_collections extends HandsOnSuite {
   /**
     * Voyons comment mettre en pratique ces manipulations de données
     */
+  section("Mise en pratique") {
+    // TODO
+    /*val (speakers, talks, rooms, slots) = Await.result(DevoxxApi.getModel(), 5 second)
+    exercice("test") {
+      speakers.length shouldBe 20
+    }*/
+  }
+
   section("Mise en pratique") {
     import models.devoxx.basic._
     val talks = List(

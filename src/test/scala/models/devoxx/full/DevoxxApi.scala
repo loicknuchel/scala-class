@@ -49,9 +49,19 @@ object DevoxxApi {
   def getSchedule(day: String): Future[List[Slot]] =
     getScheduleByUrl(scheduleUrl(day))
 
-  def getSchedule(link: LinkWithName): Future[List[Slot]] =
-    getScheduleByUrl(link.link.href)
+  def getSchedule(link: Link): Future[List[Slot]] =
+    getScheduleByUrl(link.href)
 
   private def getScheduleByUrl(url: String): Future[List[Slot]] =
     HttpClient.get(url).flatMap(res => parseJson[Schedule](res).toFuture).map(_.slots)
+
+  def getModel(): Future[(List[Speaker], List[Talk], List[Room], List[Slot])] = {
+    for {
+      rooms <- getRooms()
+      schedules <- getSchedules()
+      slots <- Future.sequence(schedules.map(getSchedule)).map(_.flatten)
+      talks <- Future.sequence(slots.flatMap(_.talk).map(_.id).map(getTalk))
+      speakers <- Future.sequence(talks.flatMap(_.speakers).map(getSpeaker))
+    } yield (speakers, talks, rooms, slots)
+  }
 }

@@ -63,20 +63,18 @@ object Formatter {
     def formatBlock(lines: List[(Int, String)], error: Int): List[String] =
       lines.map { case (lineNumber, codeLine) => formatLine(lineNumber, codeLine, lineNumber == error) }
 
-    def formatTest(context: TestContext, error: Int): String =
-      formatBlock(context.lines.slice(context.startLine - 1, context.endLine + 1), error).mkString("\n")
+    def formatError(ctx: TestContext, error: Int): String =
+      "\n" + formatBlock(ctx.lines.slice(error - 2, error + 1), error).mkString("\n")
 
-    def formatError(context: TestContext, error: Int): String =
-      "\n" + formatBlock(context.lines.slice(error - 2, error + 1), error).mkString("\n")
+    def formatTest(ctx: TestContext, error: Int): String =
+      "\n" + formatBlock(ctx.lines.slice(ctx.startLine - 1, ctx.endLine + 1), error).mkString("\n")
 
     def format(ctx: TestContext, errors: List[Int]): String = {
       val (inTest, outTest) = errors.partition(line => ctx.startLine <= line && line <= ctx.endLine)
-      val formattedErrors = outTest.sorted.map(i => formatError(ctx, i))
+      val formattedTest = if(inTest.nonEmpty) formatTest(ctx, inTest.min) else ""
+      val formattedErrors = outTest.sorted.map(i => formatError(ctx, i)).mkString("\n")
       val split = if (formattedErrors.isEmpty) "" else "\n...\n"
-      if (inTest.nonEmpty)
-        (formattedErrors ::: (split :: formatTest(ctx, inTest.min) :: Nil)).mkString("\n")
-      else
-        (formattedErrors ::: (split :: Nil)).mkString("\n")
+      formattedErrors + split + formattedTest
     }
   }
 
