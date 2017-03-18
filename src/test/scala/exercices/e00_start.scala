@@ -4,7 +4,7 @@ import support.HandsOnSuite
 
 class e00_start extends HandsOnSuite {
   exercice("Scala class") {
-    DeleteMeToContinue(
+    /*DeleteMeToContinue(
       """    _________             .__                  .__
         |   /   _____/ ____ _____  |  | _____      ____ |  | _____    ______ ______
         |   \_____  \_/ ___\\__  \ |  | \__  \   _/ ___\|  | \__  \  /  ___//  ___/
@@ -22,6 +22,6 @@ class e00_start extends HandsOnSuite {
         |
         |                              Have fun!
       """.stripMargin
-    )
+    )*/
   }
 }

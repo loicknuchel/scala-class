@@ -38,13 +38,13 @@ class e01_syntaxe extends HandsOnSuite {
     // permet de déclarer une valeur (= constante)
     val constant: String = "abc"
     //constant = "def" // mais pas une valeur (vérifier puis laisser en commentaire)
-    constant shouldBe __
+    constant shouldBe "abc"
 
     // permet de déclarer une variable (à utiliser au minimum)
     var variable: Int = 5
     variable = 42 // on peut réassigner une variable
     //variable = true // le type ne doit pas changer (vérifier puis laisser en commentaire)
-    variable shouldBe __
+    variable shouldBe 42
   }
 
 
@@ -53,7 +53,7 @@ class e01_syntaxe extends HandsOnSuite {
       return a + b;
     }
 
-    add(2, 3) shouldBe __
+    add(2, 3) shouldBe 5
   }
 
 
@@ -67,7 +67,7 @@ class e01_syntaxe extends HandsOnSuite {
     exercice("inférence de type") {
       var name = "Jean" // le type de la variable est inféré en tant que String
       // name = 12 // ne compile pas => type mismatch !
-      name shouldBe __
+      name shouldBe "Jean"
     }
 
     // comme tout est expression (function, if, for, +, ...) et retourne une valeur, le mot clé `return` est facultatif
@@ -76,7 +76,7 @@ class e01_syntaxe extends HandsOnSuite {
         a - b
       }
 
-      sub(5, 3) shouldBe __
+      sub(5, 3) shouldBe 2
     }
 
     // de même, les `{}` servent uniquement à définir un bloc d'exécution
@@ -84,7 +84,7 @@ class e01_syntaxe extends HandsOnSuite {
     exercice("les {}") {
       def mult(a: Int, b: Int): Int = a * b
 
-      mult(5, 3) shouldBe __
+      mult(5, 3) shouldBe 15
     }
 
     // enfin, l'inférence de type fonctionne aussi pour le type de retour des fonctions
@@ -93,7 +93,7 @@ class e01_syntaxe extends HandsOnSuite {
       def div(a: Int, b: Int) = a / b
 
       //val name: String = div(4, 2) // ne compile pas => type mismatch !
-      div(6, 3) shouldBe __
+      div(6, 3) shouldBe 2
     }
 
     // les () et le . étant facultatifs, les syntaxes suivantes sont équivalentes :
@@ -102,9 +102,9 @@ class e01_syntaxe extends HandsOnSuite {
       val s1 = n.toString()
       val s2 = n.toString
       val s3 = (n toString)
-      s1 shouldBe __
-      s2 shouldBe __
-      s3 shouldBe __
+      s1 shouldBe "3"
+      s2 shouldBe "3"
+      s3 shouldBe "3"
     }
     // PS: les parenthèses sont souvent omises lorsque la fonction ne prend pas de paramètres (ex: toString)
     // le reste du temps, mieux vaut conserver les . et () pour plus de clarté
@@ -123,12 +123,12 @@ class e01_syntaxe extends HandsOnSuite {
       } else {
         name = "Alex"
       }
-      name shouldBe __
+      name shouldBe "Alex"
 
       // comme tout est expression et retourne une valeur, c'est aussi le cas des if
       // et comme pour les fonctions, les `{}` sont optionnelles dans le cas d'une expression unique
       name = if (num < 4) "Luc" else if (num == 4) "Jean" else "Jules"
-      name shouldBe __
+      name shouldBe "Jean"
     }
 
     exercice("for") {
@@ -137,14 +137,14 @@ class e01_syntaxe extends HandsOnSuite {
       for (i <- 3 to 5) {
         res += i
       }
-      res shouldBe __
+      res shouldBe 12
 
       // de la même manière avec une liste
       res = 0
       for (word <- List("table", "chaise")) {
         res += word.length
       }
-      res shouldBe __
+      res shouldBe 11
     }
     // contrairement aux apparences, à Java et à beaucoup d'autres langages,
     // le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
@@ -167,9 +167,9 @@ class e01_syntaxe extends HandsOnSuite {
           |lignes
         """.stripMargin.trim
 
-      hello shouldBe __
-      count shouldBe __
-      text.split("\n").length shouldBe __
+      hello shouldBe "Hello Loïc"
+      count shouldBe "Name has 4 chars"
+      text.split("\n").length shouldBe 3
     }
 
     // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
@@ -188,8 +188,8 @@ class e01_syntaxe extends HandsOnSuite {
         branch = "solutions",
         commit = "cd959defd71f36f822dbd741085696b508549763"
       )
-      ref1 shouldBe __
-      ref2 shouldBe __
+      ref1 shouldBe "scala-class~problems"
+      ref2 shouldBe "scala-class~solutions~cd959defd71f36f822dbd741085696b508549763"
     }
   }
 }
