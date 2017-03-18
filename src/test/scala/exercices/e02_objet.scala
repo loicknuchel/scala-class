@@ -30,11 +30,11 @@ class e02_objet extends HandsOnSuite {
     }
 
     val p = new Point(1, 2)
-    p.x shouldBe __
+    p.x shouldBe 1
     p.x = 4
-    p.x shouldBe __
+    p.x shouldBe 4
     p.move(2, 2)
-    p.x shouldBe __
+    p.x shouldBe 6
   }
 
 
@@ -45,32 +45,36 @@ class e02_objet extends HandsOnSuite {
   exercice("Une classe immuable") {
     // Créée une classe Point qui corresponde aux tests suivants (les décommenter petit à petit)
 
-    // val p = new Point(1, 2)
+    class Point(val x: Int, val y: Int) {
+      def move(dx: Int, dy: Int): Point = new Point(x + dx, y + dy)
+
+      def copy(x: Int = x, y: Int = y) = new Point(x, y)
+    }
+
+    val p = new Point(1, 2)
     // p.x = 3 // ne doit pas compiler (vérifier puis laisser en commentaire)
 
 
     // Implémente la méthode `move` pour la classe Point
 
-    // p.move(2, 1)
-    // p.x shouldBe 1 // la classe étant immuable elle ne doit pas pouvoir être modifiée
+    p.move(2, 1)
+    p.x shouldBe 1 // la classe étant immuable elle ne doit pas pouvoir être modifiée
 
-    // val p1 = p.move(2, 1)
-    // p1.x shouldBe 3
+    val p1 = p.move(2, 1)
+    p1.x shouldBe 3
 
 
     // Implémente la méthode `copy` qui permettra de créer un nouvel objet en modifiant un ou plusieurs paramètres
 
-    // val p2 = p.copy(3, 4)
-    // p2.x shouldBe 3
-    // p2.y shouldBe 4
-    // val p3 = p.copy(x = 5)
-    // p3.x shouldBe 5
-    // p3.y shouldBe 2
-    // val p4 = p1.copy(y = 6)
-    // p4.x shouldBe 3
-    // p4.y shouldBe 6
-
-    "Finis cet exercice avant de supprimer cette ligne" shouldBe __
+    val p2 = p.copy(3, 4)
+    p2.x shouldBe 3
+    p2.y shouldBe 4
+    val p3 = p.copy(x = 5)
+    p3.x shouldBe 5
+    p3.y shouldBe 2
+    val p4 = p.copy(y = 6)
+    p4.x shouldBe 1
+    p4.y shouldBe 6
   }
   // TIP1: une valeur (val) ne peut pas être modifiée
   // TIP2: si on ne peut pas modifier un objet, alors il faut en créer un nouveau
@@ -97,18 +101,18 @@ class e02_objet extends HandsOnSuite {
     // p.x = 3 // ne compile pas
 
     val p1 = p.move(2, 1)
-    p.x shouldBe __
-    p1.x shouldBe __
+    p.x shouldBe 1
+    p1.x shouldBe 3
 
     val p2 = p1.copy(3, 4)
-    p2.x shouldBe __
-    p2.y shouldBe __
+    p2.x shouldBe 3
+    p2.y shouldBe 4
     val p3 = p1.copy(x = 5)
-    p3.x shouldBe __
-    p3.y shouldBe __
+    p3.x shouldBe 5
+    p3.y shouldBe 3
     val p4 = p1.copy(y = 6)
-    p4.x shouldBe __
-    p4.y shouldBe __
+    p4.x shouldBe 3
+    p4.y shouldBe 6
   }
   // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
   // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
@@ -126,7 +130,7 @@ class e02_objet extends HandsOnSuite {
         def toUpper(str: String): String = str.toUpperCase
       }
 
-      Utils.toUpper("test") shouldBe __
+      Utils.toUpper("test") shouldBe "TEST"
     }
 
     // on trouve souvent les object associés à des classe pour contenir les fonctions utilitaires non liées à l'instance
@@ -140,7 +144,7 @@ class e02_objet extends HandsOnSuite {
       case class User(firstName: String, lastName: String)
 
       val user = User.fromFullName("Jean Dupont")
-      user shouldBe __
+      user shouldBe User("Jean", "Dupont")
     }
 
     // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme
@@ -162,9 +166,9 @@ class e02_objet extends HandsOnSuite {
       }
 
       val person = Person("Jeanne", "Michu")
-      person.initials shouldBe __
-      person.trigramme shouldBe __
-      Person.trigramme("Jean-Claude", "Convenant") shouldBe __
+      person.initials shouldBe "jm"
+      person.trigramme shouldBe "jmi"
+      Person.trigramme("Jean-Claude", "Convenant") shouldBe "jco"
     }
   }
 
@@ -195,14 +199,14 @@ class e02_objet extends HandsOnSuite {
     }
 
     val square = Square(5)
-    square.name shouldBe __
-    square.perimeter() shouldBe __
-    square.color shouldBe __
+    square.name shouldBe "Square"
+    square.perimeter() shouldBe 20
+    square.color shouldBe "red"
     square.setColor("blue")
-    square.color shouldBe __
+    square.color shouldBe "blue"
 
     val other = Square(4)
-    other.color shouldBe __
+    other.color shouldBe "red"
   }
 
 
@@ -217,13 +221,13 @@ class e02_objet extends HandsOnSuite {
     */
   exercice("Les tuples") {
     val pair: Tuple2[Int, String] = (1, "test")
-    pair._1 shouldBe __ // accéder à la première valeur du tuple
-    pair._2 shouldBe __
+    pair._1 shouldBe 1 // accéder à la première valeur du tuple
+    pair._2 shouldBe "test"
 
     // n'importe quelle valeur peut être dans un tuple
     val multi = (3, 2.0, "1", (n: Int) => n + 1)
-    multi._3 shouldBe __
-    multi._4(multi._1) shouldBe __
+    multi._3 shouldBe "1"
+    multi._4(multi._1) shouldBe 4
   }
 
 
@@ -234,13 +238,13 @@ class e02_objet extends HandsOnSuite {
   exercice("Extracteurs") {
     val pair = (2, "name")
     val (value, name) = pair // On extrait les valeurs du tuple dans deux variables indépendantes
-    value shouldBe __
-    name shouldBe __
+    value shouldBe 2
+    name shouldBe "name"
 
     // De même pour une `case class`
     case class Circle(x: Int, y: Int, r: Int)
     val Circle(_, _, r) = Circle(3, 3, 5) // les _ sont utilisés pour les valeurs que l'on ne souhaite pas affecter
-    r shouldBe __
+    r shouldBe 5
   }
   // PS: voir les bonus pour plus de détails sur le fonctionnement des extracteurs...
 
@@ -258,7 +262,7 @@ class e02_objet extends HandsOnSuite {
         case in: String => "Catched " + in
         case _ => "Fallback"
       }
-      result shouldBe __
+      result shouldBe "Catched Z"
     }
 
     // Il est possible de mettre plusieurs conditions dans un même case
@@ -268,7 +272,7 @@ class e02_objet extends HandsOnSuite {
         case "D" | "F" => "second"
         case _ => "third"
       }
-      result shouldBe __
+      result shouldBe "first"
     }
 
     // Maintenant commençons avec les fonctionnalités plus sympa ;)
@@ -278,7 +282,7 @@ class e02_objet extends HandsOnSuite {
         case s: String if s.length < 3 => "short text"
         case s: String if s.length >= 3 => "long text"
       }
-      result shouldBe __
+      result shouldBe "long text"
     }
 
     // Le pattern matching supporte les extrateurs, y compris les extracteurs imbriqués
@@ -289,14 +293,14 @@ class e02_objet extends HandsOnSuite {
         case User("toto", score) => s"toto has $score in score"
         case _ => "no match"
       }
-      r1 shouldBe __
+      r1 shouldBe "toto has 10 in score"
 
       case class Talk(title: String, speaker: User, opts: (Boolean, Boolean))
       val r2 = Talk("Scala", User("Luc", 9), (true, false)) match {
         case Talk(title, User(_, score), (true, _)) if score < 10 => s"MATCH for $title"
         case _ => "no match..."
       }
-      r2 shouldBe __
+      r2 shouldBe "MATCH for Scala"
     }
 
     // Enfin, il est possible d'utiliser le pattern matching sur des types
@@ -309,7 +313,7 @@ class e02_objet extends HandsOnSuite {
         case Attendee(name) => s"$name is attendee"
         case Speaker(name) => s"$name is speaker"
       }
-      result shouldBe __
+      result shouldBe "Marc is speaker"
     }
 
     exercice("extraire une expression régulière") {
@@ -318,7 +322,7 @@ class e02_objet extends HandsOnSuite {
         case regex(x, y) => s"Match $x, $y"
         case _ => "No match"
       }
-      result shouldBe __
+      result shouldBe "Match 1, 3"
     }
   }
 }
