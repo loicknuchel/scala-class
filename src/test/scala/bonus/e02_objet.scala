@@ -21,7 +21,7 @@ class e02_objet extends HandsOnSuite {
       object Op {
         def add(a: Int, b: Int): Int = a + b
       }
-      Op.add(4, 2) shouldBe __
+      Op.add(4, 2) shouldBe 6
     }
 
     /**
@@ -35,8 +35,8 @@ class e02_objet extends HandsOnSuite {
       object Add {
         def apply(a: Int, b: Int): Int = a + b
       }
-      Add(7, 1) shouldBe __
-      Add.apply(5, 6) shouldBe __
+      Add(7, 1) shouldBe 8
+      Add.apply(5, 6) shouldBe 11
     }
 
     /**
@@ -45,7 +45,7 @@ class e02_objet extends HandsOnSuite {
       */
     exercice("Construire une instance avec apply") {
       class NormalClass(val key: String, val value: Int)
-      new NormalClass("key", 5).value shouldBe __
+      new NormalClass("key", 5).value shouldBe 5
       // NormalClass.apply("key", 5).value shouldBe __ // ne compile pas
       // NormalClass("key", 5).value shouldBe __ // ne compile pas
 
@@ -53,14 +53,14 @@ class e02_objet extends HandsOnSuite {
       object ApplyClass {
         def apply(key: String, value: Int): ApplyClass = new ApplyClass(key, value)
       }
-      new ApplyClass("key", 5).value shouldBe __
-      ApplyClass.apply("key", 5).value shouldBe __
-      ApplyClass("key", 5).value shouldBe __
+      new ApplyClass("key", 5).value shouldBe 5
+      ApplyClass.apply("key", 5).value shouldBe 5
+      ApplyClass("key", 5).value shouldBe 5
 
       case class CaseClass(key: String, value: Int)
-      new CaseClass("key", 5).value shouldBe __
-      CaseClass.apply("key", 5).value shouldBe __
-      CaseClass("key", 5).value shouldBe __
+      new CaseClass("key", 5).value shouldBe 5
+      CaseClass.apply("key", 5).value shouldBe 5
+      CaseClass("key", 5).value shouldBe 5
     }
   }
 
@@ -81,9 +81,9 @@ class e02_objet extends HandsOnSuite {
       }
 
       val MyExtractor(username, _) = new User("Jean", 10)
-      username shouldBe __
+      username shouldBe "Jean"
       val MyExtractor(x, y) = new Point(1, 2)
-      x shouldBe __
+      x shouldBe 1
     }
 
     // Mais très souvent on se sert de l'objet companion pour créer l'extracteur souhaité
@@ -93,7 +93,7 @@ class e02_objet extends HandsOnSuite {
         def unapply(arg: Square): Option[Int] = Some(arg.width)
       }
       val Square(width) = new Square(3)
-      width shouldBe __
+      width shouldBe 3
     }
 
     // C'est d'ailleurs comme ça que fonctionnent les `case class`, la méthode `unapply` étant générée dans l'objet companion
@@ -108,14 +108,14 @@ class e02_objet extends HandsOnSuite {
       }
       val unapplyClass = new UnapplyClass("key", 5)
       val UnapplyClass(uKey, uValue) = unapplyClass
-      uKey shouldBe __
-      uValue shouldBe __
+      uKey shouldBe "key"
+      uValue shouldBe 5
 
       case class CaseClass(key: String, value: Int)
       val caseClass = CaseClass("key", 5)
       val CaseClass(cKey, cValue) = caseClass
-      cKey shouldBe __
-      cValue shouldBe __
+      cKey shouldBe "key"
+      cValue shouldBe 5
     }
     // en conclusion, une case class est une classe tout à faire "normale"
     // qui possède certaines méthodes implémentées par défaut (equals, toString, copy...)
