@@ -8,6 +8,7 @@ import scala.concurrent.duration._
 import scala.language.postfixOps
 
 class e03_collections extends HandsOnSuite {
+
   /**
     * Passons maintenant aux collections...
     *
@@ -33,7 +34,7 @@ class e03_collections extends HandsOnSuite {
     *   |     |     |      |      |     |                     |                          |
     * List Stream Queue Vector String Range                TreeMap                    TreeSet
     *
-    * Plus d'infos : http://docs.scala-lang.org/overviews/collections/overview.html
+    * cf http://docs.scala-lang.org/overviews/collections/overview.html
     */
 
 
@@ -113,7 +114,7 @@ class e03_collections extends HandsOnSuite {
 
 
   /**
-    * Nous venons de l'évoquer, parfois on doit représenter la présence ou l'absence de valeur.
+    * Nous venons de l'évoquer, parfois on a besoin de représenter la présence ou l'absence de valeur.
     * Beaucoup de langages utilisent `null` ou `undefined` pour ça, voire les deux !!!
     * Ce qui crée la célèbre NullPointerException en Java ou le "Cannot read property 'x' of undefined" en JavaScript :(
     * (cf https://github.com/search?q=NullPointerException&type=Commits)
@@ -125,18 +126,18 @@ class e03_collections extends HandsOnSuite {
     * Il permet donc :
     *   - d'éliminer complètement toute erreur du type NullPointerException à l'exécution !!!
     *   - de rendre explicite ce qui peut être absent et ce qui ne peut pas l'être
-    *   - éviter les vérifications innutiles qui polluent le code
+    *   - éviter les vérifications inutiles qui polluent le code
     *
     * Le type Option[A] est une classe abstraite qui comporte deux sous-types :
     *   - Some[A] : si l'élément est présent
     *   - None    : si l'élément est absent
     *
-    * Ses principales fonctions sont :
+    * Ses principales méthodes sont :
     *   - isEmpty / nonEmpty       : tester si l'élément est présent ou non
     *   - get                      : accéder à l'élément de manière risquée (lance une exception dans le cas de None)
     *   - getOrElse(default: A)    : accéder à l'élément ou à une valeur par défaut en cas de None
     *   - orElse(other: Option[A]) : "concaténer" avec une autre option (le premier élément sinon le deuxième sinon None)
-    *   - map(f: A => B)           : transformer le contenu sans l'extraire (sans effet dans le cas de None)
+    *   - map(f: A => B)           : transformer l'élément sans l'extraire (sans effet dans le cas de None)
     *   - toutes les fonctions des collections (similaire à une liste à un seul élément)
     *
     * cf: https://www.scala-lang.org/api/current/scala/Option.html
@@ -167,9 +168,9 @@ class e03_collections extends HandsOnSuite {
 
 
   /**
-    * Comme dans beaucoup de langages Scala a une collection Map[A, B] qui associe une clé A à une valeur B
+    * Comme dans beaucoup de langages, Scala a une collection Map[A, B] qui associe une clé A à une valeur B
     * Map étant une collection, les méthodes qu'on a vu s'appliquent comme pour les listes
-    * L'élément est juste un tuple `(A, B)` au lieu de simplement `A` dans le cas d'une `List[A]`
+    * L'élément est un tuple `(A, B)` au lieu de simplement `A` dans le cas d'une `List[A]`
     * Il est d'ailleurs très facile de passer de `Map[A, B]` à `List[(A, B)]` et inversement grâce à `toList` et `toMap`
     *
     * cf https://www.scala-lang.org/api/current/scala/collection/Map.html
@@ -187,22 +188,22 @@ class e03_collections extends HandsOnSuite {
   }
 
   /**
-    * L'API collection Scala est très riche et permet de manipuler les données très simplement
-    * Nous allons voir quelques méthodes intéressantes mais jetez un oeil à l'API complète...
+    * L'API collection Scala est très riche et permet de manipuler les données simplement
+    * Nous allons voir quelques méthodes intéressantes mais pensez à jeter un oeil à l'API complète...
     *
     * cf http://www.scala-lang.org/api/current/scala/collection/Traversable.html
     */
   section("API collection") {
     /**
       * La fonction `groupBy(f: A => K): Map[K, List[A]]` crée une Map.
-      * Le résultat de la fonction est utilisé comme clé, et la valeur est une liste des éléments correspondant à cette clé
+      * Le résultat de la fonction en paramètre est utilisé comme clé et la valeur est une liste des éléments correspondant à cette clé
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#groupBy[K](f:A=>K):scala.collection.immutable.Map[K,Repr]
       */
     exercice("groupBy") {
       val words = List("table", "chaise", "bureau", "écran", "ordinateur")
       val nums = List(1, 5, 6, 7, 2)
-      words.groupBy(_.length).get(5) shouldBe __
+      words.groupBy(_.length) shouldBe __
       words.groupBy(???)('c') shouldBe List("chaise")
       nums.groupBy(???)("even") shouldBe List(6, 2)
     }
@@ -240,7 +241,8 @@ class e03_collections extends HandsOnSuite {
 
     /**
       * La fonction `fold(z: A)(op: (A, A) => A): A` permet d'aggréger les éléments d'une collection
-      * `z` est la valeur initiale et `op` l'opération d'agrégation avec en paramètre l'accumulateur et la valeur courante.
+      * `z` est la valeur initiale
+      * `op` est l'opération d'agrégation avec en paramètres l'accumulateur et la valeur courante.
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#fold[A1>:A](z:A1)(op:(A1,A1)=>A1):A1
       */

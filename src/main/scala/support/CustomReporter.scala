@@ -22,7 +22,6 @@ class CustomReporter(other: Reporter) extends Reporter {
       case _: SuiteCompleted | _: SuiteStarting | _: RunCompleted | _: RunStopped | _: TestStarting | _: TestSucceeded =>
         other(event)
       case _ =>
-        println(event)
         other(event)
     }
   }

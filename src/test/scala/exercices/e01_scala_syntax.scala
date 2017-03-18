@@ -33,9 +33,11 @@ class e01_scala_syntax extends HandsOnSuite {
     */
 
   exercice("Déclarer une variable") {
-    var variable: Int = 5
     // permet de déclarer une variable
-    val constant: String = "abc" // permet de déclarer une valeur (= constante)
+    var variable: Int = 5
+
+    // permet de déclarer une valeur (= constante)
+    val constant: String = "abc"
 
     variable = 42 // on peut réassigner une variable
     //constant = "def" // mais pas une valeur

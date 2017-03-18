@@ -5,7 +5,7 @@ import support.HandsOnSuite
 /**
   * Bienvenu dans les bonus !
   *
-  * Les bonus sont des explications facultatives qui permettent d'aller plus loin dans les explications,
+  * Les bonus sont des explications facultatives qui permettent d'aller plus loin,
   * soit pour montrer des cas plus avancés soit pour expliquer des fonctionnements internes de Scala
   *
   * Les exercices permettent de lire et écrire du Scala, les bonus permettent de comprendre son fonctionnement.

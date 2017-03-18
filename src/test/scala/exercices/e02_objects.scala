@@ -11,6 +11,8 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
+    * Commençons par créer une classe.
+    *
     * Les paramètres de la classe seront les paramètres du constructeur et ils seront conservés en tant qu'attribut de la classe :
     *   - s'il n'y a pas de modifieur, l'attribut sera un `private val`
     *   - si le modifieur est val ou var il sera alors public
@@ -84,7 +86,7 @@ class e02_objects extends HandsOnSuite {
     *     - toString          : affiche le nom de la classe et son contenu plutôt que son adresse mémoire
     *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
     *     - eq                : permet de tester une égalité de référence
-    *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus)
+    *   - ne nécessite pas de mot clé `new` à l'instantiation
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
     * Toutes ces particularités rendent les case class très pratiques pour modéliser les données d'une application
@@ -115,12 +117,11 @@ class e02_objects extends HandsOnSuite {
   // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
   // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
   // PS: pour aller plus loin avec les case class et comprendre leur fonctionnement, rendez-vous dans les bonus ;)
-  // Il est possible de lancer ce handson avec les bonus avec la commande `./handson bonus`
 
 
   /**
-    * Le langage Scala n'a pas de `static`. A la place il propose des `object`, aussi nommés objet companions lorsqu'ils accompagnent une case class
-    * Ce sont simplement des singletons (instance unique) qui peuvent être appelés depuis n'importe quel endroit du code.
+    * Le langage Scala n'a pas de `static`. A la place il propose des `object`, aussi nommés objet companions lorsqu'ils accompagnent une classe
+    * Ce sont des singletons (instance unique) qui peuvent être appelés depuis n'importe quel endroit du code.
     */
   section("Des 'object' pour remplacer static") {
     exercice("Définition") {
@@ -174,7 +175,7 @@ class e02_objects extends HandsOnSuite {
   /**
     * Les traits Scala sont très similaires aux interfaces de Java 8.
     * Ils peuvent contenir des variables, des valeurs et/ou des méthodes. Celles-ci peuvent être abstraites ou concrètes.
-    * Il est aussi possible d'hériter de plusieurs traits (comme une interface) contrairement aux classes
+    * De plus, il est aussi possible d'hériter de plusieurs traits (comme une interface)
     */
   exercice("Les traits") {
     trait Geo {
@@ -211,10 +212,10 @@ class e02_objects extends HandsOnSuite {
   /**
     * Parfois, on a besoin d'une fonction qui renvoit plusieurs résultats.
     * Dans ce cas, on peut créer un objet spécifique avec ces différents résultats ou utiliser un objet générique qui peut contenir plusieurs valeurs.
-    * Par exemple en Java, on créer souvent un objet Pair<A, B> (ex: https://github.com/search?q=filename%3APair.java)
+    * Par exemple en Java, on crée souvent un objet Pair<A, B> (ex: https://github.com/search?q=filename%3APair.java)
     *
     * En Scala, on a les tuples qui sont des case class qui peuvent contenir un nombre de valeurs hétérogènes fixe.
-    * Les tuples sont disponibles de 1 à 22 paramètres.
+    * Les tuples peuvent contenir entre 1 à 22 valeures.
     */
   exercice("Les tuples") {
     val pair: Tuple2[Int, String] = (1, "test")
@@ -243,7 +244,7 @@ class e02_objects extends HandsOnSuite {
     val Circle(_, _, r) = Circle(3, 3, 5) // les _ sont utilisés pour les valeurs que l'on ne souhaite pas affecter
     r shouldBe __
   }
-  // PS: voir les bonus pour plus de détails...
+  // PS: voir les bonus pour plus de détails sur le fonctionnement des extracteurs...
 
 
   /**
@@ -302,6 +303,7 @@ class e02_objects extends HandsOnSuite {
         case _ => "no match"
       }
       r1 shouldBe __
+
       case class Talk(title: String, speaker: User, opts: (Boolean, Boolean))
       val r2 = Talk("Scala", User("Luc", 9), (true, false)) match {
         case Talk(title, User(_, score), (true, _)) if score < 10 => s"MATCH for $title"
