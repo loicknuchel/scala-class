@@ -55,15 +55,15 @@ class e03_collections extends HandsOnSuite {
       * comme pour les case class, les collections ont une égalité structurelle
       */
     exercice("comparaison") {
-      numbers == other shouldBe __
-      numbers eq other shouldBe __
-      empty == numbers shouldBe __
+      numbers == other shouldBe true
+      numbers eq other shouldBe false
+      empty == numbers shouldBe false
     }
 
     exercice("opérations basiques") {
-      numbers(1) shouldBe __ // manière risquée d'accéder à un élément
-      numbers.head shouldBe __ // manière risquée d'accéder au premier élément
-      numbers.tail shouldBe __ // manière risquée d'accéder à la liste sans le premier élément
+      numbers(1) shouldBe 4 // manière risquée d'accéder à un élément
+      numbers.head shouldBe 2 // manière risquée d'accéder au premier élément
+      numbers.tail shouldBe List(4, 6) // manière risquée d'accéder à la liste sans le premier élément
       intercept[NoSuchElementException] {
         empty.head
       }
@@ -82,8 +82,8 @@ class e03_collections extends HandsOnSuite {
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#map[B](f:A=>B):List[B]
       */
     exercice("transformer les éléments") {
-      numbers.map(n => n.toString) shouldBe __
-      numbers.map(???) shouldBe List(4, 8, 12)
+      numbers.map(n => n.toString) shouldBe List("2", "4", "6")
+      numbers.map(n => n * 2) shouldBe List(4, 8, 12)
     }
 
     /**
@@ -93,8 +93,8 @@ class e03_collections extends HandsOnSuite {
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#filter(p:A=>Boolean):Repr
       */
     exercice("sélectionner des éléments") {
-      numbers.filter(n => n > 3) shouldBe __
-      numbers.filter(_ < 5) shouldBe __
+      numbers.filter(n => n > 3) shouldBe List(4, 6)
+      numbers.filter(_ < 5) shouldBe List(2, 4)
     }
     // le `_` dans une lambda représente le paramètre unique de la fonction
     // c'est très pratique lorsque les expressions sont simples cependant il n'est pas toujours possible de l'utiliser
@@ -106,8 +106,8 @@ class e03_collections extends HandsOnSuite {
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#find(p:A=>Boolean):Option[A]
       */
     exercice("chercher un élément") {
-      numbers.find(_ == 2).get shouldBe __
-      numbers.find(_ > 3).get shouldBe __
+      numbers.find(_ == 2).get shouldBe 2
+      numbers.find(_ > 3).get shouldBe 4
     }
   }
 
@@ -145,20 +145,20 @@ class e03_collections extends HandsOnSuite {
     exercice("manipuler") {
       val firstName = Some("Jean")
 
-      firstName.isEmpty shouldBe __
-      firstName.nonEmpty shouldBe __
-      firstName.getOrElse("empty") shouldBe __
-      firstName.orElse(Some("other")) shouldBe __
-      firstName.map(_.length) shouldBe __
-      firstName.get shouldBe __
+      firstName.isEmpty shouldBe false
+      firstName.nonEmpty shouldBe true
+      firstName.getOrElse("empty") shouldBe "Jean"
+      firstName.orElse(Some("other")) shouldBe Some("Jean")
+      firstName.map(_.length) shouldBe Some(4)
+      firstName.get shouldBe "Jean"
 
       val lastName: Option[String] = None
 
-      lastName.isEmpty shouldBe __
-      lastName.nonEmpty shouldBe __
-      lastName.getOrElse("empty") shouldBe __
-      lastName.orElse(Some("other")) shouldBe __
-      lastName.map(_.length) shouldBe __
+      lastName.isEmpty shouldBe true
+      lastName.nonEmpty shouldBe false
+      lastName.getOrElse("empty") shouldBe "empty"
+      lastName.orElse(Some("other")) shouldBe Some("other")
+      lastName.map(_.length) shouldBe None
       intercept[NoSuchElementException] {
         lastName.get
       }
@@ -178,11 +178,11 @@ class e03_collections extends HandsOnSuite {
     val countries = Map("fr" -> "France", "be" -> "Belgique", "en" -> "Angleterre")
 
     exercice("manipuler") {
-      countries.get("fr") shouldBe __
-      countries.map(country => (country._1, country._2.length)) shouldBe __
-      countries.map { case (code, name) => (code, name.length) } shouldBe __ // en utilisant le pattern matching \o/
-      countries.filter(_._2.contains("r")) shouldBe __
-      countries.find(_._2.contains("e")) shouldBe __
+      countries.get("fr") shouldBe Some("France")
+      countries.map(state => (state._1, state._2.length)) shouldBe Map("fr" -> 6, "be" -> 8, "en" -> 10)
+      countries.map { case (code, name) => (code, name.length) } shouldBe Map("fr" -> 6, "be" -> 8, "en" -> 10) // en utilisant le pattern matching \o/
+      countries.filter(_._2.contains("r")) shouldBe Map("fr" -> "France", "en" -> "Angleterre")
+      countries.find(_._2.contains("e")) shouldBe Some("fr" -> "France")
     }
   }
 
@@ -203,9 +203,13 @@ class e03_collections extends HandsOnSuite {
     exercice("groupBy") {
       val words = List("table", "chaise", "bureau", "écran", "ordinateur")
       val nums = List(1, 5, 6, 7, 2)
-      words.groupBy(_.length) shouldBe __
-      words.groupBy(???)('c') shouldBe List("chaise")
-      nums.groupBy(???)("even") shouldBe List(6, 2)
+      words.groupBy(_.length) shouldBe Map(
+        5 -> List("table", "écran"),
+        6 -> List("chaise", "bureau"),
+        10 -> List("ordinateur")
+      )
+      words.groupBy(_.head)('c') shouldBe List("chaise")
+      nums.groupBy(n => if (n % 2 == 0) "even" else "odd")("even") shouldBe List(6, 2)
     }
 
     /**
@@ -216,20 +220,20 @@ class e03_collections extends HandsOnSuite {
       */
     exercice("flatMap") {
       val words = List("I", "love", "Scala")
-      words.map(_.toList) shouldBe __
-      words.flatMap(_.toList) shouldBe __
+      words.map(_.toList) shouldBe List(List('I'), List('l', 'o', 'v', 'e'), List('S', 'c', 'a', 'l', 'a'))
+      words.flatMap(_.toList) shouldBe List('I', 'l', 'o', 'v', 'e', 'S', 'c', 'a', 'l', 'a')
 
       // Fonctionne aussi avec les Options et toutes les collections
-      Some("2").map(toInt) shouldBe __
-      Some("2").flatMap(toInt) shouldBe __
-      Some("a").map(toInt) shouldBe __
-      Some("a").flatMap(toInt) shouldBe __
-      None.map(toInt) shouldBe __
-      None.flatMap(toInt) shouldBe __
+      Some("2").map(toInt) shouldBe Some(Some(2))
+      Some("2").flatMap(toInt) shouldBe Some(2)
+      Some("a").map(toInt) shouldBe Some(None)
+      Some("a").flatMap(toInt) shouldBe None
+      None.map(toInt) shouldBe None
+      None.flatMap(toInt) shouldBe None
 
       val nums = List("1", "foo", "3")
-      nums.map(toInt) shouldBe __
-      nums.flatMap(toInt) shouldBe __
+      nums.map(toInt) shouldBe List(Some(1), None, Some(3))
+      nums.flatMap(toInt) shouldBe List(1, 3)
     }
 
     def toInt(s: String): Option[Int] = {
@@ -249,9 +253,9 @@ class e03_collections extends HandsOnSuite {
       */
     exercice("fold") {
       val words = List("I", "love", "Scala")
-      words.fold("") { case (acc, word) => acc + " " + word } shouldBe __
+      words.fold("") { case (acc, word) => acc + " " + word } shouldBe " I love Scala"
       // si la lambda prends deux paramètres, alors on peut utiliser deux `_` comme raccourci...
-      words.fold("")(_ + _.length.toString) shouldBe __
+      words.fold("")(_ + _.length.toString) shouldBe "145"
     }
 
     section("autres") {
@@ -262,11 +266,11 @@ class e03_collections extends HandsOnSuite {
         * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#exists(p:A=>Boolean):Boolean
         */
       exercice("exists") {
-        List(1, 2, 3).find(_ > 0).isDefined shouldBe __
-        List(1, 2, 3).exists(_ > 0) shouldBe __
-        Some(2).find(_ > 0).isDefined shouldBe __
-        Some(2).exists(_ > 0) shouldBe __
-        Option.empty[Int].exists(_ > 0) shouldBe __
+        List(1, 2, 3).find(_ > 0).isDefined shouldBe true
+        List(1, 2, 3).exists(_ > 0) shouldBe true
+        Some(2).find(_ > 0).isDefined shouldBe true
+        Some(2).exists(_ > 0) shouldBe true
+        Option.empty[Int].exists(_ > 0) shouldBe false
       }
 
       /**
@@ -276,8 +280,8 @@ class e03_collections extends HandsOnSuite {
         * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#count(p:A=>Boolean):Int
         */
       exercice("count") {
-        List(1, 2, 3).filter(_ % 2 == 1).length shouldBe __
-        List(1, 2, 3).count(_ % 2 == 1) shouldBe __
+        List(1, 2, 3).filter(_ % 2 == 1).length shouldBe 2
+        List(1, 2, 3).count(_ % 2 == 1) shouldBe 2
       }
     }
   }
@@ -298,9 +302,20 @@ class e03_collections extends HandsOnSuite {
     val talkTitle = "Scala class, bien démarrer avec Scala"
     val speakerId = "09a79f4e4592cf77e5ebf0965489e6c7ec0438cd"
 
-    def frenchPercentageOfTalks(): Int = ???
-    def fetchSpeakerTalks(id: SpeakerId): List[Talk] = ???
-    def roomSchedule(id: RoomId): List[(Long, Long, TalkId)] = ???
+    def frenchPercentageOfTalks(): Int =
+      Math.round(100 * talks.count(_.lang == "fr").toFloat / talks.length.toFloat)
+
+    def fetchSpeakerTalks(id: SpeakerId): List[Talk] =
+      speakers.find(_.uuid == id).map { speaker =>
+        talks.filter(talk => speaker.acceptedTalks.exists(_.exists(_.id == talk.id)))
+      }.getOrElse(List())
+
+    def roomSchedule(id: RoomId): List[(Long, Long, TalkId)] =
+      slots.filter(_.roomId == id).flatMap { slot =>
+        slot.talk.map { talk =>
+          (slot.fromTimeMillis, slot.toTimeMillis, talk.id)
+        }
+      }
 
     exercice("fetch") {
       frenchPercentageOfTalks() shouldBe 91
