@@ -1,0 +1,168 @@
+/*
+    Styles taken from https://bitbucket.org/nicolas_martignole/devoxxfr_templates
+ */
+
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url(./fonts/Montserrat/montserrat.css);
+@import url(./fonts/OpenSans/open-sans.css);
+
+/*
+    Generic code
+ */
+html, body {
+    font-size: 38px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0;
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 600;
+}
+p, ul, ol, pre {
+    padding-left: 6%;
+    padding-right: 6%;
+    margin: 20px 0 0 0;
+}
+ul, ol {
+    list-style-position: outside;
+    padding-left: 9%;
+}
+ul ul {
+    margin-top: 0;
+}
+a {
+    color: #42affa;
+    text-decoration: none;
+    -webkit-transition: color 0.15s ease;
+    -moz-transition: color 0.15s ease;
+    transition: color 0.15s ease;
+}
+a:hover {
+    color: #8dcffc;
+    text-shadow: none;
+    border: none;
+}
+
+/*
+    Remark code
+ */
+#source {
+    display: none;
+}
+.remark-fading {
+    display: none;
+}
+.remark-slide-number {
+    display: none;
+}
+.hljs-androidstudio .remark-code-line-highlighted {
+    background-color: #3e4042;
+}
+.hljs-androidstudio .remark-code-span-highlighted {
+    background-color: #3e4042;
+}
+.hljs-androidstudio pre > code {
+    color: #a9b7c6;
+    background: #282b2e;
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+}
+.hljs-androidstudio *:not(pre) > code {
+    font-size: 85%;
+    color: #a9b7c6;
+    border-radius: 6px;
+    padding: 0.2em 0;
+    background-color: rgba(27,31,35,0.3);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.remark-container {
+    background-color: #057ffa;
+    background-image: linear-gradient(#057ffa,#03002e);
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: normal;
+    color: #fff;
+}
+.remark-slide-scaler {
+    box-shadow: none;
+}
+.remark-slide-content {
+    font-size: 38px;
+    padding: 20px 0;
+    background: transparent;
+}
+.remark-slide-content h1 { font-size: 2.1em; }
+.remark-slide-content h2 { font-size: 1.3em; }
+.remark-slide-content h3 { font-size: 1.2em; }
+.remark-slide-content h4 { font-size: 1em; }
+.remark-slide-content h5 { font-size: 1em; }
+.remark-slide-content h6 { font-size: 1em; }
+
+/*
+    Devoxx code
+ */
+.remark-slide-content h1 {
+    padding-left: 6%;
+}
+.remark-slide-content h2 {
+    padding-bottom: 0.1em;
+    border-bottom: solid 10px #750e29;
+    text-align: center;
+}
+.remark-slide-content h3 {
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: #c11e53;
+    line-height: 1em;
+}
+.remark-slide-content h4 {
+    text-align: center;
+}
+.remark-slide-content h5,
+.remark-slide-content h6 {
+    padding-left: 6%;
+}
+.remark-slide-content.intro {
+    background-image: url("./background_1280_720_HD.png");
+    background-size: 150%;
+    background-position: 0% 0%;
+}
+.remark-slide-content.intro h1 {
+    margin: 0.5em 1em;
+    padding-top: 12%;
+    padding-left: 0;
+    font-size: 2em;
+    text-align: left;
+}
+.remark-slide-content.intro ul {
+    margin: 0 4em;
+    padding-left: 5%;
+    list-style-type: none;
+}
+.remark-slide-content.title h1 {
+    font-size: 2em;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    z-index: 100;
+    background-image: none;
+    background-color: #057ffa;
+    background-position: center top;
+}
+.footer p {
+    margin: 0;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.footer img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
