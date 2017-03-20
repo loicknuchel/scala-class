@@ -260,7 +260,10 @@ class e03_collections extends HandsOnSuite {
 
 
   /**
-    * Voyons comment mettre en pratique ces manipulations de données
+    * Voyons comment mettre en pratique ces manipulations de données...
+    *
+    * Essaie d'en faire le plus possible mais ne passe pas plus de 15 min sur cet exercice.
+    * Remplace 'exercice("")' par 'ignore("")' pour aller à la suite.
     */
   section("Mise en pratique") {
     val (speakers: List[Speaker], talks: List[Talk], rooms: List[Room], slots: List[Slot]) = Await.result(DevoxxApi.getModel(), 5 second)
@@ -269,48 +272,20 @@ class e03_collections extends HandsOnSuite {
     val talkTitle = "Scala class, bien démarrer avec Scala"
     val speakerId = "09a79f4e4592cf77e5ebf0965489e6c7ec0438cd"
 
+    def frenchPercentageOfTalks(): Int = ???
     def fetchTalk(id: TalkId): Option[Talk] = ???
     def fetchSpeakerTalks(id: SpeakerId): List[Talk] = ???
     def talkSpeakers(id: TalkId): List[Speaker] = ???
-    // pourcentage de talks en français
-    // l'emploi du temps d'une salle
+    def roomSchedule(id: RoomId): List[(Long, Long, TalkId)] = ???
+    def findSpeaker(id: SpeakerId, time: Long): Option[Room] = ???
 
     exercice("fetch") {
+      frenchPercentageOfTalks() shouldBe 90
       fetchTalk(talkId).map(_.title) shouldBe Some(talkTitle)
       fetchSpeakerTalks(speakerId).map(_.id) shouldBe List(talkId)
       talkSpeakers(talkId).map(_.firstName).sorted shouldBe List("Fabrice", "Loïc", "walid")
+      roomSchedule("par224M-225M").length shouldBe 5
+      findSpeaker(speakerId, 1491491200000L).map(_.id) shouldBe Some("par224M-225M")
     }
   }
-
-  /*section("Mise en pratique") {
-    // récupérer la liste des speakers pour un talk
-    def getTalkSpeakers(talk: Talk, speakers: List[Speaker]): List[Speaker] = {
-      speakers.filter(s => talk.speakers.contains(s.uuid))
-    }
-
-    getTalkSpeakers(talks.head, speakers).map(_.uuid) shouldBe talks.head.speakers
-
-    // associer les talks à leur salle
-    def getRoomTalks(slots: List[Slot], talks: List[Talk]): Map[RoomId, List[Talk]] = {
-      slots.groupBy(_.room).map { case (id, roomSlots) =>
-        (id, roomSlots.flatMap(s => talks.find(_.id == s.talk)))
-      }
-    }
-
-    // extraire la liste des salles et horaires pour un speaker
-    def speakerSchedule(slots: List[Slot], talks: List[Talk], speaker: SpeakerId): List[(DateTime, DateTime, RoomId)] = {
-      slots.filter { s =>
-        talks
-          .find(_.id == s.talk)
-          .exists(t => t.speakers.contains(speaker))
-      }.map(s => (s.from, s.to, s.room))
-    }
-
-    // déterminer où se trouve un speaker à une heure précise
-    def whereIsCharlie(slots: List[Slot], talks: List[Talk], speaker: SpeakerId, time: DateTime): Option[RoomId] = {
-      speakerSchedule(slots, talks, speaker)
-        .find { case (from, to, room) => from.isBefore(time) && to.isAfter(time) }
-        .map(_._3)
-    }
-  }*/
 }

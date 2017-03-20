@@ -326,9 +326,12 @@ class e02_objects extends HandsOnSuite {
     }
 
     exercice("extraire une expression régulière") {
-      // TODO
+      val regex = "Point\\((\\d+),(\\d+)\\)".r
+      val result = "Point(1,3)" match {
+        case regex(x, y) => s"Match $x, $y"
+        case _ => "No match"
+      }
+      result shouldBe __
     }
   }
-
-  // TODO : mise en application du pattern matching
 }

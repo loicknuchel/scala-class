@@ -5,6 +5,7 @@
 - [Transitioning to Scala](https://blog.redelastic.com/transitioning-to-scala-d1818f25b2b7)
 - [Passer à Scala, ce qu’il faut retenir](http://www.touilleur-express.fr/2014/04/08/passer-a-scala-ce-quil-faut-retenir/)
 - [Philosophie Fonctionnelle](https://speakerdeck.com/lilobase/philosophie-fonctionnelle-bdx-dot-io-2016)
+- [Cheatsheet Scala](http://docs.scala-lang.org/fr/cheatsheets/)
 
 ## Exercices et tutoriels
 
