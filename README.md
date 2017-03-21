@@ -8,7 +8,7 @@
 
 ## Lancer le handson
 
-1. Compléte les [étapes de pré-requis](prérequis.md)
+1. Complète les [étapes de pré-requis](prérequis.md)
 2. Va dans le dossier du projet avec le terminal et lance le handson
     - Linux/Mac: `./handson go`
     - Windows: `handson.bat` puis `go`
