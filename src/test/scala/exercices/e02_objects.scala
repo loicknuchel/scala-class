@@ -5,10 +5,12 @@ import support.HandsOnSuite
 class e02_objects extends HandsOnSuite {
 
   /**
-    * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus loin) mais il est tout aussi capable pour l'orienté objet
+    * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus loin)
+    * mais il est tout aussi capable pour l'orienté objet
     * C'est ce que nous allons voir dans cette partie
     */
 
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e02_objects.scala
 
   /**
     * Commençons par créer une classe.
@@ -82,7 +84,7 @@ class e02_objects extends HandsOnSuite {
   /**
     * Scala propose des `case class` qui sont des classes ordinaires avec certains bonus :
     *   - méthodes déjà implémentées :
-    *     - equals / hashcode : ils sont basés sur l'égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
+    *     - equals / hashcode : égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
     *     - toString          : affiche le nom de la classe et son contenu plutôt que son adresse mémoire
     *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
     *     - eq                : permet de tester une égalité de référence
@@ -120,7 +122,8 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Le langage Scala n'a pas de `static`. A la place il propose des `object`, aussi nommés objet companions lorsqu'ils accompagnent une classe
+    * Le langage Scala n'a pas de `static`.
+    * A la place il propose des `object` (nommés objet companions quand ils accompagnent une classe)
     * Ce sont des singletons (instance unique) qui peuvent être appelés depuis n'importe quel endroit du code.
     */
   section("Des 'object' pour remplacer static") {
@@ -132,7 +135,7 @@ class e02_objects extends HandsOnSuite {
       Utils.toUpper("test") shouldBe __
     }
 
-    // on trouve souvent les object associés à des class / case class pour contenir les fonctions utilitaires non liées à l'instance
+    // on trouve souvent les object associés à des classe pour contenir les fonctions utilitaires non liées à l'instance
     exercice("Object companion") {
       object User {
         def fromFullName(fullName: String): User = {
@@ -146,14 +149,17 @@ class e02_objects extends HandsOnSuite {
       user shouldBe __
     }
 
-    // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme des fonctions de son objet companion
+    // une pratique intéressante de programmation fonctionnelle est de coder les méthodes d'une classe comme
+    // des fonctions de son objet companion
     // ça permet de réutiliser plus simplement le code et d'avoir une fonction pure facilement testable
     // cette fonction peut soit prendre la classe en paramètre, soit des paramètres plus basiques (et donc plus génériques)
     exercice("minimiser le code des méthodes") {
       object Person {
-        def initials(p: Person): String = (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
+        def initials(p: Person): String =
+          (p.firstName.substring(0, 1) + p.lastName.substring(0, 1)).toLowerCase
 
-        def trigramme(firstName: String, lastName: String): String = (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
+        def trigramme(firstName: String, lastName: String): String =
+          (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
       }
       case class User(firstName: String, lastName: String)
       case class Person(firstName: String, lastName: String) {
@@ -211,7 +217,8 @@ class e02_objects extends HandsOnSuite {
 
   /**
     * Parfois, on a besoin d'une fonction qui renvoit plusieurs résultats.
-    * Dans ce cas, on peut créer un objet spécifique avec ces différents résultats ou utiliser un objet générique qui peut contenir plusieurs valeurs.
+    * Dans ce cas, on peut créer un objet spécifique avec ces différents résultats
+    * ou utiliser un objet générique qui peut contenir plusieurs valeurs.
     * Par exemple en Java, on crée souvent un objet Pair<A, B> (ex: https://github.com/search?q=filename%3APair.java)
     *
     * En Scala, on a les tuples qui sont des case class qui peuvent contenir un nombre de valeurs hétérogènes fixe.

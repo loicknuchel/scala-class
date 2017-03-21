@@ -9,12 +9,14 @@ import scala.language.postfixOps
 
 class e03_collections extends HandsOnSuite {
 
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e03_collections.scala
+
   /**
     * Passons maintenant aux collections...
     *
     * En Scala, toutes les collections étendent le trait `Traversable`
-    * Toutes les fonctions que nous allons voir sont définies dans Traversable et sont donc accessible pour n'importe quelle collection.
-    * Scala et la programmation fonctionnelle mettent en avant l'immuabilité mais il existe aussi un équivalent avec des collections mutables.
+    * Toutes les fonctions que nous allons voir sont définies dans Traversable et existent donc pour chaque quelle collection.
+    * Nous verrons que les collections immuable mais il existe leur équivalent en mutable.
     *
     * Voici la hierarchie (non-exhaustive) des collections Scala :
     *
@@ -78,7 +80,7 @@ class e03_collections extends HandsOnSuite {
 
     /**
       * La fonction `map(f: A => B): List[B]` crée une nouvelle liste.
-      * Elle transforme chaque élément à l'aide de la fonction passée en paramètre.
+      * Elle transforme chaque élément en appliquant la fonction passée en paramètre.
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#map[B](f:A=>B):List[B]
       */
@@ -101,7 +103,7 @@ class e03_collections extends HandsOnSuite {
     // c'est très pratique lorsque les expressions sont simples cependant il n'est pas toujours possible de l'utiliser
 
     /**
-      * La fonction `find(p: A => Boolean): Option[A]` renvoit le premier élément pour lequel la fonction en paramètre renvoit `true`
+      * La fonction `find(p: A => Boolean): Option[A]` renvoit le 1er élément pour lequel la fonction en paramètre renvoit `true`
       * Comme on ne peut pas être certain de trouver un élément qui correspond, le retour est une Option (cf exercice suivant)
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#find(p:A=>Boolean):Option[A]
@@ -196,7 +198,8 @@ class e03_collections extends HandsOnSuite {
   section("API collection") {
     /**
       * La fonction `groupBy(f: A => K): Map[K, List[A]]` crée une Map.
-      * Le résultat de la fonction en paramètre est utilisé comme clé et la valeur est une liste des éléments correspondant à cette clé
+      * Le résultat de la fonction en paramètre est utilisé comme clé
+      * et la valeur est une liste des éléments correspondants à cette clé
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#groupBy[K](f:A=>K):scala.collection.immutable.Map[K,Repr]
       */
@@ -209,7 +212,8 @@ class e03_collections extends HandsOnSuite {
     }
 
     /**
-      * La fonction `flatMap(f: A => List[B]): List[B]` est similaire à la fonction `map` mais fusionne ensemble les listes créées.
+      * La fonction `flatMap(f: A => List[B]): List[B]` est similaire à la fonction `map`
+      * mais fusionne ensemble les listes créées.
       *
       * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#flatMap[B](f:A=>scala.collection.GenTraversableOnce[B]):List[B]
       */
@@ -253,8 +257,31 @@ class e03_collections extends HandsOnSuite {
       words.fold("")(_ + _.length.toString) shouldBe __
     }
 
-    exercice("autres") {
-      // TODO : exists pour les listes et options
+    section("autres") {
+      /**
+        * `exists(p: A => Boolean): Boolean` indique si au moins un élément vérifie le prédicat
+        * C'est l'équivalent de `.find(p).isDefined`
+        *
+        * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#exists(p:A=>Boolean):Boolean
+        */
+      exercice("exists") {
+        List(1, 2, 3).find(_ > 0).isDefined shouldBe __
+        List(1, 2, 3).exists(_ > 0) shouldBe __
+        Some(2).find(_ > 0).isDefined shouldBe __
+        Some(2).exists(_ > 0) shouldBe __
+        Option.empty[Int].exists(_ > 0) shouldBe __
+      }
+
+      /**
+        * `count(p: A => Boolean): Int` compte le nombre d'éléments qui vérifient le prédicat
+        * C'est l'équivalent de `.filter(p).length`
+        *
+        * cf https://www.scala-lang.org/api/current/scala/collection/immutable/List.html#count(p:A=>Boolean):Int
+        */
+      exercice("count") {
+        List(1, 2, 3).filter(_ % 2 == 1).length shouldBe __
+        List(1, 2, 3).count(_ % 2 == 1) shouldBe __
+      }
     }
   }
 
@@ -266,6 +293,8 @@ class e03_collections extends HandsOnSuite {
     * Remplace 'exercice("")' par 'ignore("")' pour aller à la suite.
     */
   section("Mise en pratique") {
+    // pour voir les attributs de ces classes, regarde le package `models.devoxx` ou utilise le 'Ctrl + Click' dans ton IDE
+    // pour voir des exemples de données, regarde dans le répertoire `src/test/resources/devoxx-api`
     val (speakers: List[Speaker], talks: List[Talk], rooms: List[Room], slots: List[Slot]) = Await.result(DevoxxApi.getModel(), 5 second)
 
     val talkId = "XPI-0919"

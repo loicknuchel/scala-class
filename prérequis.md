@@ -3,9 +3,7 @@
 ## Nécessaires
 
 - Java 8
-- Scala 2.11
-- Sbt 0.13
 
 ## Facultatif
 
-- Intellij (with scala plugins)
+- [IntelliJ IDEA Community](https://www.jetbrains.com/idea/#chooseYourEdition) (avec le plugin Scala)

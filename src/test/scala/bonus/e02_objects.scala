@@ -126,7 +126,8 @@ class e02_objects extends HandsOnSuite {
       cKey shouldBe __
       cValue shouldBe __
     }
-    // en conclusion, une case class est une classe tout à faire "normale" qui possède certaines méthodes implémentées par défaut (equals, toString, copy...)
+    // en conclusion, une case class est une classe tout à faire "normale"
+    // qui possède certaines méthodes implémentées par défaut (equals, toString, copy...)
     // ainsi qu'un object companion avec les fonctions apply/unapply qui lui servent de constructeur / extracteur
     // c'est tout simple ;)
 

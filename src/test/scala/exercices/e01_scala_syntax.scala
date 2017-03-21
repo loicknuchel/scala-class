@@ -14,9 +14,10 @@ class e01_scala_syntax extends HandsOnSuite {
   /**
     * Introduction
     *
-    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet; et ces deux paradigmes fonctionnent très bien ensembles !
+    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet;
+    * et ces deux paradigmes fonctionnent très bien ensembles !
     * Il est possible d'écrire du code Scala très proche du code Java mais ce n'est pas vraiment l'idée du siècle...
-    * Dans ce handson on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et orientée objet.
+    * Dans ce handson on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et objet.
     *
     * De manière simple, si le code est immuable, il y a de bonnes chances pour qu'il ne soit pas si mauvais ;)
     */
@@ -31,6 +32,8 @@ class e01_scala_syntax extends HandsOnSuite {
     * Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
     *   - Alt + Egal : accéder au type de l'expression sélectionnée
     */
+
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e01_scala_syntax.scala
 
   exercice("Déclarer une variable") {
     // permet de déclarer une variable
@@ -146,8 +149,9 @@ class e01_scala_syntax extends HandsOnSuite {
       }
       res shouldBe __
     }
-    // contrairement aux apparences, à Java et à beaucoup d'autres langages, le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
-    // mais en fait une structure plus généraliste qui s'approche de `for(list of iterator-like statements){}` qui retourne lui aussi une valeur...
+    // contrairement aux apparences, à Java et à beaucoup d'autres langages,
+    // le for Scala n'est pas le traditionnel `for(initialisation; terminaison; increment){}`
+    // mais une structure plus générique du type `for(list of iterator-like statements){}` qui retourne elle aussi une valeur...
     // Mais nous verrons ça plus tard ;)
   }
 
@@ -184,6 +188,4 @@ class e01_scala_syntax extends HandsOnSuite {
       push("123", branch = "dev") shouldBe __
     }
   }
-
-  // TODO : scala : first class function
 }
