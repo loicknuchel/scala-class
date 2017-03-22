@@ -1,3 +1,4 @@
+import bonus.{e04_Try, e05_Either}
 import org.scalatest.{Args, Spec, SucceededStatus}
 import support.{CustomReporter, CustomStopper}
 
@@ -17,12 +18,12 @@ class HandsOnScala extends HandsOn {
     new exercices.e03_collections,
     new exercices.e04_Option,
     new exercices.e05_Future,
-    new exercices.e06_Try,
-    new exercices.e07_Either,
-    new exercices.e08_Monad,
-    new exercices.e09_HOF,
-    new exercices.e10_Currying,
-    new exercices.e11_implicit
+    new e04_Try,
+    new e05_Either,
+    new exercices.e06_Monad,
+    new exercices.e07_HOF,
+    new exercices.e08_Currying,
+    new exercices.e09_implicit
   )
 }
 
@@ -35,11 +36,11 @@ class HandsOnBonus extends HandsOn {
     new bonus.e03_collections,
     new exercices.e04_Option,
     new exercices.e05_Future,
-    new exercices.e06_Try,
-    new exercices.e07_Either,
-    new exercices.e08_Monad,
-    new exercices.e09_HOF,
-    new exercices.e10_Currying,
-    new exercices.e11_implicit
+    new bonus.e04_Try,
+    new bonus.e05_Either,
+    new exercices.e06_Monad,
+    new exercices.e07_HOF,
+    new exercices.e08_Currying,
+    new exercices.e09_implicit
   )
 }

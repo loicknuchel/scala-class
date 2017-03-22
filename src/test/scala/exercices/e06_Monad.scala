@@ -6,7 +6,7 @@ import support.HandsOnSuite
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
 
-class e08_Monad extends HandsOnSuite {
+class e06_Monad extends HandsOnSuite {
 
 
   exercice("for-comprehension") {

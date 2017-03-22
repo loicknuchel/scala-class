@@ -1,4 +1,4 @@
-package exercices
+package bonus
 
 import java.net.MalformedURLException
 
@@ -9,7 +9,7 @@ import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.language.postfixOps
 
-class e07_Either extends HandsOnSuite {
+class e05_Either extends HandsOnSuite {
 
   exercice("Either : Right") {
     val speaker = getSpeaker("25b6eeb75c18e3465d5cddf2be297b8863006551")

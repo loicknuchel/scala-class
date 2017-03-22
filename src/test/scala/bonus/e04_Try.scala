@@ -1,11 +1,11 @@
-package exercices
+package bonus
 
 import support.HandsOnSuite
 
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
-class e06_Try extends HandsOnSuite {
+class e04_Try extends HandsOnSuite {
   /**
     * TODO
     */

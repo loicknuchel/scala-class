@@ -2,7 +2,7 @@ package exercices
 
 import support.HandsOnSuite
 
-class e09_HOF extends HandsOnSuite {
+class e07_HOF extends HandsOnSuite {
 
   object BanqueUtils {
     def percent(per: Double)(mnt: Double) = (mnt * per) / 100
