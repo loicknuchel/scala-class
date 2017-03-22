@@ -77,11 +77,11 @@ class e10_Currying extends HandsOnSuite {
       * Comment invoqué cette fonction :
       */
 
-    val resInter1: (Int Int) => Int = addition(1) _
+    val resInter1: Int => Int => Int = addition(1) _
     //(1)
-    val resInter2: (Int) => Int = resInter1(2, _)
+    val resInter2: Int => Int = resInter1(2)(_)
     //(2)
-    val resultFinal = resInter2(3) //(3)
+    val resultFinal: Int = resInter2(3) //(3)
 
     resultFinal shouldEqual __
 
