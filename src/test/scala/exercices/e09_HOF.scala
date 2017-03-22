@@ -140,19 +140,11 @@ class e09_HOF extends HandsOnSuite {
     target2 shouldEqual __
 
   }
-  /*
 
 
-Utile --> pour le currying
 
 
-  def agios(f: Double => Double, cpt: Compte): Compte = {
-    Compte(cpt.solde - f(cpt.solde))
-  }
 
-  def interets(f: Double => Double, cpt: Compte): Compte = {
-    Compte(cpt.solde + f(cpt.solde))
-  }*/
 
 
 }
