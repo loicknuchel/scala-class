@@ -16,7 +16,7 @@ class e04_Option extends HandsOnSuite {
     *
     *  les fonctions de Option resemble beaucoup a celle des collections, ainsi un peut trouver :
     *
-    *     map : permet d'appliquer une fonction sur la valeur de l'Option, et elle retour une Option
+    *     map : permet d'appliquer une fonction sur la valeur de l'Option, et elle retoune une Option
     *     flatMap : appliquer une fonction qui retourn une Option
     *     get : retourne la valeur de l'Option
     *     getOrElse : permet de retourner une valeur si l'Option egale None
@@ -37,7 +37,7 @@ class e04_Option extends HandsOnSuite {
 
 
   /**
-    * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur dpar defaut
+    * Dans le cas d'absence de valeur, la fonction getOrElse permet de retourner une valeur par défaut
     */
   exercice("Valeur par défaut") {
     val age: Option[Int] = None
@@ -103,9 +103,10 @@ class e04_Option extends HandsOnSuite {
     * Some est une case class, alors il est possible d'appliquer du pattern matching
     */
   exercice("Pattern matching sur une Option") {
+
     val room10: Option[Room] = RoomRepository.getRoom("10")
 
-    //en appliquant le pattern matching retourner le nom de la salle, sinon "unknown"
+    //en appliquant le pattern matching, retournez le nom de la salle, sinon "unknown"
     val roomName = room10 match {
       case Some(room) => room.name
       case None => "unknown"
