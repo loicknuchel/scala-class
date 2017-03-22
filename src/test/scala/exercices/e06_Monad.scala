@@ -2,6 +2,7 @@ package exercices
 
 import models.devoxx.{DevoxxApi, Speaker}
 import support.HandsOnSuite
+import scala.concurrent.ExecutionContext.Implicits.global
 
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration._
