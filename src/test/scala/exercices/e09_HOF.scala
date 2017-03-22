@@ -50,8 +50,8 @@ class e09_HOF extends HandsOnSuite {
 
       import Compte._
 
-      debit(cpt, 5) shouldEqual Compte(5)
-      credit(cpt, 10) shouldEqual Compte(20)
+      debit(cpt, 5) shouldEqual __
+      credit(cpt, 10) shouldEqual __
 
     }
   }
@@ -101,8 +101,8 @@ class e09_HOF extends HandsOnSuite {
     val cpt = Compte(10)
 
 
-    operation(debit, cpt, 5) shouldEqual Compte(5)
-    operation(credit, cpt, 10) shouldEqual Compte(20)
+    operation(debit, cpt, 5) shouldEqual __
+    operation(credit, cpt, 10) shouldEqual __
 
 
     /**
@@ -122,8 +122,8 @@ class e09_HOF extends HandsOnSuite {
 
     val (source1, target1) = virement(cptSource, cptTarget, 20, debit, credit)
 
-    source1 shouldEqual Compte(80)
-    target1 shouldEqual Compte(70)
+    source1 shouldEqual __
+    target1 shouldEqual __
 
     /**
       * On souhaite faire des virements entre deux comptes. Les deux opérations (debit / credit ) vont nous être bien utiles.
@@ -136,8 +136,8 @@ class e09_HOF extends HandsOnSuite {
 
     val (source2, target2) =  virement(cptSource, cptTarget, 20, debitPayant, credit)
 
-    source2 shouldEqual Compte(79.996)
-    target2 shouldEqual Compte(70)
+    source2 shouldEqual __
+    target2 shouldEqual __
 
   }
   /*
