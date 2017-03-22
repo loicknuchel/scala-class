@@ -8,7 +8,7 @@ class e01_scala_syntax extends HandsOnSuite {
   /**
     * Avant de commencer :
     *   - installe l'environnement nécessaire, (cf `prérequis.md`)
-    *   - lis la présentation d'introduction (cf `doc/slides.html`)
+    *   - lis la présentation d'introduction (cf `docs/slides.html`)
     */
 
   /**

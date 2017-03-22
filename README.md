@@ -13,7 +13,7 @@
     - Linux/Mac: `./handson go`
     - Windows: `handson.bat` puis `go`
 
-![handson-terminal](doc/assets/handson-terminal.png)
+![handson-terminal](docs/assets/handson-terminal.png)
 
 Il faudra compléter les fichiers d'exercice en suivant les indications dans le terminal.
 Le début se trouve dans le fichier `src/test/scala/exercices/e01_scala_syntax.scala`
