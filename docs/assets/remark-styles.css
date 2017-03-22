@@ -11,3 +11,10 @@
 .remark-slide-content.title p {
     text-align: center;
 }
+.remark-slide-content.speakers p {
+    height: 4em;
+    line-height: 4em;
+}
+.remark-slide-content.speakers img {
+    height: 4em;
+}
