@@ -34,11 +34,11 @@ class e07_implicit extends HandsOnSuite {
     val f1 = Fraction(2, 9)
     val f2 = Fraction(3, 4)
 
-    f1 + f2 shouldBe __
+    f1 + f2 shouldBe Fraction(35, 36)
 
     import OurImplicit._
 
-    f1 + 10 shouldBe __
+    f1 + 10 shouldBe Fraction(92, 9)
   }
 
 
@@ -65,7 +65,7 @@ class e07_implicit extends HandsOnSuite {
 
     import Helpers._
 
-    speaker.initiales shouldBe __
+    speaker.initiales shouldBe "M. L."
   }
 
 
@@ -88,12 +88,12 @@ class e07_implicit extends HandsOnSuite {
     */
   exercice("Implicit : paramètre 1 (simple)") {
     import operation.addition
-    compute(3, 4) shouldBe __
+    compute(3, 4) shouldBe 7
   }
 
   exercice("Implicit : paramètre 2 (simple)") {
     import operation.multiplication
-    compute(3, 4) shouldBe __
+    compute(3, 4) shouldBe 12
   }
 
 
@@ -150,9 +150,9 @@ class e07_implicit extends HandsOnSuite {
     /**
       * La résolution de l'implicite se fait sur le type du paramètre passé à la fonction.
       */
-    display(speaker) shouldBe __
-    display(talk) shouldBe __
-    display(room) shouldBe __
+    display(speaker) shouldBe "Harry Cover [None]"
+    display(talk) shouldBe "découvrir Scala en s'amusant - LinkWithName(Loic,Link(Loic,href,rel)),LinkWithName(Walid,Link(Walid,href,rel)),LinkWithName(Fabrice,Link(Fabrice,href,rel)) Tools-in-Action"
+    display(room) shouldBe "Grand Amphi[200]"
   }
 
   /**
