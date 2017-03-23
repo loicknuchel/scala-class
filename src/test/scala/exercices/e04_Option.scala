@@ -69,7 +69,7 @@ class e04_Option extends HandsOnSuite {
     // récupérez la salle 15, sachant que la salle 15 n'existe pas
     val room15 = RoomRepository.getRoom("15")
 
-    room15 shouldBe None
+    room15 shouldBe __
 
     // appliquez la même fonction sur None, quel sera le résultat de retour ?
     val room15Name: Option[String] = ???
