@@ -2,34 +2,30 @@ package bonus
 
 import java.net.MalformedURLException
 
-import models.devoxx.DevoxxApi
+import models.devoxx.{DevoxxApi, Speaker}
 import support.HandsOnSuite
 
-import scala.concurrent.Await
-import scala.concurrent.duration._
-import scala.language.postfixOps
-
-
-// Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/bonus/e05_Either.scala
 class e05_Either extends HandsOnSuite {
+
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/bonus/e05_Either.scala
 
   exercice("Either : Right") {
     val speaker = getSpeaker("25b6eeb75c18e3465d5cddf2be297b8863006551")
 
-    speaker.isRight shouldBe true
-    speaker.isLeft shouldBe false
+    speaker.isRight shouldBe __
+    speaker.isLeft shouldBe __
 
     val speakerName: Either[MalformedURLException, String] = speaker.right.map(speaker => speaker.firstName)
 
-    speakerName.right.get shouldBe "Alexandre"
+    speakerName.right.get shouldBe __
   }
 
 
   exercice("Either: Left") {
     val speaker = getSpeaker("toto")
 
-    speaker.isRight shouldBe false
-    speaker.isLeft shouldBe true
+    speaker.isRight shouldBe __
+    speaker.isLeft shouldBe __
 
     val speakerName = speaker.right.map(speaker => speaker.firstName).left.map(ex => ex.getMessage)
   }
@@ -43,14 +39,14 @@ class e05_Either extends HandsOnSuite {
       speaker2.right.map(speaker2 => speaker1.company eq speaker2.company)
     )
 
-    sameCompany.right.get shouldBe false
+    sameCompany.right.get shouldBe __
   }
 
 
-  def getSpeaker(id: String) = {
+  def getSpeaker(id: String): Either[MalformedURLException, Speaker] = {
     if (id eq "toto")
       Left(new MalformedURLException("le user n'existe pas"))
     else
-      Right(Await.result(DevoxxApi.getSpeaker(id), 3 second))
+      Right(await(DevoxxApi.getSpeaker(id)))
   }
 }

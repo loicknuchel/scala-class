@@ -6,11 +6,17 @@ import org.scalatest.exceptions.{TestFailedException, TestPendingException}
 import org.scalatest.matchers.Matcher
 import org.scalatest.time.{Millis, Seconds, Span}
 
+import scala.concurrent.{Await, Awaitable}
+import scala.concurrent.duration._
 import scala.language.experimental.macros
+import scala.language.postfixOps
 
 trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
   implicit val suite: HandsOnSuite = this
   implicit val defaultPatience = PatienceConfig(timeout = Span(5, Seconds), interval = Span(500, Millis))
+  val timeout: Duration = 1 second
+
+  def await[T](awaitable: Awaitable[T]): T = Await.result(awaitable, timeout)
 
   def __ : Matcher[Any] = throw new TestPendingException
 
