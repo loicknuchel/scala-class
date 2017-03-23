@@ -10,8 +10,10 @@ import scala.language.postfixOps
 import scala.util.{Failure, Success}
 
 class e05_Future extends HandsOnSuite {
+
   /**
-    * Future en scala, est un type qui resprente le resultat d'un calcul qui sera disponible dans le futur,
+    * Future[T] est un type conteneur, qui resprente le resultat d'un calcul qui sera disponible dans le futur,
+    * elle est programation concurrent et asynchrone
     * elle est souvent utilisée dans les operations lentes : IO (Ecriture sur disque, appel webservice ...) et
     *
     *
@@ -27,6 +29,7 @@ class e05_Future extends HandsOnSuite {
     *     getOrElse : permet de retourner une valeur si l'Option egale None
     *
     */
+
   exercice("Déclarer une Future") {
     val number = Future {
       Thread.sleep(500)
@@ -61,6 +64,7 @@ class e05_Future extends HandsOnSuite {
     * zip : permet d'appliquer une fonction sur la valeur de de la Future, et elle retoune une Future
     */
   exercice("Combiner les Futures") {
+
     // récupérez le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd et 1693d28c079e6c28269b9aa86ae04a4549ad3074
     val speaker1 = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
     val speaker2 = DevoxxApi.getSpeaker("1693d28c079e6c28269b9aa86ae04a4549ad3074")
@@ -78,6 +82,7 @@ class e05_Future extends HandsOnSuite {
     *
     */
   exercice("Le future des Futures") {
+
     // récupérez le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
 

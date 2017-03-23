@@ -58,7 +58,7 @@ class e04_Option extends HandsOnSuite {
     // cherchez dans la base de donnée la salle avec un id = 2, en utilisant  RoomRepository.getRoomById
     val room2: Option[Room] = RoomRepository.getRoom("2")
 
-    // En utilisant la fontion map retournez le nom de la salle
+    // En utilisant la fonction map, retournez le nom de la salle
     val room2Name = room2.map(room => room.name)
 
     room2Name.get shouldBe "salle2"
@@ -87,13 +87,13 @@ class e04_Option extends HandsOnSuite {
 
     // recuperer la capacité de la room 3 en utilsiant la fonction RoomRepository.getCapacite(room :Room)
     // la fonction def getCapacite(room) return une  Option[Int]
-    val capaciteRoom3: Option[Int] = ??? //room3.flatMap( room => RoomRepository.getCapacite(room) )
+    val capaciteRoom3: Option[Int] = room3.flatMap( room => RoomRepository.getCapacite(room) )
 
     capaciteRoom3.get shouldBe 30
 
     // appliquer la meme fonction sur une None , quel sera le resultat de retour ?
     val room5: Option[Room] = RoomRepository.getRoom("5")
-    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getRecorded(room))
+    val capaciteRoom5 = room5.flatMap(room => RoomRepository.getCapacite(room))
 
     capaciteRoom5 shouldBe None
   }
@@ -114,21 +114,20 @@ class e04_Option extends HandsOnSuite {
 
     roomName shouldBe "unknown"
   }
+}
 
+object RoomRepository {
+  def getRoom(id: String): Option[Room] = {
+    if (id.toInt < 8)
+      Some(Room(id, s"salle$id", "classroom", 50, Some(id)))
+    else
+      None
+  }
 
-  object RoomRepository {
-    def getRoom(id: String): Option[Room] = {
-      if (id.toInt < 8)
-        Some(Room(id, s"salle$id", "classroom", 50, Some(id)))
-      else
-        None
-    }
-
-    def getRecorded(room: Room): Option[String] = {
-      if (room.id.toInt < 4)
-        room.recorded
-      else
-        None
-    }
+  def getCapacite(room: Room): Option[Int] = {
+    if (room.id.toInt < 4)
+      Option(room.id.toInt * 10)
+    else
+      None
   }
 }
