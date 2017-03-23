@@ -37,8 +37,8 @@ class e04_Try extends HandsOnSuite {
 
     // Pattern matching: retournez le nombre de lignes si c'est ok sinon 0
     val count: Int = linesCount match {
-      case Success(valeur) => valeur
-      case Failure(err) => 0
+      case Success(valeur) => ???
+      case Failure(err) => ???
     }
 
     count shouldBe 22
