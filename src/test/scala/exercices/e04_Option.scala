@@ -29,13 +29,13 @@ class e04_Option extends HandsOnSuite {
     val age: Option[Int] = Some(42)
 
     //Utilisez get pour retourner la valeur de l'Option
-    __ shouldBe 42
+    age.get shouldBe 42
 
     //S'il ya un doute sur la nulleté de la valeur on peut utiliser le constructeur de Option
     val valeurNull: String = null
     val valeurAbsente: Option[String] = Option(valeurNull)
 
-    valeurAbsente shouldBe __
+    valeurAbsente shouldBe None
   }
 
 
@@ -45,9 +45,9 @@ class e04_Option extends HandsOnSuite {
   exercice("Valeur par défaut") {
     val age: Option[Int] = None
 
-    age shouldBe __
-    age.getOrElse(42) shouldBe __
-    age.orElse(Option(42)) shouldBe __
+    age shouldBe None
+    age.getOrElse(42) shouldBe 42
+    age.orElse(Option(42)) shouldBe Some(42)
   }
 
 
@@ -58,23 +58,23 @@ class e04_Option extends HandsOnSuite {
     *          * si None le resultat sera None
     */
   exercice("Appliquer une fonction sur une Option") {
-    // cherchez dans la base de donnée la salle avec un id = 2, en utilisant RoomRepository.getRoomById
-    val room2: Option[Room] = ???
+    // cherchez dans la base de donnée la salle avec un id = 2, en utilisant RoomRepository.getRoom
+    val room2: Option[Room] = RoomRepository.getRoom("2")
 
     // En utilisant la fonction `map`, retournez le nom de la salle
-    val room2Name: Option[String] = ???
+    val room2Name: Option[String] = room2.map(_.name)
 
     room2Name.get shouldBe "salle2"
 
     // récupérez la salle 15, sachant que la salle 15 n'existe pas
     val room15 = RoomRepository.getRoom("15")
 
-    room15 shouldBe __
+    room15 shouldBe None
 
     // appliquez la même fonction sur None, quel sera le résultat de retour ?
-    val room15Name: Option[String] = ???
+    val room15Name: Option[String] = room15.map(_.name)
 
-    room15Name shouldBe __
+    room15Name shouldBe None
   }
 
 
@@ -88,13 +88,13 @@ class e04_Option extends HandsOnSuite {
 
     // récupérez la capacité de la room 3 en utilisant la fonction RoomRepository.getCapacite(room :Room)
     // la fonction `getCapacite(room)` retourne une Option[Int]
-    val capaciteRoom3: Option[Int] = ???
+    val capaciteRoom3: Option[Int] = room3.flatMap(room => RoomRepository.getCapacite(room))
 
     capaciteRoom3.get shouldBe 30
 
     // appliquez la même fonction, sachant que le retour de `getRoom("15")` est None, quel sera le résultat de retour ?
     val room15: Option[Room] = RoomRepository.getRoom("15")
-    val capaciteRoom15: Option[Int] = ???
+    val capaciteRoom15: Option[Int] = room15.flatMap(room => RoomRepository.getCapacite(room))
 
     capaciteRoom15 shouldBe None
   }
@@ -107,7 +107,10 @@ class e04_Option extends HandsOnSuite {
     val room10: Option[Room] = RoomRepository.getRoom("10")
 
     //en appliquant le pattern matching, retournez le nom de la salle, sinon "unknown"
-    val roomName: String = ???
+    val roomName: String = room10 match {
+      case Some(room) => room.name
+      case None => "unknown"
+    }
 
     roomName shouldBe "unknown"
   }
