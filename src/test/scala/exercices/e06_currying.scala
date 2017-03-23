@@ -24,7 +24,7 @@ class e06_currying extends HandsOnSuite {
       * et donc de transformer cette fonction en 3 foncions à 1 paramètre.
       */
 
-    addition(1, 2, 3) shouldBe __
+    addition(1, 2, 3) shouldBe 6
 
     /**
       * est équivalent à :
@@ -36,7 +36,7 @@ class e06_currying extends HandsOnSuite {
     //(2)
     val resultFinal = resInter2(3) //(3)
 
-    resultFinal shouldBe __
+    resultFinal shouldBe 6
 
     /**
       * Dans l'exemple ci-dessus  on s'aperçoit que l'on a pu décomposer la fonction à la volée.
@@ -78,7 +78,7 @@ class e06_currying extends HandsOnSuite {
     //(2)
     val resultFinal: Int = resInter2(3) //(3)
 
-    resultFinal shouldBe __
+    resultFinal shouldBe 6
 
     /**
       * Le principe d'évaluation reste le même que décrit précédemment.
