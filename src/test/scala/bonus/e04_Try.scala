@@ -7,33 +7,50 @@ import scala.util.{Failure, Success, Try}
 
 class e04_Try extends HandsOnSuite {
   /**
-    * TODO
+    * Try[T] est un  type qui encapsule des opérations qui peuvent lancer
+    * des exceptions (IO , JDBCException ….).
+    *
+    * Try a deux sous-type
+    *   Success[T] => si l'opération s'est déroulé avec succès
+    *   Failure[T] => si l'opération a lancé une exception
+    *
+    * Les fonctions :
+    *     isSuccess : retourne true si l'opération est Succes sinon false
+    *     failed : retourne false si l'opération est Succes sinon true
+    *     map : permet d'appliquer une fonction sur la valeur du Try et retoune un Try
+    *     flatMap : appliquer une fonction qui retourne un Try
     */
-  exercice("Déclarer un Try") {
-    val nombreSpeaker = Try {
-      Source.fromFile("Speakers.txt").getLines
+  exercice("Déclarer un Try : Succes") {
+
+    //Lire le fichier README.md
+    val linesCount = Try {
+      Source.fromFile("README.md").getLines
     }.map(lines => lines.size)
 
-    nombreSpeaker match {
-      case Success(count) => print(s"Le fichier Speacker.txt contient : $count speakers")
-      case Failure(ex) => println(s"Erreur : ${ex.getMessage}")
+    // L'opération s'est déroulé avec succès ?
+    linesCount.isSuccess shouldBe true
+    //README.md contient combien de ligne ?
+    linesCount.get shouldBe 30
+
+
+    // Patter matching : retounez le nombre de lignes si c'est ok sinon 0
+    val count = linesCount match {
+      case Success(count) => count
+      case Failure(ex) => 0
     }
 
-    nombreSpeaker.isSuccess shouldBe true
-    nombreSpeaker.get shouldBe 2
+    count shouldBe 30
+
   }
 
 
-  exercice("Déclarer un") {
+  exercice("Failled") {
+
     val nombreTalks = Try {
-      Source.fromFile("Talks.txt").getLines
+      Source.fromFile("TOTO.txt").getLines
     }.map(lines => lines.size)
 
-    nombreTalks match {
-      case Success(count) => print(s"Le fichier Speacker.txt contient : $count speakers")
-      case Failure(ex) => println(s"Erreur : ${ex.getMessage}")
-    }
-
+    //Sachant que le fichier TOTO.txt n'existe pas, l'opération sera Succes ou Failed ?
     nombreTalks.failed shouldBe true
     nombreTalks.recover { case _ => 0 } shouldBe 0
   }

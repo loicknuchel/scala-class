@@ -23,10 +23,8 @@ class e05_Future extends HandsOnSuite {
 
     * Les fonctions :
     *
-    *     map : permet d'appliquer une fonction sur la valeur de de la Future, et elle retoune une Future
-    *     flatMap : appliquer une fonction qui retourn une Option
-    *     get : retourne la valeur de l'Option
-    *     getOrElse : permet de retourner une valeur si l'Option egale None
+    *     map : permet d'appliquer une fonction sur la valeur de la Future, et elle retoune une Future
+    *     flatMap : appliquer une fonction qui retourne une Future
     *
     */
 
