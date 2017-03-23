@@ -33,7 +33,7 @@ class e04_Try extends HandsOnSuite {
     __ shouldBe true
 
     // README.md contient combien de ligne ?
-    __ shouldBe 30
+    __ shouldBe 22
 
     // Pattern matching: retournez le nombre de lignes si c'est ok sinon 0
     val count: Int = linesCount match {
