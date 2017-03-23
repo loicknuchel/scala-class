@@ -15,6 +15,8 @@ class e06_Monad extends HandsOnSuite {
     * qui est un sucre syntaxique pour enchaîner les opérations de flatMap et map.
     * Attention: un for-comprehension ca n'a rien avoir avec une boucle for
     */
+
+  // Solutions de l'exercice (en cas de besoin) :   // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e06_Monad.scala
   exercice("for-comprehension") {
 
     //  Rappelez-vous dans le dernier exercice des Futures, pour récupérer le nombre de speaker, qui donne le meme talk qu'un speaker

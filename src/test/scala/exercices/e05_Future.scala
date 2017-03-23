@@ -28,6 +28,8 @@ class e05_Future extends HandsOnSuite {
     *
     */
 
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e05_Future.scala
+
   exercice("Déclarer une Future") {
     val number = Future {
       Thread.sleep(500)

@@ -21,6 +21,9 @@ class e04_Option extends HandsOnSuite {
     *     get : retourne la valeur de l'Option
     *     getOrElse : permet de retourner une valeur si l'Option egale None
     */
+
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e04_Option.scala
+
   exercice("Déclarer une Option") {
     // pour declarer une Option on peut utiliser le constructeur de la classe Some
     val age: Option[Int] = Some(42)

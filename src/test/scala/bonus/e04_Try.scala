@@ -20,6 +20,8 @@ class e04_Try extends HandsOnSuite {
     *     map : permet d'appliquer une fonction sur la valeur du Try et retoune un Try
     *     flatMap : appliquer une fonction qui retourne un Try
     */
+
+  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/bonus/e04_Try.scala
   exercice("Déclarer un Try : Succes") {
 
     //Lire le fichier README.md
