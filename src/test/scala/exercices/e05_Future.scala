@@ -32,12 +32,12 @@ class e05_Future extends HandsOnSuite {
     }
 
     val numberValue = await(number)
-    numberValue shouldBe __
+    numberValue shouldBe 42
 
     //Callback :  afficher le nombre dans le cas de Succès et exception dans le cas de Failure
     number.onComplete {
-      case Success(value) => ???
-      case Failure(err) => ???
+      case Success(value) => println("value: "+value)
+      case Failure(err) => println("error: "+err.getMessage)
     }
   }
 
@@ -47,10 +47,10 @@ class e05_Future extends HandsOnSuite {
     */
   exercice("Appliquer une fonction sur Future") {
     // En utilisant la fonction DevoxxApi.getSpeaker, récupérez le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd
-    val speaker: Future[Speaker] = ???
+    val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
 
     // Avec la fonction map, appliquée sur speaker, récupérez le prénom du speaker
-    val firstName: Future[String] = ???
+    val firstName: Future[String] = speaker.map(_.firstName)
 
     val roomName = await(firstName)
     roomName shouldBe "Loïc"
@@ -67,7 +67,9 @@ class e05_Future extends HandsOnSuite {
 
     // En utilisant la méthode zip, combine les deux futures pour en avoir une seule,
     // puis comparre les langues des deux speakers
-    val sameLang: Future[Boolean] = ???
+    val sameLang: Future[Boolean] = speaker1
+      .zip(speaker2)
+      .map { case (s1: Speaker, s2: Speaker) => s1.lang == s2.lang }
 
     val sameLangValue = await(sameLang)
     sameLangValue shouldBe true
@@ -82,7 +84,9 @@ class e05_Future extends HandsOnSuite {
 
     // récupérez les details du premier Talk de ce speaker avec flatMap, puis
     // retournez le nombre de speakers de ce talk
-    val speakerNumber: Future[Int] = ???
+    val speakerNumber: Future[Int] = speaker
+      .flatMap(speaker => DevoxxApi.getTalk(speaker.acceptedTalks.get.head.id))
+      .map(talk => talk.speakers.size)
 
     val speakerNumberValue = await(speakerNumber)
 
