@@ -154,4 +154,25 @@ class e09_implicit extends HandsOnSuite {
     display(talk) shouldBe __
     display(room) shouldBe __
   }
+
+  /**
+    * Quelques exemples réels d'utilisation des implicites :
+    *
+    *
+    * - Paramètre implicite :
+    *
+    *   Play framework pour gérer l'encodage
+    *
+    * code: https://github.com/playframework/playframework/blob/38abd1ca6d17237950c82b1483057c5c39929cb4/framework/src/play/src/main/scala/play/utils/PlayIO.scala#L53
+    * codec doc: https://www.scala-lang.org/api/current/scala/io/Codec.html
+    *
+    * L'objet codec permet de spéifier l'encodage et est automatiquement passé en paramètre via les implicites
+    *
+    *
+    * - Classe implicite :
+    *
+    *   Play framework pour ajouter un timeout sur un Future
+    *
+    * code: https://github.com/playframework/playframework/blob/afcda67c5cada258a662f77c58f57ead3ecfbac8/framework/src/play/src/main/scala/play/api/libs/concurrent/Timeout.scala#L90
+    */
 }
