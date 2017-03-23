@@ -37,11 +37,12 @@ class e05_Future extends HandsOnSuite {
     }
 
     val numberValue = Await.result(number, 1 second)
-    numberValue shouldBe 42
+    numberValue shouldBe __
 
+    //Callback :  afficher Number dans le cas de Succes et exception dans le cas de Failure
     number.onComplete {
-      case Success(number) => println(number)
-      case Failure(ex) => println(s"Erreur de préparation : $ex.getMessage")
+      case Success(number) => ???
+      case Failure(ex) => ???
     }
   }
 
@@ -51,10 +52,10 @@ class e05_Future extends HandsOnSuite {
   exercice("Appliquer une fonction sur Future") {
 
     // En utilisant la fonction DevoxxApi.getSpeaker, récupérez le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd
-    val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
+    val speaker: Future[Speaker] = ???
 
     // Avec la fontion map, appliquer sur speacker, récupèrer le prénom du speaker
-    val firstName: Future[String] = speaker.map(speaker => speaker.firstName)
+    val firstName: Future[String] = ???
 
     val roomName = Await.result(firstName, 1 second)
     roomName shouldBe "Loïc"
@@ -70,25 +71,24 @@ class e05_Future extends HandsOnSuite {
     val speaker2 = DevoxxApi.getSpeaker("1693d28c079e6c28269b9aa86ae04a4549ad3074")
 
     //En utilisant la méthode zip, combine les deux futures pour en avoir une seule,
-    //pui comparrer les langues des deux speakers
-    val sameLang = speaker1.zip(speaker2)
-      .map { case (speaker1: Speaker, speaker2: Speaker) => speaker1.lang == speaker2.lang }
+    //puis comparrer les langues des deux speakers
+    val sameLang : Future[Boolean] = ???
 
     val sameLangValue = Await.result(sameLang, 2 second)
     sameLangValue shouldBe true
   }
 
   /**
-    *
+    * flatMap est une opération qui permet de combiner des Futures
     */
   exercice("Le future des Futures") {
 
     // récupérez le speaker 09a79f4e4592cf77e5ebf0965489e6c7ec0438cd
     val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
 
-    // récupèrer les dètails du talk DNY-501
-    val speakerNumber: Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(speaker.acceptedTalks.get.head.id))
-      .map(talk => talk.speakers.size)
+    // récupèrer les details du premier Talk de ce speaker avec flatMap, puis
+    // retournez le nombre de speaker de ce talk
+    val speakerNumber: Future[Int] = ???
 
     val speakerNumberValue = Await.result(speakerNumber, 1 second)
 

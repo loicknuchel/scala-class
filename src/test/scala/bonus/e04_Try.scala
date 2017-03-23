@@ -30,9 +30,10 @@ class e04_Try extends HandsOnSuite {
     }.map(lines => lines.size)
 
     // L'opération s'est déroulé avec succès ?
-    linesCount.isSuccess shouldBe true
+    __ shouldBe true
+
     //README.md contient combien de ligne ?
-    linesCount.get shouldBe 30
+    __ shouldBe 30
 
 
     // Patter matching : retounez le nombre de lignes si c'est ok sinon 0
@@ -53,7 +54,7 @@ class e04_Try extends HandsOnSuite {
     }.map(lines => lines.size)
 
     //Sachant que le fichier TOTO.txt n'existe pas, l'opération sera Succes ou Failed ?
-    nombreTalks.failed shouldBe true
-    nombreTalks.recover { case _ => 0 } shouldBe 0
+    __ shouldBe true
+    nombreTalks.recover { case _ => 0 } shouldBe __
   }
 }

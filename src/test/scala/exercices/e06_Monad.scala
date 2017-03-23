@@ -21,16 +21,19 @@ class e06_Monad extends HandsOnSuite {
 
     //  Rappelez-vous dans le dernier exercice des Futures, pour récupérer le nombre de speaker, qui donne le meme talk qu'un speaker
     // on a enchaîné les opérations flatMap et map, ce qui parfois devient difficile à lire
-    val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
+
+    //Ancien code
+
+    /* val speaker: Future[Speaker] = DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
 
     val talk: Future[Int] = speaker.flatMap(speaker => DevoxxApi.getTalk(speaker.acceptedTalks.get.head.id))
       .map(talk => talk.speakers.size)
-
+    */
     // Ici on doit réécrire ce pattern avec for-comprehension
-    val speakerNumber = for {
+    val speakerNumber : Future[Int]= for {
       speaker <- DevoxxApi.getSpeaker("09a79f4e4592cf77e5ebf0965489e6c7ec0438cd")
       talk <- DevoxxApi.getTalk(speaker.acceptedTalks.get.head.id)
-    } yield talk.speakers.size
+    } yield ???
 
     val speakerNumberValue = Await.result(speakerNumber, 1 second)
 
