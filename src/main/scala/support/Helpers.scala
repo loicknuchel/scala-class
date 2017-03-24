@@ -1,6 +1,7 @@
 package support
 
-import io.circe.{Decoder, parser}
+import io.circe._
+import org.joda.time.DateTime
 
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
@@ -13,6 +14,15 @@ object Helpers {
   def formatJson(json: String): String = parser.parse(json) match {
     case Left(_) => json
     case Right(parsed) => parsed.toString()
+  }
+
+  implicit val encodeDateTime: Encoder[DateTime] = Encoder.encodeString.contramap[DateTime](_.toString)
+
+  implicit val decodeFoo: Decoder[DateTime] = Decoder.decodeString.emap { str =>
+    Try(DateTime.parse(str)) match {
+      case Success(date) => Right(date)
+      case Failure(err) => Left(s"DateTime: ${err.getMessage}")
+    }
   }
 
   implicit class TryConverter[T](t: Try[T]) {
