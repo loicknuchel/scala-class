@@ -1,22 +1,25 @@
-# Scala class, the easy way into scala
+# Scala class
 
 ## Auteurs
 
-- Fabrice
-- Loïc
-- Walid
+- Fabrice Sznajderman [@fsznajderman](https://twitter.com/fsznajderman)
+- Loïc Knuchel [@loicknuchel](https://twitter.com/loicknuchel)
+- Walid Chergui [@walidchergui](https://twitter.com/walidchergui)
 
-## Lancer le handson
+## Lancer le Hand's on
 
-1. Complète les [étapes de pré-requis](prérequis.md)
-2. Va dans le dossier du projet avec le terminal et lance le handson
-    - Linux/Mac: `./handson go`
-    - Windows: `handson.bat` puis `go`
+Pour lancer le Hand's on, suivre le [getting started](getting_started.md).
+
+Si tout se passe bien le terminal devrait afficher :
 
 ![handson-terminal](docs/assets/handson-terminal.png)
 
-Il faudra compléter les fichiers d'exercice en suivant les indications dans le terminal.
-Le début se trouve dans le fichier `src/test/scala/exercices/e01_scala_syntax.scala`
+Comme l'indique la dernière ligne, cette commande lance les tests puis attends des modifications dans les fichiers pour les lancer à nouveau.
 
-Des exercices plus avancés/complets sont disponible dans les bonus.
-Pour les lancer remplacer `go` par `bonus` au lancement du handson.
+Des exercices plus avancés sont disponibles avec la commande `./handson bonus` \o/
+
+## Resource
+
+Les [slides](docs/slides.html) présentés en début sont accessibles dans le dossier `docs/`.
+
+Ce dossier contient aussi un fichier [resources.md](docs/resources.md) qui listes des références pour aller plus loin avec Scala :)

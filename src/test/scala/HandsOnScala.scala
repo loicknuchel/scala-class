@@ -1,4 +1,3 @@
-import bonus.{e04_Try, e05_Either}
 import org.scalatest.{Args, Spec, SucceededStatus}
 import support.{CustomReporter, CustomStopper}
 

@@ -10,7 +10,6 @@ class e02_objects extends HandsOnSuite {
     * C'est ce que nous allons voir dans cette partie
     */
 
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e02_objects.scala
 
   /**
     * Commençons par créer une classe.
@@ -34,22 +33,15 @@ class e02_objects extends HandsOnSuite {
     p.x shouldBe __
     p.move(2, 2)
     p.x shouldBe __
-
-    val p1 = new Point(1, 2)
-    val p2 = new Point(1, 2)
-    // corrige la classe Point pour que ces assertions soient correctes
-    p1 == p2 shouldBe true
-    p2.toString shouldBe "Point(1,2)"
   }
-  // TIP1: penser à hashCode/equals, intellij peut les générer...
 
 
   /**
-    * Comme évoqué au début, l'immutabilité rends les choses beaucoup plus simple
+    * Comme évoqué au début, l'immuabilité rends les choses beaucoup plus simple
     * Nous allons donc voir comment nous en servir
     */
   exercice("Une classe immuable") {
-    "Crée la classe Point immuable qui réponde aux assertions suivantes" shouldBe __
+    // Créée une classe Point qui corresponde aux tests suivants (les décommenter petit à petit)
 
     // val p = new Point(1, 2)
     // p.x = 3 // ne doit pas compiler
@@ -64,7 +56,7 @@ class e02_objects extends HandsOnSuite {
     // p1.x shouldBe 3
 
 
-    // Implémente la méthode `copy` qui permettra de créer une nouvelle classe en modifiant un ou plusieurs paramètres
+    // Implémente la méthode `copy` qui permettra de créer un nouvel objet en modifiant un ou plusieurs paramètres
 
     // val p2 = p.copy(3, 4)
     // p2.x shouldBe 3
@@ -72,9 +64,11 @@ class e02_objects extends HandsOnSuite {
     // val p3 = p.copy(x = 5)
     // p3.x shouldBe 5
     // p3.y shouldBe 2
-    // val p4 = p.copy(y = 6)
-    // p4.x shouldBe 1
+    // val p4 = p1.copy(y = 6)
+    // p4.x shouldBe 3
     // p4.y shouldBe 6
+
+    "Finis cet exercice avant de supprimer cette ligne" shouldBe __
   }
   // TIP1: une valeur (val) ne peut pas être modifiée
   // TIP2: si on ne peut pas modifier un objet, alors il faut en créer un nouveau

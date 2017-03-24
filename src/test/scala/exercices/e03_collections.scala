@@ -9,8 +9,6 @@ import scala.language.postfixOps
 
 class e03_collections extends HandsOnSuite {
 
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e03_collections.scala
-
   /**
     * Passons maintenant aux collections...
     *

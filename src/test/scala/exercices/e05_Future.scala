@@ -9,8 +9,6 @@ import scala.util.{Failure, Success}
 
 class e05_Future extends HandsOnSuite {
 
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e05_Future.scala
-
   /**
     * Future[T] est un type conteneur, qui resprésente le résultat d'un calcul qui sera disponible dans le futur,
     * ce type est très utilisé pour la programation concurrente et asynchrone,

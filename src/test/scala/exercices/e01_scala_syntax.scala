@@ -6,9 +6,7 @@ import scala.language.postfixOps
 
 class e01_scala_syntax extends HandsOnSuite {
   /**
-    * Avant de commencer :
-    *   - installe l'environnement nécessaire, (cf `prérequis.md`)
-    *   - lis la présentation d'introduction (cf `docs/slides.html`)
+    * Lire le fichier `getting_started.md` avant de démarrer
     */
 
   /**
@@ -30,10 +28,10 @@ class e01_scala_syntax extends HandsOnSuite {
     * Par ailleurs, pour laisser de côté un exercice, il suffit de remplacer `exercice("...")` par `ignore("...")`
     *
     * Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
-    *   - Alt + Egal : accéder au type de l'expression sélectionnée
+    *   - accéder au type de l'expression sélectionnée
+    *     - Mac           : Alt + Enter
+    *     - Windows/Linux : Alt + Egal
     */
-
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e01_scala_syntax.scala
 
   exercice("Déclarer une variable") {
     // permet de déclarer une variable

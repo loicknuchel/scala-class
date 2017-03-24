@@ -8,8 +8,6 @@ import scala.concurrent.Future
 
 class e06_Monad extends HandsOnSuite {
 
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e06_Monad.scala
-
   /**
     * En Scala, enchaîner flatMap suivi de map, est un pattern très récurrent, il existe donc le for-comprehension
     * qui est un sucre syntaxique pour enchaîner des opérations de flatMap et map.

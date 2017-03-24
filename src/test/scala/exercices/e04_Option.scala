@@ -5,8 +5,6 @@ import support.HandsOnSuite
 
 class e04_Option extends HandsOnSuite {
 
-  // Solutions de l'exercice (en cas de besoin) : https://github.com/loicknuchel/scala-class/blob/solution/src/test/scala/exercices/e04_Option.scala
-
   /**
     * Option
     *
