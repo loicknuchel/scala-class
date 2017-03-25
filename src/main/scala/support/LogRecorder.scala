@@ -49,18 +49,20 @@ object LogRecorder {
     }
 
   def analyse(logs: List[Log]): String = {
-    def duration(logs: List[Log]): String = {
-      val times = logs.map(_.time.getMillis)
-      ((times.max - times.min) / 1000 / 60) + " min"
-    }
+    def durations(logs: List[Log]): List[(Log, Long)] =
+      logs.sliding(2).map { case before :: after :: Nil =>
+        (before, after.time.getMillis - before.time.getMillis)
+      }.filter(_._2 < 1000 * 60 * 15).toList
 
-    def errors(logs: List[Log]): String = {
-      logs.count(_.status == "error") + " erreurs"
-    }
+    def duration(logs: List[(Log, Long)]): String =
+      (logs.map(_._2).sum / 1000 / 60) + " min"
 
-    logs.groupBy(_.suite).map { case (suite, suiteLogs) =>
+    def errors(logs: List[(Log, Long)]): String =
+      logs.count(_._1.status == "error") + " erreurs"
+
+    durations(logs).groupBy(_._1.suite).map { case (suite, suiteLogs) =>
       s"$suite: ${duration(suiteLogs)}, ${errors(suiteLogs)}\n" +
-        suiteLogs.groupBy(_.test).map { case (test, testLogs) =>
+        suiteLogs.groupBy(_._1.test).map { case (test, testLogs) =>
           s"  $test: ${duration(testLogs)}, ${errors(testLogs)}"
         }.toList.mkString("\n")
     }.toList.sorted.mkString("\n")

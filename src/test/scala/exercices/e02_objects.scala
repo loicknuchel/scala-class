@@ -134,7 +134,7 @@ class e02_objects extends HandsOnSuite {
       object User {
         def fromFullName(fullName: String): User = {
           val parts = fullName.split(" ")
-          User(parts.head, parts.tail.mkString(" "))
+          User(parts(0), parts(1))
         }
       }
       case class User(firstName: String, lastName: String)
@@ -327,7 +327,7 @@ class e02_objects extends HandsOnSuite {
     }
 
     exercice("extraire une expression régulière") {
-      val regex = "Point\\((\\d+),(\\d+)\\)".r
+      val regex = """Point\((\d+),(\d+)\)""".r
       val result = "Point(1,3)" match {
         case regex(x, y) => s"Match $x, $y"
         case _ => "No match"
