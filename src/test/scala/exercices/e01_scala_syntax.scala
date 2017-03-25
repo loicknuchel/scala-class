@@ -13,7 +13,7 @@ class e01_scala_syntax extends HandsOnSuite {
     * Introduction
     *
     * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet;
-    * et ces deux paradigmes fonctionnent très bien ensembles !
+    * et ces deux paradigmes fonctionnent très bien ensemble !
     * Il est possible d'écrire du code Scala très proche du code Java mais ce n'est pas vraiment l'idée du siècle...
     * Dans ce handson on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et objet.
     *
@@ -107,7 +107,7 @@ class e01_scala_syntax extends HandsOnSuite {
       s2 shouldBe __
       s3 shouldBe __
     }
-    // PS: les parenthèses sont souvent omises lorsque la fonction ne prends pas de paramètres (ex: toString)
+    // PS: les parenthèses sont souvent omises lorsque la fonction ne prend pas de paramètres (ex: toString)
     // le reste du temps, mieux vaut conserver les . et () pour plus de clarté
   }
 
@@ -156,7 +156,7 @@ class e01_scala_syntax extends HandsOnSuite {
 
   section("Astuces pratiques") {
     // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
-    // Il est alors facile de se tromper dans l'ordre et assez difficile ensuite trouver le bug
+    // Il est alors facile de se tromper dans l'ordre et assez difficile de ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
 
     exercice("paramètres nommés") {

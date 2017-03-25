@@ -3,6 +3,7 @@
 ## Configurer l'environnement
 
 1. Installer (si nécessaire) Java 8 ([Téléchargement](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), Installation [Windows](http://www.objis.com/formation-java/tutoriel-java-installation-jdk.html) [Mac](http://www.wikihow.com/Install-the-JDK-(Java-Development-Kit)-on-a-Mac) [Linux](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/))
+    - pour vérifier si Java est installé, ouvrir le terminal/invite de commande et taper `java -version`
 2. Télécharger le Hand's on : [https://github.com/loicknuchel/scala-class](https://github.com/loicknuchel/scala-class)
     - via git clone
     - via zip (bouton vert à droite)
@@ -50,7 +51,7 @@ Voici un exemple du contenu du terminal :
 
 Il affiche l'endroit à modifier pour avancer :
 
-- le nom et ligne du fichier est en bas
+- le nom et ligne du fichier sont en bas
 - la flèche `->` indique précisément la ligne en question
 - la ligne entre le titre et le code indique ce qu'il faut faire :
     - remplacer `__` par une valeur

@@ -14,11 +14,11 @@ Si tout se passe bien le terminal devrait afficher :
 
 ![handson-terminal](docs/assets/handson-terminal.png)
 
-Comme l'indique la dernière ligne, cette commande lance les tests puis attends des modifications dans les fichiers pour les lancer à nouveau.
+Comme l'indique la dernière ligne, cette commande lance les tests puis attend des modifications dans les fichiers pour les lancer à nouveau.
 
 Des exercices plus avancés sont disponibles avec la commande `./handson bonus` \o/
 
-## Resource
+## Ressources
 
 Les [slides](docs/slides.html) présentés en début sont accessibles dans le dossier `docs/`.
 
