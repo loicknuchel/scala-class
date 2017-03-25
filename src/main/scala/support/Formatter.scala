@@ -14,25 +14,30 @@ object Formatter {
     private val failureLine = "!" * width
     private val assertFailRegex = "(.*) was not equal to (.*)".r
 
-    def formatHeader(testName: String, pending: Boolean): String = {
+    def formatHeader(testName: String, pending: Boolean, errOpt: Option[MyException]): String = {
       val line = if (pending) pendingLine else failureLine
       val text = if (pending) "EXERCICE" else "ERREUR"
-      s"\n$line\n" +
-        s"${Utils.padCenter(text + ": " + testName, width)}\n" +
-        s"$line\n"
+      errOpt match {
+        case Some(_: MyTestPauseException) => s"\n$line\n"
+        case _ =>
+          s"\n$line\n" +
+            s"${Utils.padCenter(text + ": " + testName, width)}\n" +
+            s"$line\n"
+      }
     }
 
     def formatMessage(message: Option[String]): String =
       message.map {
         // should show 'result' or 'expeced' depending on ??? or __ but I can't know because they were removed :(
-        case assertFailRegex(result, expected) => s"\nRésultat incorrect :("
-        case m => "\n" + m
+        case assertFailRegex(result, expected) => s"\nRésultat incorrect :(\n"
+        case m => "\n" + m + "\n"
       }.getOrElse("")
 
     def formatCode(ctx: TestContext, errors: Option[List[Int]]): String =
       errors.map("\n" + Code.format(ctx, _) + "\n").getOrElse("")
 
     def formatStackTrace(err: MyException): String = err match {
+      case _: MyTestPauseException => ""
       case _: MyTestPendingException => ""
       case _: MyNotImplementedException => ""
       case _: MyTestFailedException => ""
@@ -46,9 +51,9 @@ object Formatter {
     def format(suiteName: String, testName: String, errOpt: Option[MyException], pending: Boolean): String = {
       LogRecorder.log(suiteName, testName, errOpt)
       val sb = new StringBuilder()
-      sb.append(formatHeader(testName, pending))
+      sb.append(formatHeader(testName, pending, errOpt))
       errOpt.foreach(err => {
-        sb.append(formatMessage(Option(err.getMessage)))
+        sb.append(formatMessage(err.message))
         sb.append(formatCode(err.ctx, err.errors))
         sb.append(formatStackTrace(err))
       })
@@ -65,14 +70,14 @@ object Formatter {
       lines.map { case (lineNumber, codeLine) => formatLine(lineNumber, codeLine, lineNumber == error) }
 
     def formatError(ctx: TestContext, error: Int): String =
-      "\n" + formatBlock(ctx.lines.slice(error - 2, error + 1), error).mkString("\n")
+      formatBlock(ctx.lines.slice(error - 2, error + 1), error).mkString("\n")
 
     def formatTest(ctx: TestContext, error: Int): String =
-      "\n" + formatBlock(ctx.lines.slice(ctx.startLine - 1, ctx.endLine + 1), error).mkString("\n")
+      formatBlock(ctx.lines.slice(ctx.startLine - 1, ctx.endLine + 1), error).mkString("\n")
 
     def format(ctx: TestContext, errors: List[Int]): String = {
       val (inTest, outTest) = errors.partition(line => ctx.startLine <= line && line <= ctx.endLine)
-      val formattedTest = if(inTest.nonEmpty) formatTest(ctx, inTest.min) else ""
+      val formattedTest = if (inTest.nonEmpty) formatTest(ctx, inTest.min) else ""
       val formattedErrors = outTest.sorted.map(i => formatError(ctx, i)).mkString("\n")
       val split = if (formattedErrors.isEmpty) "" else "\n          ..."
       formattedErrors + split + formattedTest

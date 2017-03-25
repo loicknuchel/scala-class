@@ -9,6 +9,7 @@ class CustomReporter(other: Reporter) extends Reporter {
       case e: TestFailed =>
         e.throwable match {
           case Some(err: MyTestFailedException) => sendInfo(e, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = false), false)
+          case Some(err: MyTestPauseException) => sendInfo(e, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
           case Some(err: MyTestPendingException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
           case Some(err: MyNotImplementedException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
           case Some(err: MyException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = false), false)
@@ -20,9 +21,9 @@ class CustomReporter(other: Reporter) extends Reporter {
       case e: InfoProvided =>
         if (e.formatter.isDefined) other(event)
       case _: SuiteCompleted | _: SuiteStarting | _: RunCompleted | _: RunStopped | _: TestStarting | _: TestSucceeded =>
-        other(event)
+        //other(event)
       case _ =>
-        other(event)
+        //other(event)
     }
   }
 

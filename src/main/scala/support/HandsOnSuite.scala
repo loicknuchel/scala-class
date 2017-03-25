@@ -18,6 +18,8 @@ trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
 
   def await[T](awaitable: Awaitable[T]): T = Await.result(awaitable, timeout)
 
+  def DeleteMeToContinue(message: String) = throw new PauseException(message)
+
   def __ : Matcher[Any] = throw new TestPendingException
 
   def section = describe _
@@ -29,6 +31,7 @@ trait HandsOnSuite extends FunSpec with Matchers with ScalaFutures {
       try {
         testFun
       } catch {
+        case e: PauseException => throw MyException.pause(suite, ctx, e)
         case e: TestPendingException => throw MyException.pending(suite, ctx, e)
         case e: NotImplementedError => throw MyException.notImplemented(suite, ctx, e)
         case e: TestFailedException => throw MyException.failed(suite, ctx, e)

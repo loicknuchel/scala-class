@@ -12,6 +12,7 @@ class HandsOn extends Spec {
 
 class HandsOnScala extends HandsOn {
   override def nestedSuites = Vector(
+    new exercices.e00_start,
     new exercices.e01_scala_syntax,
     new exercices.e02_objects,
     new exercices.e03_collections,
@@ -20,12 +21,14 @@ class HandsOnScala extends HandsOn {
     new exercices.e06_Monad,
     new exercices.e07_HOF,
     new exercices.e08_Currying,
-    new exercices.e09_implicit
+    new exercices.e09_implicit,
+    new exercices.end
   )
 }
 
 class HandsOnBonus extends HandsOn {
   override def nestedSuites = Vector(
+    new exercices.e00_start,
     new exercices.e01_scala_syntax,
     new exercices.e02_objects,
     new bonus.e02_objects,
@@ -38,6 +41,7 @@ class HandsOnBonus extends HandsOn {
     new exercices.e06_Monad,
     new exercices.e07_HOF,
     new exercices.e08_Currying,
-    new exercices.e09_implicit
+    new exercices.e09_implicit,
+    new exercices.end
   )
 }
