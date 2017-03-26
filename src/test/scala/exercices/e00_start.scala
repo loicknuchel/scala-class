@@ -13,6 +13,22 @@ class e00_start extends HandsOnSuite {
         |          \/     \/     \/          \/       \/          \/     \/     \/
         |
         |                  Bienvenue dans ce Hand's on Scala.
+        |
+        |
+        |  Dans ce handson il faudra remplir les trous :
+        |    - les `__` sont à remplacer par la valeur manquante
+        |    - les `???` sont à remplacer par une implémentation de code
+        |
+        |  Par ailleurs, pour laisser de côté un exercice, il suffit de remplacer `exercice("...")` par `ignore("...")`
+        |
+        |  Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
+        |    - accéder au type de l'expression sélectionnée
+        |       - Mac           : Alt + Enter
+        |       - Windows/Linux : Alt + Egal
+        |
+        |
+        |                  Have fun!
+        |                  
       """.stripMargin
     )
   }
