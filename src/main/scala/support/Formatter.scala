@@ -12,7 +12,7 @@ object Formatter {
     private val width = 60
     private val pendingLine = "*" * width
     private val failureLine = "!" * width
-    private val assertFailRegex = "(.*) was not equal to (.*)".r
+    private val assertFailRegex = "(?s)(.*) was not equal to (.*)".r
 
     def formatHeader(testName: String, pending: Boolean, errOpt: Option[MyException]): String = {
       val line = if (pending) pendingLine else failureLine

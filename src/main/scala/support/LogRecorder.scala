@@ -50,8 +50,9 @@ object LogRecorder {
 
   def analyse(logs: List[Log]): String = {
     def durations(logs: List[Log]): List[(Log, Long)] =
-      logs.sliding(2).map { case before :: after :: Nil =>
-        (before, after.time.getMillis - before.time.getMillis)
+      logs.sliding(2).flatMap {
+        case before :: after :: Nil => Some((before, after.time.getMillis - before.time.getMillis))
+        case _ => None
       }.filter(_._2 < 1000 * 60 * 15).toList
 
     def duration(logs: List[(Log, Long)]): String =
