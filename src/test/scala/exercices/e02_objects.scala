@@ -155,19 +155,16 @@ class e02_objects extends HandsOnSuite {
         def trigramme(firstName: String, lastName: String): String =
           (firstName.substring(0, 1) + lastName.substring(0, 2)).toLowerCase
       }
-      case class User(firstName: String, lastName: String)
       case class Person(firstName: String, lastName: String) {
         def initials(): String = Person.initials(this)
 
         def trigramme(): String = Person.trigramme(firstName, lastName)
       }
 
-      val user = User("Jean", "Dupont")
       val person = Person("Jeanne", "Michu")
       person.initials shouldBe __
       person.trigramme shouldBe __
       Person.trigramme("Jean-Claude", "Convenant") shouldBe __
-      Person.trigramme(user.firstName, user.lastName) shouldBe __
     }
   }
 
@@ -249,26 +246,15 @@ class e02_objects extends HandsOnSuite {
 
 
   /**
-    * Le pattern matching est un mécanisme similaire aux `switch` d'autres langages mais en étant bien plus puissant.
+    * Le pattern matching est un mécanisme similaire au `switch` dans d'autres langages mais en étant bien plus puissant.
     * Par ailleurs, comme en Scala toute expression retroue une valeur, c'est aussi le cas du pattern matching
     */
   section("Le pattern matching") {
-    // Commençons par du classique...
-    exercice("cas basique") {
-      val result = "B" match {
-        case "A" => "it's A"
-        case "B" => "B wins"
-        case "C" => "C is best"
-      }
-      result shouldBe __
-    }
-
-    // On peut ajouter un catch-all avec un case "sans condition"
-    // c'est le cas des deux derniers, le premier capturant la valeur (in) et l'autre non
-    // on voit ici que l'ordre compte, le premier qui est satisfait est sélectionné
+    // L'ordre des `case` compte, le premier qui correspond est sélectionné
     exercice("cas général") {
       val result = "Z" match {
-        case "D" => "Hello D"
+        case "A" => "it's A"
+        case "B" => "B wins"
         case in: String => "Catched " + in
         case _ => "Fallback"
       }

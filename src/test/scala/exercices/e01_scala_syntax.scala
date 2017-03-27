@@ -36,15 +36,13 @@ class e01_scala_syntax extends HandsOnSuite {
   exercice("Déclarer une variable") {
     // permet de déclarer une variable
     var variable: Int = 5
+    variable = 42 // on peut réassigner une variable
+    //variable = true // le type ne doit pas changer
+    variable shouldBe __
 
     // permet de déclarer une valeur (= constante)
     val constant: String = "abc"
-
-    variable = 42 // on peut réassigner une variable
     //constant = "def" // mais pas une valeur
-    //variable = true // le type ne doit pas changer
-
-    variable shouldBe __
     constant shouldBe __
   }
 
@@ -158,7 +156,6 @@ class e01_scala_syntax extends HandsOnSuite {
     // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
     // Il est alors facile de se tromper dans l'ordre et assez difficile de ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
-
     exercice("paramètres nommés") {
       def buildReference(project: String, branch: String, commit: String, shortForm: Boolean): String =
         if (shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"

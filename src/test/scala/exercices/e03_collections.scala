@@ -58,7 +58,6 @@ class e03_collections extends HandsOnSuite {
       numbers == other shouldBe __
       numbers eq other shouldBe __
       empty == numbers shouldBe __
-      empty == numbers.tail.tail.tail shouldBe __
     }
 
     exercice("opérations basiques") {
@@ -224,13 +223,8 @@ class e03_collections extends HandsOnSuite {
       val nums = List("1", "foo", "3")
       nums.map(toInt) shouldBe __
       nums.flatMap(toInt) shouldBe __
-
       Some("2").map(toInt) shouldBe __
       Some("2").flatMap(toInt) shouldBe __
-      Some("a").map(toInt) shouldBe __
-      Some("a").flatMap(toInt) shouldBe __
-      None.map(toInt) shouldBe __
-      None.flatMap(toInt) shouldBe __
     }
 
     def toInt(s: String): Option[Int] = {
@@ -300,19 +294,13 @@ class e03_collections extends HandsOnSuite {
     val speakerId = "09a79f4e4592cf77e5ebf0965489e6c7ec0438cd"
 
     def frenchPercentageOfTalks(): Int = ???
-    def fetchTalk(id: TalkId): Option[Talk] = ???
     def fetchSpeakerTalks(id: SpeakerId): List[Talk] = ???
-    def talkSpeakers(id: TalkId): List[Speaker] = ???
     def roomSchedule(id: RoomId): List[(Long, Long, TalkId)] = ???
-    def findSpeaker(id: SpeakerId, time: Long): Option[Room] = ???
 
     exercice("fetch") {
       frenchPercentageOfTalks() shouldBe 90
-      fetchTalk(talkId).map(_.title) shouldBe Some(talkTitle)
       fetchSpeakerTalks(speakerId).map(_.id) shouldBe List(talkId)
-      talkSpeakers(talkId).map(_.firstName).sorted shouldBe List("Fabrice", "Loïc", "walid")
       roomSchedule("par224M-225M").length shouldBe 5
-      findSpeaker(speakerId, 1491491200000L).map(_.id) shouldBe Some("par224M-225M")
     }
   }
 }
