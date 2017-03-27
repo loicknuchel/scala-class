@@ -156,11 +156,13 @@ class e01_scala_syntax extends HandsOnSuite {
     // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
     // Il est alors facile de se tromper dans l'ordre et assez difficile de ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
-    exercice("paramètres nommés") {
-      def buildReference(project: String, branch: String, commit: String, shortForm: Boolean): String =
-        if (shortForm) s"$project~$branch~${commit.substring(0, 7)}" else s"$project~$branch~$commit"
+    // Il est aussi possible de définir des paramètres par défaut lorsqu'il y a une valeur "évidente"
+    // mais attention à ne pas en abuser ;)
+    exercice("paramètres nommés et paramètre par défaut") {
+      def buildReference(project: String, branch: String, commit: String, shortForm: Boolean = true): String =
+        if (shortForm) s"$project~$branch" else s"$project~$branch~$commit"
 
-      val ref1 = buildReference("scala-class", "problems", "cd959defd71f36f822dbd741085696b508549763", true)
+      val ref1 = buildReference("scala-class", "problems", "cd959defd71f36f822dbd741085696b508549763")
       val ref2 = buildReference(
         shortForm = false,
         project = "scala-class",
@@ -169,18 +171,6 @@ class e01_scala_syntax extends HandsOnSuite {
       )
       ref1 shouldBe __
       ref2 shouldBe __
-    }
-
-    // Il est aussi possible de définir des paramètres par défaut lorsqu'il y a une valeur "évidente"
-    // mais attention à ne pas en abuser ;)
-    exercice("paramètre par défaut") {
-      def push(commit: String, remote: String = "origin", branch: String = "master"): String =
-        s"push $commit $remote $branch"
-
-      push("123") shouldBe __
-      push("123", "gh") shouldBe __
-      push("123", "gh", "dev") shouldBe __
-      push("123", branch = "dev") shouldBe __
     }
   }
 }
