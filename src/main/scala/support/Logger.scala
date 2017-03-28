@@ -6,7 +6,7 @@ import support.Helpers._
 
 import scala.io.Source
 import scala.tools.nsc.io.File
-import scala.util.{Failure, Success}
+import scala.util.{Failure, Success, Try}
 
 case class Log(
                 file: String,
@@ -16,18 +16,18 @@ case class Log(
                 status: String
               )
 
-object LogRecorder {
-  val logFile: String = "logs.json"
-  val recording: Boolean = true
+object Logger {
+  val config = Config.Logger
 
   def log(suiteName: String, testName: String, errOpt: Option[MyException]): Unit = {
-    if (recording) {
+    if (config.enabled) {
       val log = Log(
         file = errOpt.flatMap(_.fileName).getOrElse("unknown"),
         suite = suiteName,
         test = testName,
         time = new DateTime(),
         status = errOpt match {
+          case Some(err: MyTestPauseException) => "pending"
           case Some(err: MyTestPendingException) => "pending"
           case Some(err: MyNotImplementedException) => "pending"
           case Some(err: MyTestFailedException) => "error"
@@ -36,17 +36,19 @@ object LogRecorder {
           case _ => "unknown"
         }
       )
-      File(logFile).appendAll(asJson(log) + "\n")
+      new java.io.File(config.file).getParentFile.mkdirs()
+      File(config.file).appendAll(asJson(log) + "\n")
     }
   }
 
-  def read(): List[Log] =
-    Source.fromFile(logFile).getLines().toList.zipWithIndex.flatMap { case (json, index) =>
+  def read(): List[Log] = Try {
+    Source.fromFile(config.file).getLines().toList.zipWithIndex.flatMap { case (json, index) =>
       parseJson[Log](json) match {
         case Success(log) => Some(log)
         case Failure(err) => println(s"WARN at line ${index + 1}: " + err.getMessage); None
       }
     }
+  }.getOrElse(List())
 
   def analyse(logs: List[Log]): String = {
     def durations(logs: List[Log]): List[(Log, Long)] =
@@ -73,6 +75,7 @@ object LogRecorder {
     println("Analyse des logs:\n" + analyse(read()))
   }
 
+  // because circe do pretty print...
   private def asJson(log: Log): String =
     s"""{"file":"${log.file}","suite":"${log.suite}","test":"${log.test}","time":"${log.time}","status":"${log.status}"}"""
 }

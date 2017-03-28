@@ -49,7 +49,7 @@ object Formatter {
         fileName.map(_ + "\n").getOrElse("")
 
     def format(suiteName: String, testName: String, errOpt: Option[MyException], pending: Boolean): String = {
-      LogRecorder.log(suiteName, testName, errOpt)
+      Logger.log(suiteName, testName, errOpt)
       val sb = new StringBuilder()
       sb.append(formatHeader(testName, pending, errOpt))
       errOpt.foreach(err => {
