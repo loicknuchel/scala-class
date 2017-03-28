@@ -16,12 +16,10 @@ class HandsOnScala extends HandsOn {
     new exercices.e01_scala_syntax,
     new exercices.e02_objects,
     new exercices.e03_collections,
-    new exercices.e04_Option,
-    new exercices.e05_Future,
-    new exercices.e06_Monad,
-    new exercices.e07_HOF,
-    new exercices.e08_Currying,
-    new exercices.e09_implicit,
+    new exercices.e04_types_fonctionnels,
+    new exercices.e05_HOF,
+    new exercices.e06_Currying,
+    new exercices.e07_implicit,
     new exercices.end
   )
 }
@@ -34,14 +32,11 @@ class HandsOnBonus extends HandsOn {
     new bonus.e02_objects,
     new exercices.e03_collections,
     new bonus.e03_collections,
-    new exercices.e04_Option,
-    new bonus.e04_Try,
-    new exercices.e05_Future,
-    new bonus.e05_Either,
-    new exercices.e06_Monad,
-    new exercices.e07_HOF,
-    new exercices.e08_Currying,
-    new exercices.e09_implicit,
+    new exercices.e04_types_fonctionnels,
+    new bonus.e04_types_fonctionnels,
+    new exercices.e05_HOF,
+    new exercices.e06_Currying,
+    new exercices.e07_implicit,
     new exercices.end
   )
 }
