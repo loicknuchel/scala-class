@@ -2,7 +2,7 @@ package exercices
 
 import support.HandsOnSuite
 
-class e08_Currying extends HandsOnSuite {
+class e06_Currying extends HandsOnSuite {
 
 
   /**

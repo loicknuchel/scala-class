@@ -5,7 +5,7 @@ import support.HandsOnSuite
 
 import scala.language.implicitConversions
 
-class e09_implicit extends HandsOnSuite {
+class e07_implicit extends HandsOnSuite {
   /**
     * Une des fonctionnalité intéressante du langage Scala est l'utilisation d'implicites.
     *
