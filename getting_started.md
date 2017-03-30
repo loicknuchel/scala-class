@@ -1,5 +1,7 @@
 # Lancer le Hand's on
 
+:warning: Le processus de checkout et d'installation de l’environnement  prend du temps, ainsi, pour le bon déroulement du hands-on, il est primordiale de le faire en amont.
+
 ## Configurer l'environnement
 
 1. Installer (si nécessaire) Java 8 ([Téléchargement](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), Installation [Windows](http://www.objis.com/formation-java/tutoriel-java-installation-jdk.html) [Mac](http://www.wikihow.com/Install-the-JDK-(Java-Development-Kit)-on-a-Mac) [Linux](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/))
@@ -18,6 +20,7 @@ Cela téléchargera l'ensemble des dépendances nécessaires. A la fin vous aure
 4. Installer un éditeur de texte/IDE
     - [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/) (puissant mais plus compliqué à configurer)
         - Télécharger et installer
+        - Durant le premier lancement intellij va proposer l'installation de d’autres plugin. installer le plugin Scala
         - Ouvrir le projet : File > Open
         - Sélectionner le fichier `build.sbt` dans le dossier et cliquer sur `Ouvrir comme un projet`
         - Sélectionner le JDK 1.8 et ajouter configurer le SDK Scala (`setup Scala SDK`) comme le suggère IntelliJ
