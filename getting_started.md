@@ -20,7 +20,7 @@ Cela téléchargera l'ensemble des dépendances nécessaires. A la fin vous aure
 4. Installer un éditeur de texte/IDE
     - [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/) (puissant mais plus compliqué à configurer)
         - Télécharger et installer
-        - Durant le premier lancement intellij va proposer l'installation de d’autres plugin. installer le plugin Scala
+        - Durant le premier lancement intellij va proposer l'installation des plugins. sélectionner le plugin Scala
         - Ouvrir le projet : File > Open
         - Sélectionner le fichier `build.sbt` dans le dossier et cliquer sur `Ouvrir comme un projet`
         - Sélectionner le JDK 1.8 et ajouter configurer le SDK Scala (`setup Scala SDK`) comme le suggère IntelliJ
