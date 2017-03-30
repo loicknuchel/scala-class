@@ -1,6 +1,6 @@
 # Lancer le Hand's on
 
-:warning: Le processus de checkout et d'installation de l’environnement  prend du temps, ainsi, pour le bon déroulement du hands-on, il est primordiale de le faire en amont.
+:warning: Le processus de checkout et d'installation de l’environnement  prend du temps, alors, pour le bon déroulement du hands-on, il est primordiale de le faire en amont.
 
 ## Configurer l'environnement
 
