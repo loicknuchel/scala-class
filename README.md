@@ -24,8 +24,8 @@ Les [slides](docs/slides.html) présentés en début sont accessibles dans le do
 
 Ce dossier contient aussi un fichier [resources.md](docs/resources.md) qui listes des références pour aller plus loin avec Scala :)
 
-## Remerciement
+## Remerciements
 
 Ce Hand's on est inspiré de [dans s'cas là](https://github.com/mchataigner/dan-scala)
 
-Un grand merci à Ludwine Probst [@nivdul](https://twitter.com/nivdul), Mathieu Chataigner [@mchataigner](https://twitter.com/mchataigner), Jonathan Winandy [@ahoy_jon](https://twitter.com/ahoy_jon), Jean Helou [@jeanhelou](https://twitter.com/jeanhelou) pour leur travail initial.
+Un grand merci à Ludwine Probst [@nivdul](https://twitter.com/nivdul), Mathieu Chataigner [@mchataigner](https://twitter.com/mchataigner), Jonathan Winandy [@ahoy_jon](https://twitter.com/ahoy_jon) et Jean Helou [@jeanhelou](https://twitter.com/jeanhelou) pour leur travail initial.
