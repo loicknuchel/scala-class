@@ -23,3 +23,9 @@ Des exercices plus avancés sont disponibles avec la commande `./handson bonus` 
 Les [slides](docs/slides.html) présentés en début sont accessibles dans le dossier `docs/`.
 
 Ce dossier contient aussi un fichier [resources.md](docs/resources.md) qui listes des références pour aller plus loin avec Scala :)
+
+## Remerciement
+
+Ce Hand's on est inspiré de [dans s'cas là](https://github.com/mchataigner/dan-scala)
+
+Un grand merci à Ludwine Probst [@nivdul](https://twitter.com/nivdul), Mathieu Chataigner [@mchataigner](https://twitter.com/mchataigner), Jonathan Winandy [@ahoy_jon](https://twitter.com/ahoy_jon), Jean Helou [@jeanhelou](https://twitter.com/jeanhelou) pour leur travail initial.
