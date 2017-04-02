@@ -22,29 +22,26 @@ class e05_fonction_dordre_superieur extends HandsOnSuite {
       * Pour cet exercice nous allons nous mettre dans la peau d'un banquier.
       * Pour cela, nous allons définir notre modèle métier
       */
-    object Banque {
 
-      /** Cette case classe représente un compte */
-      case class Compte(solde: Double)
+    /** Cette case classe représente un compte */
+    object Compte {
+      /** Ici deux fonctions représentent des opérations que l'on peut faire sur un compte */
+      def debit(cpt: Compte, montant: Double): Compte = Compte(cpt.solde - montant)
 
-      object Compte {
-        /** Ici deux fonctions représentent des opérations que l'on peut faire sur un compte */
-        def debit(cpt: Compte, montant: Double): Compte = Compte(cpt.solde - montant)
-
-        def credit(cpt: Compte, montant: Double): Compte = Compte(cpt.solde + montant)
-      }
-
-      /**
-        * Maintenant on va pouvoir créer un compte et faire des opérations dessus
-        */
-
-      val cpt = Compte(10)
-
-      import Compte._
-
-      debit(cpt, 5) shouldBe __
-      credit(cpt, 10) shouldBe __
+      def credit(cpt: Compte, montant: Double): Compte = Compte(cpt.solde + montant)
     }
+    case class Compte(solde: Double)
+
+    /**
+      * Maintenant on va pouvoir créer un compte et faire des opérations dessus
+      */
+
+    val cpt = Compte(10)
+
+    import Compte._
+
+    debit(cpt, 5).solde shouldBe __
+    credit(cpt, 10).solde shouldBe __
   }
   /**
     * on remarque que si une nouvelle opération devait être rajoutée sur le compte cela passerait

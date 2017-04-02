@@ -3,6 +3,7 @@ package exercices
 import models.devoxx.{DevoxxApi, Speaker, Talk}
 import support.HandsOnSuite
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import scala.util.{Success, Try}
 

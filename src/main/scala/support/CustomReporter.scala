@@ -8,10 +8,10 @@ class CustomReporter(other: Reporter) extends Reporter {
     event match {
       case e: TestFailed =>
         e.throwable match {
-          case Some(err: MyTestFailedException) => sendInfo(e, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = false), false)
           case Some(err: MyTestPauseException) => sendInfo(e, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
           case Some(err: MyTestPendingException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
           case Some(err: MyNotImplementedException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = true), true)
+          case Some(err: MyTestFailedException) => sendInfo(e, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = false), false)
           case Some(err: MyException) => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, Some(err), pending = false), false)
           case Some(err) => println("something went wrong (" + err.getClass.getCanonicalName + ")")
           case None => sendInfo(event, Formatter.formatInfo(e.suiteName, e.testName, None, pending = false), false)
@@ -29,9 +29,10 @@ class CustomReporter(other: Reporter) extends Reporter {
 
   def sendInfo(event: Event, info: String, pending: Boolean): Unit = {
     if(pending) {
-      other(InfoProvided(event.ordinal, info, None, None, Some(IndentedText(info, info, 0)), event.location, event.payload, event.threadName, event.timeStamp))
+      other(InfoProvided(event.ordinal, "", None, None, Some(IndentedText(info, "", 0)), event.location, event.payload, event.threadName, event.timeStamp))
     } else {
-      other(AlertProvided(event.ordinal, info, None, None, Some(IndentedText(info, info, 0)), event.location, event.payload, event.threadName, event.timeStamp))
+      // TODO : AlertProvided do not work anymore :(
+      other(InfoProvided(event.ordinal, "", None, None, Some(IndentedText(info, "", 0)), event.location, event.payload, event.threadName, event.timeStamp))
     }
 
     event.ordinal.nextNewOldPair._2.next
