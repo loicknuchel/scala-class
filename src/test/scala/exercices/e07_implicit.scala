@@ -156,23 +156,19 @@ class e07_implicit extends HandsOnSuite {
   }
 
   /**
-    * Quelques exemples réels d'utilisation des implicites :
+    * Pour aller plus loin avec les implicites, voici un article qui détaille leur fonctionnement et utilisation :
+    *
+    *   http://www.lihaoyi.com/post/ImplicitDesignPatternsinScala.html
     *
     *
-    * - Paramètre implicite :
+    * Et voici quelques exemples réels de leur utilisation :
     *
-    *   Play framework pour gérer l'encodage
+    * - Paramètre implicite : Play framework pour gérer l'encodage
+    *     code: https://github.com/playframework/playframework/blob/38abd1ca6d17237950c82b1483057c5c39929cb4/framework/src/play/src/main/scala/play/utils/PlayIO.scala#L53
+    *     codec doc: https://www.scala-lang.org/api/current/scala/io/Codec.html
+    *     L'objet codec permet de spéifier l'encodage et est automatiquement passé en paramètre via les implicites
     *
-    * code: https://github.com/playframework/playframework/blob/38abd1ca6d17237950c82b1483057c5c39929cb4/framework/src/play/src/main/scala/play/utils/PlayIO.scala#L53
-    * codec doc: https://www.scala-lang.org/api/current/scala/io/Codec.html
-    *
-    * L'objet codec permet de spéifier l'encodage et est automatiquement passé en paramètre via les implicites
-    *
-    *
-    * - Classe implicite :
-    *
-    *   Play framework pour ajouter un timeout sur un Future
-    *
-    * code: https://github.com/playframework/playframework/blob/afcda67c5cada258a662f77c58f57ead3ecfbac8/framework/src/play/src/main/scala/play/api/libs/concurrent/Timeout.scala#L90
+    * - Classe implicite : Play framework pour ajouter un timeout sur un Future
+    *     code: https://github.com/playframework/playframework/blob/afcda67c5cada258a662f77c58f57ead3ecfbac8/framework/src/play/src/main/scala/play/api/libs/concurrent/Timeout.scala#L90
     */
 }

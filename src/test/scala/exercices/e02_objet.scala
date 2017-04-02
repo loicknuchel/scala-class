@@ -2,7 +2,7 @@ package exercices
 
 import support.HandsOnSuite
 
-class e02_objects extends HandsOnSuite {
+class e02_objet extends HandsOnSuite {
 
   /**
     * Scala est bien connu pour son aspect fonctionnel (et nous le verrons un peu plus loin)
@@ -81,8 +81,7 @@ class e02_objects extends HandsOnSuite {
     *     - equals / hashcode : égalité structurelle : tous les membres doivent être égaux pour que les classes soient égales
     *     - toString          : affiche le nom de la classe et son contenu plutôt que son adresse mémoire
     *     - copy              : permet de créer une nouvelle classe en modifiant quelques attributs
-    *     - eq                : permet de tester une égalité de référence
-    *   - ne nécessite pas de mot clé `new` à l'instantiation
+    *   - ne nécessite pas de mot clé `new` à l'instantiation (cf bonus, avec apply/unapply)
     *   - les attributs sont `public val` par défaut (au lieu de `private val` pour les classes "normales")
     *
     * Toutes ces particularités rendent les case class très pratiques pour modéliser les données d'une application

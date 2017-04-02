@@ -4,7 +4,7 @@ import support.HandsOnSuite
 
 import scala.language.postfixOps
 
-class e01_scala_syntax extends HandsOnSuite {
+class e01_syntaxe extends HandsOnSuite {
   /**
     * Lire le fichier `getting_started.md` avant de démarrer
     */
@@ -12,11 +12,13 @@ class e01_scala_syntax extends HandsOnSuite {
   /**
     * Introduction
     *
-    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet;
+    * Scala est un langage basé sur la JVM qui favorise la programmation fonctionnelle aussi bien que l'orienté objet,
     * et ces deux paradigmes fonctionnent très bien ensemble !
     * Il est possible d'écrire du code Scala très proche du code Java mais ce n'est pas vraiment l'idée du siècle...
     * Dans ce handson on verra comment écrire du code Scala qui tire le meilleur parti de la programmation fonctionnelle et objet.
     *
+    * A noter aussi que Scala encourage fortement à écrire du code immuable.
+    * Globalement on écrira du code code mutable qu'en dernier recours.
     * De manière simple, si le code est immuable, il y a de bonnes chances pour qu'il ne soit pas si mauvais ;)
     *
     *
@@ -28,22 +30,25 @@ class e01_scala_syntax extends HandsOnSuite {
     *
     * Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
     *   - accéder au type de l'expression sélectionnée
-    *     - Mac           : Alt + Enter
     *     - Windows/Linux : Alt + Egal
+    *     - Mac           : Alt + Enter
+    *   - accéder à la déclaration d'une valeur/fonction/objet
+    *     - Windows/Linux : Ctrl + Click
+    *     - Mac           : Cmd + Click
     */
 
 
   exercice("Déclarer une variable") {
-    // permet de déclarer une variable
-    var variable: Int = 5
-    variable = 42 // on peut réassigner une variable
-    //variable = true // le type ne doit pas changer
-    variable shouldBe __
-
     // permet de déclarer une valeur (= constante)
     val constant: String = "abc"
     //constant = "def" // mais pas une valeur
     constant shouldBe __
+
+    // permet de déclarer une variable (à utiliser au minimum)
+    var variable: Int = 5
+    variable = 42 // on peut réassigner une variable
+    //variable = true // le type ne doit pas changer
+    variable shouldBe __
   }
 
 
@@ -59,7 +64,7 @@ class e01_scala_syntax extends HandsOnSuite {
   /**
     * Scala est un langage qui se veut concis. Il propose donc :
     *   - de l'inférence de type: le compilateur est capable de déterminer un type sans qu'on ait à le préciser
-    *   - return implicit: toute expression retourne une valeur, le mot clé `return` est donc souvent omis
+    *   - return implicit: toute expression retourne une valeur, le mot clé `return` est donc inutile, et déconseillé
     *   - les `;`, `()` et `.` sont facultatifs
     */
   section("Minimiser le boilerplate") {

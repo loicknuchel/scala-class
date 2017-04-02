@@ -2,7 +2,7 @@ package exercices
 
 import support.HandsOnSuite
 
-class e06_Currying extends HandsOnSuite {
+class e06_currying extends HandsOnSuite {
 
 
   /**
@@ -39,9 +39,9 @@ class e06_Currying extends HandsOnSuite {
     resultFinal shouldBe __
 
     /**
-      * Dans l'exemple ci-dessus  on s'apercoit que l'on a pu décomposer la fonction à la volée.
+      * Dans l'exemple ci-dessus  on s'aperçoit que l'on a pu décomposer la fonction à la volée.
       *
-      * (1) : On positionne le premier paramètre avec la valeur 1. Les deux autres paramètres sont remplacés par _.
+      * (1) : On positionne le premier paramètre avec la valeur 1, c'est ce qu'on appelle une application partielle de la fonction.
       * L'évaluation de cette ligne renverra une nouvelle fonction d'arité 2  -> (Int, Int) => Int
       *
       * (2) : Sur cette ligne, nous utilisons le résultat évalué précédemment. Cette fois-ci, nous positionnons
@@ -72,9 +72,9 @@ class e06_Currying extends HandsOnSuite {
       * Comment invoquer cette fonction :
       */
 
-    val resInter1: Int => Int => Int = addition(1) _
+    val resInter1: Int => Int => Int = addition(1)
     //(1)
-    val resInter2: Int => Int = resInter1(2)(_)
+    val resInter2: Int => Int = resInter1(2)
     //(2)
     val resultFinal: Int = resInter2(3) //(3)
 
