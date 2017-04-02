@@ -175,14 +175,14 @@ class e03_collections extends HandsOnSuite {
     * cf https://www.scala-lang.org/api/current/scala/collection/Map.html
     */
   section("Map") {
-    val states = Map("fr" -> "France", "be" -> "Belgique", "en" -> "Angleterre")
+    val countries = Map("fr" -> "France", "be" -> "Belgique", "en" -> "Angleterre")
 
     exercice("manipuler") {
-      states.get("fr") shouldBe __
-      states.map(state => (state._1, state._2.length)) shouldBe __
-      states.map { case (code, name) => (code, name.length) } shouldBe __ // en utilisant le pattern matching \o/
-      states.filter(_._2.contains("r")) shouldBe __
-      states.find(_._2.contains("e")) shouldBe __
+      countries.get("fr") shouldBe __
+      countries.map(country => (country._1, country._2.length)) shouldBe __
+      countries.map { case (code, name) => (code, name.length) } shouldBe __ // en utilisant le pattern matching \o/
+      countries.filter(_._2.contains("r")) shouldBe __
+      countries.find(_._2.contains("e")) shouldBe __
     }
   }
 
