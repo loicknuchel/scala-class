@@ -21,17 +21,16 @@ class e01_scala_syntax extends HandsOnSuite {
     *
     *
     * Dans ce handson il faudra remplir les trous :
-    *    - les `__` sont à remplacer par la valeur manquante
-    *    - les `???` sont à remplacer par une implémentation de code
+    *   - les `__` sont à remplacer par la valeur manquante
+    *   - les `???` sont à remplacer par une implémentation de code
     *
     * Par ailleurs, pour laisser de côté un exercice, il suffit de remplacer `exercice("...")` par `ignore("...")`
     *
     * Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
-    *     - accéder au type de l'expression sélectionnée
-    *        - Mac           : Alt + Enter
-    *         - Windows/Linux : Alt + Egal
+    *   - accéder au type de l'expression sélectionnée
+    *     - Mac           : Alt + Enter
+    *     - Windows/Linux : Alt + Egal
     */
-
 
 
   exercice("Déclarer une variable") {

@@ -3,8 +3,8 @@ package support
 object Config {
   private val folder = "logs"
 
-  object State {
-    val file = s"$folder/state.json"
+  object Data {
+    val file = s"$folder/data.json"
   }
 
   object Logger {
