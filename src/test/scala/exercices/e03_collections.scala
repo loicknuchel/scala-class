@@ -220,12 +220,12 @@ class e03_collections extends HandsOnSuite {
       words.flatMap(_.toList) shouldBe __
 
       // Fonctionne aussi avec les Options et toutes les collections
-      Some("2").map(toInt) shouldBe Some(Some(2))
-      Some("2").flatMap(toInt) shouldBe Some(2)
-      Some("a").map(toInt) shouldBe Some(None)
-      Some("a").flatMap(toInt) shouldBe None
-      None.map(toInt) shouldBe None
-      None.flatMap(toInt) shouldBe None
+      Some("2").map(toInt) shouldBe __
+      Some("2").flatMap(toInt) shouldBe __
+      Some("a").map(toInt) shouldBe __
+      Some("a").flatMap(toInt) shouldBe __
+      None.map(toInt) shouldBe __
+      None.flatMap(toInt) shouldBe __
 
       val nums = List("1", "foo", "3")
       nums.map(toInt) shouldBe __
@@ -236,7 +236,7 @@ class e03_collections extends HandsOnSuite {
       try {
         Some(Integer.parseInt(s.trim))
       } catch {
-        case e: Exception => None
+        case _: Exception => None
       }
     }
 
