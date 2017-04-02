@@ -9,7 +9,9 @@ class e03_collections extends HandsOnSuite {
     *   - min, max, sum, reverse, sortBy
     *   - partition, sliding
     *   - zip, zipWithIndex, unzip, grouped
-    *
+    */
+
+  /**
     * Covariance
     */
 }

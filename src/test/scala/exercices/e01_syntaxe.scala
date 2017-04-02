@@ -29,12 +29,8 @@ class e01_syntaxe extends HandsOnSuite {
     * Par ailleurs, pour laisser de côté un exercice, il suffit de remplacer `exercice("...")` par `ignore("...")`
     *
     * Enfin, quelques raccourcis utiles pour les utilisateurs d'intellij :
-    *   - accéder au type de l'expression sélectionnée
-    *     - Windows/Linux : Alt + Egal
-    *     - Mac           : Alt + Enter
-    *   - accéder à la déclaration d'une valeur/fonction/objet
-    *     - Windows/Linux : Ctrl + Click
-    *     - Mac           : Cmd + Click
+    *   - accéder au type de l'expression sélectionnée         : Alt + Egal (Windows/Linux) et Alt + Enter (Mac)
+    *   - accéder à la déclaration d'une valeur/fonction/objet : Ctrl + Click (Windows/Linux) et Cmd + Click (Mac)
     */
 
 

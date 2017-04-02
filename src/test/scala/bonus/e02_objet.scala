@@ -4,12 +4,11 @@ import support.HandsOnSuite
 
 class e02_objet extends HandsOnSuite {
   /**
-    * TODO Class
-    *
-    * - faire un constructeur privé
-    * - créer d'autres constructeurs
-    * - créer d'autres attributs que ceux dans le constructeur
-    * - dire que le code à l'intérieur de la classes est exécuté à son instantiation
+    * Aller plus loin dans la construction d'une classe :
+    *   - faire un constructeur privé
+    *   - créer d'autres constructeurs
+    *   - créer d'autres attributs que ceux dans le constructeur
+    *   - dire que le code à l'intérieur de la classes est exécuté à son instantiation
     */
 
 

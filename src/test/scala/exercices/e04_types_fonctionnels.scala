@@ -51,7 +51,6 @@ class e04_types_fonctionnels extends HandsOnSuite {
 
 
   section("Manipuler un type monadique") {
-    // TODO : add pattern matching examples ?
     exercice("rappel List et Option") {
       // tansforme "list" pour produire les résultats attendus
       val list: List[String] = List("I", "love", "Monads")
