@@ -18,7 +18,7 @@
         }
       ],
       "id" : "YWB-9589",
-      "title" : "Labs sur API Watson avec Node-RED sur Bluemix"
+      "title" : "Watson API Labs using Node-RED on Bluemix"
     }
   ],
   "company" : "IBM",
@@ -28,5 +28,5 @@
   "blog" : "http://usergroup.bluemix.fr",
   "avatarURL" : "http://www.gravatar.com/avatar/d15c1d9d6bdb42da5e10aacec702bbe7.png",
   "twitter" : "@ylecleach",
-  "lang" : "fr"
+  "lang" : "en"
 }

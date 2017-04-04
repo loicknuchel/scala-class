@@ -1,6 +1,6 @@
 {
   "uuid" : "ac73db59d04b444044ed7979e630d0fd6aed66bc",
-  "bioAsHtml" : "<p>Développeur et directeur technique de Zenika Bordeaux,  Sébastien est passionné par tout ce qui touche à la sécurité et à l&#x27;intelligence artificielle.</p>\n",
+  "bioAsHtml" : "<p>Développeur et directeur technique de Zenika Bordeaux, j&#x27;interviens pour des missions de conseils et d&#x27;expertises. Passionné par tout ce qui touche à la sécurité et à l&#x27;intelligence artificielle, j&#x27;aime discuter de ces sujets dans des meetups ou des conférences.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Hands-on Labs",
@@ -22,7 +22,7 @@
     }
   ],
   "company" : "Zenika",
-  "bio" : "Développeur et directeur technique de Zenika Bordeaux,  Sébastien est passionné par tout ce qui touche à la sécurité et à l'intelligence artificielle.",
+  "bio" : "Développeur et directeur technique de Zenika Bordeaux, j'interviens pour des missions de conseils et d'expertises. Passionné par tout ce qui touche à la sécurité et à l'intelligence artificielle, j'aime discuter de ces sujets dans des meetups ou des conférences.",
   "lastName" : "Descamps",
   "firstName" : "Sébastien",
   "blog" : "https://github.com/sebastienD",

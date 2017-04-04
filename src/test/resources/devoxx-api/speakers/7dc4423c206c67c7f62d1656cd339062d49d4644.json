@@ -14,7 +14,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/7dc4423c206c67c7f62d1656cd339062d49d4644",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "François Berthaut"
+          "title" : "François Berthault"
         },
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d5ea7b950f01671d3710bedaa3b197b3f0756ec6",
@@ -33,10 +33,10 @@
   ],
   "company" : "TalanLabs",
   "bio" : "Technical & Coding Architect (Java EE / Spring) chez TalanLabs. \r\nDeveloppeur full-stack depuis 2002. Aujourd'hui, web coding architect et militant devops, je pense \"architecture as code\".",
-  "lastName" : "Berthaut",
+  "lastName" : "Berthault",
   "firstName" : "François",
   "blog" : "https://blog.talanlabs.com",
   "avatarURL" : "https://s3.amazonaws.com/flashissue/9J2Ib0AHQAejZKTf21pV_francois-berthault.jpg",
   "twitter" : "@fanfansama",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

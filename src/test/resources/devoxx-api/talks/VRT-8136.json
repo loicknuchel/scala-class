@@ -15,11 +15,11 @@
     },
     {
       "link" : {
-        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4914e3c813740c8a00dd48ccc9edfa42c7c0d945",
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71deca75770d755eff2b70d4c79cff42f87bd36a",
         "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Baha Azarmi"
+        "title" : "Sylvain Wallez"
       },
-      "name" : "Baha Azarmi"
+      "name" : "Sylvain Wallez"
     }
   ],
   "title" : "BOF elastic and tools",

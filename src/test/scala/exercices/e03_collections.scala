@@ -303,9 +303,9 @@ class e03_collections extends HandsOnSuite {
     def roomSchedule(id: RoomId): List[(Long, Long, TalkId)] = ???
 
     exercice("fetch") {
-      frenchPercentageOfTalks() shouldBe 90
+      frenchPercentageOfTalks() shouldBe 91
       fetchSpeakerTalks(speakerId).map(_.id) shouldBe List(talkId)
-      roomSchedule("par224M-225M").length shouldBe 5
+      roomSchedule("par224M-225M").length shouldBe 4
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "uuid" : "587c46e7b957f7e92a63246bdcc683e5d5e612a8",
-  "bioAsHtml" : "<p>Chez IPPON Technologies depuis 2015\nDéveloppeur Java passionné et spécialisé dans les architectures microservices.</p>\n<h1>Microservices #Elastic #Docker</h1>\n",
+  "bioAsHtml" : "<p>Chez IPPON Technologies depuis 2015<br  />\nDéveloppeur Java passionné et spécialisé dans les architectures microservices.<br  />\n#Microservices #Elastic #Docker</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Hands-on Labs",
@@ -32,7 +32,7 @@
     }
   ],
   "company" : "IPPON Technologies",
-  "bio" : "Chez IPPON Technologies depuis 2015\r\nDéveloppeur Java passionné et spécialisé dans les architectures microservices.\r\n#Microservices #Elastic #Docker",
+  "bio" : "Chez IPPON Technologies depuis 2015  \r\nDéveloppeur Java passionné et spécialisé dans les architectures microservices.  \r\n\\#Microservices \\#Elastic \\#Docker",
   "lastName" : "MONSINJON",
   "firstName" : "Jérémie",
   "blog" : "http://blog.ippon.fr/",

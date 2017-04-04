@@ -1,6 +1,6 @@
 {
   "uuid" : "e52b42078da54ebd3d8bf02fe7c4d1d442bf52c0",
-  "bioAsHtml" : "<p>Consultant et Formateur Web chez Zenika Lille depuis novembre 2015.</p>\n",
+  "bioAsHtml" : "<p>Consultant et Formateur Web chez Zenika Lille depuis novembre 2015. Je me suis spécialisé dans le domaine du Web, AngularJS, Angular, VueJs, PHP...\nFan d&#x27;IOT durant mes heures perdues, je suis toujours à l&#x27;affût des dernières nouveautés Web !</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Hands-on Labs",
@@ -27,11 +27,11 @@
     }
   ],
   "company" : "Zenika",
-  "bio" : "Consultant et Formateur Web chez Zenika Lille depuis novembre 2015.",
+  "bio" : "Consultant et Formateur Web chez Zenika Lille depuis novembre 2015. Je me suis spécialisé dans le domaine du Web, AngularJS, Angular, VueJs, PHP...\r\nFan d'IOT durant mes heures perdues, je suis toujours à l'affût des dernières nouveautés Web !",
   "lastName" : "Loyer",
   "firstName" : "Aurélien",
   "blog" : "http://aurelien-loyer.fr",
   "avatarURL" : "http://wp.aurelien-loyer.fr/upload/moi-64x64.jpg",
   "twitter" : "@T3kstiil3",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

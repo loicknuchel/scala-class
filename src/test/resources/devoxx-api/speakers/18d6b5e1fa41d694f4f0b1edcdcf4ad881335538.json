@@ -1,14 +1,37 @@
 {
   "uuid" : "18d6b5e1fa41d694f4f0b1edcdcf4ad881335538",
-  "bioAsHtml" : "<p>Je travaille chez EDF depuis 3 ans.\nJe suis entré comme expert technique sur certains produits de la gamme Oracle Middleware (WebLogic Server , OSB, SOA Suite) ainsi que sur JBoss EAP et Tomcat du catalogue EDF\nJ’interviens en tant que support Niveau 3 sur les incidents de Production et les problématiques d’APM avec Dynatrace.\nDepuis plusieurs mois, je suis en charge des problématique lié à l’intégration continue et du déploiement automatisé des produits du catalogue (projet DevOps)\nJe travaille aussi sur le développement d’architecture micro service avec Docker/OpenShift</p>\n",
+  "bioAsHtml" : "<p>Référent technique sur le pole d&#x27;expertise des serveurs d&#x27;application Java.\nIndustrialisation de leur mise en oeuvre, définition des normes de déploiement, guide de sécurité</p>\n",
   "acceptedTalks" : [
+    {
+      "talkType" : "Conference",
+      "track" : "DevOps, Agilité, Méthodologie & Tests",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/WJW-7994",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9851a429a45bee3543469ba6385e1d552790420f",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Brian Fox"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/18d6b5e1fa41d694f4f0b1edcdcf4ad881335538",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Olivier Routier"
+        }
+      ],
+      "id" : "WJW-7994",
+      "title" : "DevSecOps - Security at Devops speed with EDF"
+    }
   ],
   "company" : "EDF",
-  "bio" : "Je travaille chez EDF depuis 3 ans.\r\nJe suis entré comme expert technique sur certains produits de la gamme Oracle Middleware (WebLogic Server , OSB, SOA Suite) ainsi que sur JBoss EAP et Tomcat du catalogue EDF\r\nJ’interviens en tant que support Niveau 3 sur les incidents de Production et les problématiques d’APM avec Dynatrace.\r\nDepuis plusieurs mois, je suis en charge des problématique lié à l’intégration continue et du déploiement automatisé des produits du catalogue (projet DevOps)\r\nJe travaille aussi sur le développement d’architecture micro service avec Docker/OpenShift",
+  "bio" : "Référent technique sur le pole d'expertise des serveurs d'application Java.\r\nIndustrialisation de leur mise en oeuvre, définition des normes de déploiement, guide de sécurité\r\n\r\n",
   "lastName" : "Routier",
   "firstName" : "Olivier",
   "blog" : null,
   "avatarURL" : null,
   "twitter" : null,
-  "lang" : "fr"
+  "lang" : "en"
 }

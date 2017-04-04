@@ -1,6 +1,6 @@
 {
   "uuid" : "d84b817a907825ede4a9d5a74665bc23be072608",
-  "bioAsHtml" : "<p>Sébastien travaille chez Pivotal en tant que membre de l&#x27;équipe de développement de Spring Framework, principalement sur Spring MVC, CORS, Jackson, REST, Websocket, l&#x27;intégration avec les technologies front ainsi que sur le support Reactive programming de Spring Framework 5.\nIl est également un des organisateurs de la conférence MixIT (http://www.mix-it.fr).</p>\n",
+  "bioAsHtml" : "<p>Committer Spring Framework, notamment sur les sujets Web, Reactive et Kotlin. Organisateur de la conférence MiXiT.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "BOF (Bird of a Feather)",
@@ -60,14 +60,14 @@
           "title" : "More details about this talk"
         },
         {
-          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e8c67e2df13f82a0e69b26b1274d11fec44b0122",
-          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Brian Clozel"
-        },
-        {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/d84b817a907825ede4a9d5a74665bc23be072608",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
           "title" : "Sebastien Deleuze"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/e8c67e2df13f82a0e69b26b1274d11fec44b0122",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Brian Clozel"
         }
       ],
       "id" : "FSA-6701",
@@ -75,7 +75,7 @@
     }
   ],
   "company" : "Pivotal",
-  "bio" : "Sébastien travaille chez Pivotal en tant que membre de l'équipe de développement de Spring Framework, principalement sur Spring MVC, CORS, Jackson, REST, Websocket, l'intégration avec les technologies front ainsi que sur le support Reactive programming de Spring Framework 5.\r\nIl est également un des organisateurs de la conférence MixIT (http://www.mix-it.fr).",
+  "bio" : "Committer Spring Framework, notamment sur les sujets Web, Reactive et Kotlin. Organisateur de la conférence MiXiT.",
   "lastName" : "Deleuze",
   "firstName" : "Sebastien",
   "blog" : "https://spring.io/team/sdeleuze",

@@ -29,6 +29,29 @@
       ],
       "id" : "OKR-3855",
       "title" : "BOF Apache Maven"
+    },
+    {
+      "talkType" : "Conference",
+      "track" : "DevOps, Agilité, Méthodologie & Tests",
+      "links" : [
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/talks/WJW-7994",
+          "rel" : "http://cfp.devoxx.fr/api/profile/talk",
+          "title" : "More details about this talk"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9851a429a45bee3543469ba6385e1d552790420f",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Brian Fox"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/18d6b5e1fa41d694f4f0b1edcdcf4ad881335538",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Olivier Routier"
+        }
+      ],
+      "id" : "WJW-7994",
+      "title" : "DevSecOps - Security at Devops speed with EDF"
     }
   ],
   "company" : "Sonatype",

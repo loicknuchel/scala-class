@@ -2,7 +2,7 @@ package support
 
 import io.circe.generic.auto._
 import models.devoxx.DevoxxApi._
-import models.devoxx.{RoomList, Schedule, ScheduleList, Talk}
+import models.devoxx._
 import support.Helpers._
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -17,7 +17,7 @@ object Cache {
       schedules <- HttpClient.getAndSave(schedulesUrl).flatMap(res => parseJson[ScheduleList](res).toFuture).map(_.links)
       slots <- getAndParseSequence(schedules.map(_.href), parseJson[Schedule]).map(_.flatMap(_.slots))
       talks <- getAndParseSequence(slots.flatMap(_.talk).map(_.id).map(talkUrl), parseJson[Talk])
-      talkSpeakers <- getAndParseSequence(talks.flatMap(_.speakers).map(_.link.href), parseJson[Talk])
+      talkSpeakers <- getAndParseSequence(talks.flatMap(_.speakers).map(_.link.href), parseJson[Speaker])
     // TODO speakerList <- HttpClient.getAndSave(speakersUrl).flatMap(res => parseJson[List[Speaker]](res).toFuture)
     // TODO speakersNotInTalks <- ???
     // TODO talksNotInSlots <- (talkSpeakers ++ speakersNotInTalks).acceptedTalks.filter(not in talks)

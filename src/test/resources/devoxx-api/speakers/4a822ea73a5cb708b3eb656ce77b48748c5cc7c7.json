@@ -1,6 +1,6 @@
 {
   "uuid" : "4a822ea73a5cb708b3eb656ce77b48748c5cc7c7",
-  "bioAsHtml" : "<p>David Pilato is Technical Advocate at elasticsearch and French spoken language User Group creator.\nIn his free time, he likes talking about elasticsearch in conferences like Devoxx FR and BE, JUGs, Web5, Agile France, Mix-IT or in companies (Brown Bag Lunches).</p>\n",
+  "bioAsHtml" : "<p>Depuis 2013, David Pilato est développeur et évangéliste chez elastic.co, après avoir passé les deux années précédentes à promouvoir le projet open-source Elasticsearch. Il en anime la communauté française et organise des BBLs au sein des entreprises.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Tools-in-Action",
@@ -35,21 +35,21 @@
           "title" : "David Pilato"
         },
         {
-          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/4914e3c813740c8a00dd48ccc9edfa42c7c0d945",
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/71deca75770d755eff2b70d4c79cff42f87bd36a",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Baha Azarmi"
+          "title" : "Sylvain Wallez"
         }
       ],
       "id" : "VRT-8136",
       "title" : "BOF elastic and tools"
     }
   ],
-  "company" : "elasticsearch",
-  "bio" : "David Pilato is Technical Advocate at elasticsearch and French spoken language User Group creator.\r\nIn his free time, he likes talking about elasticsearch in conferences like Devoxx FR and BE, JUGs, Web5, Agile France, Mix-IT or in companies (Brown Bag Lunches).",
+  "company" : "elastic",
+  "bio" : "Depuis 2013, David Pilato est développeur et évangéliste chez elastic.co, après avoir passé les deux années précédentes à promouvoir le projet open-source Elasticsearch. Il en anime la communauté française et organise des BBLs au sein des entreprises.",
   "lastName" : "Pilato",
   "firstName" : "David",
-  "blog" : "http://david.pilato.fr/",
+  "blog" : "http://david.pilato.fr",
   "avatarURL" : "http://www.gravatar.com/avatar/20049a614b7f6838dc87b4bc39c42079",
   "twitter" : "@dadoonet",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

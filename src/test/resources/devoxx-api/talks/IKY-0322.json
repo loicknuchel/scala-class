@@ -7,11 +7,11 @@
   "speakers" : [
     {
       "link" : {
-        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/2bc6688597d9bd7122ae76c804cfffa6b4ffb9c0",
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f152133e6107190056f5706e22c92c95468dde9a",
         "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Jean-Laurent de Morlhon"
+        "title" : "Vincent Demeester"
       },
-      "name" : "Jean-Laurent de Morlhon"
+      "name" : "Vincent Demeester"
     }
   ],
   "title" : "Docker 2017: Nouveautés et perspectives",

@@ -1,6 +1,6 @@
 {
   "uuid" : "303c50d69c22284f37665fb4cefb5490a8ee616f",
-  "bioAsHtml" : "<p>V׀adimіr est ingénieur spécialisé en sécurité, responsable du département sécurité du cabinet de conseil NetXP. Après quelques années dans le développement, depuis plus d&#x27;une décennie il officie dans la sécurité des systèmes d&#x27;information (architecture, audits et tests d&#x27;intrusion, rétro-ingénierie, développement d&#x27;applications offensives...).</p>\n<p>V׀adimіr est membre de conseil d&#x27;administration de l&#x27;association OSSIR (Observatoire de la Sécurité des Systèmes d&#x27;Information et des Réseaux) et y présente la revue d&#x27;actualité sécurité du mois écoulé.</p>\n",
+  "bioAsHtml" : "<p>Vladimir is a CyberSecurity specialist at NetXP, OSSIR&#x27;s board member (Non-profit organization focused on cybersecurity) and speaker of the monthly review of security news.</p>\n<p>He likes to browse the deep dark marianas web on his falcighol derivation quantum computer made from raspberry pi. He also likes to deride fake information.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Conference",
@@ -47,11 +47,11 @@
     }
   ],
   "company" : "NetXP",
-  "bio" : "V׀adimіr est ingénieur spécialisé en sécurité, responsable du département sécurité du cabinet de conseil NetXP. Après quelques années dans le développement, depuis plus d'une décennie il officie dans la sécurité des systèmes d'information (architecture, audits et tests d'intrusion, rétro-ingénierie, développement d'applications offensives...).\r\n\r\nV׀adimіr est membre de conseil d'administration de l'association OSSIR (Observatoire de la Sécurité des Systèmes d'Information et des Réseaux) et y présente la revue d'actualité sécurité du mois écoulé.",
+  "bio" : "Vladimir is a CyberSecurity specialist at NetXP, OSSIR's board member (Non-profit organization focused on cybersecurity) and speaker of the monthly review of security news.\r\n\r\nHe likes to browse the deep dark marianas web on his falcighol derivation quantum computer made from raspberry pi. He also likes to deride fake information.\r\n",
   "lastName" : "Kο׀׀a",
   "firstName" : "V׀adimіr",
-  "blog" : null,
-  "avatarURL" : "http://www.gravatar.com/avatar/e3ce26c94274c13cf65e3e2dbda716da",
+  "blog" : "https://www.netxp.fr",
+  "avatarURL" : "http://i.imgur.com/J8Zmxb5.jpg",
   "twitter" : "@mynameisv__",
-  "lang" : "fr"
+  "lang" : "en"
 }

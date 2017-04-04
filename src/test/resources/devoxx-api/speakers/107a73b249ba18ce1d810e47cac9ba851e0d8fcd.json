@@ -26,12 +26,12 @@
       "title" : "Spark Streaming and Suicidal Tendencies "
     }
   ],
-  "company" : "Saagie",
+  "company" : "M.",
   "bio" : "Nosql, data processing, scala and spark fanboy. Certified as developer and admin on MongoDB.\r\n\r\n",
   "lastName" : "Vandel",
   "firstName" : "Aurélien",
-  "blog" : "https://blog.saagie.com/",
-  "avatarURL" : "https://www.saagie.com/bundles/app/assets/img/team/Aurelien.jpg",
+  "blog" : "aure.vandel@gmail.com",
+  "avatarURL" : "https://www.saagie.com/user/pages/team/Aurelien.jpg",
   "twitter" : "@aurevandel",
-  "lang" : "fr"
+  "lang" : "en"
 }

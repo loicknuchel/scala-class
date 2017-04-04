@@ -14,7 +14,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/09a79f4e4592cf77e5ebf0965489e6c7ec0438cd",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Loïc Knuchel"
+          "title" : "Loïc KNUCHEL"
         },
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1693d28c079e6c28269b9aa86ae04a4549ad3074",
@@ -33,10 +33,10 @@
   ],
   "company" : "Criteo",
   "bio" : "Développeur Scala chez Criteo, je participe activement à la communauté tech parisienne. J'organise les HumanTalks Paris, propose des BBL et assiste à de nombreux meetups.\r\nGrand fan de programmation fonctionnelle, je me consacre à Scala et Play framework mais aussi Angular, React et Ionic.",
-  "lastName" : "Knuchel",
+  "lastName" : "KNUCHEL",
   "firstName" : "Loïc",
   "blog" : "http://loic.knuchel.org/blog/",
   "avatarURL" : "https://fr.gravatar.com/userimage/23389258/9f5fb6d79f01d634495e2765659c7648.jpg?size=200",
   "twitter" : "@loicknuchel",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

@@ -12,6 +12,14 @@
         "title" : "Xavier Mary"
       },
       "name" : "Xavier Mary"
+    },
+    {
+      "link" : {
+        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/47af10c6702591ca371d85c6a11975f686cfcf95",
+        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+        "title" : "Michel caussanel"
+      },
+      "name" : "Michel caussanel"
     }
   ],
   "title" : "Bluemix - Classification et ranking grace à Watson",

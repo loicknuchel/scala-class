@@ -12,14 +12,14 @@
           "title" : "More details about this talk"
         },
         {
-          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/25d88b19cb2f790435cbd6ba5c1e350e045d925f",
-          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Julien Corioland"
-        },
-        {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/a73cc5bfb4ce4d8f07f209039ada742ee750a332",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
           "title" : "Jean-Philippe Briend"
+        },
+        {
+          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/25d88b19cb2f790435cbd6ba5c1e350e045d925f",
+          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
+          "title" : "Julien Corioland"
         }
       ],
       "id" : "PFS-2970",
@@ -56,5 +56,5 @@
   "blog" : "https://aka.ms/jcorioland",
   "avatarURL" : "http://www.gravatar.com/avatar/efbb4bed773bec0749bdd3d2ea8e670d",
   "twitter" : "@jcorioland",
-  "lang" : "fr"
+  "lang" : "en-US"
 }

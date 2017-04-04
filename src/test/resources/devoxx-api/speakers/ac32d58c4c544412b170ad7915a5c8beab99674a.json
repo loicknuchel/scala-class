@@ -1,6 +1,6 @@
 {
   "uuid" : "ac32d58c4c544412b170ad7915a5c8beab99674a",
-  "bioAsHtml" : "<p>Developer of tooling at LeBonCoin, to make the devs&#x27; lives easier</p>\n",
+  "bioAsHtml" : "<p>Developer of tooling and DevOps at LeBonCoin, to make the developers&#x27; lives easier.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Conference",
@@ -27,11 +27,11 @@
     }
   ],
   "company" : "LeBonCoin",
-  "bio" : "Developer of tooling at LeBonCoin, to make the devs' lives easier",
+  "bio" : "Developer of tooling and DevOps at LeBonCoin, to make the developers' lives easier.",
   "lastName" : "OUCHTAR",
   "firstName" : "Sonia",
   "blog" : "https://www.leboncoin.fr",
-  "avatarURL" : "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+  "avatarURL" : "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAZ6AAAAJDJjNjc3YTI5LWM0ZTUtNGM0MS1iMjY4LTUzZTE5MzY3OWY1Ng.jpg",
   "twitter" : null,
   "lang" : "fr"
 }

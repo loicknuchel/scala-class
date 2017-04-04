@@ -2,7 +2,7 @@
   "trackId" : "future",
   "talkType" : "Hands-on Labs",
   "track" : "Future, Robotique",
-  "summaryAsHtml" : "<p>Ce workshop se compose en 3 parties :</p>\n<ol>\n<li><p>Une présentation générale sur la technologie Blockchain et du projet Hyperledger.</p>\n</li>\n<li><p>Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée</p>\n</li>\n<li><p>Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live.</p>\n</li>\n</ol>\n<p>Pré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire.</p>\n",
+  "summaryAsHtml" : "<p>Ce workshop se compose en 3 parties :</p>\n<p>Une présentation générale sur la technologie Blockchain et du projet Hyperledger. Mettre en place un réseau Blockchain de 4 noeuds.</p>\n<p>Coder un smart contract en Java sur Hyperledger</p>\n<p>Coder la partie cliente en Java pour interagir avec le réseau Blockchain</p>\n<p>Pré-requis: Les participants devront amener leur ordinateur portable (puissant de préférence) et une connexion wifi est obligatoire. Comme nous allons utiliser Docker merci de vérifier si votre OS permet d'installer Docker sur votre machine (Mac,Linux et Windows 10 sont compatibles)</p>\n",
   "id" : "KWC-5405",
   "speakers" : [
     {
@@ -24,5 +24,5 @@
   ],
   "title" : "Coder un SmartContract sur Hyperledger (Blockchain) ",
   "lang" : "fr",
-  "summary" : "Ce workshop se compose en 3 parties :\r\n\r\n1.  Une présentation générale sur la technologie Blockchain et du projet Hyperledger. \r\n\r\n2.  Une démo avec explication plus approfondie sur comment marche une blockchain permissionnée\r\n\r\n3. Finalement, les participants seront amenés à coder un smart contract, le déployer et le tester on live. \r\n\r\nPré-requis: Les participants devront amener leur ordinateur portable et une connexion wifi est obligatoire."
+  "summary" : "Ce workshop se compose en 3 parties :\r\n\r\nUne présentation générale sur la technologie Blockchain et du projet Hyperledger. Mettre en place un réseau Blockchain de 4 noeuds.\r\n\r\nCoder un smart contract en Java sur Hyperledger\r\n\r\nCoder la partie cliente en Java pour interagir avec le réseau Blockchain\r\n\r\nPré-requis: Les participants devront amener leur ordinateur portable (puissant de préférence) et une connexion wifi est obligatoire. Comme nous allons utiliser Docker merci de vérifier si votre OS permet d'installer Docker sur votre machine (Mac,Linux et Windows 10 sont compatibles)"
 }

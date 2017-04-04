@@ -46,7 +46,7 @@
         }
       ],
       "id" : "CRU-5869",
-      "title" : "Recettes, outils, API et services pour construire et réussir sa startup"
+      "title" : "Recettes, outils, API et services pour construire son équipe ou sa startup"
     },
     {
       "talkType" : "Keynote",
@@ -84,5 +84,5 @@
   "blog" : "http://www.touilleur-express.fr/",
   "avatarURL" : "http://www.touilleur-express.fr/wp-content/uploads/2015/12/nicolas_martignole_captain_dash-e1450559996560.jpg",
   "twitter" : "@nmartignole",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

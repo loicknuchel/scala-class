@@ -12,14 +12,6 @@
         "title" : "Gabriel Kastenbaum"
       },
       "name" : "Gabriel Kastenbaum"
-    },
-    {
-      "link" : {
-        "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1a45fb7a0e35840e6ed9f07730d45d28f4965bb4",
-        "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Nicolas Thauvin"
-      },
-      "name" : "Nicolas Thauvin"
     }
   ],
   "title" : "Startup Driven Development",

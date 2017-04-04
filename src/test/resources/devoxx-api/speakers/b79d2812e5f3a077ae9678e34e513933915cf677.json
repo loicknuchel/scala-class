@@ -1,6 +1,6 @@
 {
   "uuid" : "b79d2812e5f3a077ae9678e34e513933915cf677",
-  "bioAsHtml" : "<p>Craftsman passionné</p>\n",
+  "bioAsHtml" : "<p>Amoureux de la programmation fonctionnelle et du code élégant, le plaisir de programmer et d&#x27;expliquer cet art ont fait de moi un craftsman passionné.</p>\n",
   "acceptedTalks" : [
     {
       "talkType" : "Tools-in-Action",
@@ -50,11 +50,11 @@
     }
   ],
   "company" : "Soat",
-  "bio" : "Craftsman passionné",
+  "bio" : "Amoureux de la programmation fonctionnelle et du code élégant, le plaisir de programmer et d'expliquer cet art ont fait de moi un craftsman passionné.\r\n",
   "lastName" : "Detant",
   "firstName" : "Xavier",
   "blog" : null,
   "avatarURL" : null,
   "twitter" : "@XDetant",
-  "lang" : "fr"
+  "lang" : "en"
 }

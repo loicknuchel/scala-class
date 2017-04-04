@@ -15,11 +15,6 @@
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/3bb736546aa9cc376293b607a165b60c4233e704",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
           "title" : "Guillaume Laforge"
-        },
-        {
-          "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/00b3ddf46d86a52eee26589a94fc45f7b0ed3970",
-          "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Stephan Janssen"
         }
       ],
       "id" : "NSJ-9765",
@@ -71,5 +66,5 @@
   "blog" : "http://glaforge.appspot.com/",
   "avatarURL" : "https://lh6.googleusercontent.com/-q2nbAhzprxo/AAAAAAAAAAI/AAAAAAAAL6g/rLd0hunWYhg/photo.jpg",
   "twitter" : "@glaforge",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

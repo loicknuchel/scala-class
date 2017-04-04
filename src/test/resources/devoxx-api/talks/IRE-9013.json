@@ -9,9 +9,9 @@
       "link" : {
         "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f4aea1c9996bf4e307a68c3080915b7a14cd1579",
         "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-        "title" : "Audrey NEVEU"
+        "title" : "Audrey Neveu"
       },
-      "name" : "Audrey NEVEU"
+      "name" : "Audrey Neveu"
     }
   ],
   "title" : "Le Streaming d'API : pourquoi et comment transformer vos APIs statiques en données temps réel ?",

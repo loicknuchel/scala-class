@@ -18,7 +18,7 @@
         }
       ],
       "id" : "YFR-9902",
-      "title" : "Boîte à outils d'investigation de soucis mémoire"
+      "title" : "Boîte à outils d'investigation des soucis de mémoire"
     }
   ],
   "company" : "Arolla",
@@ -28,5 +28,5 @@
   "blog" : null,
   "avatarURL" : "https://pbs.twimg.com/profile_images/606213307507351552/IJcDzWZo.jpg",
   "twitter" : "@jean_bisutti",
-  "lang" : "fr"
+  "lang" : "fr-FR"
 }

@@ -14,7 +14,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ef9ee08cfb1a46a285430223a056d889f99044c",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Hubert 😎 SABLONNIÈRE"
+          "title" : "Hubert SABLONNIERE"
         },
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/1454e2d0a6c2fa871454dab3dbf66f5e16b61980",
@@ -24,7 +24,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/f4aea1c9996bf4e307a68c3080915b7a14cd1579",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Audrey NEVEU"
+          "title" : "Audrey Neveu"
         },
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/996b582386dd98b7ea73098dbcc6f0bd037ba037",
@@ -52,7 +52,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ef9ee08cfb1a46a285430223a056d889f99044c",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Hubert 😎 SABLONNIÈRE"
+          "title" : "Hubert SABLONNIERE"
         }
       ],
       "id" : "YOC-1441",
@@ -70,7 +70,7 @@
         {
           "href" : "http://cfp.devoxx.fr/api/conferences/DevoxxFR2017/speakers/9ef9ee08cfb1a46a285430223a056d889f99044c",
           "rel" : "http://cfp.devoxx.fr/api/profile/speaker",
-          "title" : "Hubert 😎 SABLONNIÈRE"
+          "title" : "Hubert SABLONNIERE"
         }
       ],
       "id" : "SMA-4474",
@@ -79,8 +79,8 @@
   ],
   "company" : "OpenDevise",
   "bio" : "Hubert est passionné par le Web. Il est toujours à la recherche de nouvelles idées et autres bidouilles pour améliorer l'expérience des utilisateurs et des développeurs.\r\n\r\nChez OpenDevise, il aide des éditeurs de logiciels à passer leurs contenus pédagogiques (docs, formation, présentations...) au niveau supérieur en utilisant le Web et un peu d'asciidoctor...",
-  "lastName" : "SABLONNIÈRE",
-  "firstName" : "Hubert 😎",
+  "lastName" : "SABLONNIERE",
+  "firstName" : "Hubert",
   "blog" : "http://hsablonniere.com",
   "avatarURL" : "https://www.gravatar.com/avatar/756896776ddf47e64c33a86120feb528.png?s=200",
   "twitter" : "@hsablonniere",

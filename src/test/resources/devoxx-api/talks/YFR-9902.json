@@ -2,7 +2,7 @@
   "trackId" : "agTest",
   "talkType" : "Tools-in-Action",
   "track" : "DevOps, Agilité, Méthodologie & Tests",
-  "summaryAsHtml" : "<p>Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine de soucis mémoires causés par deux classes.</p>\n",
+  "summaryAsHtml" : "<p>Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine des soucis de mémoire causés par quelques classes.</p>\n",
   "id" : "YFR-9902",
   "speakers" : [
     {
@@ -14,7 +14,7 @@
       "name" : "Jean Bisutti"
     }
   ],
-  "title" : "Boîte à outils d'investigation de soucis mémoire",
+  "title" : "Boîte à outils d'investigation des soucis de mémoire",
   "lang" : "fr",
-  "summary" : "Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine de soucis mémoires causés par deux classes."
+  "summary" : "Nous allons utiliser différents outils (jstat, jmap, Memory Analyzer Tool, Java Mission Control, ...) afin de débusquer l'origine des soucis de mémoire causés par quelques classes."
 }
