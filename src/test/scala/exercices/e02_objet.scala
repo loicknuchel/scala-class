@@ -21,6 +21,8 @@ class e02_objet extends HandsOnSuite {
     */
   exercice("Les classes en Scala") {
     class Point(var x: Int, var y: Int) {
+      // `Unit` est un type et un objet Scala qui joue le même rôle que `void` dans d'autres langages
+      // On l'utilise quand une fonction/méthode ne renvoit rien
       def move(dx: Int, dy: Int): Unit = {
         x += dx
         y += dy
@@ -44,7 +46,7 @@ class e02_objet extends HandsOnSuite {
     // Créée une classe Point qui corresponde aux tests suivants (les décommenter petit à petit)
 
     // val p = new Point(1, 2)
-    // p.x = 3 // ne doit pas compiler
+    // p.x = 3 // ne doit pas compiler (vérifier puis laisser en commentaire)
 
 
     // Implémente la méthode `move` pour la classe Point
@@ -107,7 +109,6 @@ class e02_objet extends HandsOnSuite {
     val p4 = p1.copy(y = 6)
     p4.x shouldBe __
     p4.y shouldBe __
-    p4.toString shouldBe __
   }
   // à noter que l'immutabilité obligeant à créer et retourner de nouveaux objets permet d'avoir une fluent API naturellement
   // ex: val result = p.move(3, 4).scale(5).rotate(Point(1, 1), 30)
@@ -246,7 +247,7 @@ class e02_objet extends HandsOnSuite {
 
   /**
     * Le pattern matching est un mécanisme similaire au `switch` dans d'autres langages mais en étant bien plus puissant.
-    * Par ailleurs, comme en Scala toute expression retroue une valeur, c'est aussi le cas du pattern matching
+    * Par ailleurs, comme en Scala toute expression retourne une valeur, c'est aussi le cas du pattern matching
     */
   section("Le pattern matching") {
     // L'ordre des `case` compte, le premier qui correspond est sélectionné

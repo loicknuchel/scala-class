@@ -13,10 +13,10 @@ class e03_collections extends HandsOnSuite {
     * Passons maintenant aux collections...
     *
     * En Scala, toutes les collections étendent le trait `Traversable`
-    * Toutes les fonctions que nous allons voir sont définies dans Traversable et existent donc pour chaque quelle collection.
+    * Toutes les fonctions que nous allons voir sont définies dans Traversable et existent donc pour chaque collection.
     * Nous verrons que les collections immuable mais il existe leur équivalent en mutable.
     *
-    * Voici la hierarchie (non-exhaustive) des collections Scala :
+    * Voici la hiérarchie (non-exhaustive) des collections Scala :
     *
     *                                            Traversable
     *                                                |

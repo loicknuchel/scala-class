@@ -37,13 +37,13 @@ class e01_syntaxe extends HandsOnSuite {
   exercice("Déclarer une variable") {
     // permet de déclarer une valeur (= constante)
     val constant: String = "abc"
-    //constant = "def" // mais pas une valeur
+    //constant = "def" // mais pas une valeur (vérifier puis laisser en commentaire)
     constant shouldBe __
 
     // permet de déclarer une variable (à utiliser au minimum)
     var variable: Int = 5
     variable = 42 // on peut réassigner une variable
-    //variable = true // le type ne doit pas changer
+    //variable = true // le type ne doit pas changer (vérifier puis laisser en commentaire)
     variable shouldBe __
   }
 
@@ -70,7 +70,7 @@ class e01_syntaxe extends HandsOnSuite {
       name shouldBe __
     }
 
-    // comme tout est expression et retourne une valeur, le mot clé `return` est facultatif
+    // comme tout est expression (function, if, for, +, ...) et retourne une valeur, le mot clé `return` est facultatif
     exercice("le mot clé `return`") {
       def sub(a: Int, b: Int): Int = {
         a - b
@@ -154,6 +154,24 @@ class e01_syntaxe extends HandsOnSuite {
 
 
   section("Astuces pratiques") {
+    // Le préfix 's' devant une String permet d'utiliser l'interpolation, c'est à dire le fait d'intégrer une valeur.
+    // Pour ça il suffit de préfixer la valeur par '$' et éventuellement de l'entourer de '{}' si c'est une expression
+    exercice("interpolation") {
+      val name = "Loïc"
+      val hello = s"Hello $name"
+      val count = s"Name has ${name.length} chars"
+      val text =
+        """
+          |Un texte
+          |sur plusieurs
+          |lignes
+        """.stripMargin.trim
+
+      hello shouldBe __
+      count shouldBe __
+      text.split("\n").length shouldBe __
+    }
+
     // parfois on peut avoir des fonctions qui ont "beaucoup" de paramètres du même type (par ex String ou Int)
     // Il est alors facile de se tromper dans l'ordre et assez difficile de ensuite trouver le bug
     // Pour cela, Scala donne la possibilité de nommer les paramètres d'une fonction. Leur ordre n'a alors plus d'importance
